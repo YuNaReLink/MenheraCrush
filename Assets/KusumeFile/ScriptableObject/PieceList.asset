@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a4bee160ce7e24c80ed5c1c744c1c5, type: 3}
+  m_Name: PieceList
+  m_EditorClassIdentifier: 
+  pieceList:
+  - {fileID: 44138455395364889, guid: 97f8a88c48fb75449a824e3b711efdf1, type: 3}
+  - {fileID: 44138455395364889, guid: 580eff650d2a066418dc083edc3577ba, type: 3}
+  - {fileID: 44138455395364889, guid: 0fe91b575507dd14b83f6345b6587bd1, type: 3}
+  - {fileID: 44138455395364889, guid: 8ebca19f6d5eb8f4fb422118329753e3, type: 3}
+  - {fileID: 44138455395364889, guid: 3829c3c1aaa2e564c90fe44cf2c1e9fa, type: 3}
+  - {fileID: 44138455395364889, guid: dc8f1256a1712a244bc7164b8ba22f6f, type: 3}
+  pieceDatas:
+  - color:
+      serializedVersion: 2
+      rgba: 4278190335
+    pieceTag: 0
+  - color:
+      serializedVersion: 2
+      rgba: 4294901760
+    pieceTag: 1
+  - color:
+      serializedVersion: 2
+      rgba: 4278255360
+    pieceTag: 2
+  - color:
+      serializedVersion: 2
+      rgba: 4278255615
+    pieceTag: 3
+  - color:
+      serializedVersion: 2
+      rgba: 4294548479
+    pieceTag: 4
+  - color:
+      serializedVersion: 2
+      rgba: 4294902015
+    pieceTag: 5
