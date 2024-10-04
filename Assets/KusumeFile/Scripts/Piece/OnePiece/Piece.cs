@@ -7,12 +7,11 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
     [SerializeField]
-    private PieceTag tag = PieceTag.Red;
+    private new PieceTag tag = PieceTag.Red;
     public PieceTag Tag { get { return tag; }set { tag = value; } }
 
     [SerializeField]
     private SpriteRenderer spriteRenderer = null;
-    public SpriteRenderer SpriteRenderer => spriteRenderer;
 
     public GameObject GetGameObject => transform.gameObject;
 
