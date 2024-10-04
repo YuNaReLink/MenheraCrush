@@ -1,7 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ピースをまとめて動かす処理を行うクラス
+/// ワールド座標で上方向と
+/// ピースのローカル座標から右方向に動かす
+/// </summary>
 [RequireComponent(typeof(BoxCollider2D))]
 public class WindSpace : MonoBehaviour
 {
@@ -13,6 +16,7 @@ public class WindSpace : MonoBehaviour
 
     [SerializeField]
     private float duration = 1.0f;
+
     public void SetDuration(float _duration)
     {
         gameObject.SetActive(true);
@@ -24,12 +28,12 @@ public class WindSpace : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    void Start()
+    private void Start()
     {
         boxCollider.isTrigger = true;
     }
 
-    void Update()
+    private void Update()
     {
         if(duration <= 0)
         {
