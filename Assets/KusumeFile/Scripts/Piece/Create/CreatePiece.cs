@@ -11,7 +11,8 @@ public enum PieceTag
     Green,
     Yellow,
     Pink,
-    Purple
+    Purple,
+    Count
 }
 
 /// <summary>
@@ -73,6 +74,17 @@ public class CreatePiece : MonoBehaviour
         Create();
     }
 
+    private enum ScaleTag
+    {
+        Lv0,
+        Lv1,
+        Lv2,
+        Lv3,
+        Lv4,
+        Lv5,
+        DataEnd
+    }
+
     /// <summary>
     /// Updateで呼び出し
     /// </summary>
@@ -83,15 +95,37 @@ public class CreatePiece : MonoBehaviour
         //ピースの生成
         GameObject p = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position,Quaternion.identity);
 
-        p.transform.localScale *= Random.Range(1.0f, 1.5f);
+        int tagNum = Random.Range((int)ScaleTag.Lv0, (int)ScaleTag.DataEnd);
+
+        ScaleTag tag = (ScaleTag)tagNum;
+        float scale = 1.0f;
+        switch (tag)
+        {
+            case ScaleTag.Lv1:
+                scale = 1.1f;
+                break;
+            case ScaleTag.Lv2:
+                scale = 1.2f;
+                break;
+            case ScaleTag.Lv3:
+                scale = 1.3f;
+                break;
+            case ScaleTag.Lv4:
+                scale = 1.4f;
+                break;
+            case ScaleTag.Lv5:
+                scale = 1.5f;
+                break;
+        }
+
+        p.transform.localScale *= scale;
         //ピースの親を設定
         p.transform.SetParent(piecesParent.transform);
         
-        OnePiece onePiece = p.GetComponent<OnePiece>();
+        Piece onePiece = p.GetComponent<Piece>();
 
         PieceData data = pieceData.PieceDatas[PieceRandomNumber()];
-        onePiece.PieceTag = data.pieceTag;
-        onePiece.SpriteRenderer.color = data.color;
+        onePiece.SetPieceData(data);
 
         //生成位置を変更
         currentCreatorPositionCount++;
@@ -109,7 +143,7 @@ public class CreatePiece : MonoBehaviour
     {
         int num = 0;
         int min = (int)PieceTag.Red;
-        int max = (int)PieceTag.Purple + 1;
+        int max = (int)PieceTag.Count;
         num = Random.Range(min, max);
         currentPieceCount++;
         return num;

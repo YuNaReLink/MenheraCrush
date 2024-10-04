@@ -12,11 +12,6 @@ public struct PieceData
 public class PieceDataList : ScriptableObject
 {
     [SerializeField]
-    private List<GameObject> pieceList = new List<GameObject>();
-
-    public List<GameObject> PieceList => pieceList;
-
-    [SerializeField]
     private List<PieceData> pieceDatas = new List<PieceData>();
 
     public List <PieceData> PieceDatas => pieceDatas;

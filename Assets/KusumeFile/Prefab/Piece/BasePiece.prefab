@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcc6ba3c0dcf4b43ad40e59693bd3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pieceTag: 0
+  tag: 0
   spriteRenderer: {fileID: 0}
+  impactObject: {fileID: 8987218779975485508, guid: 558bbc09ce04cc54dabc1f06fe7e3406, type: 3}
