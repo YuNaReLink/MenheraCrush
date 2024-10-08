@@ -33,6 +33,7 @@ namespace LucKee
             }
         }
 
+        //破棄時にポーズを無効化する。
         private void OnDestroy()
         {
             Disable();

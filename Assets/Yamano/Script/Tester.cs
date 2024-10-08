@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace LucKee {
+    //テスト用の適当なコンポーネント
+    //入力担当
     public class Tester : MonoBehaviour
     {
         [SerializeField]
-        Canvas canvas = null;
+        private Rigidbody2D target = null;
         [SerializeField]
-        CutIn prefab = null;
+        private Vector2 force = Vector2.up;
         private void Update()
         {
             if (Input.anyKeyDown)
             {
-                Instantiate(prefab, canvas.transform);
+                target.AddForceAtPosition(force, target.position + new Vector2(-0.3f, 0.0f));
             }
         }
     }
