@@ -79,9 +79,6 @@ public class CreatePiece : MonoBehaviour
         Lv0,
         Lv1,
         Lv2,
-        Lv3,
-        Lv4,
-        Lv5,
         DataEnd
     }
 
@@ -103,19 +100,13 @@ public class CreatePiece : MonoBehaviour
         float scale = 1.0f;
         switch (tag)
         {
+            case ScaleTag.Lv0:
+                scale = 1.0f;
+                break;
             case ScaleTag.Lv1:
-                scale = 1.1f;
+                scale = 1.25f;
                 break;
             case ScaleTag.Lv2:
-                scale = 1.2f;
-                break;
-            case ScaleTag.Lv3:
-                scale = 1.3f;
-                break;
-            case ScaleTag.Lv4:
-                scale = 1.4f;
-                break;
-            case ScaleTag.Lv5:
                 scale = 1.5f;
                 break;
         }
