@@ -94,6 +94,8 @@ public class CreatePiece : MonoBehaviour
         
         //ÉsÅ[ÉXÇÃê∂ê¨
         GameObject p = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position,Quaternion.identity);
+        Rigidbody2D rb = p.GetComponent<Rigidbody2D>();
+        rb.AddForce(Vector2.up * 25.0f, ForceMode2D.Impulse);
 
         int tagNum = Random.Range((int)ScaleTag.Lv0, (int)ScaleTag.DataEnd);
 
