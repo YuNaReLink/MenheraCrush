@@ -25,6 +25,7 @@ public class PieceReset : MonoBehaviour
 
     public void StartPieceReset()
     {
-        windSpace.SetDuration(1.0f);
+        if(windSpace.Duration > 0) { return; }
+        windSpace.SetDuration(0.25f);
     }
 }
