@@ -11,11 +11,13 @@ namespace LucKee {
         private Rigidbody2D target = null;
         [SerializeField]
         private Vector2 force = Vector2.up;
+        [SerializeField]
+        private Vector2 offset = Vector2.zero;
         private void Update()
         {
             if (Input.anyKeyDown)
             {
-                target.AddForceAtPosition(force, target.position + new Vector2(-0.3f, 0.0f));
+                target.AddForceAtPosition(force, target.position + offset);
             }
         }
     }

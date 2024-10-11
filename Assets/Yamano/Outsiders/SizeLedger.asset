@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SizeLedger
   m_EditorClassIdentifier: 
   ledger:
-  - size: 1
+  - size: 1.25
     power: 0
     ratio: 10
-  - size: 2
+  - size: 1.5
     power: 1
     ratio: 5

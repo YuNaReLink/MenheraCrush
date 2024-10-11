@@ -550,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1689357788}
   force: {x: 0, y: 10}
+  offset: {x: 60, y: 0}
 --- !u!4 &1077244573
 Transform:
   m_ObjectHideFlags: 0
