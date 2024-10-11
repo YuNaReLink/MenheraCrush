@@ -4,14 +4,48 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Button))]
+public enum SceneList
+{
+    Titel,
+    StageSelect,
+    Game,
+
+    Count
+}
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] private string NextSceneName;
+    [SerializeField] private SceneList NextScene;
+
+    string GetSceneName(SceneList NextScene)
+    {
+        string a;
+
+        switch (NextScene)
+        {
+            case SceneList.Titel:
+                a = "Title";
+                break;
+            case SceneList.StageSelect:
+                a = "StageSelect";
+                break;
+            case SceneList.Game:
+                a = "GameTYOSHi";
+                break;
+            default:
+                a = "Title";
+                break;
+        }
+        return a;
+    }
+
+    public void ChangeScene(SceneList scene)
+    {
+        SceneManager.LoadScene(GetSceneName(scene));
+    }
 
     public void ButtonClick()
     {
-        SceneManager.LoadScene(NextSceneName);
+        ChangeScene(NextScene);
     }
 }
