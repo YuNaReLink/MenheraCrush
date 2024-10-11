@@ -1,22 +1,40 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private PlayerInput playerInput = null;
 
-    private void Start()
+    [SerializeField]
+    private PlayerHP hp;
+
+    public PlayerHP HP => hp;
+    private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        if(playerInput == null)
+        if (playerInput == null)
         {
             Debug.LogError("PlayerInputがアタッチされていません");
         }
     }
 
+    private void Start()
+    {
+        hp.Setup();
+    }
+
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            hp.Regain(10);
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            hp.Decrease(10);
+        }
+
+
         playerInput.ButtonInput();
         MouseRaycast();
     }
