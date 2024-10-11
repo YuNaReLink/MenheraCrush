@@ -9,13 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd93637938de664c8c91d2b7f5103a7, type: 3}
-  m_Name: SizeLedger
+  m_Script: {fileID: 11500000, guid: 1ba9287e5b41fc4478259a16d85adf99, type: 3}
+  m_Name: PieceLedger
   m_EditorClassIdentifier: 
-  ledger:
+  colors:
+  - tag: 0
+    color: {r: 1, g: 0, b: 0, a: 0}
+    ratio: 1
+  - tag: 1
+    color: {r: 0, g: 0, b: 1, a: 0}
+    ratio: 1
+  sizes:
   - size: 1.25
     power: 0
-    ratio: 10
+    ratio: 1
   - size: 1.5
     power: 1
-    ratio: 5
+    ratio: 1
