@@ -20,7 +20,7 @@ namespace Kusume
     /// <summary>
     /// ピースを生成するクラス
     /// </summary>
-    public class CreatePiece : MonoBehaviour
+    public class CreatePieceMachine : MonoBehaviour
     {
         /// <summary>
         /// ピースを生成するオブジェクト関係の変数
@@ -48,6 +48,10 @@ namespace Kusume
 
         private static int currentPieceCount = 0;
         public static int CurrentPieceCount { get { return currentPieceCount; }set { currentPieceCount = value; } }
+        /*
+         */
+        [SerializeField]
+        private List<GameObject> pieces = new List<GameObject>();
         /// <summary>
         /// ピースの親オブジェクト
         /// </summary>
@@ -82,6 +86,7 @@ namespace Kusume
                 return;
             }
             Create();
+            CheckAllPiece();
         }
 
         /// <summary>
@@ -93,8 +98,9 @@ namespace Kusume
         
             //ピースの生成
             GameObject p = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position,Quaternion.identity);
+            pieces.Add(p);
             Rigidbody2D rb = p.GetComponent<Rigidbody2D>();
-            rb.AddForce(Vector2.up * 25.0f, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * 10.0f, ForceMode2D.Impulse);
 
             var pieceInfo = pieceLedger.GetRandomPiece();
 
@@ -119,6 +125,29 @@ namespace Kusume
             }
             //生成のクールダウン
             createCoolDown = 0;
+        }
+
+        private void CheckAllPiece()
+        {
+            if(currentPieceCount > pieces.Count) { return; }
+            for (int i = 0; i < pieces.Count; i++)
+            {
+                if (pieces[i] == null)
+                {
+                    pieces.RemoveAt(i);
+                }
+            }
+        }
+
+        public void ChangeGravityAllPiece(float gravity,float time)
+        {
+            for (int i = 0; i < pieces.Count; i++)
+            {
+                Piece piece = pieces[i].GetComponent<Piece>();
+                Rigidbody2D rb = piece.GetComponent<Rigidbody2D>();
+                rb.gravityScale = gravity;
+                piece.SetNoGravityCount(time);
+            }
         }
     }
 }

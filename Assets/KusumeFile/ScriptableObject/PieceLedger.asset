@@ -14,23 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colors:
   - tag: 0
-    color: {r: 1, g: 0, b: 0, a: 1}
-    ratio: 0
+    color:
+      serializedVersion: 2
+      rgba: 4278190335
+    ratio: 1
   - tag: 1
-    color: {r: 0, g: 0, b: 1, a: 1}
-    ratio: 0
+    color:
+      serializedVersion: 2
+      rgba: 4294901760
+    ratio: 1
   - tag: 2
-    color: {r: 0, g: 1, b: 0, a: 1}
-    ratio: 0
+    color:
+      serializedVersion: 2
+      rgba: 4278255360
+    ratio: 1
   - tag: 3
-    color: {r: 1, g: 1, b: 0, a: 1}
-    ratio: 0
+    color:
+      serializedVersion: 2
+      rgba: 4278255615
+    ratio: 1
   - tag: 4
-    color: {r: 1, g: 0.79607844, b: 0.9882353, a: 1}
-    ratio: 0
+    color:
+      serializedVersion: 2
+      rgba: 4294757375
+    ratio: 1
   - tag: 5
-    color: {r: 0.7176471, g: 0, b: 0.7176471, a: 1}
-    ratio: 0
+    color:
+      serializedVersion: 2
+      rgba: 4290183351
+    ratio: 1
   sizes:
   - size: 1.25
     power: 0

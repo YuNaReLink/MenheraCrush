@@ -51,6 +51,7 @@ namespace Kusume
             Vector2 dir = piece.transform.position - transform.position;
             Rigidbody2D rb = piece.GetComponent<Rigidbody2D>();
             rb.AddForce(dir * power,ForceMode2D.Impulse);
+            piece.SetImpactPower(power * 0.8f);
         }
     }
 }
