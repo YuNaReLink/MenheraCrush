@@ -11,12 +11,27 @@ namespace Kusume
         private PlayerHP hp;
 
         public PlayerHP HP => hp;
+
+        [SerializeField]
+        private CreatePieceMachine createPiecemMachine;
+
+
+        [Header("変更する重力倍率"),SerializeField]
+        private float changeGravityScale;
+        [Header("変更時間(秒数)"), SerializeField]
+        private float noGravityCount;
         private void Awake()
         {
             playerInput = GetComponent<PlayerInput>();
             if (playerInput == null)
             {
                 Debug.LogError("PlayerInputがアタッチされていません");
+            }
+
+            createPiecemMachine = FindObjectOfType<CreatePieceMachine>();
+            if(createPiecemMachine == null)
+            {
+                Debug.LogError("CreatePieceMachineがアタッチされていません");
             }
         }
 
@@ -101,6 +116,7 @@ namespace Kusume
             {
                 if(pieceList.Count > 2)
                 {
+                    createPiecemMachine.ChangeGravityAllPiece(changeGravityScale, noGravityCount);
                     for(int i = 0;i < pieceList.Count; i++)
                     {
                         pieceList[i].Crush(0.05f * i);
