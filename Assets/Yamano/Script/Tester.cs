@@ -13,6 +13,10 @@ namespace LucKee {
         private Vector2 force = Vector2.up;
         [SerializeField]
         private Vector2 offset = Vector2.zero;
+        private void Awake()
+        {
+            BGMManager.Play(null);
+        }
         private void Update()
         {
             if (Input.anyKeyDown)
