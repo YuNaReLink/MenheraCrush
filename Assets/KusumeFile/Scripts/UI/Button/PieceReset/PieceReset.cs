@@ -25,6 +25,14 @@ namespace Kusume
             button.onClick.AddListener(StartPieceReset);
         }
 
+        public void Update()
+        {
+            if (Input.GetButtonDown("Reset"))
+            {
+                button.onClick.Invoke();
+            }
+        }
+
         public void StartPieceReset()
         {
             if(windSpace.Duration > 0) { return; }
