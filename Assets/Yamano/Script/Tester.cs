@@ -8,16 +8,14 @@ namespace LucKee {
     public class Tester : MonoBehaviour
     {
         [SerializeField]
-        private Rigidbody2D target = null;
+        CutIn prefab = null;
         [SerializeField]
-        private Vector2 force = Vector2.up;
-        [SerializeField]
-        private Vector2 offset = Vector2.zero;
+        Canvas canvas = null;
         private void Update()
         {
             if (Input.anyKeyDown)
             {
-                target.AddForceAtPosition(force, target.position + offset);
+                Instantiate(prefab, canvas.transform, false);
             }
         }
     }

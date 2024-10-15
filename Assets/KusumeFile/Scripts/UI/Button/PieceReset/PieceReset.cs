@@ -4,28 +4,39 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PieceReset : MonoBehaviour
+namespace Kusume
 {
-    [SerializeField]
-    private Button button;
-
-    [SerializeField]
-    private WindSpace windSpace;
-
-    private void Awake()
+    public class PieceReset : MonoBehaviour
     {
-        button = GetComponent<Button>();
-        windSpace = FindObjectOfType<WindSpace>();
-    }
+        [SerializeField]
+        private Button button;
 
-    private void Start()
-    {
-        button.onClick.AddListener(StartPieceReset);
-    }
+        [SerializeField]
+        private WindSpace windSpace;
 
-    public void StartPieceReset()
-    {
-        if(windSpace.Duration > 0) { return; }
-        windSpace.SetDuration(0.25f);
+        private void Awake()
+        {
+            button = GetComponent<Button>();
+            windSpace = FindObjectOfType<WindSpace>();
+        }
+
+        private void Start()
+        {
+            button.onClick.AddListener(StartPieceReset);
+        }
+
+        public void Update()
+        {
+            if (Input.GetButtonDown("Reset"))
+            {
+                button.onClick.Invoke();
+            }
+        }
+
+        public void StartPieceReset()
+        {
+            if(windSpace.Duration > 0) { return; }
+            windSpace.SetDuration(0.25f);
+        }
     }
 }
