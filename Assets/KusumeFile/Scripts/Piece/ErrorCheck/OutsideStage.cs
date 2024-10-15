@@ -32,7 +32,7 @@ namespace Kusume
 
             // スクリーン座標をワールド座標に変換
             Vector3 worldBottomPosition = mainCamera.ScreenToWorldPoint(bottomScreenPoint);
-            List<GameObject> pieces = createPieceMachine.Pieces;
+            List<Piece> pieces = createPieceMachine.Pieces;
             for (int i = 0; i < pieces.Count; i++)
             {
                 if(pieces[i] == null)

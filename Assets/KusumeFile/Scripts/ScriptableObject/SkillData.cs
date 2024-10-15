@@ -1,3 +1,4 @@
+using LucKee;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,8 @@ namespace Kusume
     public class SkillData : ScriptableObject
     {
         [SerializeField]
-        private GameObject data = null;
-        public GameObject Data => data;
+        private List<Skill> dataList = new List<Skill>();
+        public List<Skill> DataList => dataList;
     }
 }
 
