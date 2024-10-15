@@ -52,6 +52,7 @@ namespace Kusume
          */
         [SerializeField]
         private List<GameObject> pieces = new List<GameObject>();
+        public List<GameObject> Pieces => pieces;
         /// <summary>
         /// ピースの親オブジェクト
         /// </summary>
@@ -134,9 +135,14 @@ namespace Kusume
             {
                 if (pieces[i] == null)
                 {
-                    pieces.RemoveAt(i);
+                    PieceRemove(i);
                 }
             }
+        }
+
+        public void PieceRemove(int num)
+        {
+            pieces.RemoveAt(num);
         }
 
         public void ChangeGravityAllPiece(float gravity,float time)
