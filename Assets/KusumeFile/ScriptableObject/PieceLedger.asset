@@ -16,17 +16,17 @@ MonoBehaviour:
   - tag: 0
     color:
       serializedVersion: 2
-      rgba: 4281150975
+      rgba: 4278190335
     ratio: 1
   - tag: 1
     color:
       serializedVersion: 2
-      rgba: 4293804096
+      rgba: 4294901760
     ratio: 1
   - tag: 2
     color:
       serializedVersion: 2
-      rgba: 4284872037
+      rgba: 4278255360
     ratio: 1
   - tag: 3
     color:
@@ -41,12 +41,12 @@ MonoBehaviour:
   - tag: 5
     color:
       serializedVersion: 2
-      rgba: 4287836307
+      rgba: 4290183351
     ratio: 1
   sizes:
   - size: 1.25
     power: 0
-    ratio: 1.5
+    ratio: 1
   - size: 1.5
     power: 1
     ratio: 1
