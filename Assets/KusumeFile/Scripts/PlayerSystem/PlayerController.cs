@@ -15,6 +15,8 @@ namespace Kusume
         [SerializeField]
         private CreatePieceMachine createPiecemMachine;
 
+        [SerializeField]
+        private SkillData skillData;
 
         [Header("ïœçXÇ∑ÇÈèdóÕî{ó¶"),SerializeField]
         private float changeGravityScale;
@@ -51,6 +53,10 @@ namespace Kusume
                 hp.Decrease(10);
             }
 
+            if (Input.GetButtonDown("Jump"))
+            {
+                Instantiate(skillData.DataList[0],transform.position,Quaternion.identity);
+            }
 
             playerInput.ButtonInput();
             MouseRaycast();
