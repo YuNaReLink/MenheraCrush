@@ -548,9 +548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7d69d109f6d5d43a1fe6e82f2f4616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1689357788}
-  force: {x: 0, y: 10}
-  offset: {x: 60, y: 0}
+  prefab: {fileID: 2958813032690906436, guid: ee42b382dc742d048a8036cb96b325b0, type: 3}
+  canvas: {fileID: 1656559206}
 --- !u!4 &1077244573
 Transform:
   m_ObjectHideFlags: 0
