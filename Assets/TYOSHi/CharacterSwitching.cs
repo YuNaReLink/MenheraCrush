@@ -9,7 +9,7 @@ public enum CharacterNameList
     藤崎綾音,
     東雲葵衣,
     林功太,
-    キャラクター4,
+    おもしれー女,
     キャラクター5
 }
 public class CharacterSwitching : MonoBehaviour
@@ -20,7 +20,7 @@ public class CharacterSwitching : MonoBehaviour
     [SerializeField] private Sprite[] sprites;
 
 
-    public void Click(CharacterNameList GetName)
+    public void Character(CharacterNameList GetName)
     {
         CharacterName.text = GetName.ToString();
 
