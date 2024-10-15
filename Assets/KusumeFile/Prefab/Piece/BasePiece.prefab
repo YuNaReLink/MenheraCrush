@@ -96,7 +96,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 44138455395364889}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6f4234558f89d0a428ef46fa7805ed4d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -134,10 +134,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 1
-  m_GravityScale: 5
+  m_GravityScale: 5.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -161,6 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcc6ba3c0dcf4b43ad40e59693bd3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2D: {fileID: 0}
   tag: 0
   spriteRenderer: {fileID: 0}
   impactObject: {fileID: 8987218779975485508, guid: 558bbc09ce04cc54dabc1f06fe7e3406, type: 3}
+  keepImpactPower: 0
+  noGravityCount: 0
+  baseGravityScale: 5.5

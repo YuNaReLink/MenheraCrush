@@ -80,6 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28ffc85091198948b61f7a79ec91dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.5
-  radiusSpeed: 1.5
-  power: 20
+  duration: 0.25
+  radiusSpeed: 2
+  power: 15
