@@ -19,14 +19,13 @@ public class StageChange : MonoBehaviour
 {
     int NowStageNo;
 
-    //[SerializeField]
-    //Vector2[] sizes;
     [SerializeField]
     Vector2[] offsets;
 
     [SerializeField]
     Button[] buttons;
 
+    //ステージ変更
     void A(Stage StageNo)
     {
         int n = (int)StageNo;
@@ -53,6 +52,7 @@ public class StageChange : MonoBehaviour
         }
     }
 
+    //右に送る
     public void Right()
     {
         NowStageNo++;
@@ -65,6 +65,7 @@ public class StageChange : MonoBehaviour
         A((Stage)NowStageNo);
     }
 
+    //左に送る
     public void Left()
     {
         NowStageNo--;
