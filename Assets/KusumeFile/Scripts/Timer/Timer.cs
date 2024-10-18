@@ -5,49 +5,45 @@ namespace Kusume
 {
     public class Timer
     {
-        public event Action OnCompleted;
+        public event Action OnEnd;
 
-        private float currentCount = 0;
+        private float current = 0;
 
-        public float CurrentTime => currentCount;
+        public float Current => current;
 
         public void Start(float time)
         {
-            currentCount = time;
+            current = time;
         }
 
-        public void DoRefresh()
+        public void Update()
         {
-            if(currentCount <= 0) { return; }
-            currentCount -= Time.deltaTime;
-            if(currentCount <= 0)
+            if(current <= 0) { return; }
+            current -= Time.deltaTime;
+            if(current <= 0)
             {
-                currentCount = 0;
+                current = 0;
+                End();
             }
         }
 
         public void End() 
         {
-            currentCount = 0; 
-            OnCompleted?.Invoke();
-            OnCompleted = null;
+            current = 0; 
+            OnEnd?.Invoke();
+            OnEnd = null;
         }
-        public bool IsRefresh() { return currentCount > 0; }
 
-        public bool IsEnd() {  return currentCount <= 0; }
+        public bool IsEnd() {  return current <= 0; }
 
         public int GetMinutes()
         {
-            int m = 0;
-            m = Mathf.FloorToInt(currentCount / 60);
-            return m;
+            return (int)current / 60;
         }
 
         public int GetSecond()
         {
-            int s = 0;
-            s = Mathf.FloorToInt(currentCount % 60);
-            return s;
+            return (int)current % 60;
         }
 
     }

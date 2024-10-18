@@ -14,6 +14,7 @@ namespace Kusume
         Yellow,
         Pink,
         Purple,
+        Jama,
         Count
     }
 
