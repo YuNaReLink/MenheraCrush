@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace LucKee
 {
+    //旧式
     //カットイン用のコンポーネント
     //カットイン中はゲームの動きを止めるのでポーズを要求する。
     [RequireComponent(typeof(Pause))]
@@ -31,6 +32,7 @@ namespace LucKee
             pause.Enable();
 
             time = 0.0f;
+            image.rectTransform.localPosition = route.GetPosition(0.0f);
         }
 
 
@@ -54,5 +56,8 @@ namespace LucKee
             image.rectTransform.localPosition = route.GetPosition(time);
         }
     }
+
+
+
 }
 
