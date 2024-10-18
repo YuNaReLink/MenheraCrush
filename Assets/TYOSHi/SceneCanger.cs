@@ -30,7 +30,7 @@ public class SceneChanger : MonoBehaviour
                 a = "StageSelect";
                 break;
             case SceneList.Game:
-                a = "Game";
+                a = "GameTYOSHi";
                 break;
             default:
                 a = "Title";
