@@ -43,10 +43,17 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 4290183351
     ratio: 1
+  - tag: 6
+    color:
+      serializedVersion: 2
+      rgba: 4278190080
+    ratio: 0
   sizes:
   - size: 1.25
     power: 0
     ratio: 1
+    big: 0
   - size: 1.5
     power: 1
     ratio: 1
+    big: 1
