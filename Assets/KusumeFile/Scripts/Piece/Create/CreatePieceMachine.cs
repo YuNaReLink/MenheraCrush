@@ -38,6 +38,7 @@ namespace Kusume
 
         [SerializeField]
         private PieceLedger pieceLedger = null;
+        public PieceLedger PieceLedger => pieceLedger;
 
         [SerializeField]
         private GameObject basePiece = null;
@@ -51,8 +52,8 @@ namespace Kusume
         /*
          */
         [SerializeField]
-        private List<GameObject> pieces = new List<GameObject>();
-        public List<GameObject> Pieces => pieces;
+        private List<Piece> pieces = new List<Piece>();
+        public List<Piece> Pieces => pieces;
         /// <summary>
         /// ピースの親オブジェクト
         /// </summary>
@@ -79,6 +80,11 @@ namespace Kusume
             pieceLedger.Setup();
         }
 
+        public Piece RandomPiece()
+        {
+            return pieces[Random.Range(0, pieces.Count + 1)];
+        }
+
         void Update()
         {
             if(createCoolDown >= 0)
@@ -98,7 +104,8 @@ namespace Kusume
             if(currentPieceCount >= maxPieceCount) { return; }
         
             //ピースの生成
-            GameObject p = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position,Quaternion.identity);
+            GameObject g = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position,Quaternion.identity);
+            Piece p = g.GetComponent<Piece>();
             pieces.Add(p);
             Rigidbody2D rb = p.GetComponent<Rigidbody2D>();
             rb.AddForce(Vector2.up * 10.0f, ForceMode2D.Impulse);
