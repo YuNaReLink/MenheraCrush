@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8884762241872583565}
   - component: {fileID: 782834901408555187}
   m_Layer: 0
-  m_Name: Skill_ColorChange
+  m_Name: Skill_AllyColorChange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
