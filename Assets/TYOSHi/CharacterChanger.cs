@@ -8,6 +8,6 @@ public class CharacterChanger : MonoBehaviour
     [SerializeField] private CharacterNameList chara;
     public void Change()
     {
-        charaSwitch.Character(chara);
+        charaSwitch.Click(chara);
     }
 }
