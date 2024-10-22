@@ -26,6 +26,8 @@ public class CharacterSwitching : MonoBehaviour
     [SerializeField] private TextLedger Text;
     [SerializeField] private Image BackImage;
 
+    [SerializeField] private StageChange SC;
+
     public static int SelctCharacterNo {  get; private set; }
 
 
@@ -84,5 +86,8 @@ public class CharacterSwitching : MonoBehaviour
         }
 
         SelctCharacterNo = (int)GetName;
+
+        //キャラクター切替時の画像切替
+        SC.ChangeCharacter();
     }
 }
