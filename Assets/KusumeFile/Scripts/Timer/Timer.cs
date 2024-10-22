@@ -6,14 +6,21 @@ namespace Kusume
     public class Timer
     {
         public event Action OnEnd;
+        public event Action OnOnceEnd;
 
         private float current = 0;
 
+        private float time = 0;
+
         public float Current => current;
 
-        public void Start(float time)
+        private bool loop = false;
+        public void SetLoop(bool l) {  loop = l; }
+
+        public void Start(float _time)
         {
-            current = time;
+            current = _time;
+            time = _time;
         }
 
         public void Update()
@@ -22,16 +29,19 @@ namespace Kusume
             current -= Time.deltaTime;
             if(current <= 0)
             {
-                current = 0;
+                if (loop)
+                {
+                    current += time;
+                }
                 End();
             }
         }
 
         public void End() 
         {
-            current = 0; 
             OnEnd?.Invoke();
-            OnEnd = null;
+            OnOnceEnd?.Invoke();
+            OnOnceEnd = null;
         }
 
         public bool IsEnd() {  return current <= 0; }

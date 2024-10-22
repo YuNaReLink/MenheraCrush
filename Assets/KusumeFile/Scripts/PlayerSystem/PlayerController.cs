@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kusume
 {
@@ -13,10 +14,17 @@ namespace Kusume
         public PlayerHP HP => hp;
 
         [SerializeField]
+        private Image thisImage;
+        [SerializeField]
+        private RectTransform rectTransform;
+
+        [SerializeField]
         private CreatePieceMachine createPiecemMachine;
 
         [SerializeField]
-        private SkillData skillData;
+        private AllyData allyData;
+        [SerializeField]
+        private int charaInt = 0;
 
         [Header("変更する重力倍率"),SerializeField]
         private float changeGravityScale;
@@ -35,27 +43,22 @@ namespace Kusume
             {
                 Debug.LogError("CreatePieceMachineがアタッチされていません");
             }
+
         }
 
         private void Start()
         {
+            thisImage.sprite = allyData.Characters[charaInt].sprite;
+            thisImage.SetNativeSize();
             hp.Setup();
         }
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                hp.Regain(10);
-            }
-            else if (Input.GetKeyDown(KeyCode.A))
-            {
-                hp.Decrease(10);
-            }
 
             if (Input.GetButtonDown("Jump"))
             {
-                Instantiate(skillData.DataList[0],transform.position,Quaternion.identity);
+                Instantiate(allyData.Characters[charaInt].skill,transform.position,Quaternion.identity);
             }
 
             playerInput.ButtonInput();
