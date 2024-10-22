@@ -8,8 +8,9 @@ namespace LucKee
     public abstract class LedgerBase<T> : ScriptableObject
     {
         [SerializeField]
-        public T[] Values { get; }
-        public T this[int i] { get => Values[i]; }
-        public int Count { get => Values.Length; }
+        private T[] values;
+        public T[] Values { get => values; }
+        public T this[int i] { get => values[i]; }
+        public int Count { get => values.Length; }
     }
 }

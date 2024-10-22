@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace LucKee
@@ -9,20 +10,20 @@ namespace LucKee
     public struct MenheraInfo
     {
         //TODO:Change type to enum.
-        public int Tag { get; }
+        public int tag;
 
-        public String Name { get; }
+        public String name;
 
-        public Animator Wait { get; }
+        public AnimatorController wait;
 
-        public Skill Skill { get; }
+        public Skill skill;
 
-        public TextAsset Text { get; }
+        public TextAsset text;
 
-        public bool CanBeAlly { get; }
+        public bool canBeAlly;
 
     }
-    //[CreateAssetMenu(fileName = "MenheraLedger", menuName = "ScriptableObjects/Ledger/Menhera", order = 1)]
+    [CreateAssetMenu(fileName = "MenheraLedger", menuName = "ScriptableObjects/Ledger/Menhera", order = 1)]
     public class MenheraLedger : LedgerBase<MenheraInfo>
     {
     }
