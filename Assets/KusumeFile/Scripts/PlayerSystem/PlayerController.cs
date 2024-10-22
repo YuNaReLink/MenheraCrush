@@ -1,10 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kusume
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField]
+        private bool debug = false;
+
         private PlayerInput playerInput = null;
 
         [SerializeField]
@@ -13,10 +17,15 @@ namespace Kusume
         public PlayerHP HP => hp;
 
         [SerializeField]
+        private Image thisImage;
+
+        [SerializeField]
         private CreatePieceMachine createPiecemMachine;
 
         [SerializeField]
-        private SkillData skillData;
+        private AllyData allyData;
+        [SerializeField]
+        private int charaInt = 0;
 
         [Header("変更する重力倍率"),SerializeField]
         private float changeGravityScale;
@@ -35,27 +44,54 @@ namespace Kusume
             {
                 Debug.LogError("CreatePieceMachineがアタッチされていません");
             }
+
         }
 
         private void Start()
         {
+            SetAllyImage();
             hp.Setup();
+        }
+
+        private void SetAllyImage()
+        {
+            thisImage.sprite = allyData.Characters[charaInt].sprite;
+            thisImage.SetNativeSize();
+        }
+
+        private void UpdateDebug()
+        {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                debug = !debug;
+            }
+            if (!debug) { return; }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                charaInt--;
+                if (charaInt < 0)
+                {
+                    charaInt = 0;
+                }
+            }
+            else if(Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                charaInt++;
+                if(charaInt > (int)CharacterNameList.SawashiroNozomi)
+                {
+                    charaInt = (int)CharacterNameList.SawashiroNozomi;
+                }
+            }
+            SetAllyImage();
+
         }
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                hp.Regain(10);
-            }
-            else if (Input.GetKeyDown(KeyCode.A))
-            {
-                hp.Decrease(10);
-            }
-
+            UpdateDebug();
             if (Input.GetButtonDown("Jump"))
             {
-                Instantiate(skillData.DataList[0],transform.position,Quaternion.identity);
+                Instantiate(allyData.Characters[charaInt].skill,transform.position,Quaternion.identity);
             }
 
             playerInput.ButtonInput();
