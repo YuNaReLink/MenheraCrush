@@ -13,35 +13,33 @@ public enum Stage
     Count
 }
 
-
-
 public class StageChange : MonoBehaviour
 {
     int NowStageNo;
 
-    [SerializeField]
-    Vector2[] offsets;
+    [SerializeField] Vector2[] offsets;
+    [SerializeField] Image[] Images;
+    [SerializeField] Sprite[] FourGroup;
 
-    [SerializeField]
-    Button[] buttons;
+    [SerializeField] CharacterSwitching CS;
 
     //ステージ変更
     void A(Stage StageNo)
     {
         int n = (int)StageNo;
-        for (int i = 0; i < buttons.Length; i++)
+        for (int i = 0; i < Images.Length; i++)
         {
-            Transform t = buttons[i].transform;
+            Transform t = Images[i].transform;
             int diff = n - i;
             int abs = Mathf.Abs(diff);
 
             if (abs >= offsets.Length)
             {
-                buttons[i].enabled = false;
+                Images[i].enabled = false;
                 continue;
             }
 
-            buttons[i].enabled = true;
+            Images[i].enabled = true;
 
             t.localPosition = offsets[abs];
 
@@ -63,6 +61,9 @@ public class StageChange : MonoBehaviour
         }
 
         A((Stage)NowStageNo);
+
+        RandomCharacter();
+
     }
 
     //左に送る
@@ -76,5 +77,21 @@ public class StageChange : MonoBehaviour
         }
 
         A((Stage)NowStageNo);
+    }
+
+    public void RandomCharacter()
+    {
+        int temp = CS.GetCharacter();
+        int r = 0;
+
+        for(int i=0;i<100;i++)
+        {
+            r = Random.Range(0, 4);
+            Debug.Log(r);
+            
+            if(temp != r){break;}
+        }
+
+        Images[2].sprite= FourGroup[r];
     }
 }
