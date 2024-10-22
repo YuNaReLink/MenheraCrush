@@ -19,11 +19,11 @@ public class TestBack : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
 
-            circle.sizeDelta += Vector2.one * 100 * Time.deltaTime;
+            circle.sizeDelta += Vector2.one * 500 * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            circle.sizeDelta -= Vector2.one * 100 * Time.deltaTime;
+            circle.sizeDelta -= Vector2.one * 500 * Time.deltaTime;
 
         }
     }

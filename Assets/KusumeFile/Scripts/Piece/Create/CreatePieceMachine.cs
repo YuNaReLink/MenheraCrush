@@ -50,8 +50,7 @@ namespace Kusume
 
         private static int currentPieceCount = 0;
         public static int CurrentPieceCount { get { return currentPieceCount; }set { currentPieceCount = value; } }
-        /*
-         */
+
         [SerializeField]
         private List<Piece> pieces = new List<Piece>();
         public List<Piece> Pieces => pieces;
@@ -65,6 +64,10 @@ namespace Kusume
         /// </summary>
         private float createCoolDown = 0f;
 
+        [Header("ïœçXÇ∑ÇÈèdóÕî{ó¶"), SerializeField]
+        private float changeGravityScale;
+        [Header("ïœçXéûä‘(ïbêî)"), SerializeField]
+        private float noGravityCount;
         private void Awake()
         {
             GameObject g = null;
@@ -153,14 +156,14 @@ namespace Kusume
             pieces.RemoveAt(num);
         }
 
-        public void ChangeGravityAllPiece(float gravity,float time)
+        public void ChangeGravityAllPiece()
         {
             for (int i = 0; i < pieces.Count; i++)
             {
                 Piece piece = pieces[i].GetComponent<Piece>();
                 Rigidbody2D rb = piece.GetComponent<Rigidbody2D>();
-                rb.gravityScale = gravity;
-                piece.SetNoGravityCount(time);
+                rb.gravityScale = changeGravityScale;
+                piece.SetNoGravityCount(noGravityCount);
             }
         }
     }

@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20198550021575042823af090d64e06b, type: 3}
   m_Name: EnemySkillData
   m_EditorClassIdentifier: 
-  dataList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  characters:
+  - name: 0
+    sprite: {fileID: 0}
+    ImageOffset: {x: 0, y: 0}
+    skill: {fileID: 0}
+  - name: 1
+    sprite: {fileID: 0}
+    ImageOffset: {x: 0, y: 0}
+    skill: {fileID: 0}
