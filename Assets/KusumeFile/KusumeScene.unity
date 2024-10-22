@@ -567,7 +567,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 830, y: -113}
-  m_SizeDelta: {x: 664, y: 1184}
+  m_SizeDelta: {x: 500, y: 1249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173073067
 MonoBehaviour:
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1388673279, guid: d6043ecf2c8e4dd4a8ef262dec6e65d5, type: 3}
+  m_Sprite: {fileID: -651514625, guid: 18d8b0a469ac70e4e9c29716b8fdcc60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2677,9 +2677,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6737004526536627335, guid: 3c731c3ac2e627c4fa63c035e88e2b60, type: 3}
+      propertyPath: allyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
+    - target: {fileID: 6737004526536627335, guid: 3c731c3ac2e627c4fa63c035e88e2b60, type: 3}
       propertyPath: skillData
       value: 
       objectReference: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
+    - target: {fileID: 6737004526536627335, guid: 3c731c3ac2e627c4fa63c035e88e2b60, type: 3}
+      propertyPath: thisImage
+      value: 
+      objectReference: {fileID: 30357071}
     - target: {fileID: 6737004526536627335, guid: 3c731c3ac2e627c4fa63c035e88e2b60, type: 3}
       propertyPath: noGravityCount
       value: 0.4
