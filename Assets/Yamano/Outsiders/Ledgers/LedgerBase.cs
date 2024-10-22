@@ -10,5 +10,6 @@ namespace LucKee
         [SerializeField]
         public T[] Values { get; }
         public T this[int i] { get => Values[i]; }
+        public int Count { get => Values.Length; }
     }
 }

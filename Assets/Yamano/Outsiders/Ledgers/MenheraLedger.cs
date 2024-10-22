@@ -13,8 +13,8 @@ namespace LucKee
 
         public String Name { get; }
 
-        public Sprite Face { get; }
-        public Sprite Body { get; }
+        public Animator Wait { get; }
+
         public Skill Skill { get; }
 
         public TextAsset Text { get; }
