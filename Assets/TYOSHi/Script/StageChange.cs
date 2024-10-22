@@ -20,6 +20,8 @@ public class StageChange : MonoBehaviour
     [SerializeField] Vector2[] offsets;
     [SerializeField] Image[] Images;
     [SerializeField] Sprite[] FourGroup;
+    [SerializeField] Sprite[] BackImages;
+    [SerializeField] Image MainBackImage;
 
     //ステージ変更
     void A(Stage StageNo)
@@ -58,14 +60,9 @@ public class StageChange : MonoBehaviour
 
         NowStageNo++;
 
-        //if ((int)Stage.Stage3 < NowStageNo)
-        //{
-        //    NowStageNo = (int)Stage.Stage3;
-        //}
+        MainBackImage.sprite= BackImages[NowStageNo];
 
         A((Stage)NowStageNo);
-
-        RandomCharacter();
     }
 
     //左に送る
@@ -75,30 +72,16 @@ public class StageChange : MonoBehaviour
         {
             return;
         }
-
         NowStageNo--;
 
-        //if ((int)Stage.Stage1 > NowStageNo)
-        //{
-        //    NowStageNo = (int)Stage.Stage1;
-        //}
+        MainBackImage.sprite = BackImages[NowStageNo];
 
         A((Stage)NowStageNo);
     }
 
-    public void RandomCharacter()
+    public void ChangeCharacter()
     {
-        int temp = CharacterSwitching.SelctCharacterNo;
-        int r = 0;
-
-        for(int i=0;i<100;i++)
-        {
-            r = Random.Range(0, 4);
-            Debug.Log(r);
-            
-            if(temp != r){break;}
-        }
-
-        Images[2].sprite= FourGroup[r];
+        //選択中のキャラクターによって画像変更
+        Images[2].sprite= FourGroup[CharacterSwitching.SelctCharacterNo];
     }
 }
