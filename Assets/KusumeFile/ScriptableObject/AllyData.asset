@@ -15,22 +15,21 @@ MonoBehaviour:
   characters:
   - name: 0
     sprite: {fileID: -1974864238, guid: b3fe2e615dadf0440bbb762c142b194e, type: 3}
+    ImageOffset: {x: 0, y: 0}
     skill: {fileID: 8884762241872583565, guid: 5024e68d3c4ce8143abda77d66099db0, type: 3}
   - name: 1
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b9a31cd41cdeb0841b25f53a7d39abcd, type: 3}
+    ImageOffset: {x: 0, y: 0}
     skill: {fileID: 0}
   - name: 2
     sprite: {fileID: 605480745, guid: a8f8cc1d0aab87c48a132cca42463d6f, type: 3}
+    ImageOffset: {x: 0, y: 0}
     skill: {fileID: 0}
   - name: 3
     sprite: {fileID: -651514625, guid: 18d8b0a469ac70e4e9c29716b8fdcc60, type: 3}
+    ImageOffset: {x: 0, y: 0}
     skill: {fileID: 0}
   - name: 4
     sprite: {fileID: -394756606, guid: e11611c482996ab47b5e39626ca6bbd3, type: 3}
+    ImageOffset: {x: 0, y: 0}
     skill: {fileID: 0}
-  dataList:
-  - {fileID: 8884762241872583565, guid: 5024e68d3c4ce8143abda77d66099db0, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

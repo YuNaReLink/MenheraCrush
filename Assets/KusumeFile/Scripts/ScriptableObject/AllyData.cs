@@ -11,20 +11,17 @@ namespace Kusume
     {
         public CharacterNameList name;
         public Sprite sprite;
-        public Vector2 ImagePosition;
+        public Vector2 ImageOffset;
         public Skill skill;
     }
 
-    [CreateAssetMenu(fileName = "Skill", menuName = "ScriptableObjects/Skill", order = 1)]
+    [CreateAssetMenu(fileName = "Ally", menuName = "ScriptableObjects/Ally", order = 1)]
     public class AllyData : ScriptableObject
     {
         [SerializeField]
         private AllyCharacterInfo[] characters;
         public AllyCharacterInfo[] Characters => characters;
 
-        [SerializeField]
-        private List<Skill> dataList = new List<Skill>();
-        public List<Skill> DataList => dataList;
     }
 }
 

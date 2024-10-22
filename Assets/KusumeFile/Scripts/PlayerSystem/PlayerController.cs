@@ -6,6 +6,9 @@ namespace Kusume
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField]
+        private bool debug = false;
+
         private PlayerInput playerInput = null;
 
         [SerializeField]
@@ -15,8 +18,6 @@ namespace Kusume
 
         [SerializeField]
         private Image thisImage;
-        [SerializeField]
-        private RectTransform rectTransform;
 
         [SerializeField]
         private CreatePieceMachine createPiecemMachine;
@@ -48,14 +49,46 @@ namespace Kusume
 
         private void Start()
         {
+            SetAllyImage();
+            hp.Setup();
+        }
+
+        private void SetAllyImage()
+        {
             thisImage.sprite = allyData.Characters[charaInt].sprite;
             thisImage.SetNativeSize();
-            hp.Setup();
+        }
+
+        private void UpdateDebug()
+        {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                debug = !debug;
+            }
+            if (!debug) { return; }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                charaInt--;
+                if (charaInt < 0)
+                {
+                    charaInt = 0;
+                }
+            }
+            else if(Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                charaInt++;
+                if(charaInt > (int)CharacterNameList.SawashiroNozomi)
+                {
+                    charaInt = (int)CharacterNameList.SawashiroNozomi;
+                }
+            }
+            SetAllyImage();
+
         }
 
         public void Update()
         {
-
+            UpdateDebug();
             if (Input.GetButtonDown("Jump"))
             {
                 Instantiate(allyData.Characters[charaInt].skill,transform.position,Quaternion.identity);
