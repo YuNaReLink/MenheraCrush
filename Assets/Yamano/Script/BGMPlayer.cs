@@ -8,6 +8,9 @@ namespace LucKee
     public class BGMPlayer : MonoBehaviour
     {
         private static BGMPlayer instance = null;
+        public static BGMPlayer Instance { get => instance; }
+
+
         private new AudioSource audio = null;
 
         private void Awake()
@@ -31,5 +34,12 @@ namespace LucKee
             audio.Stop();
             instance = null;
         }
+
+        public void SetSpeed(float speed)
+        {
+            audio.pitch = speed;
+
+        }
     }
+
 }
