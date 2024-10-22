@@ -10,7 +10,9 @@ public enum CharacterNameList
     ShinonomeAoi,
     HayashiKouta,
     UenoNozomi,
-    SawashiroNozomi
+    SawashiroNozomi,
+
+    Count
 }
 public class CharacterSwitching : MonoBehaviour
 {
@@ -24,7 +26,7 @@ public class CharacterSwitching : MonoBehaviour
     [SerializeField] private TextLedger Text;
     [SerializeField] private Image BackImage;
 
-    private int SelctCharacterNo = 0;
+    private static int SelctCharacterNo = 0;
 
 
     private void Start()
