@@ -7,8 +7,8 @@ public class HPRecovery : MonoBehaviour
 {
     private PlayerController player;
 
-    //[SerializeField]
-    //private int 
+    [SerializeField]
+    private int regain = 20;
 
     private void Awake()
     {
@@ -17,12 +17,12 @@ public class HPRecovery : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Execute();
     }
 
 
     private void Execute()
     {
-        //player.HP.Regain();
+        player.HP.Regain(regain);
     }
 }
