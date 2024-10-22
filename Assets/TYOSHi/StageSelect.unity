@@ -839,7 +839,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 54c0b154f48c20a458ae0b467516968e, type: 3}
   - {fileID: 21300000, guid: 4ec86a612dcfb2342aea582879f94dfe, type: 3}
   - {fileID: 21300000, guid: 622504cf56c63d74b853c9249da6e8e9, type: 3}
-  CS: {fileID: 1214975974}
 --- !u!1 &653844635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1625,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -1876,7 +1875,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 501f0fe7cee360d4f9aae1ce77303e48, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

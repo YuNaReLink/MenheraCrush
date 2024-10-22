@@ -21,8 +21,6 @@ public class StageChange : MonoBehaviour
     [SerializeField] Image[] Images;
     [SerializeField] Sprite[] FourGroup;
 
-    [SerializeField] CharacterSwitching CS;
-
     //ステージ変更
     void A(Stage StageNo)
     {
@@ -53,35 +51,44 @@ public class StageChange : MonoBehaviour
     //右に送る
     public void Right()
     {
+        if((int)Stage.Stage3 <= NowStageNo)
+        {
+            return;
+        }
+
         NowStageNo++;
 
-        if ((int)Stage.Stage3 < NowStageNo)
-        {
-            NowStageNo = (int)Stage.Stage3;
-        }
+        //if ((int)Stage.Stage3 < NowStageNo)
+        //{
+        //    NowStageNo = (int)Stage.Stage3;
+        //}
 
         A((Stage)NowStageNo);
 
         RandomCharacter();
-
     }
 
     //左に送る
     public void Left()
     {
+        if((int)Stage.Stage1 >= NowStageNo)
+        {
+            return;
+        }
+
         NowStageNo--;
 
-        if ((int)Stage.Stage1 > NowStageNo)
-        {
-            NowStageNo = (int)Stage.Stage1;
-        }
+        //if ((int)Stage.Stage1 > NowStageNo)
+        //{
+        //    NowStageNo = (int)Stage.Stage1;
+        //}
 
         A((Stage)NowStageNo);
     }
 
     public void RandomCharacter()
     {
-        int temp = CS.GetCharacter();
+        int temp = CharacterSwitching.SelctCharacterNo;
         int r = 0;
 
         for(int i=0;i<100;i++)

@@ -26,7 +26,7 @@ public class CharacterSwitching : MonoBehaviour
     [SerializeField] private TextLedger Text;
     [SerializeField] private Image BackImage;
 
-    private static int SelctCharacterNo = 0;
+    public static int SelctCharacterNo {  get; private set; }
 
 
     private void Start()
@@ -84,10 +84,5 @@ public class CharacterSwitching : MonoBehaviour
         }
 
         SelctCharacterNo = (int)GetName;
-    }
-
-    public int GetCharacter()
-    {
-        return SelctCharacterNo;
     }
 }
