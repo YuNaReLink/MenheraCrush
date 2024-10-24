@@ -24,6 +24,15 @@ namespace Kusume
         {
             if(pieceList.Count > 1)
             {
+                if(piece == pieceList[pieceList.Count - 1])
+                {
+                    return;
+                }
+                if(pieceList.Count >= 2&&piece == pieceList[pieceList.Count - 2])
+                {
+                    pieceList.RemoveAt(pieceList.Count - 1);
+                    return;
+                }
                 //現在最後に連結したピースと今連結しようとしてるピースの差分を取得
                 Vector2 dis = pieceList[pieceList.Count - 1].GetGameObject.transform.position - piece.GetGameObject.transform.position;
                 //指定距離よりも遠かったらリターン
@@ -47,11 +56,11 @@ namespace Kusume
             float dis = 1.5f;
             if (scale < 1.3f)
             {
-                dis = 1.25f;
+                dis = 2.0f;
             }
             else
             {
-                dis = 1.5f;
+                dis = 2.0f;
             }
             return dis;
         }
