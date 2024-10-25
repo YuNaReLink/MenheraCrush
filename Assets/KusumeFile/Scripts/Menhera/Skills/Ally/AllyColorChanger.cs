@@ -36,7 +36,7 @@ namespace Kusume
             for (int i = 0; i < pieceMachine.Pieces.Count; i++)
             {
                 if (pieceMachine.Pieces[i].Tag != tag) { continue; }
-                pieceMachine.Pieces[i].SetPieceData(pieceInfo.color);
+                pieceMachine.Pieces[i].SetPieceData(pieceInfo.color,pieceInfo);
             }
         }
     }

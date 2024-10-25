@@ -91,6 +91,8 @@ namespace Kusume
         public void Update()
         {
             UpdateDebug();
+            if (GameController.Instance.IsPuzzleStop) { return; }
+
             if (Input.GetButtonDown("Jump"))
             {
                 Instantiate(allyData.Characters[charaInt].skill,transform.position,Quaternion.identity);

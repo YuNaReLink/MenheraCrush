@@ -36,6 +36,9 @@ namespace Kusume
         [SerializeField]
         private float baseGravityScale;
 
+        private PieceInfo pieceInfo;
+        public PieceInfo PieceInfo => pieceInfo;
+
         private void Awake()
         {
             rb2D = GetComponent<Rigidbody2D>();
@@ -47,10 +50,11 @@ namespace Kusume
             rb2D.gravityScale = baseGravityScale;
         }
 
-        public void SetPieceData(ColorInfo data)
+        public void SetPieceData(ColorInfo data,PieceInfo _pieceInfo)
         {
             tag = data.tag;
             spriteRenderer.color = data.color;
+            pieceInfo = _pieceInfo;
         }
         private void Update()
         {

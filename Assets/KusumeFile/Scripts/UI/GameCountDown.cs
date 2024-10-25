@@ -14,11 +14,6 @@ namespace Kusume
             timerCountText = GetComponent<Text>();
         }
 
-        private void Start()
-        {
-            
-        }
-
         private void Update()
         {
             CountRefresh();

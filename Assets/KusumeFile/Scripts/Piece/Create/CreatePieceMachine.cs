@@ -91,13 +91,14 @@ namespace Kusume
 
         void Update()
         {
-            if(createCoolDown >= 0)
+            CheckAllPiece();
+            if (GameController.Instance.IsPuzzleStop) { return; }
+            if (createCoolDown >= 0)
             {
                 createCoolDown -= Time.deltaTime;
                 return;
             }
             Create();
-            CheckAllPiece();
         }
 
         /// <summary>
@@ -124,7 +125,7 @@ namespace Kusume
         
             Piece onePiece = p.GetComponent<Piece>();
 
-            onePiece.SetPieceData(pieceInfo.color);
+            onePiece.SetPieceData(pieceInfo.color, pieceInfo);
 
             //ê∂ê¨à íuÇïœçX
             currentCreatorPositionCount++;

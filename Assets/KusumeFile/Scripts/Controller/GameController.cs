@@ -16,6 +16,10 @@ namespace Kusume
         [SerializeField]
         private float gameTimerCount = 60.0f;
 
+        private bool puzzleStop = false;
+        public bool IsPuzzleStop => puzzleStop;
+        public void SetPuzzleStop(bool b) { puzzleStop = b;}
+
         private void Awake()
         {
             SetupInstance();

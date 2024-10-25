@@ -6,12 +6,7 @@ namespace Kusume
 {
     public class GameScore
     {
-        private int count;
-        public int Count => count;
-
-        public void AddScore(int _count)
-        {
-            count += _count;
-        }
+        private static int count;
+        public static int Count => count;
     }
 }
