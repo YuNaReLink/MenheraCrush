@@ -60,6 +60,28 @@ namespace Kusume
             }
         }
 
+        public PieceInfo GetDecisionPiece(int color)
+        {
+            if (sum_color <= 0)
+            {
+                Initialize();
+            }
+            PieceInfo info = new PieceInfo();
+            int colorIndex = color;
+            if (colorIndex < 0)
+            {
+                return info;
+            }
+            int sizeIndex = GetRandomSize();
+            if (sizeIndex < 0)
+            {
+                return info;
+            }
+            info.color = colors[colorIndex];
+            info.size = sizes[sizeIndex];
+            return info;
+        }
+
         public PieceInfo GetRandomPiece()
         {
             if (sum_color <= 0)

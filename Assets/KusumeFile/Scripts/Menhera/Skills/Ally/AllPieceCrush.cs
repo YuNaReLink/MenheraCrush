@@ -12,6 +12,7 @@ public class AllPieceCrush : MonoBehaviour
 
     private LucKee.Skill skill;
 
+
     private void Awake()
     {
         pieceMachine = FindObjectOfType<CreatePieceMachine>();
@@ -22,6 +23,9 @@ public class AllPieceCrush : MonoBehaviour
     {
         GameController.Instance.SetPuzzleStop(true);
         skill.SetSkillDestroyType(SkillDestroyType.SkillEnd);
+
+        List<Piece> pieceList = pieceMachine.Pieces;
+        pieceInfo = pieceList[Random.Range(0, pieceList.Count)].PieceInfo;
     }
 
     private void Update()
@@ -34,9 +38,19 @@ public class AllPieceCrush : MonoBehaviour
         List<Piece> pieceList = pieceMachine.Pieces;
         for (int i = 0; i < pieceList.Count; i++)
         {
-            pieceList[i].Crush(0.1f * i);
+            if(pieceInfo.color.tag != pieceList[i].PieceInfo.color.tag) { continue; }
+            pieceList[i].Crush();
+            pieceList.RemoveAt(i);
         }
-        if(pieceList.Count <= 0)
+        int num = 0;
+        for (int i = 0; i < pieceList.Count; i++)
+        {
+            if (pieceInfo.color.tag == pieceList[i].PieceInfo.color.tag)
+            {
+                num++;
+            }
+        }
+        if (num <= 0)
         {
             skill.SetEnd(true);
         }
