@@ -106,6 +106,7 @@ namespace Kusume
 
         public void Crush(float w)
         {
+            if(wait > 0) { return; }
             if(w <= 0)
             {
                 Crush();

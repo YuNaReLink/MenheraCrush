@@ -92,7 +92,9 @@ namespace Kusume
         void Update()
         {
             CheckAllPiece();
+
             if (GameController.Instance.IsPuzzleStop) { return; }
+
             if (createCoolDown >= 0)
             {
                 createCoolDown -= Time.deltaTime;
