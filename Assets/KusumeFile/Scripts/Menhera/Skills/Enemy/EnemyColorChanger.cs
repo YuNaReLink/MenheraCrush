@@ -33,7 +33,7 @@ namespace Kusume
             for (int i = 0; i < pieceList.Count; i++)
             {
                 var pieceInfo = pieceMachine.PieceLedger.GetRandomPiece();
-                pieceList[i].SetPieceData(pieceInfo.color);
+                pieceList[i].SetPieceData(pieceInfo.color, pieceInfo);
             }
         }
     }

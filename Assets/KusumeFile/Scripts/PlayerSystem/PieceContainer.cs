@@ -1,3 +1,4 @@
+using LucKee;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -73,6 +74,7 @@ namespace Kusume
                 for (int i = 0; i < pieceList.Count; i++)
                 {
                     pieceList[i].Crush(0.05f * i);
+                    //ScoreCalculator.Calc(pieceList[i]., pieceList[i].PieceInfo.size.big);
                 }
             }
             pieceList.Clear();

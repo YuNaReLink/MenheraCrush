@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//–¡•û“GŠÖŒW‚È‚­
 public enum CharacterNameList
 {
-    //–¡•û‚Ì‚Ý
     HuzisakiAyane,
     ShinonomeAoi,
     HayashiKouta,
     UenoNozomi,
     SawashiroNozomi,
-
+    HanayaRaika,
+    KuzuharaNaoya,
     Count
 }
 public class CharacterSwitching : MonoBehaviour
