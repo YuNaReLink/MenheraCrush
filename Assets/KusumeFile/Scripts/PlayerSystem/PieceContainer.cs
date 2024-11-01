@@ -16,9 +16,12 @@ namespace Kusume
         public List<Piece> PieceList => pieceList;
 
         private CreatePieceMachine createPiecemMachine;
-        public void Setup(CreatePieceMachine c)
+
+        private PlayerHP hp;
+        public void Setup(PlayerController p)
         {
-            createPiecemMachine = c;
+            createPiecemMachine = p.CreatePieceMachine;
+            hp = p.HP;
         }
 
         public void ChangePiece(Piece piece)
@@ -78,8 +81,9 @@ namespace Kusume
                     pieceList[i].Crush(0.05f * i);
                     sizes.Add(pieceList[i].PieceInfo.size.big);
                 }
-                //TODO : ボーナス変更
+
                 GameScore.SetOnceCount((int)ScoreCalculator.Calc(sizes, GameScore.Bonus));
+                hp.Regain(5);
             }
             pieceList.Clear();
         }

@@ -23,6 +23,7 @@ namespace Kusume
 
         [SerializeField]
         private CreatePieceMachine  createPiecemMachine;
+        public CreatePieceMachine CreatePieceMachine => createPiecemMachine;
 
         [SerializeField]
         private MenheraData            allyData;
@@ -47,7 +48,7 @@ namespace Kusume
 
         private void Start()
         {
-            pieceContainer.Setup(createPiecemMachine);
+            pieceContainer.Setup(this);
 
             charaInt = CharacterSwitching.SelctCharacterNo;
             SetAllyImage();
