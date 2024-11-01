@@ -7,27 +7,27 @@ namespace Kusume
     public class PlayerController : MonoBehaviour
     {
         [SerializeField]
-        private bool debug = false;
+        private bool                debug = false;
 
-        private PlayerInput playerInput = null;
-
-        [SerializeField]
-        private PlayerHP hp;
-
-        public PlayerHP HP => hp;
+        private PlayerInput         playerInput = null;
 
         [SerializeField]
-        private Image thisImage;
-        [SerializeField]
-        private Animator animator;
+        private PlayerHP            hp;
+
+        public PlayerHP             HP => hp;
 
         [SerializeField]
-        private CreatePieceMachine createPiecemMachine;
+        private Image               thisImage;
+        [SerializeField]
+        private Animator            animator;
 
         [SerializeField]
-        private AllyData allyData;
+        private CreatePieceMachine  createPiecemMachine;
+
         [SerializeField]
-        private int charaInt = 0;
+        private MenheraData            allyData;
+        [SerializeField]
+        private int                 charaInt = 0;
 
         private void Awake()
         {
