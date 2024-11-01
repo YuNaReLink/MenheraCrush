@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,39 +8,65 @@ public class SceneTransitionP : MonoBehaviour
 {
     [SerializeField]
     private RectTransform circle;
+
+    [SerializeField]
+    private GameObject MaskBack;
+
+    [SerializeField]
+    private float speed = 1000;
+
+    [SerializeField]
+    private Vector2 StartSiz;
+
+    [SerializeField]
+    private bool expand = false;
+
+    //ÉVÅ[ÉìïœÇ¶ÇÈÇ‚Ç¬
+    SceneChanger SC = new SceneChanger();
+
     //// Start is called before the first frame update
     void Start()
     {
-
+        circle.sizeDelta = StartSiz;
     }
 
     //// Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (!MaskBack.activeSelf)
         {
-
-            circle.sizeDelta += Vector2.one * 1600 * Time.deltaTime;
+            return;
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            circle.sizeDelta -= Vector2.one * 1600 * Time.deltaTime;
 
+        VariableSize();
+
+        if (circle.sizeDelta.x >= 2200)
+        {
+            MaskBack.SetActive(false);
+            return;
+        }
+
+        //âÊñ Ç™çïÇ≠Ç»Ç¡ÇΩÇÁ
+        if (circle.sizeDelta.x <= 0.0f)
+        {
+            SC.ChangeScene(SceneList.StageSelect);
         }
     }
 
     public void Brack()
     {
-        if (circle.sizeDelta.x < 0)
-        {
-            circle.sizeDelta += Vector2.one * 100 * Time.deltaTime;
-
-        }
-        else if(circle.sizeDelta.x > 2200)
-        {
-            circle.sizeDelta -= Vector2.one * 100 * Time.deltaTime;
-        }
+        MaskBack.SetActive(true);
     }
 
-
+    public void VariableSize()
+    {
+        if (expand)
+        {
+            circle.sizeDelta += speed * Time.deltaTime * Vector2.one;
+        }
+        else
+        {
+            circle.sizeDelta -= speed * Time.deltaTime * Vector2.one;
+        }
+    }
 }

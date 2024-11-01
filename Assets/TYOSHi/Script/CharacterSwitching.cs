@@ -18,12 +18,14 @@ public enum CharacterNameList
 public class CharacterSwitching : MonoBehaviour
 {
     [SerializeField] private Text CharacterName;
-    [SerializeField] private Text CharacterSkill;
+    [SerializeField] private Image CharacterSkill;
+    [SerializeField] private Text CharacterSingleWord;
     [SerializeField] private Image CharacterImage;
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private Button[] Buttons;
     [SerializeField] private Sprite[] NormalFaceSprites;
     [SerializeField] private Sprite[] YamiFaceSprites;
+    [SerializeField] private Sprite[] DescriptionImage;
     [SerializeField] private TextLedger Text;
     [SerializeField] private Image BackImage;
 
@@ -46,7 +48,10 @@ public class CharacterSwitching : MonoBehaviour
         CharacterImage.sprite = sprites[(int)GetName];
 
         //説明テキスト変更
-        CharacterSkill.text = Text.GetText((int)GetName+5);
+        CharacterSkill.sprite = DescriptionImage[(int)GetName];
+
+        //一言テキスト変更
+        CharacterSingleWord.text = Text.GetText((int)GetName + 5);
 
         //ゆっくり画像変更と色変更
         for (int i=0;i< Buttons.Length;i++)
