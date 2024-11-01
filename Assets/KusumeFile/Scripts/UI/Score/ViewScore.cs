@@ -23,9 +23,11 @@ namespace Kusume
 
         private void Update()
         {
-            if(subScore >= GameScore.Count) { return; }
-            subScore += 10;
-            scoreText.text = subScore.ToString("D8");
+            if(subScore < GameScore.Count)
+            {
+                subScore += 10;
+                scoreText.text = subScore.ToString("D8");
+            }
         }
     }
 }

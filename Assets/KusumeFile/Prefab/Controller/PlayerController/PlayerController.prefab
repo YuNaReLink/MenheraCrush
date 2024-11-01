@@ -61,14 +61,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1ed62efcb5fe54cb095a53a4d2c8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   hp:
     maxHP: 200
     currentHP: 0
+  thisImage: {fileID: 0}
+  animator: {fileID: 0}
   createPiecemMachine: {fileID: 0}
-  skillData: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
-  changeGravityScale: 1
-  noGravityCount: 0.4
-  pieceList: []
+  allyData: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
+  charaInt: 0
+  pieceContainer:
+    pieceList: []
 --- !u!114 &5206039346121342140
 MonoBehaviour:
   m_ObjectHideFlags: 0
