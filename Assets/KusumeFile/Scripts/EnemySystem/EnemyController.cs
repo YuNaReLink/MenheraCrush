@@ -12,7 +12,7 @@ namespace Kusume
         private Timer               attackTimer;
 
         [SerializeField]
-        private AllyData            enemyData;
+        private MenheraData            enemyData;
         [SerializeField]
         private Image               thisImage;
 

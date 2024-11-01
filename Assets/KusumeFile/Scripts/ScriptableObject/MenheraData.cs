@@ -18,8 +18,8 @@ namespace Kusume
         public Vector2 ImageOffset;
     }
 
-    [CreateAssetMenu(fileName = "Ally", menuName = "ScriptableObjects/Ally", order = 1)]
-    public class AllyData : ScriptableObject
+    [CreateAssetMenu(fileName = "Menhera", menuName = "ScriptableObjects/Menhera", order = 1)]
+    public class MenheraData : ScriptableObject
     {
         [SerializeField]
         private AllyCharacterInfo[] characters;
