@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,7 @@ namespace Kusume
         private void Start()
         {
             subScore = GameScore.Count;
+            scoreText.text = String.Format("{0:0,########}", subScore);
         }
 
 
@@ -26,7 +28,7 @@ namespace Kusume
             if(subScore < GameScore.Count)
             {
                 subScore += 10;
-                scoreText.text = subScore.ToString("D8");
+                scoreText.text = String.Format("{0:0,########}",subScore);
             }
         }
     }

@@ -28,6 +28,19 @@ namespace Kusume
         /// </summary>
         private static int count;
         public static int Count => count;
-        public static void InitCount() {  count = 0; }
+
+        private static int goal;
+
+        public static void InitCount(int g) 
+        {
+            goal = g;
+            count = 0; 
+        }
+
+
+        public static float GetProgress()
+        {
+            return (float)count / goal;
+        }
     }
 }
