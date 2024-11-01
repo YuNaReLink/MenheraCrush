@@ -13,7 +13,7 @@ namespace Kusume
         public PieceTag tag;
         public Color32 color;
         public float ratio;
-        public SpriteRenderer image;
+        public Sprite sprite;
     }
     [Serializable]
     public struct SizeInfo

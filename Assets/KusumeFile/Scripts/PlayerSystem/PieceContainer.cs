@@ -70,12 +70,16 @@ namespace Kusume
         {
             if (pieceList.Count > 2)
             {
+                List<bool> sizes = new List<bool>();
+
                 createPiecemMachine.ChangeGravityAllPiece();
                 for (int i = 0; i < pieceList.Count; i++)
                 {
                     pieceList[i].Crush(0.05f * i);
-                    //ScoreCalculator.Calc(pieceList[i]., pieceList[i].PieceInfo.size.big);
+                    sizes.Add(pieceList[i].PieceInfo.size.big);
                 }
+                //TODO : ボーナス変更
+                GameScore.SetOnceCount((int)ScoreCalculator.Calc(sizes, GameScore.Bonus));
             }
             pieceList.Clear();
         }

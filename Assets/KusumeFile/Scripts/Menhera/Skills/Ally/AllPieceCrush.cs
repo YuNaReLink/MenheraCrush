@@ -22,7 +22,6 @@ public class AllPieceCrush : MonoBehaviour
     private void Start()
     {
         GameController.Instance.SetPuzzleStop(true);
-        skill.SetSkillDestroyType(SkillDestroyType.SkillEnd);
 
         List<Piece> pieceList = pieceMachine.Pieces;
         pieceInfo = pieceList[Random.Range(0, pieceList.Count)].PieceInfo;
@@ -52,7 +51,7 @@ public class AllPieceCrush : MonoBehaviour
         }
         if (num <= 0)
         {
-            skill.SetEnd(true);
+            skill.End();
         }
     }
 

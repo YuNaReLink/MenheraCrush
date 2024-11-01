@@ -223,6 +223,8 @@ MonoBehaviour:
   maxPieceCount: 45
   pieces: []
   piecesParent: {fileID: 0}
+  changeGravityScale: 1
+  noGravityCount: 0.4
 --- !u!114 &2685012183717631125
 MonoBehaviour:
   m_ObjectHideFlags: 0

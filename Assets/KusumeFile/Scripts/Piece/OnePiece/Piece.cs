@@ -55,6 +55,7 @@ namespace Kusume
             tag = data.tag;
             spriteRenderer.color = data.color;
             pieceInfo = _pieceInfo;
+            spriteRenderer.sprite = data.sprite;
         }
         private void Update()
         {
