@@ -36,19 +36,19 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 4278255615
     ratio: 1
-    sprite: {fileID: 21300000, guid: 633e62372f9564747bc478aaf0d1a8da, type: 3}
+    sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
   - tag: 4
     color:
       serializedVersion: 2
       rgba: 4294757375
     ratio: 1
-    sprite: {fileID: 21300000, guid: 633e62372f9564747bc478aaf0d1a8da, type: 3}
+    sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
   - tag: 5
     color:
       serializedVersion: 2
       rgba: 4290183351
     ratio: 1
-    sprite: {fileID: 21300000, guid: 633e62372f9564747bc478aaf0d1a8da, type: 3}
+    sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
   - tag: 6
     color:
       serializedVersion: 2
