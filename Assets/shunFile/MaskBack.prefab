@@ -182,6 +182,8 @@ MonoBehaviour:
   circle: {fileID: 3488869254622865664}
   MaskBack: {fileID: 6689505822945942701}
   speed: 2000
+  StartSiz: {x: 2200, y: 2200}
+  expand: 0
 --- !u!1 &8637134588820312143
 GameObject:
   m_ObjectHideFlags: 0
