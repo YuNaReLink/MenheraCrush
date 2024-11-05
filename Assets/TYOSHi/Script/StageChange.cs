@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public enum Stage
 {
+    Null = -1,
     Stage1,
     Stage2,
     Stage3,
@@ -53,12 +54,12 @@ public class StageChange : MonoBehaviour
     //‰E‚É‘—‚é
     public void Right()
     {
-        if((int)Stage.Stage3 <= NowStageNo)
-        {
-            return;
-        }
-
         NowStageNo++;
+
+        if((int)Stage.Count <= NowStageNo)
+        {
+            NowStageNo = 0;
+        }
 
         MainBackImage.sprite= BackImages[NowStageNo];
 
@@ -68,11 +69,12 @@ public class StageChange : MonoBehaviour
     //¶‚É‘—‚é
     public void Left()
     {
-        if((int)Stage.Stage1 >= NowStageNo)
-        {
-            return;
-        }
         NowStageNo--;
+
+        if((int)Stage.Null >= NowStageNo)
+        {
+            NowStageNo = (int)Stage.Count - 1;
+        }
 
         MainBackImage.sprite = BackImages[NowStageNo];
 
