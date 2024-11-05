@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,12 @@ namespace LucKee {
     public class Tester : MonoBehaviour
     {
         [SerializeField]
-        CutIn prefab = null;
-        [SerializeField]
-        Canvas canvas = null;
+        private Rigidbody2D target = null;
         private void Update()
         {
             if (Input.anyKeyDown)
             {
-                Instantiate(prefab, canvas.transform, false);
+                target.AddForce(10 * Vector2.left);
             }
         }
     }
