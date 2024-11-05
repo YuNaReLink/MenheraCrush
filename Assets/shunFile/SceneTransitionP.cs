@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class SceneTransitionP : MonoBehaviour
 {
-    [SerializeField]
-    private RectTransform circle;
+    private Kusume.Timer t = new();
+
 
     [SerializeField]
-    private GameObject MaskBack;
+    private RectTransform circle;
 
     [SerializeField]
     private float speed = 1000;
 
     [SerializeField]
-    private Vector2 StartSiz;
+    private float maxSize = 2200;
 
     [SerializeField]
     private bool expand = false;
@@ -25,24 +25,33 @@ public class SceneTransitionP : MonoBehaviour
     SceneChanger SC = new SceneChanger();
 
     //// Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        circle.sizeDelta = StartSiz;
+        if (expand)
+        {
+            circle.sizeDelta = Vector2.zero;
+        }
+        else
+        {
+            circle.sizeDelta = Vector2.one * maxSize;
+        }
     }
 
     //// Update is called once per frame
     void Update()
     {
-        if (!MaskBack.activeSelf)
+        t.Update();
+        
+        if (!t.IsEnd())
         {
             return;
         }
 
         VariableSize();
 
-        if (circle.sizeDelta.x >= 2200)
+        if (circle.sizeDelta.x >= maxSize)
         {
-            MaskBack.SetActive(false);
+            Destroy(gameObject);
             return;
         }
 
@@ -55,7 +64,7 @@ public class SceneTransitionP : MonoBehaviour
 
     public void Brack()
     {
-        MaskBack.SetActive(true);
+        t.Start(0.5f);
     }
 
     public void VariableSize()
