@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,9 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 0}
-  tag: 0
   spriteRenderer: {fileID: 0}
+  tag: 0
   impactObject: {fileID: 8987218779975485508, guid: 558bbc09ce04cc54dabc1f06fe7e3406, type: 3}
   keepImpactPower: 0
-  noGravityCount: 0
   baseGravityScale: 5.5
