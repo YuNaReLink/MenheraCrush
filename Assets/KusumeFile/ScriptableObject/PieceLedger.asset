@@ -24,13 +24,13 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 4294967295
     ratio: 1
-    sprite: {fileID: 21300000, guid: 633e62372f9564747bc478aaf0d1a8da, type: 3}
+    sprite: {fileID: 21300000, guid: 2cd020db240c05849a6f4f868bb8cabd, type: 3}
   - tag: 2
     color:
       serializedVersion: 2
       rgba: 4278255360
     ratio: 1
-    sprite: {fileID: 21300000, guid: 633e62372f9564747bc478aaf0d1a8da, type: 3}
+    sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
   - tag: 3
     color:
       serializedVersion: 2
@@ -46,15 +46,15 @@ MonoBehaviour:
   - tag: 5
     color:
       serializedVersion: 2
-      rgba: 4290183351
+      rgba: 4294967295
     ratio: 1
-    sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
+    sprite: {fileID: 21300000, guid: 6583bb627e08dee4f9aa47aead504070, type: 3}
   - tag: 6
     color:
       serializedVersion: 2
       rgba: 4278190080
     ratio: 0
-    sprite: {fileID: 21300000, guid: 633e62372f9564747bc478aaf0d1a8da, type: 3}
+    sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
   sizes:
   - size: 1.25
     power: 0

@@ -44,3 +44,6 @@ TagManager:
   - name: Piece
     uniqueID: 1256949313
     locked: 0
+  - name: Line
+    uniqueID: 1534123293
+    locked: 0
