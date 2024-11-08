@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Kusume
@@ -23,21 +24,29 @@ namespace Kusume
         [SerializeField]
         private GameObject MenuObject;
 
-        private void Awake()
-        {
-            GameObject gameController = GameObject.Find("GameController");
-            if(gameController != null)
-            {
-                sceneChanger = gameController.GetComponent<SceneChanger>();
-            }
-        }
-
         private void Start()
         {
-            buttons[(int)ButtonTag.Menu].onClick.AddListener(MenuStart);
-            buttons[(int)ButtonTag.Return].onClick.AddListener(ReturnUpdate);
-            buttons[(int)ButtonTag.Configure].onClick.AddListener(ConfigureUpdate);
-            buttons[(int)ButtonTag.End].onClick.AddListener(EndUpdate);
+            UnityAction unityAction = null;
+            for(int i = 0; i < buttons.Count; i++)
+            {
+                if (buttons[i] == null) { continue; }
+                switch (i)
+                {
+                    case 0:
+                        unityAction = MenuStart;
+                        break;
+                    case 1:
+                        unityAction = ReturnUpdate;
+                        break;
+                    case 2:
+                        unityAction = ConfigureUpdate;
+                        break;
+                    case 3:
+                        unityAction = EndUpdate;
+                        break;
+                }
+                buttons[i].onClick.AddListener(unityAction);
+            }
         }
 
         private void MenuActive(bool a)
