@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class StageSelect : MonoBehaviour
 {
-
+    [SerializeField]
+    private GameObject Menu;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class StageSelect : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneChanger.ChangeScene(SceneList.Titel);
+            Menu.SetActive(true);
         }
     }
 }
