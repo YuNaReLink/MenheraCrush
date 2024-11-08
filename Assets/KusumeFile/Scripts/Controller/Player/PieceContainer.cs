@@ -1,5 +1,4 @@
 using LucKee;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,12 +11,12 @@ namespace Kusume
         /// 選択中のピースを保存するリスト
         /// </summary>
         [SerializeField]
-        private List<Piece> pieceList = new List<Piece>();
-        public List<Piece> PieceList => pieceList;
+        private List<Piece>         pieceList = new List<Piece>();
+        public List<Piece>          PieceList => pieceList;
 
-        private CreatePieceMachine createPiecemMachine;
+        private CreatePieceMachine  createPiecemMachine;
 
-        private PlayerHP hp;
+        private PlayerHP            hp;
         public void Setup(PlayerController p)
         {
             createPiecemMachine = p.CreatePieceMachine;

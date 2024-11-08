@@ -1,28 +1,32 @@
-using Kusume;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class HPRecovery : MonoBehaviour
+namespace Kusume
 {
-    private PlayerController player;
-
-    [SerializeField]
-    private int regain = 20;
-
-    private void Awake()
+    /// <summary>
+    /// プレイヤーの体力を回復させるスキルクラス
+    /// </summary>
+    public class HPRecovery : MonoBehaviour
     {
-        player = FindObjectOfType<PlayerController>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        Execute();
-    }
+        private PlayerController    player;
+
+        [SerializeField]
+        private int                 regain = 20;
+
+        private void Awake()
+        {
+            player = FindObjectOfType<PlayerController>();
+        }
+
+        private void Start()
+        {
+            Execute();
+        }
 
 
-    private void Execute()
-    {
-        player.HP.Regain(regain);
+        private void Execute()
+        {
+            player.HP.Regain(regain);
+        }
     }
+
 }
