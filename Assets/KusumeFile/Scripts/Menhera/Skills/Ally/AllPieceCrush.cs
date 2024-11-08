@@ -1,62 +1,70 @@
-using Kusume;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AllPieceCrush : MonoBehaviour
+namespace Kusume 
 {
-    private CreatePieceMachine pieceMachine;
-
-    public CreatePieceMachine CreatePieceMachine => pieceMachine;
-
-    private PieceInfo pieceInfo;
-
-    private LucKee.Skill skill;
-
-
-    private void Awake()
+    /// <summary>
+    /// 味方メンヘラのスキルクラス
+    /// 同じ色のピースを全て消すクラス
+    /// </summary>
+    public class AllPieceCrush : MonoBehaviour
     {
-        pieceMachine = FindObjectOfType<CreatePieceMachine>();
-        skill = GetComponent<LucKee.Skill>();
-    }
+        private CreatePieceMachine      pieceMachine;
 
-    private void Start()
-    {
-        GameController.Instance.SetPuzzleStop(true);
+        public CreatePieceMachine       CreatePieceMachine => pieceMachine;
 
-        List<Piece> pieceList = pieceMachine.Pieces;
-        pieceInfo = pieceList[Random.Range(0, pieceList.Count)].PieceInfo;
-    }
+        private PieceInfo               pieceInfo;
 
-    private void Update()
-    {
-        Execute();
-    }
+        private LucKee.Skill            skill;
 
-    public void Execute()
-    {
-        List<Piece> pieceList = pieceMachine.Pieces;
-        for (int i = 0; i < pieceList.Count; i++)
+
+        private void Awake()
         {
-            if(pieceInfo.color.tag != pieceList[i].PieceInfo.color.tag) { continue; }
-            pieceList[i].Crush();
-            pieceList.RemoveAt(i);
+            pieceMachine = FindObjectOfType<CreatePieceMachine>();
+            skill = GetComponent<LucKee.Skill>();
         }
-        int num = 0;
-        for (int i = 0; i < pieceList.Count; i++)
+
+        private void Start()
         {
-            if (pieceInfo.color.tag == pieceList[i].PieceInfo.color.tag)
+            GameController.Instance.SetPuzzleStop(true);
+
+            List<Piece> pieceList = pieceMachine.Pieces;
+            pieceInfo = pieceList[Random.Range(0, pieceList.Count)].PieceInfo;
+        }
+
+        private void Update()
+        {
+            Execute();
+        }
+
+        public void Execute()
+        {
+            List<Piece> pieceList = pieceMachine.Pieces;
+            for (int i = 0; i < pieceList.Count; i++)
             {
-                num++;
+                if (pieceInfo.color.tag != pieceList[i].PieceInfo.color.tag) { continue; }
+                pieceList[i].Crush();
+                pieceList.RemoveAt(i);
+            }
+            int num = 0;
+            for (int i = 0; i < pieceList.Count; i++)
+            {
+                if (pieceInfo.color.tag == pieceList[i].PieceInfo.color.tag)
+                {
+                    num++;
+                }
+            }
+            if (num <= 0)
+            {
+                skill.End();
             }
         }
-        if (num <= 0)
+
+        private void OnDestroy()
         {
-            skill.End();
+            GameController.Instance.SetPuzzleStop(false);
         }
     }
-
-    private void OnDestroy()
-    {
-        GameController.Instance.SetPuzzleStop(false);
-    }
 }
+
+

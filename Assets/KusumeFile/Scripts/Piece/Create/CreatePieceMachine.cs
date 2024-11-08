@@ -27,47 +27,47 @@ namespace Kusume
         /// ピースを生成するオブジェクト関係の変数
         /// </summary>
         [SerializeField]
-        private List<Transform> pieceSpawnPosition = new List<Transform>();
+        private List<Transform>         pieceSpawnPosition = new List<Transform>();
 
-        private int creatorCount = 0;
+        private int                     creatorCount = 0;
 
-        private int currentCreatorPositionCount = 0;
+        private int                     currentCreatorPositionCount = 0;
 
         [Header("ピースオブジェクトを格納したScriptableObject")]
         [SerializeField]
-        private PieceDataList pieceData = null;
+        private PieceDataList           pieceData = null;
 
         [SerializeField]
-        private PieceLedger pieceLedger = null;
-        public PieceLedger PieceLedger => pieceLedger;
+        private PieceLedger             pieceLedger = null;
+        public PieceLedger              PieceLedger => pieceLedger;
 
         [SerializeField]
-        private GameObject basePiece = null;
+        private GameObject              basePiece = null;
 
         [Header("ピースごとの最大カウント")]
         [SerializeField]
-        private int maxPieceCount = 100;
+        private int                     maxPieceCount = 100;
 
-        private static int currentPieceCount = 0;
-        public static int CurrentPieceCount { get { return currentPieceCount; }set { currentPieceCount = value; } }
+        private static int              currentPieceCount = 0;
+        public static int               CurrentPieceCount { get { return currentPieceCount; }set { currentPieceCount = value; } }
 
         [SerializeField]
-        private List<Piece> pieces = new List<Piece>();
-        public List<Piece> Pieces => pieces;
+        private List<Piece>             pieces = new List<Piece>();
+        public List<Piece>              Pieces => pieces;
         /// <summary>
         /// ピースの親オブジェクト
         /// </summary>
         [SerializeField]
-        private GameObject piecesParent = null;
+        private GameObject              piecesParent = null;
         /// <summary>
         /// ピース生成の間隔をとる変数
         /// </summary>
-        private float createCoolDown = 0f;
+        private float                   createCoolDown = 0f;
 
         [Header("変更する重力倍率"), SerializeField]
-        private float changeGravityScale;
+        private float                   changeGravityScale;
         [Header("変更時間(秒数)"), SerializeField]
-        private float noGravityCount;
+        private float                   noGravityCount;
         private void Awake()
         {
             GameObject g = null;

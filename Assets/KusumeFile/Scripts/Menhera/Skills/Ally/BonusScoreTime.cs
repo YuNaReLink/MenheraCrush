@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Kusume
 {
+    /// <summary>
+    /// スコア倍率のスキルクラス
+    /// </summary>
     [RequireComponent(typeof(Skill))]
     public class BonusScoreTime : MonoBehaviour
     {
