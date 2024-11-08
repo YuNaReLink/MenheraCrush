@@ -2,6 +2,12 @@ Shader "Custom/LucKeeShader"
 {
     Properties
     {
+        //値を変更する時は、Materialの変数に対してSetFloatなどを用いて設定する。
+        //引数では変数名(String)と設定したい値を渡す。
+        //この場合の変数名は頭にアンダースコアを付けている部分を指す。
+        //Material型変数materialに対して回転の補正を0にする処理を行う場合、下記のようになる。
+        //material.SetFloat("_Rotation", 0.0f);
+
         //加算するための画像
         //全体的に同じ色を加算するので白無地の画像を設定する。
         _MainTex ("Main Texture", 2D) = "white" {}
@@ -9,7 +15,7 @@ Shader "Custom/LucKeeShader"
         //光の区画
         //光の正方形の単体の、全体を1とした時の大きさを設定する。
         //0にするとUnityがクラッシュするので制限している。
-        _ShineDivision ("Shine Division", Range(0.01, 1)) = 0.1
+        _ShineDivision("Shine Division", Range(0.01, 1)) = 0.1
 
         //回転の加算値
         //この値をラジアン角として加算し、光の強さを計算する。
