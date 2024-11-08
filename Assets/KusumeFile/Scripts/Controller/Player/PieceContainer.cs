@@ -33,6 +33,7 @@ namespace Kusume
                 }
                 if(pieceList.Count >= 2&&piece == pieceList[pieceList.Count - 2])
                 {
+                    //piece.SetSelected(false);
                     pieceList.RemoveAt(pieceList.Count - 1);
                     return;
                 }
@@ -44,12 +45,37 @@ namespace Kusume
                     return;
                 }
             }
+            /*
+             */
+            if (pieceList.Count == 1)
+            {
+                //現在最後に連結したピースと今連結しようとしてるピースの差分を取得
+                Vector2 d = pieceList[pieceList.Count-1].GetGameObject.transform.position - piece.GetGameObject.transform.position;
+                //指定距離よりも遠かったらリターン
+                if (d.magnitude > MaxDisSetting(pieceList[pieceList.Count-1], pieceList[pieceList.Count-1].Tag))
+                {
+                    return;
+                }
+            }
             for (int i = 0; i < pieceList.Count; i++)
             {
                 if (pieceList[i] == piece ||
                    pieceList[0].Tag != piece.Tag) { return; }
             }
+            //piece.SetSelected(true);
             pieceList.Add(piece);
+        }
+
+        public void CheckPieceList()
+        {
+            if(pieceList.Count <= 0) { return; }
+            for (int i = 0;i < pieceList.Count; i++)
+            {
+                if (!pieceList[i].IsSelected)
+                {
+                    pieceList[i].SetSelected(true);
+                }
+            }
         }
 
         //ピースの連結間隔を決めてる関数(距離が気に入らないならここから変えろ)
@@ -83,6 +109,10 @@ namespace Kusume
 
                 GameScore.SetOnceCount((int)ScoreCalculator.Calc(sizes, GameScore.Bonus));
                 hp.Regain(5);
+            }
+            for(int i = 0;i < pieceList.Count; i++)
+            {
+                pieceList[i].SetSelected(false);
             }
             pieceList.Clear();
         }

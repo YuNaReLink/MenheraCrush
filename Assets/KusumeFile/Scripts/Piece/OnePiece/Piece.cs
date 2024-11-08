@@ -39,6 +39,17 @@ namespace Kusume
         private PieceInfo           pieceInfo;
         public PieceInfo            PieceInfo => pieceInfo;
 
+        [SerializeField]
+        private bool selected = false;
+        public bool IsSelected => selected;
+        public void SetSelected(bool s) 
+        {
+            if(selected != s)
+            {
+                selected = s; 
+            }
+        }
+
         private void Awake()
         {
             rb2D = GetComponent<Rigidbody2D>();
@@ -56,12 +67,18 @@ namespace Kusume
             spriteRenderer.color = data.color;
             pieceInfo = _pieceInfo;
             spriteRenderer.sprite = data.sprite;
+            spriteRenderer.material = data.material;
         }
         private void Update()
         {
             GravityUpdate();
 
             CrushUpdate();
+
+            if (selected)
+            {
+                Debug.Log("ê⁄ë±íÜ");
+            }
         }
 
         private void GravityUpdate()

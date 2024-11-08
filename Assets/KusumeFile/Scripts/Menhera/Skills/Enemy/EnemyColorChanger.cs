@@ -35,6 +35,7 @@ namespace Kusume
             List<Piece> pieceList = pieceMachine.Pieces;
             for (int i = 0; i < pieceList.Count; i++)
             {
+                if (pieceList[i].IsSelected) { continue; }
                 var pieceInfo = pieceMachine.PieceLedger.GetRandomPiece();
                 pieceList[i].SetPieceData(pieceInfo.color, pieceInfo);
             }

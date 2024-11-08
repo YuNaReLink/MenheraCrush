@@ -35,6 +35,7 @@ namespace Kusume
             PieceTag tag = p.Tag;
             for (int i = 0; i < pieceMachine.Pieces.Count; i++)
             {
+                if (pieceMachine.Pieces[i].IsSelected) { continue; }
                 if (pieceMachine.Pieces[i].Tag != tag) { continue; }
                 pieceMachine.Pieces[i].SetPieceData(pieceInfo.color,pieceInfo);
             }
