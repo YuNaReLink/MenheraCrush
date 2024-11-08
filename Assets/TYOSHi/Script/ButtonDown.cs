@@ -39,10 +39,12 @@ public class ButtonDown : MonoBehaviour
     }
     public void Exit()
     {
+        //イベントトリガーを追加して､ポインターExitを追加して､ボタンを入れて､これを設定して
         down = false;
     }
     public void Enter()
     {
+        //イベントトリガーを追加して､ポインターEnterを追加して､ボタンを入れて､これを設定して
         down = true;        
     }
 }
