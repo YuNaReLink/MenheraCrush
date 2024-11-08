@@ -19,7 +19,7 @@ namespace Kusume
         private List<Button> buttons = new List<Button>();
 
         [SerializeField]
-        private SceneChanger sceneChanger;
+        private SceneList nextScene = SceneList.StageSelect;
 
         [SerializeField]
         private GameObject MenuObject;
@@ -79,7 +79,7 @@ namespace Kusume
 
         private void EndUpdate()
         {
-            SceneChanger.ChangeScene(SceneList.StageSelect);
+            SceneChanger.ChangeScene(nextScene);
         }
     }
 }
