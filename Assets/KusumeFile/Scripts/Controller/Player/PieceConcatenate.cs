@@ -8,11 +8,11 @@ namespace Kusume
     public class PieceConcatenate : MonoBehaviour
     {
         [SerializeField]
-        private GameObject lineGameObject = null;
+        private GameObject          lineGameObject = null;
         [SerializeField]
-        private LineRenderer lineRenderer = null;   
+        private LineRenderer        lineRenderer = null;   
 
-        private PlayerController playerController = null;
+        private PlayerController    playerController = null;
 
         private void Awake()
         {

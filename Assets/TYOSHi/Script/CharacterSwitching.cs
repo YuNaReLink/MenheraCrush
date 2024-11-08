@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,6 +38,14 @@ public class CharacterSwitching : MonoBehaviour
     private void Start()
     {
         Select((CharacterNameList)0);
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
     public void Select(CharacterNameList GetName)

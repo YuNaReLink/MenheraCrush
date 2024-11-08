@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Kusume
 {
+    /// <summary>
+    /// ピースがステージ外に落ちた時に処理するクラス
+    /// </summary>
     public class OutsideStage : MonoBehaviour
     {
         [SerializeField]
@@ -13,16 +16,14 @@ namespace Kusume
             createPieceMachine = GetComponent<CreatePieceMachine>();
         }
 
-        private void Start()
-        {
-            
-        }
-
         private void Update()
         {
             Check();
         }
-
+        /// <summary>
+        /// ゲーム中のピースを全てチェックし
+        /// ステージよりもy座標が低かったらピースを消す処理を行う
+        /// </summary>
         private void Check()
         {
             Camera mainCamera = Camera.main;

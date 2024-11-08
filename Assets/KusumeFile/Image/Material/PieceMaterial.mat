@@ -97,7 +97,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _GlowIntensity: 0.1
+    - _GlowIntensity: 0.289
     - _GlowSpeed: 5
     - _LightCompletion: 1
     - _Metallic: 0
@@ -105,7 +105,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PasutelColor: 0.3
-    - _PatternScale: 4.19
+    - _PatternScale: 10
     - _Repetition: 10
     - _ShineIntensity: 1
     - _ShineSpeed: 1
@@ -113,7 +113,7 @@ Material:
     - _SparkleIntensity: 0.083
     - _SparkleSpeed: 13.1
     - _SpecularHighlights: 1
-    - _Speed: 4.64
+    - _Speed: 5
     - _SrcBlend: 1
     - _UVSec: 0
     - _Width: 0.5

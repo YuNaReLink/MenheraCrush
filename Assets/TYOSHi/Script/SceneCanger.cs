@@ -17,14 +17,14 @@ public class SceneChanger : MonoBehaviour
 {
     [SerializeField] private SceneList NextScene;
 
-    string GetSceneName(SceneList NextScene)
+    static string GetSceneName(SceneList NextScene)
     {
         string a;
 
         switch (NextScene)
         {
             case SceneList.Titel:
-                a = "Title";
+                a = "KanataniScene";
                 break;
             case SceneList.StageSelect:
                 a = "GameStageSelect";
@@ -33,13 +33,13 @@ public class SceneChanger : MonoBehaviour
                 a = "Game";
                 break;
             default:
-                a = "Title";
+                a = "KanataniScene";
                 break;
         }
         return a;
     }
 
-    public void ChangeScene(SceneList scene)
+    public static void ChangeScene(SceneList scene)
     {
         SceneManager.LoadScene(GetSceneName(scene));
     }

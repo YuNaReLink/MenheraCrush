@@ -1,9 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+
 
 namespace Kusume
 {
+    /// <summary>
+    /// ゲーム中のスコアを計測&ゲーム中に獲得した総スコアを保持するクラス
+    /// 参照はstaticなのでGameScore.Bounsで可能
+    /// </summary>
     public class GameScore
     {
         private static bool bonus = false;
@@ -36,7 +38,6 @@ namespace Kusume
             goal = g;
             count = 0; 
         }
-
 
         public static float GetProgress()
         {
