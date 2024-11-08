@@ -19,6 +19,9 @@ namespace Kusume
         [SerializeField]
         private Animator            animator;
 
+        [SerializeField]
+        private EnemyAttackCount enemyAttackCount;
+
         private void Awake()
         {
             player = FindObjectOfType<PlayerController>();
@@ -27,6 +30,8 @@ namespace Kusume
                 Debug.LogError("PlayerController‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
             }
             attackTimer = new Timer();
+
+            enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
         }
 
 
@@ -40,6 +45,7 @@ namespace Kusume
         private void SetThisUI()
         {
             thisImage.sprite = enemyData.Characters[(int)SelectStageContainer.EnemyCharacter].sprite;
+            thisImage.color = Color.white;
             thisImage.SetNativeSize();
             RectTransform rectTransform = thisImage.GetComponent<RectTransform>();
             rectTransform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -48,8 +54,8 @@ namespace Kusume
         private void LoopAttackStart()
         {
             attackTimer.SetLoop(true);
-            attackTimer.Start(2.0f);
-            attackTimer.OnEnd += DecreaseHP;
+            attackTimer.Start(10.0f);
+            attackTimer.OnEnd += Attack;
         }
 
         
@@ -57,9 +63,14 @@ namespace Kusume
         {
             attackTimer.Update();
         }
-        private void DecreaseHP()
+        private void Attack()
         {
-            player.HP.Decrease(10);
+            enemyAttackCount.CountUpdate();
+            if(enemyAttackCount.Count <= 0)
+            {
+                player.HP.Decrease(10);
+                //Instantiate(enemyData.Characters[(int)SelectStageContainer.EnemyCharacter].skill, transform.position, Quaternion.identity);
+            }
         }
     }
 }

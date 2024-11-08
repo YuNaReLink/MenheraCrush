@@ -59,6 +59,7 @@ namespace Kusume
         {
             animator.runtimeAnimatorController = allyData.Characters[charaInt].animator;
             thisImage.sprite = allyData.Characters[charaInt].sprite;
+            thisImage.color = Color.white;
             thisImage.SetNativeSize();
         }
 
@@ -101,6 +102,8 @@ namespace Kusume
 
             playerInput.ButtonInput();
             MouseRaycast();
+
+            pieceContainer.CheckPieceList();
         }
 
         [SerializeField]

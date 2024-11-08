@@ -22,9 +22,18 @@ namespace Kusume
         {
             for (int i = 0; i < changeCount; i++)
             {
-                Piece piece = pieceMachine.Pieces[Random.Range(0, pieceMachine.Pieces.Count - 1)];
-                piece.SetPieceData(pieceInfo.color, pieceInfo);
+                Create();
             }
+        }
+
+        private void Create()
+        {
+            Piece piece = pieceMachine.Pieces[Random.Range(0, pieceMachine.Pieces.Count - 1)];
+            if (piece.IsSelected)
+            {
+                Create();
+            }
+            piece.SetPieceData(pieceInfo.color, pieceInfo);
         }
     }
 }
