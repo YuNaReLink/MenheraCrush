@@ -29,7 +29,7 @@ namespace Kusume
             attackTimer = new Timer();
         }
 
-        // Start is called before the first frame update
+
         private void Start()
         {
             SetThisUI();
@@ -40,7 +40,6 @@ namespace Kusume
         private void SetThisUI()
         {
             thisImage.sprite = enemyData.Characters[(int)SelectStageContainer.EnemyCharacter].sprite;
-            //animator.runtimeAnimatorController = enemyData.Characters[(int)SelectStageContainer.EnemyCharacter].animator;
             thisImage.SetNativeSize();
             RectTransform rectTransform = thisImage.GetComponent<RectTransform>();
             rectTransform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);

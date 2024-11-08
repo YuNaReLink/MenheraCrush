@@ -61,7 +61,7 @@ Shader "Custom/PrismGlowShader"
 
                 // ‹P‚«‚ğ“K—p
                 float glow = smoothstep(0.2, 1.0, prismColors.r + prismColors.g + prismColors.b) * _GlowIntensity;
-                col.rgb += (prismColors * glow);
+                col.rgb = lerp(col.rgb, col.rgb + (prismColors * glow), _GlowIntensity); // ‹P‚«‚ğ’²®
 
                 return col;
             }
