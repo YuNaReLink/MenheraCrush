@@ -21,8 +21,6 @@ public class SceneTransitionP : MonoBehaviour
     [SerializeField]
     private bool expand = false;
 
-    //ƒV[ƒ“•Ï‚¦‚é‚â‚Â
-    SceneChanger SC = new SceneChanger();
 
     //// Start is called before the first frame update
     void Awake()
@@ -58,7 +56,7 @@ public class SceneTransitionP : MonoBehaviour
         //‰æ–Ê‚ª•‚­‚È‚Á‚½‚ç
         if (circle.sizeDelta.x <= 0.0f)
         {
-            SC.ChangeScene(SceneList.StageSelect);
+            SceneChanger.ChangeScene(SceneList.StageSelect);
         }
     }
 
