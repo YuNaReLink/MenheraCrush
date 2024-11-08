@@ -70,7 +70,7 @@ namespace Kusume
 
         private void EndUpdate()
         {
-            sceneChanger?.ChangeScene(SceneList.StageSelect);
+            SceneChanger.ChangeScene(SceneList.StageSelect);
         }
     }
 }
