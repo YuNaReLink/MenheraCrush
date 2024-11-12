@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class CharacterChanger : MonoBehaviour
 {
-    [SerializeField] private CharacterSwitching charaSwitch;
+    [SerializeField] private CharacterSelect select;
     [SerializeField] private CharacterNameList chara;
     public void Change()
     {
         //ƒLƒƒƒ‰•ÏXŒÄ‚Ño‚µ
-        charaSwitch.Select(chara);
+        select.Select(chara);
     }
 }

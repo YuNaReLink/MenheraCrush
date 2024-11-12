@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class ScoreBoard : MonoBehaviour
 {
     [SerializeField]
-    private Text Score;
+    private Text score;
 
     void Start()
     {
         int value = Kusume.GameScore.Count;
-        Score.text = String.Format("{0:#,0}", value);
+        score.text = String.Format("{0:#,0}", value);
     }
 }

@@ -50,7 +50,7 @@ namespace Kusume
         {
             pieceContainer.Setup(this);
 
-            charaInt = CharacterSwitching.SelctCharacterNo;
+            charaInt = CharacterSelect.SelectCharacterNo;
             SetAllyImage();
             hp.Setup();
         }

@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 6397622108746381353}
   - component: {fileID: 6928510506228151791}
   - component: {fileID: 2685924852957750493}
-  - component: {fileID: 5667204914050767043}
+  - component: {fileID: 4782931703562359562}
   m_Layer: 5
   m_Name: MaskBack
   m_TagString: Untagged
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!114 &5667204914050767043
+--- !u!114 &4782931703562359562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,14 +176,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6689505822945942701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4abc1ae2b2dafc445830030033869148, type: 3}
+  m_Script: {fileID: 11500000, guid: 25c74612db4828e48827f7ae92a37f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 3488869254622865664}
-  MaskBack: {fileID: 6689505822945942701}
-  speed: 2000
-  StartSiz: {x: 2200, y: 2200}
+  speed: 1000
+  maxSize: 2200
   expand: 0
+  duration: 0.5
 --- !u!1 &8637134588820312143
 GameObject:
   m_ObjectHideFlags: 0
