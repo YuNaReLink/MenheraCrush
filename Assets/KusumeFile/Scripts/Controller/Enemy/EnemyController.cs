@@ -66,6 +66,7 @@ namespace Kusume
         
         private void Update()
         {
+            if (GameController.Instance.IsPuzzleStop || GameController.Instance.IsEndGame) { return; }
             attackTimer.Update();
         }
         private void Attack()

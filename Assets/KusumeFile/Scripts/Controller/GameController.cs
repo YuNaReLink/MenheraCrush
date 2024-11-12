@@ -25,7 +25,7 @@ namespace Kusume
         public void SetEndGame(bool b) 
         {
             endGame = b;
-            resultSystem.gameObject.SetActive(true);
+            Instantiate(resultSystem.ResultBoard, resultSystem.transform);
         }
 
         private ResultSystem resultSystem;
@@ -50,7 +50,6 @@ namespace Kusume
         private void Start()
         {
             gameTimer.Start(gameTimerCount);
-            resultSystem.gameObject.SetActive(false);
             endGame = false;
             puzzleStop = false;
         }
