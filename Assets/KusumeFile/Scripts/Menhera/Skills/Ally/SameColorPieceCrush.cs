@@ -1,3 +1,4 @@
+using LucKee;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Kusume
     /// 味方メンヘラのスキルクラス
     /// 同じ色のピースを全て消すクラス
     /// </summary>
-    public class AllPieceCrush : MonoBehaviour
+    public class SameColorPieceCrush : MonoBehaviour
     {
         private CreatePieceMachine      pieceMachine;
 
@@ -17,6 +18,7 @@ namespace Kusume
 
         private LucKee.Skill            skill;
 
+        private List<bool>              sizes = new List<bool>();
 
         private void Awake()
         {
@@ -44,6 +46,7 @@ namespace Kusume
             {
                 if (pieceInfo.color.tag != pieceList[i].PieceInfo.color.tag) { continue; }
                 pieceList[i].Crush();
+                sizes.Add(pieceList[i].PieceInfo.size.big);
                 pieceList.RemoveAt(i);
             }
             int num = 0;
@@ -57,6 +60,7 @@ namespace Kusume
             if (num <= 0)
             {
                 skill.End();
+                GameScore.SetOnceCount((int)ScoreCalculator.Calc(sizes, GameScore.Bonus));
             }
         }
 

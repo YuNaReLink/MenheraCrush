@@ -35,7 +35,7 @@ namespace Kusume
 
         [Header("ピースオブジェクトを格納したScriptableObject")]
         [SerializeField]
-        private PieceDataList           pieceData = null;
+        private PieceDataList           pieceData;
 
         [SerializeField]
         private PieceLedger             pieceLedger = null;
@@ -82,6 +82,7 @@ namespace Kusume
         private void Start()
         {
             pieceLedger.Setup();
+            currentPieceCount = 0;
         }
 
         public Piece RandomPiece()
@@ -93,7 +94,7 @@ namespace Kusume
         {
             CheckAllPiece();
 
-            if (GameController.Instance.IsPuzzleStop) { return; }
+            if (GameController.Instance.IsPuzzleStop || GameController.Instance.IsEndGame) { return; }
 
             if (createCoolDown >= 0)
             {

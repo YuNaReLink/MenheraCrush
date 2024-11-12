@@ -39,7 +39,7 @@ MonoBehaviour:
     ImageOffset: {x: 0, y: 0}
   - tag: 4
     name: 4
-    skill: {fileID: 8884762241872583565, guid: a5d9397eaf9f1824990a00301a2860b5, type: 3}
+    skill: {fileID: 8884762241872583565, guid: 9d6234ff75df5a2469d8d189efea4a8e, type: 3}
     animator: {fileID: 0}
     sprite: {fileID: -394756606, guid: e11611c482996ab47b5e39626ca6bbd3, type: 3}
     ImageOffset: {x: 0, y: 0}

@@ -1,26 +1,24 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Kusume
 {
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : BaseMenheraController
     {
         [SerializeField]
         private PlayerController    player;
 
 
         private Timer               attackTimer;
+        public  Timer               AttackTimer => attackTimer;
+
+        [Header("敵の攻撃開始までのカウント"),SerializeField]
+        private float               attackCount = 11.5f;
 
         [SerializeField]
-        private MenheraData         enemyData;
-        [SerializeField]
-        private Image               thisImage;
+        private EnemyMenheraData    enemyMenheraData;
 
         [SerializeField]
-        private Animator            animator;
-
-        [SerializeField]
-        private EnemyAttackCount enemyAttackCount;
+        private EnemyAttackCount    enemyAttackCount;
 
         private void Awake()
         {
@@ -29,24 +27,31 @@ namespace Kusume
             {
                 Debug.LogError("PlayerControllerが見つかりません");
             }
+            enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
+            if(enemyAttackCount == null)
+            {
+                Debug.LogError("EnemyAttackCountがアタッチされていません");
+            }
+            
             attackTimer = new Timer();
 
-            enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
         }
 
 
         private void Start()
         {
-            SetThisUI();
+            SetCharaInt((int)SelectStageContainer.EnemyCharacter);
+
+            SetMenheraUI();
+
+            attackCount = enemyMenheraData.EnemyAttackCountInfos[charaInt].attackCount;
 
             LoopAttackStart();
         }
 
-        private void SetThisUI()
+        public override void SetMenheraUI()
         {
-            thisImage.sprite = enemyData.Characters[(int)SelectStageContainer.EnemyCharacter].sprite;
-            thisImage.color = Color.white;
-            thisImage.SetNativeSize();
+            base.SetMenheraUI();
             RectTransform rectTransform = thisImage.GetComponent<RectTransform>();
             rectTransform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         }
@@ -54,7 +59,7 @@ namespace Kusume
         private void LoopAttackStart()
         {
             attackTimer.SetLoop(true);
-            attackTimer.Start(10.0f);
+            attackTimer.Start(attackCount);
             attackTimer.OnEnd += Attack;
         }
 
@@ -69,7 +74,7 @@ namespace Kusume
             if(enemyAttackCount.Count <= 0)
             {
                 player.HP.Decrease(10);
-                //Instantiate(enemyData.Characters[(int)SelectStageContainer.EnemyCharacter].skill, transform.position, Quaternion.identity);
+                
             }
         }
     }
