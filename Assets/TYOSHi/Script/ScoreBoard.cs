@@ -12,7 +12,7 @@ public class ScoreBoard : MonoBehaviour
 
     private void Awake()
     {
-        score = GetComponentInChildren<Text>();
+        //score = GetComponentInChildren<Text>();
     }
     void Start()
     {
