@@ -21,6 +21,7 @@ namespace LucKee
 
         public void SetProgress(float f)
         {
+            //0.0f~1.0f
             fill.fillAmount = f;
         }
     }
