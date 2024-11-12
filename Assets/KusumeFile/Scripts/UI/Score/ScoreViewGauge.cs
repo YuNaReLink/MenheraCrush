@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kusume
 {
@@ -13,14 +14,23 @@ namespace Kusume
 
         [SerializeField]
         private RectTransform fillRectTransform;
+
+        [SerializeField]
+        private Image fillImage;
+
+        private void Awake()
+        {
+            fillImage = fillRectTransform.gameObject.GetComponentInChildren<Image>();
+        }
         // Start is called before the first frame update
         void Start()
         {
             RectTransform myRect = GetComponent<RectTransform>();
-            maxGauge = Mathf.Abs(myRect.sizeDelta.y);
 
+            fillImage.fillAmount = 0;
 
-            GameScore.InitCount((int)goalGauge);
+            float c = goalGauge;
+            GameScore.InitCount((int)c);
         }
 
         // Update is called once per frame
@@ -36,10 +46,11 @@ namespace Kusume
             {
                 p = 1.0f;
             }
-            float scale = 0;
-            scale = p * maxGauge;
-            Vector2 v = fillRectTransform.sizeDelta;
-            fillRectTransform.sizeDelta = new Vector2(v.x, scale);
+            fillImage.fillAmount = p;
+            //float scale = 0;
+            //scale = p * maxGauge;
+            //Vector2 v = fillRectTransform.sizeDelta;
+            //fillRectTransform.sizeDelta = new Vector2(v.x, scale);
         }
     }
 }
