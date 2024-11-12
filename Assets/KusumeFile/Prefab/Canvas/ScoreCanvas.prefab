@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75b0afbbbefe7a4988ad39218e205d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalGauge: 10000
+  goalGauge: 1000
   fillRectTransform: {fileID: 8015352439134280985}
 --- !u!1 &5620450250612987728
 GameObject:
