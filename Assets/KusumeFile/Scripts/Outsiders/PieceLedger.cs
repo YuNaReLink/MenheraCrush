@@ -14,6 +14,7 @@ namespace Kusume
         public Color32 color;
         public float ratio;
         public Sprite sprite;
+        public Material material;
     }
     [Serializable]
     public struct SizeInfo

@@ -23,6 +23,11 @@ namespace Kusume
             time = _time;
         }
 
+        public void AddCurrent(float _time)
+        {
+            current += _time;
+        }
+
         public void Update()
         {
             if(current <= 0) { return; }

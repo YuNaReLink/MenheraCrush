@@ -20,10 +20,21 @@ namespace Kusume
         public bool IsPuzzleStop => puzzleStop;
         public void SetPuzzleStop(bool b) { puzzleStop = b;}
 
+        public bool endGame = false;
+        public bool IsEndGame => endGame;
+        public void SetEndGame(bool b) 
+        {
+            endGame = b;
+            resultSystem.gameObject.SetActive(true);
+        }
+
+        private ResultSystem resultSystem;
+
         private void Awake()
         {
             SetupInstance();
             gameTimer = new Timer();
+            resultSystem = FindAnyObjectByType<ResultSystem>();
         }
 
         private void SetupInstance()
@@ -39,6 +50,9 @@ namespace Kusume
         private void Start()
         {
             gameTimer.Start(gameTimerCount);
+            resultSystem.gameObject.SetActive(false);
+            endGame = false;
+            puzzleStop = false;
         }
 
         // Update is called once per frame

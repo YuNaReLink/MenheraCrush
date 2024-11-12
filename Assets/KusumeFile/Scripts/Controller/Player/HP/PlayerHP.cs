@@ -26,6 +26,7 @@ namespace Kusume
             if (currentHP < 0)
             {
                 currentHP = 0;
+                GameController.Instance.SetEndGame(true);
             }
         }
 

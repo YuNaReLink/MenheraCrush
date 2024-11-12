@@ -18,6 +18,12 @@ namespace Kusume
         public Vector2 ImageOffset;
     }
 
+    [Serializable]
+    public struct EnemyAttackCountInfo
+    {
+        public float attackCount;
+    }
+
     [CreateAssetMenu(fileName = "Menhera", menuName = "ScriptableObjects/Menhera", order = 1)]
     public class MenheraData : ScriptableObject
     {

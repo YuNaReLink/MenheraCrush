@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Kusume
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : BaseMenheraController
     {
         [SerializeField]
         private bool                debug = false;
@@ -17,31 +16,21 @@ namespace Kusume
         public PlayerHP             HP => hp;
 
         [SerializeField]
-        private Image               thisImage;
-        [SerializeField]
-        private Animator            animator;
-
-        [SerializeField]
         private CreatePieceMachine  createPiecemMachine;
         public CreatePieceMachine CreatePieceMachine => createPiecemMachine;
-
-        [SerializeField]
-        private MenheraData            allyData;
-        [SerializeField]
-        private int                 charaInt = 0;
 
         private void Awake()
         {
             playerInput = GetComponent<PlayerInput>();
             if (playerInput == null)
             {
-                Debug.LogError("PlayerInput���A�^�b�`����Ă��܂���");
+                Debug.LogError("PlayerInputがアタッチされていません");
             }
 
             createPiecemMachine = FindObjectOfType<CreatePieceMachine>();
             if(createPiecemMachine == null)
             {
-                Debug.LogError("CreatePieceMachine���A�^�b�`����Ă��܂���");
+                Debug.LogError("CreatePieceMachineがアタッチされていません");
             }
 
         }
@@ -49,17 +38,14 @@ namespace Kusume
         private void Start()
         {
             pieceContainer.Setup(this);
-
-            charaInt = CharacterSelect.SelectCharacterNo;
-            SetAllyImage();
+            SetCharaInt(CharacterSwitching.SelctCharacterNo);
+            SetMenheraUI();
             hp.Setup();
         }
 
-        private void SetAllyImage()
+        public override void SetMenheraUI()
         {
-            animator.runtimeAnimatorController = allyData.Characters[charaInt].animator;
-            thisImage.sprite = allyData.Characters[charaInt].sprite;
-            thisImage.SetNativeSize();
+            base.SetMenheraUI();
         }
 
         private void UpdateDebug()
@@ -85,22 +71,24 @@ namespace Kusume
                     charaInt = (int)CharacterNameList.SawashiroNozomi;
                 }
             }
-            SetAllyImage();
+            SetMenheraUI();
 
         }
 
         public void Update()
         {
             UpdateDebug();
-            if (GameController.Instance.IsPuzzleStop) { return; }
+            if (GameController.Instance.IsPuzzleStop||GameController.Instance.IsEndGame) { return; }
 
             if (Input.GetButtonDown("Jump"))
             {
-                Instantiate(allyData.Characters[charaInt].skill,transform.position,Quaternion.identity);
+                Instantiate(menheraData.Characters[charaInt].skill,transform.position,Quaternion.identity);
             }
 
             playerInput.ButtonInput();
             MouseRaycast();
+
+            pieceContainer.CheckPieceList();
         }
 
         [SerializeField]
@@ -108,7 +96,7 @@ namespace Kusume
         public List<Piece> PieceList => pieceContainer.PieceList;
 
         /// <summary>
-        /// �}�E�X�N���b�N���ɃI�u�W�F�N�g�ɓ������Ă邩���肷��֐�
+        /// マウスクリック時にオブジェクトに当たってるか判定する関数
         /// </summary>
         private void MouseRaycast()
         {
@@ -121,10 +109,10 @@ namespace Kusume
                     Piece onePiece;
                     RaycastHit2D hitObject;
                     hitObject = Physics2D.CircleCast(tapPoint, 0.3f, -Vector2.up);
-                    //���ɂ��������Ă��Ȃ�������
+                    //何にも当たっていなかったら
                     if (hitObject.collider == null) { return; }
                     onePiece = hitObject.collider.gameObject.GetComponent<Piece>();
-                    //�s�[�X��񂪂Ȃ������烊�^�[��
+                    //ピース情報がなかったらリターン
                     if (onePiece == null) { return; }
                     pieceContainer.ChangePiece(onePiece);
                 }

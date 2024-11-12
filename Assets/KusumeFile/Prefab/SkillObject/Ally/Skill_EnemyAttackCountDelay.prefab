@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &133067524146794630
+--- !u!1 &9196297991906327631
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7172012508541297441}
-  - component: {fileID: 8060747844320220969}
+  - component: {fileID: 6482744433003574921}
+  - component: {fileID: 5357405439446024664}
+  - component: {fileID: 8884762241872583565}
   m_Layer: 0
-  m_Name: EnemyController
+  m_Name: Skill_EnemyAttackCountDelay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7172012508541297441
+--- !u!4 &6482744433003574921
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133067524146794630}
+  m_GameObject: {fileID: 9196297991906327631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,23 +33,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8060747844320220969
+--- !u!114 &5357405439446024664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133067524146794630}
+  m_GameObject: {fileID: 9196297991906327631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6781c5f0eda694941a8fdbdf6d286c3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 41343cf5fe0688b41b521cb9ff1b09c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menheraData: {fileID: 11400000, guid: 5bb719b2062e253458d322bdd190ccbb, type: 2}
-  thisImage: {fileID: 0}
-  animator: {fileID: 0}
-  charaInt: 0
-  player: {fileID: 0}
-  attackCount: 11.5
-  enemyMenheraData: {fileID: 11400000, guid: a8d60ad8a3b9f394d92ad2b06ac32449, type: 2}
-  enemyAttackCount: {fileID: 0}
+  addCount: 5
+--- !u!114 &8884762241872583565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196297991906327631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e263e2192eebda141ab9acc9e88b356f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 10
