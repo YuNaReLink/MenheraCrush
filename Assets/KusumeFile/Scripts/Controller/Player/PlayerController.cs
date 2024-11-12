@@ -38,7 +38,7 @@ namespace Kusume
         private void Start()
         {
             pieceContainer.Setup(this);
-            SetCharaInt(CharacterSwitching.SelctCharacterNo);
+            SetCharaInt(CharacterSelect.SelectCharacterNo);
             SetMenheraUI();
             hp.Setup();
         }

@@ -10,9 +10,13 @@ public class ScoreBoard : MonoBehaviour
     [SerializeField]
     private Text score;
 
+    private void Awake()
+    {
+        score = GetComponentInChildren<Text>();
+    }
     void Start()
     {
         int value = Kusume.GameScore.Count;
-        score.text = String.Format("{0:#,0}", value);
+        score.text = String.Format("{0:0,########}", value);
     }
 }
