@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kusume
 {
-    public class ScoreViewGauge : MonoBehaviour
+    public class OverScoreViewGauge : MonoBehaviour
     {
+        [SerializeField]
+        private ScoreViewGauge scoreViewGauge;
+
         private float maxGauge;
 
         [SerializeField]
-        private float goalGauge = 500.0f;
+        private float goalGauge = 10000000.0f;
 
         [SerializeField]
         private RectTransform fillRectTransform;
+
+        private void Awake()
+        {
+            scoreViewGauge = GetComponentInParent<ScoreViewGauge>();
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -20,19 +26,23 @@ namespace Kusume
             maxGauge = Mathf.Abs(myRect.sizeDelta.y);
 
 
-            GameScore.InitCount((int)goalGauge);
+            GameScore.InitOverCount((int)goalGauge);
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (GameScore.GetProgress() < 1.0f)
+            {
+                return;
+            }
             UpdateGauge();
         }
 
         private void UpdateGauge()
         {
-            float p = GameScore.GetProgress();
-            if(p > 1.0f)
+            float p = GameScore.GetOverProgress();
+            if (p > 1.0f)
             {
                 p = 1.0f;
             }

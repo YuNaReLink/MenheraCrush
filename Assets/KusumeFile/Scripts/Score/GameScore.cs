@@ -33,15 +33,27 @@ namespace Kusume
 
         private static int goal;
 
+        private static int overGoal;
+
         public static void InitCount(int g) 
         {
             goal = g;
             count = 0; 
         }
 
+        public static void InitOverCount(int g)
+        {
+            overGoal = g;
+        }
+
         public static float GetProgress()
         {
             return (float)count / goal;
+        }
+
+        public static float GetOverProgress()
+        {
+            return (float)count / overGoal;
         }
     }
 }
