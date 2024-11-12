@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public enum SceneList
 {
-    Titel,
+    Title,
     StageSelect,
     Game,
 
@@ -15,28 +15,28 @@ public enum SceneList
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] private SceneList NextScene;
+    [SerializeField] private SceneList nextScene;
 
-    static string GetSceneName(SceneList NextScene)
+    static string GetSceneName(SceneList scene)
     {
-        string a;
+        string temp;
 
-        switch (NextScene)
+        switch (scene)
         {
-            case SceneList.Titel:
-                a = "KanataniScene";
+            case SceneList.Title:
+                temp = "KanataniScene";
                 break;
             case SceneList.StageSelect:
-                a = "GameStageSelect";
+                temp = "GameStageSelect";
                 break;
             case SceneList.Game:
-                a = "Game";
+                temp = "Game";
                 break;
             default:
-                a = "KanataniScene";
+                temp = "KanataniScene";
                 break;
         }
-        return a;
+        return temp;
     }
 
     public static void ChangeScene(SceneList scene)
@@ -46,6 +46,6 @@ public class SceneChanger : MonoBehaviour
 
     public void ButtonClick()
     {
-        ChangeScene(NextScene);
+        ChangeScene(nextScene);
     }
 }

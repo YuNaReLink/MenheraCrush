@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterChange : MonoBehaviour
+public class FaceChanger : MonoBehaviour
 {
     [SerializeField]
-    private SceneTransitionP transitionPrefab = null;
+    private SceneTransition transitionPrefab = null;
 
     [SerializeField]
     private Sprite[] sprites;
@@ -14,14 +14,14 @@ public class CharacterChange : MonoBehaviour
     [SerializeField]
     private Image[] images;
 
-    public void Button()
+    public void Click()
     {
-        for(int i=0;i< images.Length;i++)
+        for(int i=0; i < images.Length;i++)
         {
             images[i].sprite = sprites[i];
         }
         Canvas canvas = FindAnyObjectByType<Canvas>();
-        SceneTransitionP transition = Instantiate(transitionPrefab, canvas.transform);
-        transition.Brack();
+        SceneTransition transition = Instantiate(transitionPrefab, canvas.transform);
+        transition.Activate();
     }
 }

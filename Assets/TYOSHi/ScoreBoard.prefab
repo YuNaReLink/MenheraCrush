@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25bd3489cb728b498d4015d72f3ff51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: 1
+  nextScene: 1
 --- !u!1 &7985859818673176322
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,3 +511,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73156bb3bf13c1a4fa329dca6a33bc2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 6493368583701867675}

@@ -658,8 +658,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 883414428}
-        m_TargetAssemblyTypeName: CharacterChange, Assembly-CSharp
-        m_MethodName: Button
+        m_TargetAssemblyTypeName: FaceChanger, Assembly-CSharp
+        m_MethodName: Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a80d5bd672bc44a80b8c470682d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionPrefab: {fileID: 5667204914050767043, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
+  transitionPrefab: {fileID: 4782931703562359562, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
   sprites:
   - {fileID: 1915891541, guid: 085a2b15d6f38f44390f6023b3d0e4b2, type: 3}
   - {fileID: 664011754, guid: 9049cfbdc9b21f2469e5a618ce99c32b, type: 3}

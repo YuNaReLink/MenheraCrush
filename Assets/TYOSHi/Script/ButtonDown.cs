@@ -6,16 +6,17 @@ using UnityEngine.UI;
 
 public class ButtonDown : MonoBehaviour
 {
-    Vector2 temp;
+    //å≥ÇÃç¿ïW
+    Vector2 defaultScale;
     bool down = false;
     bool click = false;
 
     [SerializeField]
-    public float Decrease = 0.9f;
+    public float ratio = 0.9f;
 
     private void Awake()
     {
-        temp = gameObject.transform.localScale;
+        defaultScale = gameObject.transform.localScale;
     }
     private void Update()
     {
@@ -30,11 +31,11 @@ public class ButtonDown : MonoBehaviour
 
         if (click && down)
         {
-            gameObject.transform.localScale = temp * Decrease;
+            gameObject.transform.localScale = defaultScale * ratio;
         }
         else
         {
-            gameObject.transform.localScale = temp;
+            gameObject.transform.localScale = defaultScale;
         }
     }
     public void Exit()

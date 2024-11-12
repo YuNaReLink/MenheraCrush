@@ -24,13 +24,13 @@ namespace Kusume
             playerInput = GetComponent<PlayerInput>();
             if (playerInput == null)
             {
-                Debug.LogError("PlayerInput���A�^�b�`����Ă��܂���");
+                Debug.LogError("PlayerInputがアタッチされていません");
             }
 
             createPiecemMachine = FindObjectOfType<CreatePieceMachine>();
             if(createPiecemMachine == null)
             {
-                Debug.LogError("CreatePieceMachine���A�^�b�`����Ă��܂���");
+                Debug.LogError("CreatePieceMachineがアタッチされていません");
             }
 
         }
@@ -38,7 +38,6 @@ namespace Kusume
         private void Start()
         {
             pieceContainer.Setup(this);
-
             SetCharaInt(CharacterSwitching.SelctCharacterNo);
             SetMenheraUI();
             hp.Setup();
@@ -97,7 +96,7 @@ namespace Kusume
         public List<Piece> PieceList => pieceContainer.PieceList;
 
         /// <summary>
-        /// �}�E�X�N���b�N���ɃI�u�W�F�N�g�ɓ������Ă邩���肷��֐�
+        /// マウスクリック時にオブジェクトに当たってるか判定する関数
         /// </summary>
         private void MouseRaycast()
         {
@@ -110,10 +109,10 @@ namespace Kusume
                     Piece onePiece;
                     RaycastHit2D hitObject;
                     hitObject = Physics2D.CircleCast(tapPoint, 0.3f, -Vector2.up);
-                    //���ɂ��������Ă��Ȃ�������
+                    //何にも当たっていなかったら
                     if (hitObject.collider == null) { return; }
                     onePiece = hitObject.collider.gameObject.GetComponent<Piece>();
-                    //�s�[�X��񂪂Ȃ������烊�^�[��
+                    //ピース情報がなかったらリターン
                     if (onePiece == null) { return; }
                     pieceContainer.ChangePiece(onePiece);
                 }

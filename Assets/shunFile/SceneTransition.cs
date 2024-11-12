@@ -4,10 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SceneTransitionP : MonoBehaviour
+public class SceneTransition : MonoBehaviour
 {
-    private Kusume.Timer t = new();
-
+    private Kusume.Timer timer = new();
 
     [SerializeField]
     private RectTransform circle;
@@ -20,6 +19,9 @@ public class SceneTransitionP : MonoBehaviour
 
     [SerializeField]
     private bool expand = false;
+
+    [SerializeField]
+    private float duration = 0.5f;
 
 
     //// Start is called before the first frame update
@@ -38,14 +40,14 @@ public class SceneTransitionP : MonoBehaviour
     //// Update is called once per frame
     void Update()
     {
-        t.Update();
+        timer.Update();
         
-        if (!t.IsEnd())
+        if (!timer.IsEnd())
         {
             return;
         }
 
-        VariableSize();
+        UpdateSize();
 
         if (circle.sizeDelta.x >= maxSize)
         {
@@ -60,12 +62,12 @@ public class SceneTransitionP : MonoBehaviour
         }
     }
 
-    public void Brack()
+    public void Activate()
     {
-        t.Start(0.5f);
+        timer.Start(duration);
     }
 
-    public void VariableSize()
+    public void UpdateSize()
     {
         if (expand)
         {
