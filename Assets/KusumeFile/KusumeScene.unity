@@ -514,30 +514,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 49441579778848852, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: goalGauge
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1735602905242490357, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 550
-      objectReference: {fileID: 0}
-    - target: {fileID: 2104891747413054798, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2104891747413054798, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-    - target: {fileID: 2104891747413054798, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2104891747413054798, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_FillMethod
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3102474629970744923, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
       propertyPath: m_Camera
       value: 
@@ -546,9 +522,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7288006627173792856, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
+      propertyPath: goalGauge
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 8015352439134280985, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8572549380833219732, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
       propertyPath: m_Pivot.x
