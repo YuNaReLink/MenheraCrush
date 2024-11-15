@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,19 +20,14 @@ public enum CharacterNameList
 public class CharacterSelect : MonoBehaviour
 {
     [SerializeField] private new Text name;
-    [SerializeField] private Image skillDetail;
     [SerializeField] private Text comment;
-    [SerializeField] private Image image;
-    [SerializeField] private Sprite[] fullSprites;
-    [SerializeField] private Button[] buttons;
-    [SerializeField] private Sprite[] normalFaceSprites;
-    [SerializeField] private Sprite[] yamiFaceSprites;
-    [SerializeField] private Sprite[] descriptions;
-    [SerializeField] private TextLedger nameLedger;
-    [SerializeField] private TextLedger commentLedger;
-    [SerializeField] private Image background;
-    [SerializeField] private Color[] backColor;
 
+    [SerializeField] private Image skillDetail;
+    [SerializeField] private Image image;
+    [SerializeField] private Image background;
+
+    [SerializeField] private CharacterInfo[] infos;
+    [SerializeField] private UnityEngine.UI.Button[] buttons;
 
     [SerializeField] private StageSelect changer;
 
@@ -40,6 +36,19 @@ public class CharacterSelect : MonoBehaviour
 
     private void Start()
     {
+        name = GameObject.Find("Name").GetComponent<Text>();
+        comment=GameObject.Find("SingleWord").GetComponent<Text>();
+
+        skillDetail = GameObject.Find("CharacterDescription").GetComponent<Image>();
+        image = GameObject.Find("CharacterImage").GetComponent<Image>();
+        background = GameObject.Find("BaskImage").GetComponent<Image>();
+
+        buttons[0] = GameObject.Find("HuzisakiAyane").GetComponent<Button>();
+        buttons[1] = GameObject.Find("ShinonomeAoi").GetComponent<Button>();
+        buttons[2] = GameObject.Find("HayashiKouta").GetComponent<Button>();
+        buttons[3] = GameObject.Find("UenoNozomi").GetComponent<Button>();
+        buttons[4] = GameObject.Find("SawashiroNozomi").GetComponent<Button>();
+
         Select((CharacterNameList)0);
     }
 
@@ -55,33 +64,33 @@ public class CharacterSelect : MonoBehaviour
     {
         int index = (int)character;
         //キャラ名表示
-        name.text = nameLedger.GetText(index);
+        name.text = infos[index].name;
 
         //キャラ画像切替
-        image.sprite = fullSprites[index];
+        image.sprite = infos[index].fullBody;
 
         //説明テキスト変更
-        skillDetail.sprite = descriptions[index];
+        skillDetail.sprite = infos[index].skillDetail;
 
         //一言テキスト変更
-        comment.text = commentLedger.GetText(index);
+        comment.text = infos[index].comment;
 
         //ゆっくり画像変更と色変更
         for (int i=0;i< buttons.Length;i++)
         {
             Color c = Color.white;
-            Sprite s = normalFaceSprites[i];
+            Sprite s = infos[i].yamiFace;
             if (i != (int)character)
             {
                 c.r = 0.6f;
                 c.g = 0.6f;
                 c.b = 0.6f;
-                s = yamiFaceSprites[i];
+                s = infos[i].yamiFace;
             }
             buttons[i].image.color = c;
             buttons[i].image.sprite = s;
         }
-        background.color = backColor[index];
+        background.color = infos[index].color;
 
         SelectCharacterNo = index;
 
