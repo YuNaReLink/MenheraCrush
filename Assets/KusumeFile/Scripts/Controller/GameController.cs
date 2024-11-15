@@ -22,9 +22,9 @@ namespace Kusume
 
         public bool endGame = false;
         public bool IsEndGame => endGame;
-        public void SetEndGame(bool b) 
+        public void EndGame() 
         {
-            endGame = b;
+            endGame = true;
             Instantiate(resultSystem.ResultBoard, resultSystem.transform);
         }
 
@@ -50,6 +50,7 @@ namespace Kusume
         private void Start()
         {
             gameTimer.Start(gameTimerCount);
+            gameTimer.OnOnceEnd += EndGame;
             endGame = false;
             puzzleStop = false;
         }
