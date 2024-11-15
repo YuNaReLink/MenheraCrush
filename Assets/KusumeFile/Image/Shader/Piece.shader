@@ -50,17 +50,14 @@ Shader "Custom/PrismGlowShader"
                 // メインテクスチャ
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                // プリズム効果を模倣するための色分解
-                float3 prismColors = float3(0, 0, 0);
-                float offset = _Time.y * _Speed;
+                // プリズム効果を白一色に設定
+                float3 prismColors = float3(1.0, 1.0, 1.0);
 
-                // 色を生成
-                prismColors.r = sin(i.uv.x * _PatternScale + offset) * 0.5 + 0.5; // 赤
-                prismColors.g = sin(i.uv.x * _PatternScale + offset + 1.0) * 0.5 + 0.5; // 緑
-                prismColors.b = sin(i.uv.x * _PatternScale + offset + 2.0) * 0.5 + 0.5; // 青
+                // 時間による変化のためのオフセットを sin を使って波のように変化させる
+                float offset = sin(_Time.y * _Speed) * _PatternScale;
 
-                // 輝きを適用
-                float glow = smoothstep(0.2, 1.0, prismColors.r + prismColors.g + prismColors.b) * _GlowIntensity;
+                // 輝きを適用 (白色の輝きが波の動きに従って変化する)
+                float glow = smoothstep(0.2, 1.0, sin(i.uv.x * _PatternScale + offset) * 0.5 + 0.5) * _GlowIntensity;
                 col.rgb = lerp(col.rgb, col.rgb + (prismColors * glow), _GlowIntensity); // 輝きを調整
 
                 return col;
