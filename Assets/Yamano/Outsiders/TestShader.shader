@@ -2,9 +2,15 @@ Shader "Custom/LucKeeTestShader"
 {
     Properties
     {
-        _MainTex("Main Texture", 2D) = "white" {}
-        _MaskTex("Mask Texture", 2D) = "white" {}
-        _MinAlpha("Min Alpha", Range(0, 1)) = 0.1
+        _MainTex ("Main Texture", 2D) = "white" {}
+        _GlowIntensity ("Glow Intensity", Range(0, 1)) = 0.8
+        _PatternScale ("Pattern Scale", Range(0.1, 10.0)) = 5.0
+
+        _StepMin("Step Min", Range(0, 1)) = 0.2
+        _StepMax("Step Max", Range(0, 1)) = 1.0
+
+
+        _Offset("Offset", float) = 0
     }
     SubShader
     {
@@ -20,9 +26,13 @@ Shader "Custom/LucKeeTestShader"
             #include "UnityCG.cginc"
 
             sampler2D _MainTex;
-            sampler2D _MaskTex;
+            float _GlowIntensity;
+            float _PatternScale;
 
-            float _MinAlpha;
+            float _StepMin;
+            float _StepMax;
+
+            float _Offset;
 
             struct appdata
             {
@@ -46,15 +56,17 @@ Shader "Custom/LucKeeTestShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MaskTex, i.uv);
-                if(col.a < _MinAlpha) {
-                    col.a = 0;
-                    return col;
-                }
-                col.r = 0;
-                col.g = 0;
-                col.b = 0;
+                // メインテクスチャ
+                fixed4 col = tex2D(_MainTex, i.uv);
 
+                // プリズム効果を白一色に設定
+                float3 prismColors = float3(1.0, 1.0, 1.0);
+
+                //wave:0~1
+                float wave = sin((i.uv.x - i.uv.y + _Offset) * _PatternScale) * 0.5 + 0.5;
+                // 輝きを適用 (白色の輝きが波の動きに従って変化する)
+                float glow = smoothstep(_StepMin, _StepMax, wave) * _GlowIntensity;
+                col.rgb = lerp(col.rgb, col.rgb + (prismColors * glow), _GlowIntensity); // 輝きを調整
 
                 return col;
             }

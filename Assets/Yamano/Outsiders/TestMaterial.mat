@@ -72,14 +72,20 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _GlowIntensity: 0.8
     - _Metallic: 0
     - _MinAlpha: 0.1
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset: 1.06
     - _Parallax: 0.02
+    - _PatternScale: 5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 1
     - _SrcBlend: 1
+    - _StepMax: 1
+    - _StepMin: 0.2
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
