@@ -16,13 +16,18 @@ public enum StageNo
 
 public class StageSelect : MonoBehaviour
 {
-    int index;
+    int index = (int)(StageNo)0;
 
     [SerializeField] Vector2[] offsets;
     [SerializeField] Image[] images;
     [SerializeField] Sprite[] groups;
     [SerializeField] Sprite[] backSprite;
     [SerializeField] Image background;
+
+    private void Awake()
+    {
+        background.sprite = backSprite[index];
+    }
 
     //ステージ変更
     void CheckState(StageNo no)

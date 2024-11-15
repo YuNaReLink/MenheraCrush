@@ -30,6 +30,7 @@ public class CharacterSelect : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Button[] buttons;
 
     [SerializeField] private StageSelect changer;
+    [SerializeField] private NowCharacter NC;
 
     public static int SelectCharacterNo {  get; private set; }
 
@@ -96,5 +97,8 @@ public class CharacterSelect : MonoBehaviour
 
         //キャラクター切替時の画像切替
         changer.ChangeCharacter();
+
+        //メイン画面のキャラ表示変更
+        NC.Change(index);
     }
 }
