@@ -4479,49 +4479,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: {fileID: 1728784780}
-  skillDetail: {fileID: 1876738285}
   comment: {fileID: 258663851}
+  skillDetail: {fileID: 1876738285}
   image: {fileID: 1315143653}
-  fullSprites:
-  - {fileID: -1974864238, guid: b3fe2e615dadf0440bbb762c142b194e, type: 3}
-  - {fileID: -127505809, guid: dbbc809ce00d17d49ac9850246a0624b, type: 3}
-  - {fileID: 605480745, guid: a8f8cc1d0aab87c48a132cca42463d6f, type: 3}
-  - {fileID: -651514625, guid: 18d8b0a469ac70e4e9c29716b8fdcc60, type: 3}
-  - {fileID: -394756606, guid: e11611c482996ab47b5e39626ca6bbd3, type: 3}
+  background: {fileID: 259870748}
+  infos:
+  - {fileID: 11400000, guid: 0f927ab42362b524398878a5a7828cff, type: 2}
+  - {fileID: 11400000, guid: 5ded5370d5e502b4c8a14e1711973af7, type: 2}
+  - {fileID: 11400000, guid: a00c6c6a6dfdc9646bf4871872bb958f, type: 2}
+  - {fileID: 11400000, guid: d3c1554b9a25eb146a58fd2939eddfd7, type: 2}
+  - {fileID: 11400000, guid: 6d7227a85b244544a81456b4446220f3, type: 2}
   buttons:
   - {fileID: 1695244465}
   - {fileID: 1250594}
   - {fileID: 1309467953}
   - {fileID: 242323813}
   - {fileID: 717385421}
-  normalFaceSprites:
-  - {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
-  - {fileID: 780244944, guid: d3dde02520d9bcc41a5e5f39b0af30c1, type: 3}
-  - {fileID: -902836371, guid: 22c3982b593ddff4b88980881ab897e9, type: 3}
-  - {fileID: -394756606, guid: df196fa9b236047458b5862508507f59, type: 3}
-  - {fileID: -651514625, guid: 1e595923d2798fb4a8d5c36a1cd4aaec, type: 3}
-  yamiFaceSprites:
-  - {fileID: 1915891541, guid: fc1e3749101854a49ba2b4e5480522d8, type: 3}
-  - {fileID: -1445708448, guid: 840d8565dbc5b4740bc826a875c1f051, type: 3}
-  - {fileID: 664011754, guid: 4c39967b4de49fc4e9301d386832b85a, type: 3}
-  - {fileID: -720584886, guid: cdd6880c87187f2488b57beba2f28680, type: 3}
-  - {fileID: 1633954823, guid: 8972a39c4086cfa4b855ce89a12645d7, type: 3}
-  descriptions:
-  - {fileID: 21300000, guid: 677f49a313c48b149869a4461edc06ac, type: 3}
-  - {fileID: 21300000, guid: 677f49a313c48b149869a4461edc06ac, type: 3}
-  - {fileID: 21300000, guid: 677f49a313c48b149869a4461edc06ac, type: 3}
-  - {fileID: 21300000, guid: 677f49a313c48b149869a4461edc06ac, type: 3}
-  - {fileID: 21300000, guid: 677f49a313c48b149869a4461edc06ac, type: 3}
-  - {fileID: 21300000, guid: 677f49a313c48b149869a4461edc06ac, type: 3}
-  nameLedger: {fileID: 11400000, guid: a305104ec7d2f8e4fbfd08a14358535d, type: 2}
-  commentLedger: {fileID: 11400000, guid: 21cdb975e37c641488ac1f3f0f413774, type: 2}
-  background: {fileID: 259870748}
-  backColor:
-  - {r: 0.6, g: 0.5686275, b: 0.69411767, a: 1}
-  - {r: 0.38823533, g: 0.43921572, b: 0.5294118, a: 1}
-  - {r: 0.46274513, g: 0.61960787, b: 0.49411768, a: 1}
-  - {r: 0.60784316, g: 0.33333334, b: 0.31764707, a: 1}
-  - {r: 0.8705883, g: 0.76470596, b: 0.5176471, a: 1}
   changer: {fileID: 1561487481}
 --- !u!1 &1695244464
 GameObject:
