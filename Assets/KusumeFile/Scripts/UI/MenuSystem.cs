@@ -24,6 +24,12 @@ namespace Kusume
         [SerializeField]
         private GameObject MenuObject;
 
+        private FaceChanger faceChanger;
+
+        private void Awake()
+        {
+            faceChanger = GetComponent<FaceChanger>();
+        }
         private void Start()
         {
             UnityAction unityAction = null;
@@ -79,7 +85,7 @@ namespace Kusume
 
         private void EndUpdate()
         {
-            SceneChanger.ChangeScene(nextScene);
+            faceChanger.Click();
         }
     }
 }

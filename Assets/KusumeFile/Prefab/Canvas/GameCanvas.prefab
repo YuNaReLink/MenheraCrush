@@ -1456,6 +1456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4914059898833371354}
   - component: {fileID: 3367998076902188529}
+  - component: {fileID: 2642298976636170442}
   m_Layer: 0
   m_Name: MenuSystem
   m_TagString: Untagged
@@ -1499,6 +1500,23 @@ MonoBehaviour:
   - {fileID: 3530773252064347400}
   nextScene: 1
   MenuObject: {fileID: 6223813719753134248}
+--- !u!114 &2642298976636170442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108794481743587958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a80d5bd672bc44a80b8c470682d3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionPrefab: {fileID: 4782931703562359562, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
+  sprites: []
+  images: []
+  nextScene: 1
+  parent: {fileID: 3825572372955718997}
 --- !u!1 &6223813719753134248
 GameObject:
   m_ObjectHideFlags: 0

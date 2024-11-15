@@ -68,6 +68,8 @@ namespace Kusume
             }
         }
 
+        
+
         public void SetPieceData(ColorInfo data,PieceInfo _pieceInfo)
         {
             tag = data.tag;
@@ -81,14 +83,6 @@ namespace Kusume
             GravityUpdate();
 
             CrushUpdate();
-
-            MaterialSin();
-        }
-
-        private void MaterialSin()
-        {
-            float offset = Mathf.Sin(Time.time * 1.5f);
-            mat.SetFloat("_LightOffset", offset);
         }
 
         private void GravityUpdate()
