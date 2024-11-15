@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 772417481109394051}
   - component: {fileID: 5846372125376038961}
   - component: {fileID: -8627405056025566574}
+  - component: {fileID: -989834613429512028}
   m_Layer: 0
   m_Name: BasePiece
   m_TagString: Untagged
@@ -163,8 +164,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  mat: {fileID: 0}
   tag: 0
   impactObject: {fileID: 8987218779975485508, guid: 558bbc09ce04cc54dabc1f06fe7e3406, type: 3}
   keepImpactPower: 0
   baseGravityScale: 5.5
   selected: 0
+--- !u!114 &-989834613429512028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44138455395364889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0535486f6a3ff544b879200bbb9105fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 0}
+  speed: 1.5
