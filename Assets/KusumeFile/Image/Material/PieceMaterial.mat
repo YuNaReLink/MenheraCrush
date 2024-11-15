@@ -84,6 +84,7 @@ Material:
     m_Ints: []
     m_Floats:
     - PixelSnap: 0
+    - _AngleRatio: 0.5
     - _BumpScale: 1
     - _ChromaticAberration: 0
     - _ColoeLevel: 0.5
@@ -97,29 +98,36 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _GlowIntensity: 0.289
+    - _GlowIntensity: 0.263
     - _GlowSpeed: 5
     - _LightCompletion: 1
+    - _LightOffset: 1.12
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PasutelColor: 0.3
-    - _PatternScale: 10
+    - _PatternScale: 6
     - _Repetition: 10
+    - _Rotation: 0
+    - _ShineDivision: 0.491
     - _ShineIntensity: 1
     - _ShineSpeed: 1
     - _SmoothnessTextureChannel: 0
+    - _SmoothstepTime: 0
     - _SparkleIntensity: 0.083
     - _SparkleSpeed: 13.1
     - _SpecularHighlights: 1
-    - _Speed: 5
+    - _Speed: 1.5
     - _SrcBlend: 1
+    - _Time: 0
     - _UVSec: 0
     - _Width: 0.5
     - _ZWrite: 1
+    - __AngleRatio: -1.62
     m_Colors:
     - _BasaColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Center: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 1, g: 0, b: 0, a: 1}
@@ -127,9 +135,11 @@ Material:
     - _Color3: {r: 1, g: 0, b: 0.84050083, a: 1}
     - _Color4: {r: 1, g: 0.91517913, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0.28193712, b: 1, a: 1}
+    - _EndColor: {r: 0, g: 0, b: 0, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShineColor: {r: 1, g: 1, b: 1, a: 1}
     - _SparkleColor: {r: 0.5680937, g: 0, b: 1, a: 1}
+    - _StartColor: {r: 1, g: 0, b: 0.95121956, a: 0}
     - _SurfaceClolr: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

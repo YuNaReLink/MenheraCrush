@@ -14,6 +14,9 @@ namespace Kusume
 
         [SerializeField]
         private SpriteRenderer      spriteRenderer = null;
+
+        [SerializeField]
+        private Material            mat = null;
         public GameObject           GetGameObject => transform.gameObject;
 
         [SerializeField]
@@ -59,6 +62,10 @@ namespace Kusume
         private void Start()
         {
             rb2D.gravityScale = baseGravityScale;
+            if (spriteRenderer != null)
+            {
+                mat = spriteRenderer.material;
+            }
         }
 
         public void SetPieceData(ColorInfo data,PieceInfo _pieceInfo)
@@ -75,10 +82,13 @@ namespace Kusume
 
             CrushUpdate();
 
-            if (selected)
-            {
-                Debug.Log("ê⁄ë±íÜ");
-            }
+            MaterialSin();
+        }
+
+        private void MaterialSin()
+        {
+            float offset = Mathf.Sin(Time.time * 1.5f);
+            mat.SetFloat("_LightOffset", offset);
         }
 
         private void GravityUpdate()

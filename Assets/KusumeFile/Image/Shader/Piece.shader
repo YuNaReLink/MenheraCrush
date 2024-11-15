@@ -6,6 +6,9 @@ Shader "Custom/PrismGlowShader"
         _GlowIntensity ("Glow Intensity", Range(0, 1)) = 0.8
         _PatternScale ("Pattern Scale", Range(0.1, 10.0)) = 5.0
         _Speed ("Animation Speed", Range(0.1, 5.0)) = 1.0
+
+        _LightOffset("LightOffset",float) = 0
+        _SmoothstepTime("SmoothstepTime",float) = 0
     }
     SubShader
     {
@@ -24,6 +27,16 @@ Shader "Custom/PrismGlowShader"
             float _GlowIntensity;
             float _PatternScale;
             float _Speed;
+
+            float _LightOffset;
+
+            float _SmoothstepTime;
+
+            float fractAlt(float x) 
+            {
+
+                return x - floor(x);
+            }
 
             struct appdata
             {
@@ -54,10 +67,12 @@ Shader "Custom/PrismGlowShader"
                 float3 prismColors = float3(1.0, 1.0, 1.0);
 
                 // 時間による変化のためのオフセットを sin を使って波のように変化させる
-                float offset = sin(_Time.y * _Speed) * _PatternScale;
+                float offset = _LightOffset * _PatternScale;
+                
+                _SmoothstepTime = sin((i.uv.x + i.uv.y) * _PatternScale + offset) * 0.5 + 0.5;
 
-                // 輝きを適用 (白色の輝きが波の動きに従って変化する)
-                float glow = smoothstep(0.2, 1.0, sin(i.uv.x * _PatternScale + offset) * 0.5 + 0.5) * _GlowIntensity;
+                // 斜め方向に輝きを適用（UV座標のxとyを加算して斜め方向に）
+                float glow = smoothstep(0.2, 1.0, _SmoothstepTime) * _GlowIntensity;
                 col.rgb = lerp(col.rgb, col.rgb + (prismColors * glow), _GlowIntensity); // 輝きを調整
 
                 return col;
