@@ -494,7 +494,7 @@ RectTransform:
   m_AnchoredPosition: {x: -311.07, y: -221}
   m_SizeDelta: {x: 506.2, y: 1004.26}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &638618464
+--- !u!1001 &617799938
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -504,7 +504,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6156829725712040905, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_Name
-      value: Particle
+      value: ParticleManager
       objectReference: {fileID: 0}
     - target: {fileID: 6317935957999850055, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -524,15 +524,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317935957999850055, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317935957999850055, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317935957999850055, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317935957999850055, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1660,4 +1660,4 @@ SceneRoots:
   - {fileID: 1484994898}
   - {fileID: 1199505653}
   - {fileID: 72006417}
-  - {fileID: 638618464}
+  - {fileID: 617799938}
