@@ -17,9 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/KanataniScene.unity
     guid: 24c0d6e020a2eb2489467883edc2f4d2
-  - enabled: 1
-
-    path: Assets/TYOSHi/StageSelect.unity
-    guid: e1e670f1a1e22b9499e113779d32a7da
-
   m_configObjects: {}
