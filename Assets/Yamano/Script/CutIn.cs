@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 namespace LucKee
 {
-    //旧式
+    /*旧式なので後々変更する予定*/
+
     //カットイン用のコンポーネント
     //カットイン中はゲームの動きを止めるのでポーズを要求する。
     [RequireComponent(typeof(Pause))]
     public class CutIn : MonoBehaviour
     {
+        /*Serialized*/
+
         //カットインの制限時間
         //カウントアップ式なのでこの値は不動
         [SerializeField]
@@ -22,8 +25,12 @@ namespace LucKee
         [SerializeField]
         private RouteHolder route;
 
+        /*Member*/
+
         //経過時間
         private float time = 0.0f;
+
+        /*Event*/
 
         void Start()
         {
@@ -34,7 +41,6 @@ namespace LucKee
             time = 0.0f;
             image.rectTransform.localPosition = route.GetPosition(0.0f);
         }
-
 
         void Update()
         {
@@ -56,8 +62,5 @@ namespace LucKee
             image.rectTransform.localPosition = route.GetPosition(time);
         }
     }
-
-
-
 }
 

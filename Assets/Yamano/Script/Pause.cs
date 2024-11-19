@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //名前空間
-//この範囲を誰が書いたかが分かりやすくなるはず。
+//徹底さえされれば、この範囲を誰が書いたかが分かりやすくなるはず。
 namespace LucKee
 {
     //ポーズ制御用コンポーネント
@@ -12,8 +12,12 @@ namespace LucKee
     //・Time.timeScaleを使って制御しているので、オブジェクトごとの影響の有無/大小を把握しておくこと。
     public class Pause : MonoBehaviour
     {
+        /*Member*/
+
         //ポーズ解除までの待機時間
         private float wait = 0;
+
+        /*Event*/
 
         private void Update()
         {
@@ -38,6 +42,8 @@ namespace LucKee
         {
             Disable();
         }
+
+        /*Method*/
 
         //ポーズの有効化
         //Time.timeScaleを0に設定することで、ほぼ全てのオブジェクトの動作を停止できる。
@@ -67,6 +73,5 @@ namespace LucKee
             //待機時間を設定し、残りはUpdateに任せる。
             wait = w;
         }
-
     }
 }

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b2433d7019bfce48b46481a31e318be, type: 3}
+  m_Script: {fileID: 11500000, guid: ae34fea0446e8ab47bdc6c6c03dd2e57, type: 3}
   m_Name: SELedger
   m_EditorClassIdentifier: 
-  ledger: []
+  values:
+  - {fileID: 0}
