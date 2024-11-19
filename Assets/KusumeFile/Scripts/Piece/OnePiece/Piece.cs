@@ -143,7 +143,7 @@ namespace Kusume
             if(piece == null) { return; }
             if(piece.transform.position.y < transform.position.y) { return; }
             if(keepImpactPower <= 0) { return; }
-
+            //ƒs[ƒX‚ðíœ‚µ‚½Žž‚Ì”š”­ˆ—
             Vector2 dir = piece.transform.position - transform.position;
 
             Rigidbody2D rb = piece.GetComponent<Rigidbody2D>();

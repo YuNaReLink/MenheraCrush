@@ -13,6 +13,8 @@ namespace Kusume
 
         private Animator animator;
 
+        private bool entry = false;
+
         public void Init(AllyCharacterInfo characterInfo)
         {
             animator.runtimeAnimatorController = characterInfo.animator;
@@ -20,6 +22,7 @@ namespace Kusume
             image.sprite = characterInfo.sprite;
             image.color = Color.white;
             image.SetNativeSize();
+            image.enabled = true;
         }
 
         private void Awake()
@@ -27,6 +30,22 @@ namespace Kusume
             image = GetComponent<Image>();
 
             animator = GetComponent<Animator>();
+        }
+
+        private void Start()
+        {
+            image.enabled = false;
+        }
+
+        private void Update()
+        {
+            
+        }
+
+        private void EntryUpdate()
+        {
+            if (!entry) { return; }
+
         }
     }
 }
