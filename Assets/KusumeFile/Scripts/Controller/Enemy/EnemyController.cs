@@ -20,13 +20,10 @@ namespace Kusume
         [SerializeField]
         private EnemyAttackCount    enemyAttackCount;
 
+        protected override MenheraBoard Board => GameController.Instance.EnemyBoard;
+
         private void Awake()
         {
-            player = FindObjectOfType<PlayerController>();
-            if(player == null)
-            {
-                Debug.LogError("PlayerController‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
-            }
             enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
             if(enemyAttackCount == null)
             {
@@ -40,6 +37,12 @@ namespace Kusume
 
         private void Start()
         {
+            player = FindObjectOfType<PlayerController>();
+            if (player == null)
+            {
+                Debug.LogError("PlayerController‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
+            }
+
             SetCharaInt((int)SelectStageContainer.EnemyCharacter);
 
             SetMenheraUI();
@@ -47,13 +50,6 @@ namespace Kusume
             attackCount = enemyMenheraData.EnemyAttackCountInfos[charaInt].attackCount;
 
             LoopAttackStart();
-        }
-
-        public override void SetMenheraUI()
-        {
-            base.SetMenheraUI();
-            RectTransform rectTransform = thisImage.GetComponent<RectTransform>();
-            rectTransform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         }
 
         private void LoopAttackStart()
