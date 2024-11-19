@@ -80,7 +80,7 @@ public class CharacterSelect : MonoBehaviour
         for (int i=0;i< buttons.Length;i++)
         {
             Color c = Color.white;
-            Sprite s = infos[i].yamiFace;
+            Sprite s = infos[i].normalFace;
             if (i != (int)character)
             {
                 c.r = 0.6f;
