@@ -12,7 +12,7 @@ namespace Kusume
 
         [SerializeField]
         protected int charaInt = 0;
-
+        public int CharaInt => charaInt;
         public void SetCharaInt(int i) { charaInt = i; }
 
         public virtual void SetMenheraUI()

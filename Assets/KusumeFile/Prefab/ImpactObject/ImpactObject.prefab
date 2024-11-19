@@ -82,4 +82,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0.25
   radiusSpeed: 2
-  power: 15
+  power: 12.5

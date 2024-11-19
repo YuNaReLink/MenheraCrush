@@ -23,9 +23,16 @@ namespace Kusume
 
         private FaceChanger faceChanger;
 
+        private AudioSource audioSource;
+
+        [SerializeField]
+        private AudioClip audioClip;
+
         private void Awake()
         {
             faceChanger = GetComponent<FaceChanger>();
+
+            audioSource = GetComponent<AudioSource>();
         }
         private void Start()
         {
@@ -55,6 +62,7 @@ namespace Kusume
         private void MenuActive(bool a)
         {
             MenuObject?.SetActive(a);
+            audioSource.PlayOneShot(audioClip);
         }
 
         private void Update()

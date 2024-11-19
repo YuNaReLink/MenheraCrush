@@ -8,12 +8,12 @@ namespace Kusume
     /// </summary>
     public enum PieceTag
     {
-        Red,
+        Purple,
         Blue,
         Green,
+        Red,
         Yellow,
         Pink,
-        Purple,
         Jama,
         Count
     }
@@ -127,6 +127,7 @@ namespace Kusume
             p.transform.localScale *= scale;
             //ピースの親を設定
             p.transform.SetParent(piecesParent.transform);
+            p.SetInit();
         
             Piece onePiece = p.GetComponent<Piece>();
 
