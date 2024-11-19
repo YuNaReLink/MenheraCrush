@@ -14,6 +14,9 @@ namespace Kusume
 
         [SerializeField]
         private SpriteRenderer      spriteRenderer = null;
+
+        [SerializeField]
+        private Material            mat = null;
         public GameObject           GetGameObject => transform.gameObject;
 
         [SerializeField]
@@ -59,7 +62,13 @@ namespace Kusume
         private void Start()
         {
             rb2D.gravityScale = baseGravityScale;
+            if (spriteRenderer != null)
+            {
+                mat = spriteRenderer.material;
+            }
         }
+
+        
 
         public void SetPieceData(ColorInfo data,PieceInfo _pieceInfo)
         {
@@ -74,11 +83,6 @@ namespace Kusume
             GravityUpdate();
 
             CrushUpdate();
-
-            if (selected)
-            {
-                Debug.Log("ê⁄ë±íÜ");
-            }
         }
 
         private void GravityUpdate()
@@ -139,7 +143,7 @@ namespace Kusume
             if(piece == null) { return; }
             if(piece.transform.position.y < transform.position.y) { return; }
             if(keepImpactPower <= 0) { return; }
-
+            //ÉsÅ[ÉXÇçÌèúÇµÇΩéûÇÃîöî≠èàóù
             Vector2 dir = piece.transform.position - transform.position;
 
             Rigidbody2D rb = piece.GetComponent<Rigidbody2D>();

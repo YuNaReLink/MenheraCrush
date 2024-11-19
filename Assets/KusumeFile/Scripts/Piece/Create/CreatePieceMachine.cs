@@ -77,6 +77,8 @@ namespace Kusume
                 pieceSpawnPosition.Add(g.transform);
             }
             creatorCount = transform.childCount;
+
+            piecesParent = FindObjectOfType<PieceParent>().gameObject;
         }
 
         private void Start()

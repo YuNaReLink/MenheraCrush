@@ -19,11 +19,14 @@ namespace Kusume
         private List<Button> buttons = new List<Button>();
 
         [SerializeField]
-        private SceneList nextScene = SceneList.StageSelect;
-
-        [SerializeField]
         private GameObject MenuObject;
 
+        private FaceChanger faceChanger;
+
+        private void Awake()
+        {
+            faceChanger = GetComponent<FaceChanger>();
+        }
         private void Start()
         {
             UnityAction unityAction = null;
@@ -79,7 +82,7 @@ namespace Kusume
 
         private void EndUpdate()
         {
-            SceneChanger.ChangeScene(nextScene);
+            faceChanger.Click();
         }
     }
 }

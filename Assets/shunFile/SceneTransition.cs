@@ -23,6 +23,8 @@ public class SceneTransition : MonoBehaviour
     [SerializeField]
     private float duration = 0.5f;
 
+    private SceneList nextScene = SceneList.Title;
+    public void SetNextScene(SceneList n) {  nextScene = n; }
 
     //// Start is called before the first frame update
     void Awake()
@@ -58,7 +60,7 @@ public class SceneTransition : MonoBehaviour
         //âÊñ Ç™çïÇ≠Ç»Ç¡ÇΩÇÁ
         if (circle.sizeDelta.x <= 0.0f)
         {
-            SceneChanger.ChangeScene(SceneList.StageSelect);
+            SceneChanger.ChangeScene(nextScene);
         }
     }
 
