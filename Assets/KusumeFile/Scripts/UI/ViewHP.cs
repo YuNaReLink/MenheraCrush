@@ -19,19 +19,16 @@ namespace Kusume
         [SerializeField]
         private Slider hpSlider;
 
-        private void Awake()
+        public void Setup(PlayerController c)
         {
-            controller = FindObjectOfType<PlayerController>();
-        }
-        // Start is called before the first frame update
-        private void Start()
-        {
+            controller = c;
             hpSlider.value = (float)controller.HP.CurrentHP / (float)controller.HP.MaxHP;
         }
 
         // Update is called once per frame
         private void Update()
         {
+            if(controller == null) { return; }
             UpdateGauge();
 
         }

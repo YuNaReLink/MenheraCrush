@@ -3,16 +3,12 @@ using UnityEngine.UI;
 
 namespace Kusume
 {
-    public class BaseMenheraController : MonoBehaviour
+    public abstract class BaseMenheraController : MonoBehaviour
     {
         [SerializeField]
         protected MenheraData menheraData;
 
-        [SerializeField]
-        protected Image thisImage;
-
-        [SerializeField]
-        protected Animator animator;
+        protected abstract MenheraBoard Board { get; }
 
         [SerializeField]
         protected int charaInt = 0;
@@ -21,13 +17,7 @@ namespace Kusume
 
         public virtual void SetMenheraUI()
         {
-            if(animator != null)
-            {
-                animator.runtimeAnimatorController = menheraData.Characters[charaInt].animator;
-            }
-            thisImage.sprite = menheraData.Characters[charaInt].sprite;
-            thisImage.color = Color.white;
-            thisImage.SetNativeSize();
+            Board.Init(menheraData.Characters[charaInt]);
         }
     }
 }

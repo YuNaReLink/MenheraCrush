@@ -19,6 +19,12 @@ namespace Kusume
         private CreatePieceMachine  createPiecemMachine;
         public CreatePieceMachine CreatePieceMachine => createPiecemMachine;
 
+        [SerializeField]
+        private PieceContainer pieceContainer;
+        public List<Piece> PieceList => pieceContainer.PieceList;
+
+        protected override MenheraBoard Board => GameController.Instance.PlayerBoard;
+
         private void Awake()
         {
             playerInput = GetComponent<PlayerInput>();
@@ -27,27 +33,29 @@ namespace Kusume
                 Debug.LogError("PlayerInputがアタッチされていません");
             }
 
-            createPiecemMachine = FindObjectOfType<CreatePieceMachine>();
-            if(createPiecemMachine == null)
+            ViewHP viewHP = FindObjectOfType<ViewHP>();
+            if(viewHP != null)
             {
-                Debug.LogError("CreatePieceMachineがアタッチされていません");
+                viewHP.Setup(this);
+                hp.Setup();
             }
-
         }
 
         private void Start()
         {
+            createPiecemMachine = FindObjectOfType<CreatePieceMachine>();
+            if (createPiecemMachine == null)
+            {
+                Debug.LogError("CreatePieceMachineがアタッチされていません");
+            }
+
             pieceContainer.Setup(this);
             SetCharaInt(CharacterSelect.SelectCharacterNo);
             SetMenheraUI();
-            hp.Setup();
         }
-
-        public override void SetMenheraUI()
-        {
-            base.SetMenheraUI();
-        }
-
+        /// <summary>
+        /// デバッグ用のメソッド
+        /// </summary>
         private void UpdateDebug()
         {
             if (Input.GetKeyDown(KeyCode.F1))
@@ -90,10 +98,6 @@ namespace Kusume
 
             pieceContainer.CheckPieceList();
         }
-
-        [SerializeField]
-        private PieceContainer pieceContainer;
-        public List<Piece> PieceList => pieceContainer.PieceList;
 
         /// <summary>
         /// マウスクリック時にオブジェクトに当たってるか判定する関数
