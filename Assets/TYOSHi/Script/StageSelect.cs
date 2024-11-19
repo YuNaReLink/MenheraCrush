@@ -32,6 +32,8 @@ public class StageSelect : MonoBehaviour
     //ステージ変更
     void CheckState(StageNo no)
     {
+        background.sprite = backSprite[index];
+
         int n = (int)no;
         for (int i = 0; i < images.Length; i++)
         {
@@ -66,8 +68,6 @@ public class StageSelect : MonoBehaviour
             index = 0;
         }
 
-        background.sprite= backSprite[index];
-
         CheckState((StageNo)index);
     }
 
@@ -81,14 +81,12 @@ public class StageSelect : MonoBehaviour
             index = (int)StageNo.Count - 1;
         }
 
-        background.sprite = backSprite[index];
-
         CheckState((StageNo)index);
     }
 
     public void ChangeCharacter()
     {
         //選択中のキャラクターによって画像変更
-        images[2].sprite= groups[CharacterSelect.SelectCharacterNo];
+        images[2].sprite = groups[CharacterSelect.SelectCharacterNo];
     }
 }
