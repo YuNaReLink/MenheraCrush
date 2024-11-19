@@ -19,9 +19,6 @@ namespace Kusume
         private List<Button> buttons = new List<Button>();
 
         [SerializeField]
-        private SceneList nextScene = SceneList.StageSelect;
-
-        [SerializeField]
         private GameObject MenuObject;
 
         private FaceChanger faceChanger;
