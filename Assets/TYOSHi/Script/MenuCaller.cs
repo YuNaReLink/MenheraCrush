@@ -8,11 +8,17 @@ public class MenuCaller : MonoBehaviour
     [SerializeField]
     private Kusume.MenuController menu;
 
+    [SerializeField]
+    private GameObject charaSelect;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            menu.gameObject.SetActive(true);
+            if(!charaSelect.activeSelf)
+            {
+                menu.gameObject.SetActive(!menu.gameObject.activeSelf);
+            }
         }
     }
 }

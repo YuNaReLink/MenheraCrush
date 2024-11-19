@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689505822945942701, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1476,8 +1476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 951.2, y: -532.2}
-  m_SizeDelta: {x: 239.4949, y: 103.2255}
+  m_AnchoredPosition: {x: 936.90735, y: -537.8}
+  m_SizeDelta: {x: 305.9333, y: 113.0403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377263914
 MonoBehaviour:
@@ -1538,7 +1538,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 377263914}
         m_TargetAssemblyTypeName: PanelHider, Assembly-CSharp
-        m_MethodName: Hide
+        m_MethodName: Reveal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6284,6 +6284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 710279339}
+  charaSelect: {fileID: 1576566420}
 --- !u!4 &2127838423
 Transform:
   m_ObjectHideFlags: 0

@@ -8,11 +8,6 @@ public class PanelHider : MonoBehaviour
 
     public void Reveal()
     {
-        panel.SetActive(true);
-    }
-    
-    public void Hide()
-    {
-        panel.SetActive(false);
+        panel.SetActive(!panel.activeSelf);
     }
 }
