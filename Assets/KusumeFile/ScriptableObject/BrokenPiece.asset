@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2433d7019bfce48b46481a31e318be, type: 3}
+  m_Name: BrokenPiece
+  m_EditorClassIdentifier: 
+  values:
+  - {fileID: 8300000, guid: f266392dcd8f26b4e9f258247580b0fc, type: 3}
+  - {fileID: 8300000, guid: 1db95e24dfd689d448c3df2c582388d4, type: 3}

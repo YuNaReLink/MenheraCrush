@@ -62,16 +62,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menheraData: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
-  thisImage: {fileID: 0}
-  animator: {fileID: 0}
   charaInt: 0
   debug: 0
   hp:
     maxHP: 200
     currentHP: 0
+  skillCoolDownCount: 1
+  skillRunCount: 0
   createPiecemMachine: {fileID: 0}
   pieceContainer:
     pieceList: []
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
 --- !u!114 &5206039346121342140
 MonoBehaviour:
   m_ObjectHideFlags: 0

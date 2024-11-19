@@ -17,8 +17,11 @@ namespace Kusume
         private CreatePieceMachine  createPiecemMachine;
 
         private PlayerHP            hp;
+
+        private PlayerController controller;
         public void Setup(PlayerController p)
         {
+            controller = p;
             createPiecemMachine = p.CreatePieceMachine;
             hp = p.HP;
         }
@@ -106,9 +109,16 @@ namespace Kusume
                     pieceList[i].Crush(0.05f * i);
                     sizes.Add(pieceList[i].PieceInfo.size.big);
                 }
-
                 GameScore.SetOnceCount((int)ScoreCalculator.Calc(sizes, GameScore.Bonus));
-                hp.Regain(5);
+                PieceTag tag = pieceList[0].PieceInfo.color.tag;
+                if((int)tag == controller.CharaInt)
+                {
+                    controller.SetSkillRunCount(pieceList.Count);
+                }
+                if (tag == PieceTag.Pink)
+                {
+                    hp.Regain(5);
+                }
             }
             for(int i = 0;i < pieceList.Count; i++)
             {

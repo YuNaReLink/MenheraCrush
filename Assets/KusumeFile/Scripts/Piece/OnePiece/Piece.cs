@@ -8,6 +8,8 @@ namespace Kusume
     /// </summary>
     public class Piece : MonoBehaviour
     {
+        LucKee.SEManager seManager;
+
         [SerializeField]
         private Rigidbody2D         rb2D; 
         public Rigidbody2D          RB2D => rb2D;
@@ -51,6 +53,12 @@ namespace Kusume
             {
                 selected = s; 
             }
+        }
+
+        public void SetInit()
+        {
+            PieceParent pieceParent = GetComponentInParent<PieceParent>();
+            seManager = pieceParent.gameObject.GetComponent<LucKee.SEManager>();
         }
 
         private void Awake()
@@ -121,6 +129,11 @@ namespace Kusume
             {
                 GameObject g = Instantiate(impactObject, transform.position,Quaternion.identity);
                 g.transform.SetParent(transform.parent);
+                seManager.Play(0);
+            }
+            else
+            {
+                seManager.Play(1);
             }
             CreatePieceMachine.CurrentPieceCount--;
             Destroy(gameObject);

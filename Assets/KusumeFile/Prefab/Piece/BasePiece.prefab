@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ad15375929370d44af9804158d43007, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.25, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.52
 --- !u!50 &5846372125376038961
 Rigidbody2D:
   serializedVersion: 4
@@ -162,6 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcc6ba3c0dcf4b43ad40e59693bd3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip1: {fileID: 8300000, guid: f266392dcd8f26b4e9f258247580b0fc, type: 3}
+  audioClip2: {fileID: 8300000, guid: 1db95e24dfd689d448c3df2c582388d4, type: 3}
   rb2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
   mat: {fileID: 0}

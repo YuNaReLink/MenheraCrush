@@ -6,22 +6,36 @@ namespace Kusume
     public class PlayerController : BaseMenheraController
     {
         [SerializeField]
-        private bool                debug = false;
+        private bool                    debug = false;
 
-        private PlayerInput         playerInput = null;
-
-        [SerializeField]
-        private PlayerHP            hp;
-
-        public PlayerHP             HP => hp;
+        private PlayerInput             playerInput = null;
 
         [SerializeField]
-        private CreatePieceMachine  createPiecemMachine;
-        public CreatePieceMachine CreatePieceMachine => createPiecemMachine;
+        private PlayerHP                hp;
+
+        public PlayerHP                 HP => hp;
 
         [SerializeField]
-        private PieceContainer pieceContainer;
-        public List<Piece> PieceList => pieceContainer.PieceList;
+        private float                   skillCoolDownCount = 1.0f;
+        [SerializeField]
+        private int                     skillRunCount = 0;
+        public void                     SetSkillRunCount(int count) 
+        {
+            skillRunCount += count; 
+            if(skillRunCount >= menheraData.Characters[charaInt].skillGauge)
+            {
+                skillRunCount = menheraData.Characters[charaInt].skillGauge;
+            }
+        }
+        private Timer                   skillCoolTimer = new Timer();
+
+        [SerializeField]
+        private CreatePieceMachine      createPiecemMachine;
+        public CreatePieceMachine       CreatePieceMachine => createPiecemMachine;
+
+        [SerializeField]
+        private PieceContainer          pieceContainer;
+        public List<Piece>              PieceList => pieceContainer.PieceList;
 
         protected override MenheraBoard Board => GameController.Instance.PlayerBoard;
 
@@ -38,6 +52,12 @@ namespace Kusume
             {
                 viewHP.Setup(this);
                 hp.Setup();
+            }
+
+            SkillButton skill = FindObjectOfType<SkillButton>();
+            if (skill != null)
+            {
+                skill.Setup(RunSkill);
             }
         }
 
@@ -85,18 +105,28 @@ namespace Kusume
 
         public void Update()
         {
+            skillCoolTimer.Update();
+
             UpdateDebug();
             if (GameController.Instance.IsPuzzleStop||GameController.Instance.IsEndGame) { return; }
 
             if (Input.GetButtonDown("Jump"))
             {
-                Instantiate(menheraData.Characters[charaInt].skill,transform.position,Quaternion.identity);
+                RunSkill();
             }
 
             playerInput.ButtonInput();
             MouseRaycast();
 
             pieceContainer.CheckPieceList();
+        }
+
+        public void RunSkill()
+        {
+            if (skillRunCount < menheraData.Characters[charaInt].skillGauge) { return; }
+            Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+            skillCoolTimer.Start(skillCoolDownCount);
+            skillRunCount = 0;
         }
 
         /// <summary>
