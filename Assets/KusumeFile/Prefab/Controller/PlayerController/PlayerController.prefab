@@ -61,14 +61,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1ed62efcb5fe54cb095a53a4d2c8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menheraData: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
+  thisImage: {fileID: 0}
+  animator: {fileID: 0}
+  charaInt: 0
+  debug: 0
   hp:
     maxHP: 200
     currentHP: 0
   createPiecemMachine: {fileID: 0}
-  skillData: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
-  changeGravityScale: 1
-  noGravityCount: 0.4
-  pieceList: []
+  pieceContainer:
+    pieceList: []
 --- !u!114 &5206039346121342140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +137,26 @@ PrefabInstance:
     - target: {fileID: 8606966946790515500, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
       propertyPath: m_Name
       value: Line
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

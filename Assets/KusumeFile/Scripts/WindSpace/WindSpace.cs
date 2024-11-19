@@ -11,14 +11,14 @@ namespace Kusume
     public class WindSpace : MonoBehaviour
     {
         [SerializeField]
-        private BoxCollider2D boxCollider;
+        private BoxCollider2D   boxCollider;
 
         [SerializeField]
-        private float power = 500.0f;
+        private float           power = 500.0f;
 
         [SerializeField]
-        private float duration = 1.0f;
-        public float Duration => duration;
+        private float           duration = 1.0f;
+        public float            Duration => duration;
 
         public void SetDuration(float _duration)
         {

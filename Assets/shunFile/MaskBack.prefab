@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 6397622108746381353}
   - component: {fileID: 6928510506228151791}
   - component: {fileID: 2685924852957750493}
-  - component: {fileID: 653961720785514360}
+  - component: {fileID: 4782931703562359562}
   m_Layer: 5
   m_Name: MaskBack
   m_TagString: Untagged
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!114 &653961720785514360
+--- !u!114 &4782931703562359562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,10 +176,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6689505822945942701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0fea083bcc01a41af05659dc316fb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 25c74612db4828e48827f7ae92a37f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 3488869254622865664}
+  speed: 1000
+  maxSize: 2200
+  expand: 0
+  duration: 0.5
 --- !u!1 &8637134588820312143
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +220,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 600}
+  m_SizeDelta: {x: 2200, y: 2200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3527018879655255810
 CanvasRenderer:

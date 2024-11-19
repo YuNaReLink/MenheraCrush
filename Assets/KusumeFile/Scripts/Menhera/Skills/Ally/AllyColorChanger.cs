@@ -1,22 +1,22 @@
-using LucKee;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kusume
 {
+    /// <summary>
+    /// 味方メンヘラの同じ色のピースの色を変化させるスキルクラス
+    /// </summary>
     public class AllyColorChanger : MonoBehaviour, IColorChanger
     {
-        private CreatePieceMachine pieceMachine;
+        private CreatePieceMachine      pieceMachine;
 
-        public CreatePieceMachine CreatePieceMachine => pieceMachine;
+        public CreatePieceMachine       CreatePieceMachine => pieceMachine;
 
         [SerializeField]
-        private ColorChangeType type = ColorChangeType.TypeAlly;
+        private ColorChangeType         type = ColorChangeType.TypeAlly;
 
-        public ColorChangeType Type => type;
+        public ColorChangeType          Type => type;
 
-        private PieceInfo pieceInfo;
+        private PieceInfo               pieceInfo;
 
         private void Awake()
         {
@@ -35,6 +35,7 @@ namespace Kusume
             PieceTag tag = p.Tag;
             for (int i = 0; i < pieceMachine.Pieces.Count; i++)
             {
+                if (pieceMachine.Pieces[i].IsSelected) { continue; }
                 if (pieceMachine.Pieces[i].Tag != tag) { continue; }
                 pieceMachine.Pieces[i].SetPieceData(pieceInfo.color,pieceInfo);
             }

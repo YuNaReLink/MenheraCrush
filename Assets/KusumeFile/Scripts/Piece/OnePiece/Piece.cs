@@ -9,35 +9,49 @@ namespace Kusume
     public class Piece : MonoBehaviour
     {
         [SerializeField]
-        private Rigidbody2D rb2D; 
-        public Rigidbody2D RB2D => rb2D;
+        private Rigidbody2D         rb2D; 
+        public Rigidbody2D          RB2D => rb2D;
 
         [SerializeField]
-        private SpriteRenderer spriteRenderer = null;
-        public GameObject GetGameObject => transform.gameObject;
+        private SpriteRenderer      spriteRenderer = null;
 
         [SerializeField]
-        private new PieceTag tag = PieceTag.Red;
-        public PieceTag Tag { get { return tag; }set { tag = value; } }
+        private Material            mat = null;
+        public GameObject           GetGameObject => transform.gameObject;
+
+        [SerializeField]
+        private new PieceTag        tag = PieceTag.Red;
+        public PieceTag             Tag { get { return tag; }set { tag = value; } }
 
         [Header("Scaleが1.5の時に使う爆発オブジェクト"),SerializeField]
-        private GameObject impactObject = null;
+        private GameObject          impactObject = null;
 
         [SerializeField]
-        private float keepImpactPower;
-        public void SetImpactPower(float power) {  keepImpactPower = power; }
+        private float               keepImpactPower;
+        public void                 SetImpactPower(float power) {  keepImpactPower = power; }
 
-        private float wait = 0;
+        private float               wait = 0;
 
-        private float noGravityCount = 0;
-        public void SetNoGravityCount(float time) {  noGravityCount = time; }
+        private float               noGravityCount = 0;
+        public void                 SetNoGravityCount(float time) {  noGravityCount = time; }
 
 
         [SerializeField]
-        private float baseGravityScale;
+        private float               baseGravityScale;
 
-        private PieceInfo pieceInfo;
-        public PieceInfo PieceInfo => pieceInfo;
+        private PieceInfo           pieceInfo;
+        public PieceInfo            PieceInfo => pieceInfo;
+
+        [SerializeField]
+        private bool selected = false;
+        public bool IsSelected => selected;
+        public void SetSelected(bool s) 
+        {
+            if(selected != s)
+            {
+                selected = s; 
+            }
+        }
 
         private void Awake()
         {
@@ -48,13 +62,21 @@ namespace Kusume
         private void Start()
         {
             rb2D.gravityScale = baseGravityScale;
+            if (spriteRenderer != null)
+            {
+                mat = spriteRenderer.material;
+            }
         }
+
+        
 
         public void SetPieceData(ColorInfo data,PieceInfo _pieceInfo)
         {
             tag = data.tag;
             spriteRenderer.color = data.color;
             pieceInfo = _pieceInfo;
+            spriteRenderer.sprite = data.sprite;
+            spriteRenderer.material = data.material;
         }
         private void Update()
         {

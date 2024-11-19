@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,14 +10,18 @@ namespace Kusume
     public class SetEnemy : MonoBehaviour
     {
         [SerializeField]
-        private Button selectButton;
+        private Button              selectButton;
 
         [SerializeField]
-        private CharacterNameList character;
+        private CharacterNameList   character;
 
         private void Awake()
         {
             selectButton = GetComponentInChildren<Button>();
+            if(selectButton == null)
+            {
+                Debug.LogWarning("Buttonがコンポーネントされていません");
+            }
         }
 
         private void Start()

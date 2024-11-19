@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,17 @@ namespace LucKee {
     public class Tester : MonoBehaviour
     {
         [SerializeField]
-        CutIn prefab = null;
+        private Rigidbody2D target = null;
         [SerializeField]
-        Canvas canvas = null;
+        private new SpriteRenderer renderer;
         private void Update()
         {
+            float s = Mathf.Sin(Time.time * 1.5f);
+            renderer.material.SetFloat("_Offset", s);
+            float f = renderer.material.GetFloat("_Offset");
             if (Input.anyKeyDown)
             {
-                Instantiate(prefab, canvas.transform, false);
+                target.AddForce(10 * Vector2.left);
             }
         }
     }

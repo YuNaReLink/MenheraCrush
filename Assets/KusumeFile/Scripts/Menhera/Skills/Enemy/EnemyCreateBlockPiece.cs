@@ -1,26 +1,40 @@
-using Kusume;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill_EnemyCreateBlockPiece : MonoBehaviour
+namespace Kusume
 {
-    private CreatePieceMachine pieceMachine;
-
-    public CreatePieceMachine CreatePieceMachine => pieceMachine;
-
-    private PieceInfo pieceInfo;
-
-    private void Awake()
+    public class Skill_EnemyCreateBlockPiece : MonoBehaviour
     {
-        pieceMachine = FindObjectOfType<CreatePieceMachine>();
-        pieceInfo = pieceMachine.PieceLedger.GetDecisionPiece((int)PieceTag.Jama);
-    }
+        private CreatePieceMachine      pieceMachine;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Piece piece = pieceMachine.Pieces[Random.Range(0, pieceMachine.Pieces.Count - 1)];
-        piece.SetPieceData(pieceInfo.color, pieceInfo);
+        private PieceInfo               pieceInfo;
+
+        [SerializeField]
+        private int                     changeCount = 3;
+
+        private void Awake()
+        {
+            pieceMachine = FindObjectOfType<CreatePieceMachine>();
+            pieceInfo = pieceMachine.PieceLedger.GetDecisionPiece((int)PieceTag.Jama);
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            for (int i = 0; i < changeCount; i++)
+            {
+                Create();
+            }
+        }
+
+        private void Create()
+        {
+            Piece piece = pieceMachine.Pieces[Random.Range(0, pieceMachine.Pieces.Count - 1)];
+            if (piece.IsSelected)
+            {
+                Create();
+            }
+            piece.SetPieceData(pieceInfo.color, pieceInfo);
+        }
     }
 }
+
