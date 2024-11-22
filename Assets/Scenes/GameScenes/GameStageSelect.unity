@@ -3282,6 +3282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterSelectButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4449928421033484597, guid: f23b88bb75c7ab54190ced87aac18e4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4161,6 +4165,10 @@ PrefabInstance:
     - target: {fileID: 6156829725712040905, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_Name
       value: ParticleManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156829725712040905, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6317935957999850055, guid: 8778b90b3cd080f4ebc9d3bcec60a8b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5775,7 +5783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001652098464914850, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6001652098464914850, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
