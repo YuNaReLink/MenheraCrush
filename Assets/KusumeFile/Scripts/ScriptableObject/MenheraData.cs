@@ -8,28 +8,23 @@ using UnityEngine;
 namespace Kusume
 {
     [Serializable]
-    public struct AllyCharacterInfo
+    public struct CharacterInfo
     {
         public CharacterNameList tag;
         public string name;
         public Skill skill;
+        public int skillGauge; 
         public AnimatorController animator;
         public Sprite sprite;
         public Vector2 ImageOffset;
-    }
-
-    [Serializable]
-    public struct EnemyAttackCountInfo
-    {
-        public float attackCount;
     }
 
     [CreateAssetMenu(fileName = "Menhera", menuName = "ScriptableObjects/Menhera", order = 1)]
     public class MenheraData : ScriptableObject
     {
         [SerializeField]
-        private AllyCharacterInfo[] characters;
-        public AllyCharacterInfo[] Characters => characters;
+        private CharacterInfo[] characters;
+        public CharacterInfo[] Characters => characters;
 
     }
 }

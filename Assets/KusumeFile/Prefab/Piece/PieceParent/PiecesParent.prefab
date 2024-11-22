@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6643733312432234581}
   - component: {fileID: -3649134744253603469}
+  - component: {fileID: 5438665383974932266}
   m_Layer: 0
   m_Name: PiecesParent
   m_TagString: Untagged
@@ -44,3 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f19315ab4ca334280b032790690565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5438665383974932266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028913099963739839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ledger: {fileID: 11400000, guid: 6fc865b487e4cc1449715591de043898, type: 2}

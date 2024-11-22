@@ -9,10 +9,14 @@ namespace LucKee
     //用途によって使い分けられるように非staticで作っている。
     public class SEManager : MonoBehaviour
     {
+
+        /*Serialized*/
+
         //台帳
         [SerializeField]
-        private SELedger ledger;
+        private AudioLedger ledger;
 
+        /*Method*/
 
         //再生するためだけのオブジェクトを生成する。
         //番号指定なので間違いに注意。
@@ -23,10 +27,13 @@ namespace LucKee
             {
                 return;
             }
+
             //空のオブジェクトを生成する。
-            GameObject o = Instantiate(new GameObject());
+            GameObject o = new("SE Player");
+
             //コンポーネントを括り付ける。
             SEPlayer se = o.AddComponent<SEPlayer>();
+
             //鳴らす。
             se.Play(ledger[i]);
         }

@@ -12,9 +12,13 @@ namespace Kusume
 
         private Timer                   gameTimer;
         public Timer                    GameTimer => gameTimer;
-
         [SerializeField]
-        private float                   gameTimerCount = 60.0f;
+        private float                   gameTimerCount = 10.0f;
+
+        private Timer                   gameStartTimer;
+        public Timer                    GameStartTimer => gameStartTimer;
+        [SerializeField]
+        private float                   gameStartCount = 3.0f;
 
         [SerializeField]
         private GamePreparationData     preparationData;
@@ -25,6 +29,9 @@ namespace Kusume
         [SerializeField]
         private MenheraBoard            enemy;
         public MenheraBoard             EnemyBoard => enemy;
+
+        [SerializeField]
+        private AudioClip bgm;
 
         public void SetPreparation()
         {
@@ -50,6 +57,7 @@ namespace Kusume
         {
             SetupInstance();
             gameTimer = new Timer();
+            gameStartTimer = new Timer();
             resultSystem = FindAnyObjectByType<ResultSystem>();
         }
 
@@ -65,9 +73,29 @@ namespace Kusume
 
         private void Start()
         {
+            endGame = false;
+            puzzleStop = false;
+
+            LucKee.BGMManager.Play(bgm);
+        }
+
+        public void SetGameTimer(float t)
+        {
+            gameTimerCount = t;
             gameTimer.Start(gameTimerCount);
             gameTimer.OnOnceEnd += EndGame;
-            endGame = false;
+            gameStartTimer.Start(gameStartCount);
+        }
+
+        public void SetGameStartTimer()
+        {
+            puzzleStop = true;
+            gameStartTimer.Start(gameStartCount);
+            gameStartTimer.OnOnceEnd += GameStartTimerEnd;
+        }
+
+        private void GameStartTimerEnd()
+        {
             puzzleStop = false;
         }
 
@@ -75,6 +103,7 @@ namespace Kusume
         void Update()
         {
             gameTimer.Update();
+            gameStartTimer.Update();
         }
     }
 }

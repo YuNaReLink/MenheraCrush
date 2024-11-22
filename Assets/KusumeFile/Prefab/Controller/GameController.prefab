@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTimerCount: 60
   preparationData: {fileID: 11400000, guid: b828ac93f3584a5499bfdf4c50bba07c, type: 2}
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  bgm: {fileID: 8300000, guid: a19ba5b313b243348b7ce1f66e226434, type: 3}
   endGame: 0
 --- !u!114 &361388246940360034
 MonoBehaviour:

@@ -5,22 +5,19 @@ namespace Kusume
     public class EnemyController : BaseMenheraController
     {
         [SerializeField]
-        private PlayerController    player;
+        private PlayerController            player;
 
-
-        private Timer               attackTimer;
-        public  Timer               AttackTimer => attackTimer;
+        //攻撃のカウントを進めるタイマー
+        private Timer                       attackTimer;
+        public  Timer                       AttackTimer => attackTimer;
 
         [Header("敵の攻撃開始までのカウント"),SerializeField]
-        private float               attackCount = 11.5f;
-
+        private float                       attackCount = 11.5f;
+        //敵がプレイヤーを攻撃するまでのカウントを管理＆表示するクラス
         [SerializeField]
-        private EnemyMenheraData    enemyMenheraData;
+        private EnemyAttackCount            enemyAttackCount;
 
-        [SerializeField]
-        private EnemyAttackCount    enemyAttackCount;
-
-        protected override MenheraBoard Board => GameController.Instance.EnemyBoard;
+        protected override MenheraBoard     Board => GameController.Instance.EnemyBoard;
 
         private void Awake()
         {
@@ -46,16 +43,13 @@ namespace Kusume
             SetCharaInt((int)SelectStageContainer.EnemyCharacter);
 
             SetMenheraUI();
-
-            attackCount = enemyMenheraData.EnemyAttackCountInfos[charaInt].attackCount;
-
-            LoopAttackStart();
         }
 
-        private void LoopAttackStart()
+        public void LoopAttackStart(float time)
         {
+            attackCount = time;
             attackTimer.SetLoop(true);
-            attackTimer.Start(attackCount);
+            attackTimer.Start(time);
             attackTimer.OnEnd += Attack;
         }
 

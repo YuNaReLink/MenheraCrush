@@ -15,7 +15,7 @@ namespace Kusume
 
         private bool entry = false;
 
-        public void Init(AllyCharacterInfo characterInfo)
+        public void Init(CharacterInfo characterInfo)
         {
             animator.runtimeAnimatorController = characterInfo.animator;
 

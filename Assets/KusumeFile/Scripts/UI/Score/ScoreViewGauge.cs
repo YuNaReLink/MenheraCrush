@@ -1,3 +1,4 @@
+using LucKee;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,11 @@ namespace Kusume
 {
     public class ScoreViewGauge : MonoBehaviour
     {
+        [SerializeField]
         private float maxGauge;
 
         [SerializeField]
-        private float goalGauge = 500.0f;
+        private float goalGauge;
 
         [SerializeField]
         private RectTransform fillRectTransform;
@@ -18,9 +20,13 @@ namespace Kusume
         [SerializeField]
         private Image fillImage;
 
+        [SerializeField]
+        private GaugeFill fill;
+
         private void Awake()
         {
             fillImage = fillRectTransform.gameObject.GetComponentInChildren<Image>();
+            fill = GetComponentInChildren<GaugeFill>();
         }
         // Start is called before the first frame update
         void Start()
@@ -31,6 +37,13 @@ namespace Kusume
 
             float c = goalGauge;
             GameScore.InitCount((int)c);
+
+            
+        }
+
+        public void SetMaxScoreFill(float goal)
+        {
+            fill.SetGoalRatio(goal / maxGauge);
         }
 
         // Update is called once per frame
