@@ -369,6 +369,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 356022634}
+    - target: {fileID: 4097233445527138983, guid: 28f1452077d409f4b86abc9e248ef205, type: 3}
+      propertyPath: gameStartCount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7531911738132834561, guid: 28f1452077d409f4b86abc9e248ef205, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -679,6 +683,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1786439621554983826, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
+      propertyPath: StartUI
+      value: 
+      objectReference: {fileID: 821292557170559220, guid: 0393bcdb72f940444a50938bc43b246a, type: 3}
     - target: {fileID: 3825572372955718997, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -784,7 +792,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6531246811231067783, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}

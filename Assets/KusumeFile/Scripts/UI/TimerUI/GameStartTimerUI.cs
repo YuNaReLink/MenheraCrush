@@ -9,6 +9,9 @@ namespace Kusume
     {
         private Text text;
 
+        [SerializeField]
+        private GameObject StartUI;
+
         private void Awake()
         {
             text = GetComponent<Text>();
@@ -23,6 +26,8 @@ namespace Kusume
         {
             if (GameController.Instance.GameStartTimer.IsEnd())
             {
+                GameObject g = Instantiate(StartUI,transform.position, Quaternion.identity);
+                g.transform.SetParent(transform.parent);
                 Destroy(gameObject);
                 return;
             }
