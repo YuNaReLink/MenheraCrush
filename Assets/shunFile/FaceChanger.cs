@@ -9,6 +9,12 @@ public class FaceChanger : MonoBehaviour
     private SceneTransition transitionPrefab = null;
 
     [SerializeField]
+    private Sprite backSprite;
+
+    [SerializeField]
+    private Image backImage;
+
+    [SerializeField]
     private Sprite[] sprites;
 
     [SerializeField]
@@ -26,6 +32,9 @@ public class FaceChanger : MonoBehaviour
         {
             images[i].sprite = sprites[i];
         }
+
+        backImage.sprite = backSprite;
+
         Canvas canvas = parent.GetComponent<Canvas>();
         GameObject maskObject = Instantiate(transitionPrefab, canvas.transform).gameObject;
         maskObject.transform.SetParent(parent);

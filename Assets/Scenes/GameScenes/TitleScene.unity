@@ -247,7 +247,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 578a734eb961ce54abb74522ebba058a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e6a276aae959594291c1e4fc9d09fe3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -777,6 +777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionPrefab: {fileID: 4782931703562359562, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
+  backSprite: {fileID: 21300000, guid: 578a734eb961ce54abb74522ebba058a, type: 3}
+  backImage: {fileID: 308723671}
   sprites:
   - {fileID: 1915891541, guid: 085a2b15d6f38f44390f6023b3d0e4b2, type: 3}
   - {fileID: 664011754, guid: 9049cfbdc9b21f2469e5a618ce99c32b, type: 3}
