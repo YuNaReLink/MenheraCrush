@@ -15,9 +15,6 @@ namespace Kusume
         private float               attackCount = 11.5f;
 
         [SerializeField]
-        private EnemyMenheraData    enemyMenheraData;
-
-        [SerializeField]
         private EnemyAttackCount    enemyAttackCount;
 
         protected override MenheraBoard Board => GameController.Instance.EnemyBoard;
@@ -46,16 +43,13 @@ namespace Kusume
             SetCharaInt((int)SelectStageContainer.EnemyCharacter);
 
             SetMenheraUI();
-
-            attackCount = enemyMenheraData.EnemyAttackCountInfos[charaInt].attackCount;
-
-            LoopAttackStart();
         }
 
-        private void LoopAttackStart()
+        public void LoopAttackStart(float time)
         {
+            attackCount = time;
             attackTimer.SetLoop(true);
-            attackTimer.Start(attackCount);
+            attackTimer.Start(time);
             attackTimer.OnEnd += Attack;
         }
 

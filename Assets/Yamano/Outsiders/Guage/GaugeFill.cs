@@ -17,7 +17,7 @@ namespace LucKee
         }
         private void Update()
         {
-            SetGoalRatio(r);
+            //SetGoalRatio(r);
         }
         public void SetGoalRatio(float ratio)
         {
