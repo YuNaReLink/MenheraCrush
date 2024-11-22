@@ -32,8 +32,10 @@ public class FaceChanger : MonoBehaviour
         {
             images[i].sprite = sprites[i];
         }
-
-        backImage.sprite = backSprite;
+        if(backImage != null && backSprite != null)
+        {
+            backImage.sprite = backSprite;
+        }
 
         Canvas canvas = parent.GetComponent<Canvas>();
         GameObject maskObject = Instantiate(transitionPrefab, canvas.transform).gameObject;
