@@ -55,7 +55,7 @@ namespace Kusume
                 enteringLeader.Jump();
             }
 
-            Invoke("SetGameStartCountDown", 3);
+            SetGameStartCountDown();
         }
 
         private void SetGameStartCountDown()
