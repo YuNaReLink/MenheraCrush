@@ -13,8 +13,9 @@ namespace Kusume
         private Timer                   gameTimer;
         public Timer                    GameTimer => gameTimer;
 
+
         [SerializeField]
-        private float                   gameTimerCount = 60.0f;
+        private float                   gameTimerCount = 10.0f;
 
         [SerializeField]
         private GamePreparationData     preparationData;
@@ -68,12 +69,17 @@ namespace Kusume
 
         private void Start()
         {
-            gameTimer.Start(gameTimerCount);
-            gameTimer.OnOnceEnd += EndGame;
             endGame = false;
             puzzleStop = false;
 
             LucKee.BGMManager.Play(bgm);
+        }
+
+        public void SetGameTimer(float t)
+        {
+            gameTimerCount = t;
+            gameTimer.Start(gameTimerCount);
+            gameTimer.OnOnceEnd += EndGame;
         }
 
         // Update is called once per frame
