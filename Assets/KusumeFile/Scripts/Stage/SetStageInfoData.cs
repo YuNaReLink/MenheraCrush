@@ -1,3 +1,4 @@
+using LucKee;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,12 +14,15 @@ namespace Kusume
 
         private EnemyController enemyController;
 
+        private EnteringLeader enteringLeader;
+
         private void Awake()
         {
             scoreViewGauge = FindObjectOfType<ScoreViewGauge>();
 
             enemyController = GetComponent<EnemyController>();
 
+            enteringLeader = FindObjectOfType<EnteringLeader>();
         }
 
         private void Start()
@@ -33,6 +37,11 @@ namespace Kusume
             }
             GameController.Instance.SetGameTimer(stageInfoData.StageInfos[(int)SelectStageContainer.EnemyCharacter].gameTime);
 
+
+            if(enteringLeader != null)
+            {
+                enteringLeader.Jump();
+            }
             Destroy(this);
         }
     }
