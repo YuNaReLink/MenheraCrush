@@ -26,6 +26,9 @@ namespace Kusume
         private MenheraBoard            enemy;
         public MenheraBoard             EnemyBoard => enemy;
 
+        [SerializeField]
+        private AudioClip bgm;
+
         public void SetPreparation()
         {
             //準備時の用意するオブジェクトを作成
@@ -69,6 +72,8 @@ namespace Kusume
             gameTimer.OnOnceEnd += EndGame;
             endGame = false;
             puzzleStop = false;
+
+            LucKee.BGMManager.Play(bgm);
         }
 
         // Update is called once per frame
