@@ -16,6 +16,11 @@ namespace Kusume
 
         private EnteringLeader enteringLeader;
 
+        [SerializeField]
+        private Transform gameCanvasTransform;
+
+        [SerializeField]
+        private GameObject gameStartObject;
         private void Awake()
         {
             scoreViewGauge = FindObjectOfType<ScoreViewGauge>();
@@ -23,6 +28,12 @@ namespace Kusume
             enemyController = GetComponent<EnemyController>();
 
             enteringLeader = FindObjectOfType<EnteringLeader>();
+
+            GameCanvas gameCanvas = FindObjectOfType<GameCanvas>();
+            if( gameCanvas != null)
+            {
+                gameCanvasTransform = gameCanvas.transform;
+            }
         }
 
         private void Start()
@@ -35,6 +46,7 @@ namespace Kusume
             {
                 enemyController.LoopAttackStart(stageInfoData.StageInfos[(int)SelectStageContainer.EnemyCharacter].attackCount);
             }
+
             GameController.Instance.SetGameTimer(stageInfoData.StageInfos[(int)SelectStageContainer.EnemyCharacter].gameTime);
 
 
@@ -42,6 +54,15 @@ namespace Kusume
             {
                 enteringLeader.Jump();
             }
+
+            Invoke("SetGameStartCountDown", 3);
+        }
+
+        private void SetGameStartCountDown()
+        {
+            GameController.Instance.SetGameStartTimer();
+            GameObject gameobject = Instantiate(gameStartObject, gameCanvasTransform.position, Quaternion.identity);
+            gameobject.transform.SetParent(gameCanvasTransform);
             Destroy(this);
         }
     }

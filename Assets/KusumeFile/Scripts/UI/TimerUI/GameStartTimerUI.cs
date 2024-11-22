@@ -18,5 +18,16 @@ namespace Kusume
         {
             text.text = "";
         }
+
+        private void Update()
+        {
+            if (GameController.Instance.GameStartTimer.IsEnd())
+            {
+                Destroy(gameObject);
+                return;
+            }
+            int count = (int)GameController.Instance.GameStartTimer.Current;
+            text.text = count.ToString();
+        }
     }
 }

@@ -12,10 +12,13 @@ namespace Kusume
 
         private Timer                   gameTimer;
         public Timer                    GameTimer => gameTimer;
-
-
         [SerializeField]
         private float                   gameTimerCount = 10.0f;
+
+        private Timer                   gameStartTimer;
+        public Timer                    GameStartTimer => gameStartTimer;
+        [SerializeField]
+        private float                   gameStartCount = 3.0f;
 
         [SerializeField]
         private GamePreparationData     preparationData;
@@ -54,6 +57,7 @@ namespace Kusume
         {
             SetupInstance();
             gameTimer = new Timer();
+            gameStartTimer = new Timer();
             resultSystem = FindAnyObjectByType<ResultSystem>();
         }
 
@@ -80,12 +84,26 @@ namespace Kusume
             gameTimerCount = t;
             gameTimer.Start(gameTimerCount);
             gameTimer.OnOnceEnd += EndGame;
+            gameStartTimer.Start(gameStartCount);
+        }
+
+        public void SetGameStartTimer()
+        {
+            puzzleStop = true;
+            gameStartTimer.Start(gameStartCount);
+            gameStartTimer.OnOnceEnd += GameStartTimerEnd;
+        }
+
+        private void GameStartTimerEnd()
+        {
+            puzzleStop = false;
         }
 
         // Update is called once per frame
         void Update()
         {
             gameTimer.Update();
+            gameStartTimer.Update();
         }
     }
 }
