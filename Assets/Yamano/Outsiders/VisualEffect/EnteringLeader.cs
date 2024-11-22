@@ -23,20 +23,24 @@ namespace LucKee
         //生成後に自身を上に打ち上げる。
         [SerializeField]
         private float power = 1.0f;
+        [SerializeField]
+        private bool jumpOnStart = false;
 
+        private Rigidbody2D rigid = null;
 
         private void Awake()
         {
             Instance = this;
+            rigid = GetComponent<Rigidbody2D>();
+            rigid.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         private void Start()
         {
-            //ここ以外でコンポーネントに干渉しないため、ローカル変数にしている。
-            Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-
-            //上に打ち上げる。
-            rigid.AddForce(power * Vector2.up, ForceMode2D.Impulse);
+            if (jumpOnStart)
+            {
+                Jump();
+            }
         }
         private void Update()
         {
@@ -59,6 +63,18 @@ namespace LucKee
         private void OnDestroy()
         {
             Instance = null;
+        }
+
+
+        public void Jump()
+        {
+            if (rigid.constraints == RigidbodyConstraints2D.None)
+            {
+                return;
+            }
+            rigid.constraints = RigidbodyConstraints2D.None;
+            //上に打ち上げる。
+            rigid.AddForce(power * Vector2.up, ForceMode2D.Impulse);
         }
     }
 }

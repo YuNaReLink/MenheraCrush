@@ -11,8 +11,11 @@ namespace LucKee {
         {
             if (Input.anyKeyDown)
             {
-                SEManager manager = GetComponent<SEManager>();
-                manager.Play(0);
+                EnteringLeader leader = EnteringLeader.Instance;
+                if (leader != null)
+                {
+                    leader.Jump();
+                }
             }
         }
     }

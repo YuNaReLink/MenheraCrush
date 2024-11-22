@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ledger: {fileID: 0}
+  ledger: {fileID: 11400000, guid: 24e68ef36be8f8c4090f04488b133427, type: 2}
 --- !u!1 &1646278779
 GameObject:
   m_ObjectHideFlags: 0
