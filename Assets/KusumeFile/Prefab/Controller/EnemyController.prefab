@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7172012508541297441}
   - component: {fileID: 8060747844320220969}
+  - component: {fileID: 568177720476819852}
   m_Layer: 0
   m_Name: EnemyController
   m_TagString: Untagged
@@ -45,10 +46,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menheraData: {fileID: 11400000, guid: 5bb719b2062e253458d322bdd190ccbb, type: 2}
-  thisImage: {fileID: 0}
-  animator: {fileID: 0}
   charaInt: 0
   player: {fileID: 0}
   attackCount: 11.5
   enemyMenheraData: {fileID: 11400000, guid: a8d60ad8a3b9f394d92ad2b06ac32449, type: 2}
   enemyAttackCount: {fileID: 0}
+--- !u!114 &568177720476819852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133067524146794630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe96f24b0b844b24aba38fb92c5c5528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageInfoData: {fileID: 11400000, guid: a8d60ad8a3b9f394d92ad2b06ac32449, type: 2}
