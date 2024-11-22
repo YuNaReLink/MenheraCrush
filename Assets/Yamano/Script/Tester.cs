@@ -11,11 +11,7 @@ namespace LucKee {
         {
             if (Input.anyKeyDown)
             {
-                EnteringLeader leader = EnteringLeader.Instance;
-                if (leader != null)
-                {
-                    leader.Jump();
-                }
+                EnteringLeader.Instance?.Jump();
             }
         }
     }
