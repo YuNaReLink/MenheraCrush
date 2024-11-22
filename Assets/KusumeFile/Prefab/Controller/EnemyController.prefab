@@ -49,7 +49,6 @@ MonoBehaviour:
   charaInt: 0
   player: {fileID: 0}
   attackCount: 11.5
-  enemyMenheraData: {fileID: 11400000, guid: a8d60ad8a3b9f394d92ad2b06ac32449, type: 2}
   enemyAttackCount: {fileID: 0}
 --- !u!114 &568177720476819852
 MonoBehaviour:
@@ -64,3 +63,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageInfoData: {fileID: 11400000, guid: a8d60ad8a3b9f394d92ad2b06ac32449, type: 2}
+  gameCanvasTransform: {fileID: 0}
+  gameStartObject: {fileID: 5381002642108124215, guid: 5ce52a8ad0503e94a9183a5379532089, type: 3}
