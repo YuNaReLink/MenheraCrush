@@ -1,35 +1,34 @@
-using LucKee;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Kusume
 {
+    /// <summary>
+    /// 背景に配置してるスコアをUIで表示してるものに処理を行うクラス
+    /// </summary>
     public class ScoreViewGauge : MonoBehaviour
     {
         [SerializeField]
-        private float maxGauge;
+        private float               maxGauge;
 
         [SerializeField]
-        private float goalGauge;
+        private float               goalGauge;
 
         [SerializeField]
-        private RectTransform fillRectTransform;
+        private RectTransform       fillRectTransform;
 
         [SerializeField]
-        private Image fillImage;
+        private Image               fillImage;
 
         [SerializeField]
-        private GaugeFill fill;
+        private LucKee.GaugeFill    fill;
 
         private void Awake()
         {
             fillImage = fillRectTransform.gameObject.GetComponentInChildren<Image>();
-            fill = GetComponentInChildren<GaugeFill>();
+            fill = GetComponentInChildren<LucKee.GaugeFill>();
         }
-        // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             RectTransform myRect = GetComponent<RectTransform>();
 
@@ -46,8 +45,7 @@ namespace Kusume
             fill.SetGoalRatio(goal / maxGauge);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
             UpdateGauge();
         }
@@ -60,10 +58,6 @@ namespace Kusume
                 p = 1.0f;
             }
             fillImage.fillAmount = p;
-            //float scale = 0;
-            //scale = p * maxGauge;
-            //Vector2 v = fillRectTransform.sizeDelta;
-            //fillRectTransform.sizeDelta = new Vector2(v.x, scale);
         }
     }
 }

@@ -18,6 +18,8 @@ namespace Kusume
         private EnemyAttackCount            enemyAttackCount;
 
         protected override MenheraBoard     Board => GameController.Instance.EnemyBoard;
+        [SerializeField]
+        private int                         actionRatio;
 
         private void Awake()
         {
@@ -70,9 +72,24 @@ namespace Kusume
             enemyAttackCount.CountUpdate();
             if(enemyAttackCount.Count <= 0)
             {
-                player.HP.Decrease(10);
+                int random = GetRandomAction();
+                if (random <= actionRatio / 2)
+                {
+                    player.HP.Decrease(10);
+                }
+                else
+                {
+                    Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+                }
                 
             }
+        }
+
+        public int GetRandomAction()
+        {
+            int randomized = Random.Range(0, actionRatio+1);
+            
+            return randomized;
         }
     }
 }
