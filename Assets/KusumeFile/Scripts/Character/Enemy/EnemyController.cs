@@ -12,7 +12,7 @@ namespace Kusume
         public  Timer                       AttackTimer => attackTimer;
 
         [Header("敵の攻撃開始までのカウント"),SerializeField]
-        private float                       attackCount = 11.5f;
+        private float                       attackCount;
         //敵がプレイヤーを攻撃するまでのカウントを管理＆表示するクラス
         [SerializeField]
         private EnemyAttackCount            enemyAttackCount;
@@ -30,7 +30,6 @@ namespace Kusume
             attackTimer = new Timer();
 
         }
-
 
         private void Start()
         {
@@ -57,7 +56,14 @@ namespace Kusume
         private void Update()
         {
             if (GameController.Instance.IsPuzzleStop || GameController.Instance.IsEndGame) { return; }
-            attackTimer.Update();
+            float time = Time.deltaTime;
+            /*
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                time *= 1.5f;
+            }
+             */
+            attackTimer.Update(time);
         }
         private void Attack()
         {

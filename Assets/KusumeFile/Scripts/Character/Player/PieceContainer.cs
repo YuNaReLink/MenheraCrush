@@ -19,6 +19,9 @@ namespace Kusume
         private PlayerHP            hp;
 
         private PlayerController controller;
+
+        [SerializeField]
+        private List<float> diss = new List<float>();
         public void Setup(PlayerController p)
         {
             controller = p;
@@ -28,45 +31,26 @@ namespace Kusume
 
         public void ChangePiece(Piece piece)
         {
-            if(pieceList.Count > 1)
+            if(pieceList.Contains(piece)) 
             {
-                if(piece == pieceList[pieceList.Count - 1])
-                {
-                    return;
-                }
-                if(pieceList.Count >= 2&&piece == pieceList[pieceList.Count - 2])
+                if (pieceList.Count >= 2 && piece == pieceList[^2])
                 {
                     //piece.SetSelected(false);
                     pieceList.RemoveAt(pieceList.Count - 1);
-                    return;
                 }
-                //現在最後に連結したピースと今連結しようとしてるピースの差分を取得
-                Vector2 dis = pieceList[pieceList.Count - 1].GetGameObject.transform.position - piece.GetGameObject.transform.position;
-                //指定距離よりも遠かったらリターン
-                if (dis.magnitude > MaxDisSetting(pieceList[pieceList.Count - 1], pieceList[pieceList.Count - 1].Tag))
-                {
-                    return;
-                }
-            }
-            /*
-             */
-            if (pieceList.Count == 1)
-            {
-                //現在最後に連結したピースと今連結しようとしてるピースの差分を取得
-                Vector2 d = pieceList[pieceList.Count-1].GetGameObject.transform.position - piece.GetGameObject.transform.position;
-                //指定距離よりも遠かったらリターン
-                if (d.magnitude > MaxDisSetting(pieceList[pieceList.Count-1], pieceList[pieceList.Count-1].Tag))
-                {
-                    return;
-                }
-            }
-            for (int i = 0; i < pieceList.Count; i++)
-            {
-                if (pieceList[i] == piece ||
-                   pieceList[0].Tag != piece.Tag) { return; }
+                return; 
             }
             //piece.SetSelected(true);
             pieceList.Add(piece);
+        }
+
+        public bool CheckColor(PieceTag tag)
+        {
+            if(pieceList.Count <= 0)
+            {
+                return true;
+            }
+            return pieceList[0].Tag == tag;
         }
 
         public void CheckPieceList()
@@ -79,22 +63,6 @@ namespace Kusume
                     pieceList[i].SetSelected(true);
                 }
             }
-        }
-
-        //ピースの連結間隔を決めてる関数(距離が気に入らないならここから変えろ)
-        private float MaxDisSetting(Piece piece, PieceTag tag)
-        {
-            float scale = piece.transform.localScale.x;
-            float dis = 1.5f;
-            if (scale < 1.3f)
-            {
-                dis = 2.0f;
-            }
-            else
-            {
-                dis = 2.0f;
-            }
-            return dis;
         }
 
         public void Crush()
@@ -125,6 +93,16 @@ namespace Kusume
                 pieceList[i].SetSelected(false);
             }
             pieceList.Clear();
+        }
+
+
+        public Piece GetLastPiece()
+        {
+            if(pieceList.Count <= 0)
+            {
+                return null;
+            }
+            return pieceList[^1];
         }
     }
 }

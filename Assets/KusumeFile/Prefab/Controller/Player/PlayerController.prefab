@@ -72,8 +72,12 @@ MonoBehaviour:
   createPiecemMachine: {fileID: 0}
   pieceContainer:
     pieceList: []
-  audioClip1: {fileID: 0}
-  audioClip2: {fileID: 0}
+    diss:
+    - 2.25
+    - 2.25
+  minMag: 0.5
+  maxMag: 1
+  sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
 --- !u!114 &5206039346121342140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b72ea118f3c4f499923f3950f7d1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineGameObject: {fileID: 1174783220311708008}
   lineRenderer: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
 --- !u!1001 &7439873790999196228
 PrefabInstance:
@@ -165,11 +168,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
---- !u!1 &1174783220311708008 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8606966946790515500, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
-  m_PrefabInstance: {fileID: 7439873790999196228}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4124657291027640202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6773981430731218382, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}

@@ -24,19 +24,10 @@ namespace Kusume
         {
             button.onClick.AddListener(StartPieceReset);
         }
-
-        public void Update()
-        {
-            if (Input.GetButtonDown("Reset"))
-            {
-                button.onClick.Invoke();
-            }
-        }
-
+        //onClick‚ÅŒÄ‚Ño‚³‚ê‚é
         public void StartPieceReset()
         {
-            if(windSpace.Duration > 0) { return; }
-            windSpace.SetDuration(0.25f);
+            windSpace.Activate();
         }
     }
 }

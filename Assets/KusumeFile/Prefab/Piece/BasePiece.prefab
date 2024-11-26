@@ -162,14 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcc6ba3c0dcf4b43ad40e59693bd3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  audioClip1: {fileID: 8300000, guid: f266392dcd8f26b4e9f258247580b0fc, type: 3}
-  audioClip2: {fileID: 8300000, guid: 1db95e24dfd689d448c3df2c582388d4, type: 3}
   rb2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
   mat: {fileID: 0}
   tag: 0
-  impactObject: {fileID: 8987218779975485508, guid: 558bbc09ce04cc54dabc1f06fe7e3406, type: 3}
+  impactObject: {fileID: 6887719655045300248, guid: 558bbc09ce04cc54dabc1f06fe7e3406, type: 3}
   keepImpactPower: 0
   baseGravityScale: 5.5
   selected: 0

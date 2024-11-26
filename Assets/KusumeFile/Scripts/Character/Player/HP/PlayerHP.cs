@@ -38,5 +38,10 @@ namespace Kusume
                 currentHP = maxHP;
             }
         }
+
+        public float GetRatio()
+        {
+            return currentHP / maxHP;
+        }
     }
 }

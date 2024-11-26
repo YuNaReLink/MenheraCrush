@@ -8,18 +8,13 @@ namespace Kusume
     public class PieceConcatenate : MonoBehaviour
     {
         [SerializeField]
-        private GameObject          lineGameObject = null;
-        [SerializeField]
         private LineRenderer        lineRenderer = null;   
 
         private PlayerController    playerController = null;
 
         private void Awake()
         {
-            if(lineGameObject != null)
-            {
-                lineRenderer = lineGameObject.GetComponent<LineRenderer>();
-            }
+            lineRenderer = GetComponentInChildren<LineRenderer>();
 
             playerController = GetComponent<PlayerController>();
         }

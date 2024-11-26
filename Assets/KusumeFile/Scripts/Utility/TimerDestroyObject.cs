@@ -23,7 +23,7 @@ namespace Kusume
 
         private void Update()
         {
-            destroyTimer.Update();
+            destroyTimer.Update(Time.deltaTime);
         }
 
         private void Run()
