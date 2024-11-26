@@ -39,8 +39,14 @@ namespace Kusume
 
         protected override MenheraBoard Board => GameController.Instance.PlayerBoard;
 
+        [SerializeField]
+        private float minMag = 1.0f;
+        [SerializeField]
+        private float maxMag = 3.0f;
+
         private void Awake()
         {
+
             playerInput = GetComponent<PlayerInput>();
             if (playerInput == null)
             {
@@ -105,7 +111,7 @@ namespace Kusume
 
         public void Update()
         {
-            skillCoolTimer.Update();
+            skillCoolTimer.Update(Time.deltaTime);
 
             UpdateDebug();
             if (GameController.Instance.IsPuzzleStop||GameController.Instance.IsEndGame) { return; }
@@ -136,19 +142,36 @@ namespace Kusume
         {
             if (playerInput.LeftMouseButton)
             {
-                var tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                var collition2d = Physics2D.OverlapPoint(tapPoint);
-                if (collition2d)
+                //マウスの位置取得
+                Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                //最後に選択したピースの位置取得
+                Piece last = pieceContainer.GetLastPiece();
+                if(last != null)
                 {
-                    Piece onePiece;
-                    RaycastHit2D hitObject;
-                    hitObject = Physics2D.CircleCast(tapPoint, 0.3f, -Vector2.up);
-                    //何にも当たっていなかったら
-                    if (hitObject.collider == null) { return; }
-                    onePiece = hitObject.collider.gameObject.GetComponent<Piece>();
+                    //最後のピースの位置取得
+                    Vector2 lastPos = last.transform.position;
+                    //マウス位置と最後のピースの距離を求める
+                    Vector2 dis = tapPoint - lastPos;
+                    //ベクトルの長さ
+                    float mag = dis.magnitude;
+                    //最低の長さよりも小さかったら無視
+                    if(mag < minMag * last.transform.localScale.x) { return; }
+                    //最大の長さよりも大きかったら
+                    if(mag > maxMag * last.transform.localScale.x)
+                    {
+                        //位置を補正
+                        tapPoint = lastPos + dis.normalized * maxMag * last.transform.localScale.x;
+                    }
+                }
+                RaycastHit2D[] hitObjects;
+                hitObjects = Physics2D.CircleCastAll(tapPoint, 0.01f, Vector2.zero, 0.01f);
+                foreach (RaycastHit2D hitObject in hitObjects)
+                {
+                    Piece piece = hitObject.collider.gameObject.GetComponent<Piece>();
                     //ピース情報がなかったらリターン
-                    if (onePiece == null) { return; }
-                    pieceContainer.ChangePiece(onePiece);
+                    if (piece == null) { continue; }
+                    if (!pieceContainer.CheckColor(piece.Tag)) { continue; }
+                    pieceContainer.ChangePiece(piece);
                 }
             }
             else

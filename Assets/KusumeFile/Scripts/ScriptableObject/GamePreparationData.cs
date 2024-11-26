@@ -8,9 +8,9 @@ namespace Kusume
     [Serializable]
     public struct PreparationDatas
     {
-        public GameObject pieceMachine;
-        public GameObject playerController;
-        public GameObject enemyController;
+        public CreatePieceMachine pieceMachine;
+        public PlayerController playerController;
+        public EnemyController enemyController;
         public void Instantiate()
         {
             GameObject.Instantiate(pieceMachine, pieceMachine.transform.position, Quaternion.identity);

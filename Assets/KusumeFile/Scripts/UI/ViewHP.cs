@@ -22,7 +22,6 @@ namespace Kusume
         public void Setup(PlayerController c)
         {
             controller = c;
-            hpSlider.value = (float)controller.HP.CurrentHP / (float)controller.HP.MaxHP;
         }
 
         // Update is called once per frame
@@ -35,16 +34,17 @@ namespace Kusume
 
         private void UpdateGauge()
         {
-            hpSlider.value = (float)controller.HP.CurrentHP / (float)controller.HP.MaxHP;
+            float value = controller.HP.GetRatio();
+            hpSlider.value = value;
 
-            if (hpSlider.value < damageSlider.value)
+            if (value < damageSlider.value)
             {
                 damageSlider.value -= decreaseSpeed * Time.deltaTime;
             }
 
-            if (damageSlider.value < hpSlider.value)
+            if (damageSlider.value < value)
             {
-                damageSlider.value = hpSlider.value;
+                damageSlider.value = value;
             }
         }
     }

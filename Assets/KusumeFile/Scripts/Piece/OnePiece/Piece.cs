@@ -6,6 +6,7 @@ namespace Kusume
     /// ピース単体のクラス
     /// タグでピースを区別してる
     /// </summary>
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Piece : MonoBehaviour
     {
         LucKee.SEManager seManager;
@@ -25,8 +26,9 @@ namespace Kusume
         private new PieceTag        tag = PieceTag.Red;
         public PieceTag             Tag { get { return tag; }set { tag = value; } }
 
-        [Header("Scaleが1.5の時に使う爆発オブジェクト"),SerializeField]
-        private GameObject          impactObject = null;
+        [Header("ピースサイズが大の時に使う爆発オブジェクト")]
+        [SerializeField]
+        private ImpactObject        impactObject = null;
 
         [SerializeField]
         private float               keepImpactPower;
@@ -127,7 +129,7 @@ namespace Kusume
         {
             if (transform.localScale.x >= 1.5f)
             {
-                GameObject g = Instantiate(impactObject, transform.position,Quaternion.identity);
+                GameObject g = Instantiate(impactObject.gameObject, transform.position,Quaternion.identity);
                 g.transform.SetParent(transform.parent);
                 seManager.Play(0);
             }

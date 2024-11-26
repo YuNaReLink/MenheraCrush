@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kusume
@@ -48,7 +46,7 @@ namespace Kusume
         public void EndGame() 
         {
             endGame = true;
-            Instantiate(resultSystem.ResultBoard, resultSystem.transform);
+            resultSystem.Create();
         }
 
         private ResultSystem resultSystem;
@@ -98,11 +96,10 @@ namespace Kusume
             LucKee.BGMManager.Play(bgm);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            gameTimer.Update();
-            gameStartTimer.Update();
+            gameTimer.Update(Time.deltaTime);
+            gameStartTimer.Update(Time.deltaTime);
         }
     }
 }

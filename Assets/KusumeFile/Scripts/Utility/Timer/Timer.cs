@@ -28,10 +28,10 @@ namespace Kusume
             current += _time;
         }
 
-        public void Update()
+        public void Update(float t)
         {
             if(current <= 0) { return; }
-            current -= Time.deltaTime;
+            current -= t;
             if(current <= 0)
             {
                 if (loop)

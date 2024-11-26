@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GamePreparationData
   m_EditorClassIdentifier: 
   datas:
-    pieceMachine: {fileID: 8069709058422704739, guid: c62f2a06f814f8b40a232a5979e6a33e, type: 3}
-    playerController: {fileID: 9027297697176674626, guid: 3c731c3ac2e627c4fa63c035e88e2b60, type: 3}
-    enemyController: {fileID: 133067524146794630, guid: 5eac836e12c34724da91b87314f06296, type: 3}
+    pieceMachine: {fileID: 2813406820074382984, guid: c62f2a06f814f8b40a232a5979e6a33e, type: 3}
+    playerController: {fileID: 6737004526536627335, guid: 3c731c3ac2e627c4fa63c035e88e2b60, type: 3}
+    enemyController: {fileID: 8060747844320220969, guid: 5eac836e12c34724da91b87314f06296, type: 3}
   pieceMachine: {fileID: 8069709058422704739, guid: c62f2a06f814f8b40a232a5979e6a33e, type: 3}
