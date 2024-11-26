@@ -50,6 +50,7 @@ MonoBehaviour:
   player: {fileID: 0}
   attackCount: 11.5
   enemyAttackCount: {fileID: 0}
+  actionRatio: 10
 --- !u!114 &568177720476819852
 MonoBehaviour:
   m_ObjectHideFlags: 0

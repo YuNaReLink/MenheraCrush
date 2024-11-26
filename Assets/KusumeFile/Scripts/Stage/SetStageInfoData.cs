@@ -1,6 +1,3 @@
-using LucKee;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kusume
@@ -8,26 +5,26 @@ namespace Kusume
     public class SetStageInfoData : MonoBehaviour
     {
         [SerializeField]
-        private StageInfoData stageInfoData;
+        private StageInfoData               stageInfoData;
 
-        private ScoreViewGauge scoreViewGauge;
+        private ScoreViewGauge              scoreViewGauge;
 
-        private EnemyController enemyController;
+        private EnemyController             enemyController;
 
-        private EnteringLeader enteringLeader;
-
-        [SerializeField]
-        private Transform gameCanvasTransform;
+        private LucKee.EnteringLeader       enteringLeader;
 
         [SerializeField]
-        private GameObject gameStartObject;
+        private Transform                   gameCanvasTransform;
+
+        [SerializeField]
+        private GameObject                  gameStartObject;
         private void Awake()
         {
             scoreViewGauge = FindObjectOfType<ScoreViewGauge>();
 
             enemyController = GetComponent<EnemyController>();
 
-            enteringLeader = FindObjectOfType<EnteringLeader>();
+            enteringLeader = FindObjectOfType<LucKee.EnteringLeader>();
 
             GameCanvas gameCanvas = FindObjectOfType<GameCanvas>();
             if( gameCanvas != null)
