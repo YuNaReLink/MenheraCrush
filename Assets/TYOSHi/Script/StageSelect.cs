@@ -33,6 +33,18 @@ public class StageSelect : MonoBehaviour
         background.sprite = backSprite[index];
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Right();
+        }
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Left();
+        }
+    }
+
     //ステージ変更
     void CheckState(StageNo no)
     {
