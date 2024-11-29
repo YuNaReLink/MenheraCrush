@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -23,6 +24,9 @@ public class StageSelect : MonoBehaviour
     [SerializeField] Sprite[] groups;
     [SerializeField] Sprite[] backSprite;
     [SerializeField] Image background;
+
+    [SerializeField] String[] stageName;
+    [SerializeField] Text stageText;
 
     private void Awake()
     {
@@ -56,6 +60,8 @@ public class StageSelect : MonoBehaviour
                 t.localPosition *= -1;
             }
         }
+
+        stageText.text = stageName[(int)no];
     }
 
     //‰E‚É‘—‚é
