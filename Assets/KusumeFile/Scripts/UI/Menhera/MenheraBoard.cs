@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +7,10 @@ namespace Kusume
     [RequireComponent(typeof(Animator))]
     public class MenheraBoard : MonoBehaviour
     {
+        private RectTransform rectTransform;
+
+        private Vector2 basePosition;
+
         private Image image;
 
         private Animator animator;
@@ -23,6 +25,10 @@ namespace Kusume
             image.color = Color.white;
             image.SetNativeSize();
             image.enabled = true;
+
+            Vector2 pos =basePosition;
+            pos += characterInfo.ImageOffset;
+            rectTransform.anchoredPosition = pos;
         }
 
         private void Awake()
@@ -30,16 +36,15 @@ namespace Kusume
             image = GetComponent<Image>();
 
             animator = GetComponent<Animator>();
+
+            rectTransform = GetComponent<RectTransform>();
         }
 
         private void Start()
         {
             image.enabled = false;
-        }
 
-        private void Update()
-        {
-            
+            basePosition = rectTransform.anchoredPosition;
         }
 
         private void EntryUpdate()
