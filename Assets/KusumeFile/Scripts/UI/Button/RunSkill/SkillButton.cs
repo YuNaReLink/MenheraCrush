@@ -6,7 +6,12 @@ namespace Kusume
 {
     public class SkillButton : MonoBehaviour
     {
+        private Image image;
+
+
         private Button button;
+
+        private SkillImage skillImage;
 
         private SkillButtonMask mask;
 
@@ -27,7 +32,9 @@ namespace Kusume
 
         private void Awake()
         {
+            image = GetComponent<Image>();
             mask = GetComponentInChildren<SkillButtonMask>();
+            skillImage = GetComponentInChildren<SkillImage>();
             GameCanvas gameCanvas = FindObjectOfType<GameCanvas>();
             if(gameCanvas != null)
             {
@@ -41,6 +48,9 @@ namespace Kusume
         {
             button = GetComponent<Button>();
             button.onClick.AddListener(action);
+
+            image.color = GameController.Instance.AllyData.imageColor;
+            skillImage.SetSkillImageAndColor();
         }
 
         public void SetStateButton(bool state)
@@ -59,9 +69,10 @@ namespace Kusume
             }
         }
 
-        public void OnCutIn()
+        public void RunCutIn()
         {
-            Instantiate(cutIn, canvas.transform);
+            LucKee.CutIn c = Instantiate(cutIn, canvas.transform);
+            c.SetSprite(GameController.Instance.AllyData.sprite);
         }
     }
 }

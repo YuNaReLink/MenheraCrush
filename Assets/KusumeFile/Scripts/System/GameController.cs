@@ -31,6 +31,13 @@ namespace Kusume
         [SerializeField]
         private AudioClip bgm;
 
+
+        private CharacterInfo allyData;
+        public CharacterInfo AllyData => allyData;
+        public void SetAllyData(CharacterInfo data) { allyData = data;}
+
+        //private CharacterInfo enemyData;
+
         public void SetPreparation()
         {
             //準備時の用意するオブジェクトを作成

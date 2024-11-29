@@ -16,7 +16,9 @@ namespace Kusume
         public int skillGauge; 
         public AnimatorController animator;
         public Sprite sprite;
+        public Sprite faceSprite;
         public Vector2 ImageOffset;
+        public Color imageColor;
     }
 
     [CreateAssetMenu(fileName = "Menhera", menuName = "ScriptableObjects/Menhera", order = 1)]

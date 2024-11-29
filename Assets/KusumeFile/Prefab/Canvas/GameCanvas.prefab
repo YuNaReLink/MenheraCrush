@@ -2365,6 +2365,7 @@ GameObject:
   - component: {fileID: 6513773602441196057}
   - component: {fileID: 9026422542808325635}
   - component: {fileID: 9091866804334209878}
+  - component: {fileID: 121407994087375600}
   m_Layer: 5
   m_Name: SkillImage
   m_TagString: Untagged
@@ -2429,6 +2430,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &121407994087375600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015639725725112321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a53787f281dc488c93bfc6eed8932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8081669740885009139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,6 +2805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b7da1b3778bd343a25293885e81e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cutIn: {fileID: 1627902704877820490, guid: 9aecd6dea39f47c4a8123347431ae2c7, type: 3}
+  buttonMoveUI: 0
 --- !u!1 &9062265106012515358
 GameObject:
   m_ObjectHideFlags: 0

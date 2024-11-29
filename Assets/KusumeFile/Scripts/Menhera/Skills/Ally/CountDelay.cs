@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kusume
 {
-    public class CountDelay : MonoBehaviour
+    public class CountDelay : MonoBehaviour, LucKee.ISkillObject
     {
         private EnemyController enemyController;
 
@@ -16,7 +14,7 @@ namespace Kusume
             enemyController = FindAnyObjectByType<EnemyController>();
         }
 
-        private void OnDestroy()
+        public void Execute()
         {
             enemyController.AttackTimer.AddCurrent(addCount);
         }

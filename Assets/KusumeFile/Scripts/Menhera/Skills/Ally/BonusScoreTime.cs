@@ -7,7 +7,7 @@ namespace Kusume
     /// スコア倍率のスキルクラス
     /// </summary>
     [RequireComponent(typeof(Skill))]
-    public class BonusScoreTime : MonoBehaviour
+    public class BonusScoreTime : MonoBehaviour,LucKee.ISkillObject
     {
         private Skill skill;
 
@@ -16,7 +16,7 @@ namespace Kusume
             GameScore.SetBonus(true);
         }
 
-        private void OnDestroy()
+        public void Execute()
         {
             GameScore.SetBonus(false);
         }

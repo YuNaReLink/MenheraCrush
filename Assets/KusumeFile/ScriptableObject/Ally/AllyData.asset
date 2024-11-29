@@ -19,32 +19,42 @@ MonoBehaviour:
     skillGauge: 5
     animator: {fileID: 9100000, guid: c7709532207edcd4784da6e0c29cf2fe, type: 2}
     sprite: {fileID: 21300000, guid: 82ee2c1e90a4e2c4cb1ac325e3b822f9, type: 3}
+    faceSprite: {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
     ImageOffset: {x: 0, y: 0}
+    imageColor: {r: 0.7411765, g: 0, b: 1, a: 1}
   - tag: 1
     name: Shinonomi Aoi
     skill: {fileID: 8884762241872583565, guid: dab0f94f17df52b4da24c5c96d74a020, type: 3}
     skillGauge: 1
     animator: {fileID: 9100000, guid: e520782af84dd4b499f3224a80f9a71a, type: 2}
     sprite: {fileID: 21300000, guid: 27202cf273238c446913b491ccacf476, type: 3}
+    faceSprite: {fileID: 780244944, guid: d3dde02520d9bcc41a5e5f39b0af30c1, type: 3}
     ImageOffset: {x: 0, y: 0}
+    imageColor: {r: 0, g: 0.6272721, b: 1, a: 1}
   - tag: 2
     name: Hayashi Kouta
     skill: {fileID: 8884762241872583565, guid: cecc3eb968f5a004d857043603525c73, type: 3}
     skillGauge: 5
     animator: {fileID: 9100000, guid: 3d5e38cdf7146cc4f909c48e9c416d57, type: 2}
     sprite: {fileID: 21300000, guid: cab5ea185d45aee4b81d56f858b02990, type: 3}
+    faceSprite: {fileID: -902836371, guid: 22c3982b593ddff4b88980881ab897e9, type: 3}
     ImageOffset: {x: 0, y: 0}
+    imageColor: {r: 0, g: 1, b: 0.047268867, a: 1}
   - tag: 3
     name: Ueno Nozomi
     skill: {fileID: 8884762241872583565, guid: b8c9b7f42ec5a2842872f6befca4fc5f, type: 3}
     skillGauge: 0
     animator: {fileID: 0}
     sprite: {fileID: -651514625, guid: 18d8b0a469ac70e4e9c29716b8fdcc60, type: 3}
+    faceSprite: {fileID: -651514625, guid: 1e595923d2798fb4a8d5c36a1cd4aaec, type: 3}
     ImageOffset: {x: 0, y: 0}
+    imageColor: {r: 1, g: 0.108383685, b: 0, a: 1}
   - tag: 4
     name: Sawashiro Nozomi
     skill: {fileID: 8884762241872583565, guid: 9d6234ff75df5a2469d8d189efea4a8e, type: 3}
     skillGauge: 0
     animator: {fileID: 0}
-    sprite: {fileID: -394756606, guid: e11611c482996ab47b5e39626ca6bbd3, type: 3}
+    sprite: {fileID: -394756606, guid: df196fa9b236047458b5862508507f59, type: 3}
+    faceSprite: {fileID: -394756606, guid: df196fa9b236047458b5862508507f59, type: 3}
     ImageOffset: {x: 0, y: 0}
+    imageColor: {r: 1, g: 0.96657693, b: 0, a: 1}

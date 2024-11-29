@@ -5,7 +5,7 @@ namespace Kusume
     /// <summary>
     /// プレイヤーの体力を回復させるスキルクラス
     /// </summary>
-    public class HPRecovery : MonoBehaviour
+    public class HPRecovery : MonoBehaviour, LucKee.ISkillObject
     {
         private PlayerController    player;
 
@@ -17,12 +17,7 @@ namespace Kusume
             player = FindObjectOfType<PlayerController>();
         }
 
-        private void OnDestroy()
-        {
-            Execute();
-        }
-
-        private void Execute()
+        public void Execute()
         {
             player.HP.Regain(regain);
         }
