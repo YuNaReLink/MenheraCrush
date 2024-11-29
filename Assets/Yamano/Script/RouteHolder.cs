@@ -29,6 +29,18 @@ namespace LucKee
 
         /*Method*/
 
+        //所要時間の取得
+        //自身が持つキーフレームの最後の時間を返す。
+        public float GetDuration()
+        {
+            //要素が無い場合は0を返す。
+            if (keys.Length <= 0)
+            {
+                return 0;
+            }
+            return keys[^1].time;
+        }
+
         //位置の取得
         //本体の時間の範囲と引数の関係によって挙動が変わる。
         //・本体の長さが0の場合、引数に拘わらず(0, 0)を返す。

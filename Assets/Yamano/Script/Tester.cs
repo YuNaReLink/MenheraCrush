@@ -7,11 +7,18 @@ namespace LucKee {
     //テスト用の適当なコンポーネント
     public class Tester : MonoBehaviour
     {
+        [SerializeField]
+        private Canvas canvas = null;
+        [SerializeField]
+        private CutIn cut = null;
+
+
+
         private void Update()
         {
             if (Input.anyKeyDown)
             {
-                EnteringLeader.Instance?.Jump();
+                Instantiate(cut, canvas.transform);
             }
         }
     }
