@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "\u85E4\u54B2\u5F69\u97F3"
   comment: "\u85E4\u54B2\u5F69\u97F3"
-  skillDetail: {fileID: 21300000, guid: 677f49a313c48b149869a4461edc06ac, type: 3}
+  skillDetail: {fileID: 21300000, guid: baf13913d47f3e94b962a9e69bb69aa0, type: 3}
   fullBody: {fileID: -1974864238, guid: b3fe2e615dadf0440bbb762c142b194e, type: 3}
   normalFace: {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
   yamiFace: {fileID: 1915891541, guid: fc1e3749101854a49ba2b4e5480522d8, type: 3}
