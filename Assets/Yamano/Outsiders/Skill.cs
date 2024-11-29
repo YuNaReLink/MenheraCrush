@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LucKee {
+namespace LucKee 
+{
+    /// <summary>
+    /// スキルオブジェクトを時間経過で消すクラス
+    /// </summary>
     public class Skill : MonoBehaviour 
     {
         [SerializeField]

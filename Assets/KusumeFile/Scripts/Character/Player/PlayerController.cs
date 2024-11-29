@@ -134,6 +134,7 @@ namespace Kusume
         public void RunSkill()
         {
             if (skillRunCount < menheraData.Characters[charaInt].skillGauge) { return; }
+            skillButton.OnCutIn();
             Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
             skillCoolTimer.Start(skillCoolDownCount);
             skillRunCount = 0;

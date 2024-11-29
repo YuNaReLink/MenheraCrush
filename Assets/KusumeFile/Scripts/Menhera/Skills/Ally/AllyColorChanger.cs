@@ -23,11 +23,6 @@ namespace Kusume
             pieceMachine = FindObjectOfType<CreatePieceMachine>();
         }
 
-        private void Start()
-        {
-            Execute();
-        }
-
         public void Execute()
         {
             pieceInfo = pieceMachine.PieceLedger.GetRandomPiece();
@@ -39,6 +34,11 @@ namespace Kusume
                 if (pieceMachine.Pieces[i].Tag != tag) { continue; }
                 pieceMachine.Pieces[i].SetPieceData(pieceInfo.color,pieceInfo);
             }
+        }
+
+        private void OnDestroy()
+        {
+            Execute();
         }
     }
 }
