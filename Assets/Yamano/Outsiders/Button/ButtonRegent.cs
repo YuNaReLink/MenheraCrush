@@ -12,11 +12,11 @@ namespace LucKee
     {
         //ëŒè€ÉLÅ[
         [SerializeField]
-        KeyCode key = KeyCode.A;
+        private KeyCode key = KeyCode.A;
 
 
-        Button button = null;
-        bool down = false;
+        private Button button = null;
+        private bool down = false;
 
         private void Awake()
         {
