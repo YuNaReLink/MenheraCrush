@@ -17,11 +17,10 @@ namespace Kusume
             player = FindObjectOfType<PlayerController>();
         }
 
-        private void Start()
+        private void OnDestroy()
         {
             Execute();
         }
-
 
         private void Execute()
         {

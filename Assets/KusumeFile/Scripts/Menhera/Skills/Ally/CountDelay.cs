@@ -16,7 +16,7 @@ namespace Kusume
             enemyController = FindAnyObjectByType<EnemyController>();
         }
 
-        private void Start()
+        private void OnDestroy()
         {
             enemyController.AttackTimer.AddCurrent(addCount);
         }
