@@ -9,7 +9,6 @@ namespace LucKee
 
     //カットイン用のコンポーネント
     //カットイン中はゲームの動きを止めるのでポーズを要求する。
-    [RequireComponent(typeof(Image))]
     [RequireComponent(typeof(Pause))]
     public class CutIn : MonoBehaviour
     {
@@ -68,10 +67,23 @@ namespace LucKee
             image.rectTransform.localPosition = route.GetPosition(time);
         }
 
+        /*Method*/
+
+        //カットイン中に動く画像の変更
+        public void SetSprite(Sprite sprite)
+        {
+            image.sprite = sprite;
+        }
+
+        //カットイン終了後に生成したいものを設定する。
         public void SetAfter(MonoBehaviour mono)
         {
             after = mono;
         }
+
+        //カットインの終了
+        //終了後の生成やオブジェクトの破棄を行う。
+        //ポーズは破棄時に無効化される。
         private void Finish()
         {
             if (after != null)
@@ -79,7 +91,6 @@ namespace LucKee
                 Instantiate(after);
             }
 
-            //ポーズは破棄時に無効化される。
             Destroy(gameObject);
         }
     }
