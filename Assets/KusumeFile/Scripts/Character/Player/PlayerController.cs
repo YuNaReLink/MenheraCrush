@@ -67,7 +67,6 @@ namespace Kusume
             if (skill != null)
             {
                 skillButton = skill;
-                skillButton.Setup(RunSkill);
             }
         }
 
@@ -82,6 +81,8 @@ namespace Kusume
             pieceContainer.Setup(this);
             SetCharaInt(CharacterSelect.SelectCharacterNo);
             SetMenheraUI();
+            GameController.Instance.SetAllyData(menheraData.Characters[charaInt]);
+            skillButton.Setup(RunSkill);
         }
         /// <summary>
         /// デバッグ用のメソッド
@@ -134,7 +135,7 @@ namespace Kusume
         public void RunSkill()
         {
             if (skillRunCount < menheraData.Characters[charaInt].skillGauge) { return; }
-            skillButton.OnCutIn();
+            skillButton.RunCutIn();
             Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
             skillCoolTimer.Start(skillCoolDownCount);
             skillRunCount = 0;

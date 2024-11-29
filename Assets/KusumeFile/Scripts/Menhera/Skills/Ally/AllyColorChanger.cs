@@ -5,7 +5,7 @@ namespace Kusume
     /// <summary>
     /// 味方メンヘラの同じ色のピースの色を変化させるスキルクラス
     /// </summary>
-    public class AllyColorChanger : MonoBehaviour, IColorChanger
+    public class AllyColorChanger : MonoBehaviour, IColorChanger,LucKee.ISkillObject
     {
         private CreatePieceMachine      pieceMachine;
 

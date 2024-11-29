@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9dfca4247245d7499af579eecab5aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalHeight: 300
-  widenSpeed: 500
+  goalHeight: 500
+  widenSpeed: 1000
 --- !u!114 &115926294652053266
 MonoBehaviour:
   m_ObjectHideFlags: 0
