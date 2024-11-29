@@ -17,7 +17,7 @@ MonoBehaviour:
     color:
       serializedVersion: 2
       rgba: 4294967295
-    ratio: 1
+    ratio: 2
     sprite: {fileID: 21300000, guid: 83f4993039fccf1408ec803da6931adf, type: 3}
     material: {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
   - tag: 1

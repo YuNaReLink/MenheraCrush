@@ -24,15 +24,15 @@ MonoBehaviour:
     name: Shinonomi Aoi
     skill: {fileID: 8884762241872583565, guid: dab0f94f17df52b4da24c5c96d74a020, type: 3}
     skillGauge: 1
-    animator: {fileID: 0}
-    sprite: {fileID: 21300000, guid: b9a31cd41cdeb0841b25f53a7d39abcd, type: 3}
+    animator: {fileID: 9100000, guid: e520782af84dd4b499f3224a80f9a71a, type: 2}
+    sprite: {fileID: 21300000, guid: 27202cf273238c446913b491ccacf476, type: 3}
     ImageOffset: {x: 0, y: 0}
   - tag: 2
     name: Hayashi Kouta
     skill: {fileID: 8884762241872583565, guid: cecc3eb968f5a004d857043603525c73, type: 3}
     skillGauge: 5
-    animator: {fileID: 9100000, guid: e1e801d1431c805459b174e4231666c9, type: 2}
-    sprite: {fileID: 21300000, guid: b2b5da68bc15aa942bf68332dd5975b3, type: 3}
+    animator: {fileID: 9100000, guid: 3d5e38cdf7146cc4f909c48e9c416d57, type: 2}
+    sprite: {fileID: 21300000, guid: cab5ea185d45aee4b81d56f858b02990, type: 3}
     ImageOffset: {x: 0, y: 0}
   - tag: 3
     name: Ueno Nozomi
