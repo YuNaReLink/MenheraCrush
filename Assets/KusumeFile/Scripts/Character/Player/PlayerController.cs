@@ -25,6 +25,7 @@ namespace Kusume
             if(skillRunCount >= menheraData.Characters[charaInt].skillGauge)
             {
                 skillRunCount = menheraData.Characters[charaInt].skillGauge;
+                skillButton.SetStateButton(false);
             }
         }
         private Timer                   skillCoolTimer = new Timer();
@@ -43,6 +44,8 @@ namespace Kusume
         private float minMag = 1.0f;
         [SerializeField]
         private float maxMag = 3.0f;
+
+        SkillButton skillButton;
 
         private void Awake()
         {
@@ -63,7 +66,8 @@ namespace Kusume
             SkillButton skill = FindObjectOfType<SkillButton>();
             if (skill != null)
             {
-                skill.Setup(RunSkill);
+                skillButton = skill;
+                skillButton.Setup(RunSkill);
             }
         }
 
@@ -133,6 +137,7 @@ namespace Kusume
             Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
             skillCoolTimer.Start(skillCoolDownCount);
             skillRunCount = 0;
+            skillButton.SetStateButton(true);
         }
 
         /// <summary>

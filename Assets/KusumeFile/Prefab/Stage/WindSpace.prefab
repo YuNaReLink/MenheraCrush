@@ -45,3 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 750
+  angleRatio: 60
+  addAngle: 90
