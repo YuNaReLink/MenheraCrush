@@ -1,9 +1,16 @@
 using UnityEngine;
 
-public class ResultSystem : MonoBehaviour
+namespace Kusume
 {
+    public class ResultSystem : MonoBehaviour
+    {
+        //ƒvƒŒƒnƒu
+        [SerializeField]
+        private ScoreBoard resultBoard;
 
-    [SerializeField]
-    private GameObject resultBoard;
-    public GameObject ResultBoard => resultBoard;
+        public void Create()
+        {
+            Instantiate(resultBoard, transform);
+        }
+    }
 }

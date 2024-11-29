@@ -219,7 +219,7 @@ MonoBehaviour:
   pieceSpawnPosition: []
   pieceData: {fileID: 11400000, guid: 75f84eb46254e98469328f58007a3f01, type: 2}
   pieceLedger: {fileID: 11400000, guid: 73ccc5ca89aea1347ace69819be97bb9, type: 2}
-  basePiece: {fileID: 44138455395364889, guid: 76b320c455f20964b9a46a692f9f9a8f, type: 3}
+  basePiece: {fileID: -8627405056025566574, guid: 76b320c455f20964b9a46a692f9f9a8f, type: 3}
   maxPieceCount: 45
   pieces: []
   piecesParent: {fileID: 0}

@@ -42,7 +42,7 @@ public class SceneTransition : MonoBehaviour
     //// Update is called once per frame
     void Update()
     {
-        timer.Update();
+        timer.Update(Time.deltaTime);
         
         if (!timer.IsEnd())
         {

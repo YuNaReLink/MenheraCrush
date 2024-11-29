@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kusume
@@ -7,18 +5,32 @@ namespace Kusume
     public class SetStageInfoData : MonoBehaviour
     {
         [SerializeField]
-        private StageInfoData stageInfoData;
+        private StageInfoData               stageInfoData;
 
-        private ScoreViewGauge scoreViewGauge;
+        private ScoreViewGauge              scoreViewGauge;
 
-        private EnemyController enemyController;
+        private EnemyController             enemyController;
 
+        private LucKee.EnteringLeader       enteringLeader;
+
+        [SerializeField]
+        private Transform                   gameCanvasTransform;
+
+        [SerializeField]
+        private GameObject                  gameStartObject;
         private void Awake()
         {
             scoreViewGauge = FindObjectOfType<ScoreViewGauge>();
 
             enemyController = GetComponent<EnemyController>();
 
+            enteringLeader = FindObjectOfType<LucKee.EnteringLeader>();
+
+            GameCanvas gameCanvas = FindObjectOfType<GameCanvas>();
+            if( gameCanvas != null)
+            {
+                gameCanvasTransform = gameCanvas.transform;
+            }
         }
 
         private void Start()
@@ -31,8 +43,23 @@ namespace Kusume
             {
                 enemyController.LoopAttackStart(stageInfoData.StageInfos[(int)SelectStageContainer.EnemyCharacter].attackCount);
             }
+
             GameController.Instance.SetGameTimer(stageInfoData.StageInfos[(int)SelectStageContainer.EnemyCharacter].gameTime);
 
+
+            if(enteringLeader != null)
+            {
+                enteringLeader.Jump();
+            }
+
+            SetGameStartCountDown();
+        }
+
+        private void SetGameStartCountDown()
+        {
+            GameController.Instance.SetGameStartTimer();
+            GameObject gameobject = Instantiate(gameStartObject, gameCanvasTransform.position, Quaternion.identity);
+            gameobject.transform.SetParent(gameCanvasTransform);
             Destroy(this);
         }
     }

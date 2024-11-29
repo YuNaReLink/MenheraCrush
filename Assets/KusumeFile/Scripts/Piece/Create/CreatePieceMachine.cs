@@ -23,6 +23,8 @@ namespace Kusume
     /// </summary>
     public class CreatePieceMachine : MonoBehaviour
     {
+        public static CreatePieceMachine Instance { get; private set; }
+
         /// <summary>
         /// ピースを生成するオブジェクト関係の変数
         /// </summary>
@@ -42,7 +44,7 @@ namespace Kusume
         public PieceLedger              PieceLedger => pieceLedger;
 
         [SerializeField]
-        private GameObject              basePiece = null;
+        private Piece                   basePiece = null;
 
         [Header("ピースごとの最大カウント")]
         [SerializeField]
@@ -58,7 +60,7 @@ namespace Kusume
         /// ピースの親オブジェクト
         /// </summary>
         [SerializeField]
-        private GameObject              piecesParent = null;
+        private PieceParent              piecesParent = null;
         /// <summary>
         /// ピース生成の間隔をとる変数
         /// </summary>
@@ -70,6 +72,8 @@ namespace Kusume
         private float                   noGravityCount;
         private void Awake()
         {
+            Instance = this;
+
             GameObject g = null;
             for(int i = 0; i < transform.childCount; i++)
             {
@@ -78,7 +82,7 @@ namespace Kusume
             }
             creatorCount = transform.childCount;
 
-            piecesParent = FindObjectOfType<PieceParent>().gameObject;
+            piecesParent = FindObjectOfType<PieceParent>();
         }
 
         private void Start()
@@ -114,8 +118,7 @@ namespace Kusume
             if(currentPieceCount >= maxPieceCount) { return; }
         
             //ピースの生成
-            GameObject g = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position,Quaternion.identity);
-            Piece p = g.GetComponent<Piece>();
+            Piece p = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position, Quaternion.identity); ;
             pieces.Add(p);
             Rigidbody2D rb = p.GetComponent<Rigidbody2D>();
             rb.AddForce(Vector2.up * 10.0f, ForceMode2D.Impulse);
