@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using LucKee;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +8,7 @@ namespace Kusume
     {
         private RectTransform   rectTransform;
 
-        private Text            text;
+        private SpriteConverter converter;
 
         [SerializeField]
         private GameObject      StartUI;
@@ -27,13 +26,8 @@ namespace Kusume
 
         private void Awake()
         {
-            text = GetComponent<Text>();
+            converter = GetComponent<SpriteConverter>();
             rectTransform = GetComponent<RectTransform>();
-        }
-
-        private void Start()
-        {
-            text.text = "";
         }
 
         private void Update()
@@ -49,7 +43,7 @@ namespace Kusume
             currentTime = starter.GameStartTimer.Current;
             ChangeCountUpdate();
             int count = (int)starter.GameStartTimer.Current + 1;
-            text.text = count.ToString();
+            converter.SetText(count.ToString());
         }
 
         private void ChangeCountUpdate()
