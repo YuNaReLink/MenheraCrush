@@ -50,7 +50,8 @@ public class CharacterSelect : MonoBehaviour
         buttons[3] = GameObject.Find("UenoNozomi").GetComponent<Button>();
         buttons[4] = GameObject.Find("SawashiroNozomi").GetComponent<Button>();
 
-        Select((CharacterNameList)0);
+        Select((CharacterNameList)SelectCharacterNo);
+        gameObject.SetActive(false);
     }
 
     private void Update()

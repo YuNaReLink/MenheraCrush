@@ -13,11 +13,6 @@ namespace Kusume
         [SerializeField]
         private float                   gameTimerCount = 10.0f;
 
-        private Timer                   gameStartTimer;
-        public Timer                    GameStartTimer => gameStartTimer;
-        [SerializeField]
-        private float                   gameStartCount = 3.0f;
-
         [SerializeField]
         private GamePreparationData     preparationData;
 
@@ -61,8 +56,7 @@ namespace Kusume
         private void Awake()
         {
             SetupInstance();
-            gameTimer = new Timer();
-            gameStartTimer = new Timer();
+            gameTimer = new Timer(0);
             resultSystem = FindAnyObjectByType<ResultSystem>();
         }
 
@@ -79,7 +73,7 @@ namespace Kusume
         private void Start()
         {
             endGame = false;
-            puzzleStop = false;
+            puzzleStop = true;
         }
 
         public void SetGameTimer(float t)
@@ -87,17 +81,9 @@ namespace Kusume
             gameTimerCount = t;
             gameTimer.Start(gameTimerCount);
             gameTimer.OnOnceEnd += EndGame;
-            gameStartTimer.Start(gameStartCount);
         }
 
-        public void SetGameStartTimer()
-        {
-            puzzleStop = true;
-            gameStartTimer.Start(gameStartCount);
-            gameStartTimer.OnOnceEnd += GameStartTimerEnd;
-        }
-
-        private void GameStartTimerEnd()
+        public void GameStartTimerEnd()
         {
             puzzleStop = false;
             LucKee.BGMManager.Play(bgm);
@@ -106,7 +92,6 @@ namespace Kusume
         private void Update()
         {
             gameTimer.Update(Time.deltaTime);
-            gameStartTimer.Update(Time.deltaTime);
         }
     }
 }

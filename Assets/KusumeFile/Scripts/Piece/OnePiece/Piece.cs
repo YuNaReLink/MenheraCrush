@@ -34,7 +34,9 @@ namespace Kusume
         private float               keepImpactPower;
         public void                 SetImpactPower(float power) {  keepImpactPower = power; }
 
-        private float               wait = 0;
+        private float               crushWait = 0;
+
+        private float               addSkillpointWait = 0;   
 
         private float               noGravityCount = 0;
         public void                 SetNoGravityCount(float time) {  noGravityCount = time; }
@@ -49,6 +51,10 @@ namespace Kusume
         [SerializeField]
         private bool selected = false;
         public bool IsSelected => selected;
+
+
+        private PlayerController player;
+        public void SetPlayerController(PlayerController controller) { player = controller; }
         public void SetSelected(bool s) 
         {
             if(selected != s)
@@ -93,6 +99,8 @@ namespace Kusume
             GravityUpdate();
 
             CrushUpdate();
+
+            AddSkillPointUpdate();
         }
 
         private void GravityUpdate()
@@ -112,16 +120,31 @@ namespace Kusume
 
         private void CrushUpdate()
         {
-            if (wait <= 0)
+            if (crushWait <= 0)
             {
                 return;
             }
 
-            wait -= Time.deltaTime;
+            crushWait -= Time.deltaTime;
 
-            if (wait <= 0)
+            if (crushWait <= 0)
             {
                 Crush();
+            }
+        }
+
+        private void AddSkillPointUpdate()
+        {
+            if(addSkillpointWait <= 0)
+            {
+                return;
+            }
+
+            addSkillpointWait -= Time.deltaTime;
+
+            if(addSkillpointWait <= 0)
+            {
+                AddSkillCount();
             }
         }
 
@@ -143,13 +166,29 @@ namespace Kusume
 
         public void Crush(float w)
         {
-            if(wait > 0) { return; }
+            if(crushWait > 0) { return; }
             if(w <= 0)
             {
                 Crush();
                 return;
             }
-            wait = w;
+            crushWait = w;
+        }
+
+        public void AddSkillPoint(float w)
+        {
+            if (addSkillpointWait > 0) { return; }
+            if (w <= 0)
+            {
+                AddSkillCount();
+                return;
+            }
+            addSkillpointWait = w;
+        }
+
+        private void AddSkillCount()
+        {
+            player.SetSkillRunCount(1);
         }
 
         private void OnTriggerStay(Collider other)

@@ -74,15 +74,16 @@ namespace Kusume
                 createPiecemMachine.ChangeGravityAllPiece();
                 for (int i = 0; i < pieceList.Count; i++)
                 {
+                    if((int)pieceList[0].PieceInfo.color.tag == controller.CharaInt)
+                    {
+                        pieceList[i].SetPlayerController(controller);
+                        pieceList[i].AddSkillPoint(0.05f * i);
+                    }
                     pieceList[i].Crush(0.05f * i);
                     sizes.Add(pieceList[i].PieceInfo.size.big);
                 }
                 GameScore.SetOnceCount((int)ScoreCalculator.Calc(sizes, GameScore.Bonus));
                 PieceTag tag = pieceList[0].PieceInfo.color.tag;
-                if((int)tag == controller.CharaInt)
-                {
-                    controller.SetSkillRunCount(pieceList.Count);
-                }
                 if (tag == PieceTag.Pink)
                 {
                     hp.Regain(5);

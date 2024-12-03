@@ -12,7 +12,7 @@ namespace Kusume
         private Timer destroyTimer;
         private void Awake()
         {
-            destroyTimer = new Timer();
+            destroyTimer = new Timer(0);
         }
 
         private void Start()

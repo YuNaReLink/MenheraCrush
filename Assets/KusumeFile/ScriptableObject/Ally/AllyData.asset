@@ -16,12 +16,12 @@ MonoBehaviour:
   - tag: 0
     name: YadomeAyane
     skill: {fileID: 8884762241872583565, guid: 5024e68d3c4ce8143abda77d66099db0, type: 3}
-    skillGauge: 5
+    skillGauge: 20
     animator: {fileID: 9100000, guid: c7709532207edcd4784da6e0c29cf2fe, type: 2}
     sprite: {fileID: 21300000, guid: 82ee2c1e90a4e2c4cb1ac325e3b822f9, type: 3}
     faceSprite: {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
     ImageOffset: {x: 0, y: 0}
-    imageColor: {r: 0.7411765, g: 0, b: 1, a: 1}
+    imageColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   - tag: 1
     name: Shinonomi Aoi
     skill: {fileID: 8884762241872583565, guid: dab0f94f17df52b4da24c5c96d74a020, type: 3}

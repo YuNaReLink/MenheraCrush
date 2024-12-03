@@ -30,6 +30,9 @@ namespace Kusume
 
         private Vector2 baseRectPosition;
 
+        [SerializeField]
+        private SkillButtonColorDataList colorDataList;
+
         private void Awake()
         {
             image = GetComponent<Image>();
@@ -49,13 +52,27 @@ namespace Kusume
             button = GetComponent<Button>();
             button.onClick.AddListener(action);
 
-            image.color = GameController.Instance.AllyData.imageColor;
+            int num = (int)GameController.Instance.AllyData.tag;
+            ColorBlock colorBlock = button.colors;
+            colorBlock.normalColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Normal];
+            colorBlock.highlightedColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Highlighted];
+            colorBlock.pressedColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Pressed];
+            colorBlock.selectedColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Selected];
+            colorBlock.disabledColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Disabled];
+            button.colors = colorBlock;
+
             skillImage.SetSkillImageAndColor();
+        }
+        public void MaskUpdate(float current,float max)
+        {
+            mask.MaskUpdate(current,max);
         }
 
         public void SetStateButton(bool state)
         {
             mask.SetState(state);
+            //ボタンを押した時に下に動く処理
+            //フラグがtrueなら処理
             if (!buttonMoveUI) { return; }
             if (state)
             {

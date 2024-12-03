@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
 {
-    private Kusume.Timer timer = new();
+    private Kusume.Timer timer = new(0);
 
     [SerializeField]
     private RectTransform circle;

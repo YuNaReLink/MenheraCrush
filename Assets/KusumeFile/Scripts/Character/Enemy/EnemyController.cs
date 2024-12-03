@@ -29,7 +29,7 @@ namespace Kusume
                 Debug.LogError("EnemyAttackCountがアタッチされていません");
             }
             
-            attackTimer = new Timer();
+            attackTimer = new Timer(0);
 
         }
 

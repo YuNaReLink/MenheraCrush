@@ -19,16 +19,20 @@ namespace Kusume
         private float                   skillCoolDownCount = 1.0f;
         [SerializeField]
         private int                     skillRunCount = 0;
+
+        [SerializeField]
+        private int                     maxSkillRunCount = 0;   
         public void                     SetSkillRunCount(int count) 
         {
-            skillRunCount += count; 
-            if(skillRunCount >= menheraData.Characters[charaInt].skillGauge)
+            skillRunCount += count;
+            skillButton.MaskUpdate(skillRunCount, maxSkillRunCount);
+            if(skillRunCount >= maxSkillRunCount)
             {
-                skillRunCount = menheraData.Characters[charaInt].skillGauge;
+                skillRunCount = maxSkillRunCount;
                 skillButton.SetStateButton(false);
             }
         }
-        private Timer                   skillCoolTimer = new Timer();
+        private Timer                   skillCoolTimer = new Timer(0);
 
         [SerializeField]
         private CreatePieceMachine      createPiecemMachine;
@@ -83,6 +87,7 @@ namespace Kusume
             SetMenheraUI();
             GameController.Instance.SetAllyData(menheraData.Characters[charaInt]);
             skillButton.Setup(RunSkill);
+            maxSkillRunCount = menheraData.Characters[charaInt].skillGauge;
         }
         /// <summary>
         /// デバッグ用のメソッド
