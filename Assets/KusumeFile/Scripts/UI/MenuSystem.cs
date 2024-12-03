@@ -25,6 +25,8 @@ namespace Kusume
 
         private AudioSource audioSource;
 
+        private LucKee.Pause pause;
+
         [SerializeField]
         private AudioClip audioClip;
 
@@ -33,6 +35,8 @@ namespace Kusume
             faceChanger = GetComponent<FaceChanger>();
 
             audioSource = GetComponent<AudioSource>();
+
+            pause = GetComponent<LucKee.Pause>();
         }
         private void Start()
         {
@@ -76,11 +80,13 @@ namespace Kusume
         private void MenuStart()
         {
             MenuActive(true);
+            pause.Enable();
         }
 
         private void ReturnUpdate()
         {
             MenuActive(false);
+            pause.Disable();
         }
 
         private void ConfigureUpdate()

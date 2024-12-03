@@ -5,12 +5,19 @@ namespace Kusume
 {
     public class Timer
     {
+        public Timer(float _endTime)
+        {
+            endTime = _endTime;
+        }
+
         public event Action OnEnd;
         public event Action OnOnceEnd;
 
         private float current = 0;
 
         private float time = 0;
+
+        private float endTime = 0;
 
         public float Current => current;
 
@@ -30,9 +37,9 @@ namespace Kusume
 
         public void Update(float t)
         {
-            if(current <= 0) { return; }
+            if(current <= endTime) { return; }
             current -= t;
-            if(current <= 0)
+            if(current <= endTime)
             {
                 if (loop)
                 {
@@ -49,7 +56,7 @@ namespace Kusume
             OnOnceEnd = null;
         }
 
-        public bool IsEnd() {  return current <= 0; }
+        public bool IsEnd() {  return current <= endTime; }
 
         public int GetMinutes()
         {

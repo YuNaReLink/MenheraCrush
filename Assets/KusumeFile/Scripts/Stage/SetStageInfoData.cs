@@ -45,7 +45,7 @@ namespace Kusume
             }
 
             GameController.Instance.SetGameTimer(stageInfoData.StageInfos[(int)SelectStageContainer.EnemyCharacter].gameTime);
-
+            GameStarter.Instance.Activate();
 
             if(enteringLeader != null)
             {
@@ -57,7 +57,6 @@ namespace Kusume
 
         private void SetGameStartCountDown()
         {
-            GameController.Instance.SetGameStartTimer();
             GameObject gameobject = Instantiate(gameStartObject, gameCanvasTransform.position, Quaternion.identity);
             gameobject.transform.SetParent(gameCanvasTransform);
             Destroy(this);

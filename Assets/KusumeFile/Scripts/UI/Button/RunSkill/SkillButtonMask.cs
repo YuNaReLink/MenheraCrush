@@ -5,8 +5,6 @@ namespace Kusume
 {
     public class SkillButtonMask : MonoBehaviour
     {
-        [SerializeField]
-        private float maskAlpha = 0.5f;
         private Image image;
         private void Awake()
         {
@@ -16,20 +14,18 @@ namespace Kusume
             image.color = c;
         }
 
+        public void MaskUpdate(float current, float max)
+        {
+            float fillAmount = current / max;
+            image.fillAmount = 1.0f - fillAmount;
+        }
+
         public void SetState(bool state)
         {
-            float alpha;
-            Color c = image.color;
             if (state)
             {
-                alpha = maskAlpha;
+                image.fillAmount = 1.0f;
             }
-            else
-            {
-                alpha = 0.0f;
-            }
-            c.a = alpha;
-            image.color = c;
         }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9079471532279408965}
   - component: {fileID: 4097233445527138983}
   - component: {fileID: 361388246940360034}
+  - component: {fileID: 9020294904179553478}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -46,7 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimerCount: 60
-  gameStartCount: 4
   preparationData: {fileID: 11400000, guid: b828ac93f3584a5499bfdf4c50bba07c, type: 2}
   player: {fileID: 0}
   enemy: {fileID: 0}
@@ -65,3 +65,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: 0
+--- !u!114 &9020294904179553478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531911738132834561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e229d2f61c7054faf2a6ecaef3c92d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStartCountSpeed: 0.5
+  gameStartCount: 3
