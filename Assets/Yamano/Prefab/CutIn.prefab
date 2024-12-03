@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalHeight: 300
-  widenSpeed: 500
+  widenSpeed: 1000
 --- !u!114 &115926294652053266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,19 +136,14 @@ MonoBehaviour:
   route:
     keys:
     - time: 0
-      position: {x: 1600, y: 0}
-    - time: 0.3
-      position: {x: 1600, y: 0}
-    - time: 0.8
-      position: {x: -400, y: 0}
-    - time: 0.925
+      position: {x: 2000, y: 0}
+    - time: 0.5
       position: {x: 0, y: 0}
-    - time: 1.225
+    - time: 1
       position: {x: 0, y: 0}
-    - time: 1.35
-      position: {x: 400, y: 0}
-    - time: 1.85
-      position: {x: -1600, y: 0}
+    - time: 1.5
+      position: {x: -2000, y: 0}
+    offset: {x: 0, y: 0}
 --- !u!1 &8441276994854023586
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,15 +171,15 @@ RectTransform:
   m_GameObject: {fileID: 8441276994854023586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.85, y: 1.85, z: 1.85}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3687666031343410351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 400, y: 680}
+  m_AnchoredPosition: {x: 0, y: -385}
+  m_SizeDelta: {x: 800, y: 1360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4441377288839231851
 CanvasRenderer:

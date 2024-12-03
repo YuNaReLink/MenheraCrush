@@ -27,6 +27,9 @@ namespace LucKee
         [SerializeField]
         private Keyframe2D[] keys;
 
+        [SerializeField]
+        private Vector2 offset;
+
         /*Method*/
 
         //所要時間の取得
@@ -41,29 +44,35 @@ namespace LucKee
             return keys[^1].time;
         }
 
+        public void SetOffset(Vector2 off)
+        {
+            offset = off;
+        }
+
         //位置の取得
         //本体の時間の範囲と引数の関係によって挙動が変わる。
         //・本体の長さが0の場合、引数に拘わらず(0, 0)を返す。
         //・引数が本体[0]のtime以下の場合、[0]のpositionを返す。
         //・引数が本体[^1]のtime以上の場合、[^1]のpositionを返す。
         //・上記のいずれでもない場合、引数を挟むtimeを持つ2つの値から計算する。
+        //・offsetが設定されている場合、以上の値にoffsetが加算される。
         public Vector2 GetPosition(float time)
         {
-            //本体が無いので(0, 0)を返す。
+            //本体が無い。
             if (keys.Length <= 0)
             {
-                return Vector2.zero;
+                return offset;
             }
 
             //[0]以下なので計算を省いて返す。
             if (time <= keys[0].time)
             {
-                return keys[0].position;
+                return keys[0].position + offset;
             }
             //[^1]以上なので計算を省いて返す。
             if (time >= keys[^1].time)
             {
-                return keys[^1].position;
+                return keys[^1].position + offset;
             }
 
             //計算を省けないと判断したので渋々ループを回す。
@@ -81,11 +90,11 @@ namespace LucKee
 
                 //上記の割合を基に位置を求めて返す。
                 Vector2 v = keys[i].position + (keys[i + 1].position - keys[i].position) * progress;
-                return v;
+                return v + offset;
             }
 
             //ここまで来た場合はエラーだと考えるべきだが、最終的な地点を返すことにした。
-            return keys[^1].position;
+            return keys[^1].position + offset;
         }
     }
 }

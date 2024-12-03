@@ -45,6 +45,7 @@ namespace LucKee
             pause.Enable();
 
             time = 0.0f;
+            route.SetOffset(image.rectTransform.localPosition);
             image.rectTransform.localPosition = route.GetPosition(0.0f);
         }
 
