@@ -24,7 +24,7 @@ public class SceneChanger : MonoBehaviour
         switch (scene)
         {
             case SceneList.Title:
-                temp = "Title";
+                temp = "TitleScene";
                 break;
             case SceneList.StageSelect:
                 temp = "GameStageSelect";
