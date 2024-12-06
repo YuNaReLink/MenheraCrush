@@ -1,22 +1,18 @@
-using Kusume;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
-    [SerializeField]
-    private Text score;
+
+    private LucKee.SpriteConverter converter;
 
     private void Awake()
     {
-        //score = GetComponentInChildren<Text>();
+        converter = GetComponentInChildren<LucKee.SpriteConverter>();
     }
     void Start()
     {
         int value = Kusume.GameScore.Count;
-        score.text = String.Format("{0:0,########}", value);
+        converter.SetText(String.Format("{0:0,########}", value));
     }
 }

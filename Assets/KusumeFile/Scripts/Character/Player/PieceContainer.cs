@@ -20,6 +20,8 @@ namespace Kusume
 
         private PlayerController controller;
 
+        private PieceConcatenate pieceConcatenate;
+
         [SerializeField]
         private List<float> diss = new List<float>();
         public void Setup(PlayerController p)
@@ -27,6 +29,7 @@ namespace Kusume
             controller = p;
             createPiecemMachine = p.CreatePieceMachine;
             hp = p.HP;
+            pieceConcatenate = controller.GetComponent<PieceConcatenate>();
         }
 
         public void ChangePiece(Piece piece)
@@ -37,11 +40,13 @@ namespace Kusume
                 {
                     //piece.SetSelected(false);
                     pieceList.RemoveAt(pieceList.Count - 1);
+                    pieceConcatenate.Remove();
                 }
                 return; 
             }
             //piece.SetSelected(true);
             pieceList.Add(piece);
+            pieceConcatenate.Add(piece.transform.position);
         }
 
         public bool CheckColor(PieceTag tag)
@@ -94,6 +99,7 @@ namespace Kusume
                 pieceList[i].SetSelected(false);
             }
             pieceList.Clear();
+            pieceConcatenate.Clear();
         }
 
 
