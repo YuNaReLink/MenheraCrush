@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 7158089740099251229}
---- !u!114 &7158089740099251229
+  - {fileID: 5737990777744794398}
+--- !u!114 &5737990777744794398
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
