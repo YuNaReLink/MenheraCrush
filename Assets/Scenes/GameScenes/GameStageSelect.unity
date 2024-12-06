@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.60784316, g: 0.32941177, b: 0.31764707, a: 1}
+  m_Color: {r: 0.54901963, g: 0.3019608, b: 0.28627452, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   select: {fileID: 1576566422}
-  chara: 3
+  chara: 4
 --- !u!114 &242323813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8705883, g: 0.76470596, b: 0.5176471, a: 1}
+  m_Color: {r: 0.8000001, g: 0.7058824, b: 0.44705886, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2817,7 +2817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   select: {fileID: 1576566422}
-  chara: 4
+  chara: 3
 --- !u!114 &717385423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3764,14 +3764,14 @@ MonoBehaviour:
   - {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
   - {fileID: 780244944, guid: d3dde02520d9bcc41a5e5f39b0af30c1, type: 3}
   - {fileID: -902836371, guid: 22c3982b593ddff4b88980881ab897e9, type: 3}
-  - {fileID: -394756606, guid: df196fa9b236047458b5862508507f59, type: 3}
   - {fileID: -651514625, guid: 1e595923d2798fb4a8d5c36a1cd4aaec, type: 3}
+  - {fileID: -394756606, guid: df196fa9b236047458b5862508507f59, type: 3}
   characterColor:
   - {r: 0.6, g: 0.5686275, b: 0.69411767, a: 1}
   - {r: 0.38823533, g: 0.43921572, b: 0.5294118, a: 1}
   - {r: 0.46274513, g: 0.61960787, b: 0.49411768, a: 1}
-  - {r: 0.8705883, g: 0.76470596, b: 0.5176471, a: 1}
   - {r: 0.60784316, g: 0.33333334, b: 0.31764707, a: 1}
+  - {r: 0.8705883, g: 0.76470596, b: 0.5176471, a: 1}
 --- !u!4 &1217278003
 Transform:
   m_ObjectHideFlags: 0
@@ -4818,8 +4818,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f927ab42362b524398878a5a7828cff, type: 2}
   - {fileID: 11400000, guid: 5ded5370d5e502b4c8a14e1711973af7, type: 2}
   - {fileID: 11400000, guid: a00c6c6a6dfdc9646bf4871872bb958f, type: 2}
-  - {fileID: 11400000, guid: d3c1554b9a25eb146a58fd2939eddfd7, type: 2}
   - {fileID: 11400000, guid: 6d7227a85b244544a81456b4446220f3, type: 2}
+  - {fileID: 11400000, guid: d3c1554b9a25eb146a58fd2939eddfd7, type: 2}
   buttons:
   - {fileID: 1695244465}
   - {fileID: 1250594}
