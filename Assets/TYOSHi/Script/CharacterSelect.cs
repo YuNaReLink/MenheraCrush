@@ -11,8 +11,8 @@ public enum CharacterNameList
     HuzisakiAyane,
     ShinonomeAoi,
     HayashiKouta,
-    UenoNozomi,
     SawashiroNozomi,
+    UenoNozomi,
     HanayaRaika,
     KuzuharaNaoya,
     Count
@@ -47,8 +47,8 @@ public class CharacterSelect : MonoBehaviour
         buttons[0] = GameObject.Find("HuzisakiAyane").GetComponent<Button>();
         buttons[1] = GameObject.Find("ShinonomeAoi").GetComponent<Button>();
         buttons[2] = GameObject.Find("HayashiKouta").GetComponent<Button>();
-        buttons[3] = GameObject.Find("UenoNozomi").GetComponent<Button>();
-        buttons[4] = GameObject.Find("SawashiroNozomi").GetComponent<Button>();
+        buttons[3] = GameObject.Find("SawashiroNozomi").GetComponent<Button>();
+        buttons[4] = GameObject.Find("UenoNozomi").GetComponent<Button>();
 
         Select((CharacterNameList)SelectCharacterNo);
         gameObject.SetActive(false);
