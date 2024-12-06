@@ -69,6 +69,7 @@ MonoBehaviour:
     currentHP: 0
   skillCoolDownCount: 1
   skillRunCount: 0
+  maxSkillRunCount: 0
   createPiecemMachine: {fileID: 0}
   pieceContainer:
     pieceList: []
@@ -77,7 +78,6 @@ MonoBehaviour:
     - 2.25
   minMag: 0.5
   maxMag: 1
-  sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
 --- !u!114 &5206039346121342140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
+  joint: {fileID: 2761353069815332505, guid: 9d2452b2c42cae54cb0dbba9ed330f1a, type: 3}
+  joints: []
 --- !u!1001 &7439873790999196228
 PrefabInstance:
   m_ObjectHideFlags: 0
