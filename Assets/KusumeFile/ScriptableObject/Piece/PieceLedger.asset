@@ -16,42 +16,42 @@ MonoBehaviour:
   - tag: 0
     color:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
     ratio: 2
     sprite: {fileID: 21300000, guid: 83f4993039fccf1408ec803da6931adf, type: 3}
     material: {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
   - tag: 1
     color:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
     ratio: 1
     sprite: {fileID: 21300000, guid: e2e19b54cc1904242a3b276de0f6e0bb, type: 3}
     material: {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
   - tag: 2
     color:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
     ratio: 1
     sprite: {fileID: 21300000, guid: ce5977b9ae0dea64ea4c9f5b9502617a, type: 3}
     material: {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
   - tag: 3
     color:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
     ratio: 1
     sprite: {fileID: 21300000, guid: 5eb652eb4bb5a0d4a98ba7c62f369f70, type: 3}
     material: {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
   - tag: 4
     color:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
     ratio: 1
     sprite: {fileID: 21300000, guid: 64e4a684581b9094ba31ed0c1b4a7c8d, type: 3}
     material: {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
   - tag: 5
     color:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4278190080
     ratio: 1
     sprite: {fileID: 21300000, guid: caa24d47569afa742a01b63e123dfae6, type: 3}
     material: {fileID: 2100000, guid: e37729bf92775f847b12bf956ecf0622, type: 2}
