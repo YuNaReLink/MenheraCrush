@@ -1099,11 +1099,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
-    m_FontSize: 50
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 55
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3027,7 +3027,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -3171,6 +3171,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u9078\u629E"
       objectReference: {fileID: 0}
+    - target: {fileID: 90020105012591876, guid: f23b88bb75c7ab54190ced87aac18e4b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     - target: {fileID: 90020105012591876, guid: f23b88bb75c7ab54190ced87aac18e4b, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 0
@@ -3704,7 +3708,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -4444,7 +4448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -5186,6 +5190,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u30B9\u30C6\u30FC\u30B81"
       objectReference: {fileID: 0}
+    - target: {fileID: 3738103688697129116, guid: f218e66813936e447862cec3c71aef4d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     - target: {fileID: 6001652098464914850, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5819,6 +5827,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u30B9\u30C6\u30FC\u30B82"
       objectReference: {fileID: 0}
+    - target: {fileID: 3738103688697129116, guid: f218e66813936e447862cec3c71aef4d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     - target: {fileID: 6001652098464914850, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6111,7 +6123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 149.8, y: -1.9}
+  m_AnchoredPosition: {x: 182.1, y: 1.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096559673
@@ -6135,19 +6147,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u9078\u629E\u4E2D\u306E\u30AD\u30E3\u30E9"
+  m_Text: "\u3042\u306A\u305F\u304C\u9078\u3093\u3060"
 --- !u!222 &2096559674
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6176,6 +6188,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u30B9\u30C6\u30FC\u30B83"
       objectReference: {fileID: 0}
+    - target: {fileID: 3738103688697129116, guid: f218e66813936e447862cec3c71aef4d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e3e87edc8547aa34c8e77f2d104d6771, type: 3}
     - target: {fileID: 6001652098464914850, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
