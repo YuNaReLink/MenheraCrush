@@ -11,15 +11,34 @@ namespace LucKee
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class SpriteConverter : MonoBehaviour
     {
+        /*
+         * 各絵文字は名称で対応しており、下記の通りの条件で扱うことができる。
+         * ・先に色を指定する。(Black及びPink)
+         * ・後に文字を指定する。(各数字及びコンマ、コロン)
+         * 例として、TextMeshProに<sprite name=Black0>と入力した場合、黒の0にあたる絵文字が表示される。
+        */
+
+        /*static*/
+
+        //黒の絵文字
+        private static readonly String Black = "Black";
+
+        //ピンクの絵文字
+        private static readonly String Pink = "Pink";
+
+        //変換対象
+        //変換する文字全てをひと繋ぎの文字列で保持している。
+        private static readonly String Convertion = "0123456789,:";
+
+        //絵文字を名称で呼び出すためのフォーマット
+        //変数名をFormatとしたかったが、String.Formatとの混同を避けるために使用を控えた。
+        private static readonly String Sentence = "<sprite name={0}>";
+
         /*Serialized*/
 
-        //フォーマット
-        //{0}の部分に絵文字の番号が入ることになる。
-        //0~9……ピンク色
-        //10~19……黒色
-        //黒色を使いたい場合は{0}の直前に'1'を書き足して10番台にするべし。
+        //黒とピンクの切り替えを行うフラグ
         [SerializeField]
-        private String format = "<sprite index={0}>";
+        private bool black = false;
 
         /*Component*/
 
@@ -32,6 +51,8 @@ namespace LucKee
         private void Awake()
         {
             mesh = GetComponent<TextMeshProUGUI>();
+            //For the test.
+            //SetText("0123456789,:");
         }
 
         /*Method*/
@@ -40,11 +61,27 @@ namespace LucKee
         //引数の文字列に含まれる数字を全てフォーマットに置き換えて変更する。
         public void SetText(String text)
         {
-            //数字は10種類だけなので固定値で行う。
-            for (int i = 0; i < 10; i++)
+            //前に付く文字列の判断
+            String title;
+            if (black)
             {
+                title = Black;
+            }
+            else
+            {
+                title = Pink;
+            }
+
+            for (int i = 0; i < Convertion.Length; i++)
+            {
+                //変換対象の文字
+                String before = Convertion[i].ToString();
+
+                //変換後の文字列
+                String after = String.Format(Sentence, title + before);
+
                 //各数字をフォーマットに従って置き換える。
-                text = text.Replace(i.ToString(), String.Format(format, i));
+                text = text.Replace(before, after);
             }
 
             //上記の処理後、対象のテキストに代入する。
