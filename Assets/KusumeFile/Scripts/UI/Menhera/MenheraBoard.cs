@@ -26,6 +26,7 @@ namespace Kusume
             image.SetNativeSize();
             image.enabled = true;
 
+            basePosition = rectTransform.anchoredPosition;
             Vector2 pos =basePosition;
             pos += characterInfo.ImageOffset;
             rectTransform.anchoredPosition = pos;
@@ -43,8 +44,6 @@ namespace Kusume
         private void Start()
         {
             image.enabled = false;
-
-            basePosition = rectTransform.anchoredPosition;
         }
 
         private void EntryUpdate()

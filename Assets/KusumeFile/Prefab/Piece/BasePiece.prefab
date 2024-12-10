@@ -170,6 +170,7 @@ MonoBehaviour:
   keepImpactPower: 0
   baseGravityScale: 5.5
   selected: 0
+  breakEffect: {fileID: 9009186611849046066, guid: 9935ea04d32108f46814f83f10c4cc0f, type: 3}
 --- !u!114 &-989834613429512028
 MonoBehaviour:
   m_ObjectHideFlags: 0

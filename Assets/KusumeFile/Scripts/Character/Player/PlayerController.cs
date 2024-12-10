@@ -85,7 +85,6 @@ namespace Kusume
             pieceContainer.Setup(this);
             SetCharaInt(CharacterSelect.SelectCharacterNo);
             SetMenheraUI();
-            GameController.Instance.SetAllyData(menheraData.Characters[charaInt]);
             skillButton.Setup(RunSkill);
             maxSkillRunCount = menheraData.Characters[charaInt].skillGauge;
         }
