@@ -34,8 +34,8 @@ namespace Kusume
 
             fillImage.fillAmount = 0;
 
-            float c = goalGauge;
-            GameScore.InitCount((int)c);
+            //float c = goalGauge;
+            //GameScore.InitCount((int)c);
 
             
         }
@@ -43,6 +43,9 @@ namespace Kusume
         public void SetMaxScoreFill(float goal)
         {
             fill.SetGoalRatio(goal / maxGauge);
+            GameScore.InitCount((int)goal);
+            GameScore.InitOverCount((int)maxGauge);
+            goalGauge = goal;
         }
 
         private void Update()

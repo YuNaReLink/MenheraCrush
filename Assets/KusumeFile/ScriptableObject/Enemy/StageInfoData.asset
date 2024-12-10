@@ -30,7 +30,7 @@ MonoBehaviour:
     goalScore: 7000
   - attackCount: 5
     gameTime: 120
-    goalScore: 7500
+    goalScore: 1000
   - attackCount: 4
     gameTime: 120
     goalScore: 8000
