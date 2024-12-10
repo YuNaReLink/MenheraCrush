@@ -26,12 +26,17 @@ namespace Kusume
         [SerializeField]
         private AudioClip bgm;
 
+        [SerializeField]
+        private MenheraData allyData;
+        [SerializeField]
+        private MenheraData enemyData;
+        public MenheraData EnemyData => enemyData;
 
-        private CharacterInfo allyData;
-        public CharacterInfo AllyData => allyData;
-        public void SetAllyData(CharacterInfo data) { allyData = data;}
 
-        //private CharacterInfo enemyData;
+        private CharacterInfo allyDataInfo;
+        public CharacterInfo AllyDataInfo => allyDataInfo;
+
+        private GameStarter gameStarter;
 
         public void SetPreparation()
         {
@@ -58,6 +63,8 @@ namespace Kusume
             SetupInstance();
             gameTimer = new Timer(0);
             resultSystem = FindAnyObjectByType<ResultSystem>();
+
+            gameStarter = GetComponent<GameStarter>();
         }
 
         private void SetupInstance()
@@ -68,6 +75,8 @@ namespace Kusume
                 return;
             }
             instance = this;
+
+            allyDataInfo = allyData.Characters[CharacterSelect.SelectCharacterNo];
         }
 
         private void Start()
@@ -91,6 +100,7 @@ namespace Kusume
 
         private void Update()
         {
+            if(gameStarter != null) { return; }
             gameTimer.Update(Time.deltaTime);
         }
     }

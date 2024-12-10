@@ -13,7 +13,7 @@ namespace Kusume
 
         public void SetSkillImageAndColor()
         {
-            image.sprite = GameController.Instance.AllyData.faceSprite;
+            image.sprite = GameController.Instance.AllyDataInfo.faceSprite;
         }
     }
 }

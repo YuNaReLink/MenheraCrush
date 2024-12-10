@@ -51,6 +51,8 @@ MonoBehaviour:
   player: {fileID: 0}
   enemy: {fileID: 0}
   bgm: {fileID: 8300000, guid: a19ba5b313b243348b7ce1f66e226434, type: 3}
+  allyData: {fileID: 11400000, guid: 9840888c965d96d4ba4d9ca2a5414889, type: 2}
+  enemyData: {fileID: 11400000, guid: 5bb719b2062e253458d322bdd190ccbb, type: 2}
   endGame: 0
 --- !u!114 &361388246940360034
 MonoBehaviour:
@@ -77,5 +79,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e229d2f61c7054faf2a6ecaef3c92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartCountSpeed: 0.5
+  gameStartCountSpeed: 0.7
   gameStartCount: 3

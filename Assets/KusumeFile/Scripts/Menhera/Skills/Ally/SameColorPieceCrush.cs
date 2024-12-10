@@ -40,6 +40,7 @@ namespace Kusume
                 sizes.Add(pieceList[i].PieceInfo.size.big);
                 pieceList.RemoveAt(i);
             }
+            /*
             int num = 0;
             for (int i = 0; i < pieceList.Count; i++)
             {
@@ -52,6 +53,7 @@ namespace Kusume
             {
                 GameScore.SetOnceCount((int)LucKee.ScoreCalculator.Calc(sizes, GameScore.Bonus));
             }
+            */
             GameController.Instance.SetPuzzleStop(false);
         }
     }
