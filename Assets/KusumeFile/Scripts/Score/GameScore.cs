@@ -48,12 +48,17 @@ namespace Kusume
 
         public static float GetProgress()
         {
-            return (float)count / goal;
+            return (float)count / overGoal;
         }
 
         public static float GetOverProgress()
         {
             return (float)count / overGoal;
+        }
+
+        public static bool IsSuccessful()
+        {
+            return count >= goal;
         }
     }
 }

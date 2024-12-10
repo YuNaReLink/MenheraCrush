@@ -6,12 +6,15 @@ namespace Kusume
 {
     public class GameCountDown : MonoBehaviour
     {
-
-        [SerializeField]
         private LucKee.SpriteConverter converter;
         private void Awake()
         {
             converter = GetComponent<LucKee.SpriteConverter>();
+        }
+
+        private void Start()
+        {
+            SetTimeText(0, 0);
         }
 
         private void Update()
@@ -25,6 +28,11 @@ namespace Kusume
             Timer timer = GameController.Instance.GameTimer;
             int m = timer.GetMinutes();
             int s = timer.GetSecond();
+            SetTimeText(m, s);
+        }
+
+        private void SetTimeText(int m ,int s)
+        {
             converter.SetText(string.Format("{0:00}:{1:00}", m, s));
         }
     }
