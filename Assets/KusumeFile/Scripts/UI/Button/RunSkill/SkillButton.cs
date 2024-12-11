@@ -45,13 +45,28 @@ namespace Kusume
             }
             rectTransform = GetComponent<RectTransform>();
             baseRectPosition = rectTransform.anchoredPosition;
+
+            button = GetComponent<Button>();
+        }
+
+        private void Start()
+        {
+            int num = (int)GameController.Instance.AllyDataInfo.tag;
+            ColorBlock colorBlock = button.colors;
+            colorBlock.normalColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Normal];
+            colorBlock.highlightedColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Highlighted];
+            colorBlock.pressedColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Pressed];
+            colorBlock.selectedColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Selected];
+            colorBlock.disabledColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Disabled];
+            button.colors = colorBlock;
+            skillImage.SetSkillImageAndColor();
         }
 
         public void Setup(UnityAction action)
         {
-            button = GetComponent<Button>();
+            //button = GetComponent<Button>();
             button.onClick.AddListener(action);
-
+            /*
             int num = (int)GameController.Instance.AllyData.tag;
             ColorBlock colorBlock = button.colors;
             colorBlock.normalColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Normal];
@@ -60,8 +75,8 @@ namespace Kusume
             colorBlock.selectedColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Selected];
             colorBlock.disabledColor = colorDataList.ButtonColors[num].colors[(int)ButtonColor.Disabled];
             button.colors = colorBlock;
+            */
 
-            skillImage.SetSkillImageAndColor();
         }
         public void MaskUpdate(float current,float max)
         {
@@ -89,7 +104,7 @@ namespace Kusume
         public void RunCutIn()
         {
             LucKee.CutIn c = Instantiate(cutIn, canvas.transform);
-            c.SetSprite(GameController.Instance.AllyData.sprite);
+            c.SetSprite(GameController.Instance.AllyDataInfo.sprite);
         }
     }
 }

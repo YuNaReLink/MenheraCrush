@@ -53,6 +53,18 @@ namespace Kusume
         public bool IsSelected => selected;
 
 
+        [SerializeField]
+        private ParticleSystem breakEffect;
+
+        private Color effectColor = Color.white;
+
+        public void Create()
+        {
+            GameObject effect = Instantiate(breakEffect.gameObject, transform.position,Quaternion.identity);
+            ParticleSystem e = effect.GetComponent<ParticleSystem>();
+            e.startColor = effectColor;
+        }
+
         private PlayerController player;
         public void SetPlayerController(PlayerController controller) { player = controller; }
         public void SetSelected(bool s) 
@@ -89,10 +101,12 @@ namespace Kusume
         public void SetPieceData(ColorInfo data,PieceInfo _pieceInfo)
         {
             tag = data.tag;
-            spriteRenderer.color = data.color;
+            //spriteRenderer.color = data.color;
             pieceInfo = _pieceInfo;
             spriteRenderer.sprite = data.sprite;
             spriteRenderer.material = data.material;
+
+            effectColor = data.color;
         }
         private void Update()
         {
@@ -161,6 +175,7 @@ namespace Kusume
                 seManager.Play(1);
             }
             CreatePieceMachine.CurrentPieceCount--;
+            Create();
             Destroy(gameObject);
         }
 
