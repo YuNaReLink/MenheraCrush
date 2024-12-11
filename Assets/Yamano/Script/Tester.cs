@@ -8,17 +8,14 @@ namespace LucKee {
     public class Tester : MonoBehaviour
     {
         [SerializeField]
-        private Canvas canvas = null;
-        [SerializeField]
-        private CutIn cut = null;
-
+        private ParticleSystem particle;
 
 
         private void Update()
         {
             if (Input.anyKeyDown)
             {
-                Instantiate(cut, canvas.transform);
+                particle.Play();
             }
         }
     }

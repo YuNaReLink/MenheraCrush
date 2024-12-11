@@ -190,8 +190,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 210
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 130
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 0
       m_Y: 0
@@ -206,8 +206,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 170
       m_Y: 0
@@ -222,8 +222,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 340
       m_Y: 0
@@ -238,8 +238,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 505
       m_Y: 0
@@ -254,8 +254,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 675
       m_Y: 0
@@ -270,8 +270,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 850
       m_Y: 0
@@ -286,8 +286,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1030
       m_Y: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1200
       m_Y: 0
@@ -318,8 +318,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1360
       m_Y: 0
@@ -334,8 +334,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1540
       m_Y: 0
@@ -350,8 +350,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 210
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 130
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 0
       m_Y: 220
@@ -366,8 +366,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 170
       m_Y: 220
@@ -382,8 +382,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 340
       m_Y: 220
@@ -398,8 +398,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 505
       m_Y: 220
@@ -414,8 +414,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 675
       m_Y: 220
@@ -430,8 +430,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 850
       m_Y: 220
@@ -446,8 +446,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1030
       m_Y: 220
@@ -462,8 +462,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1200
       m_Y: 220
@@ -478,8 +478,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1360
       m_Y: 220
@@ -494,8 +494,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1540
       m_Y: 220
@@ -510,8 +510,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1720
       m_Y: 0
@@ -526,8 +526,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1850
       m_Y: 0
@@ -542,8 +542,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1720
       m_Y: 220
@@ -558,8 +558,8 @@ MonoBehaviour:
       m_Width: 180
       m_Height: 260
       m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 200
-      m_HorizontalAdvance: 180
+      m_HorizontalBearingY: 150
+      m_HorizontalAdvance: 200
     m_GlyphRect:
       m_X: 1850
       m_Y: 220

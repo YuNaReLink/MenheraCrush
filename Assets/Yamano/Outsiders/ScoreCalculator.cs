@@ -6,15 +6,10 @@ using UnityEngine.XR;
 
 namespace LucKee
 {
-
-    //sss->100
-    //ssl->110
-    //sll->120
-    //lll->130
-    //~~~s->10n
-    //~~~l->30n
+    //スコア計算用のコンポーネント
     public class ScoreCalculator : MonoBehaviour
     {
+
         private static ScoreCalculator instance = null;
         private static ScoreCalculator Instance
         {
@@ -40,10 +35,23 @@ namespace LucKee
             return Instance.CalcExecute(sizes, bonus);
         }
 
+        /*
+        //sss->100
+        //ssl->110
+        //sll->120
+        //lll->130
+        //~~~s->10n
+        //~~~l->30n(45n?)
+         */
+
+        //~~~->100
+        //~~~s->+10n
+        //~~~l->+s*3
+
         //基礎スコア
         [SerializeField]
         private int baseScore = 100;
-
+        /*
         //基礎スコアへの加算
         //繋げた最初の3つのうち、大きいピース1個につき1回加算される。
         [SerializeField]
@@ -58,6 +66,17 @@ namespace LucKee
         //4つ目以降のピースのうち、小さいピース1個につき1回加算される。
         [SerializeField]
         private int additionalScoreSmall = 10;
+         */
+
+        //追加スコア
+        [SerializeField]
+        private int additionalScore = 10;
+
+        //追加倍率(大)
+        //大きい場合には追加スコアにこの倍率が掛かる
+        [SerializeField]
+        private float additionalRatio = 3.0f;
+
 
         //基礎ボーナス
         //スコアボーナスが発動している場合、基礎スコアと同様に加算される。
@@ -92,6 +111,8 @@ namespace LucKee
                 score += (sizes.Count - 3) * additionalBonus;
             }
 
+
+            /*
             //最初の3つのうち、大きいピースの数だけスコアを加算する。
             for (int i = 0; i < 3; i++)
             {
@@ -100,21 +121,17 @@ namespace LucKee
                     score += baseScorePerLarge;
                 }
             }
+             */
 
             //4つ目以降の計算
             for (int i = 3; i < sizes.Count; i++)
             {
-                //サイズ判定
+                float ratio = 1.0f;
                 if (sizes[i])
                 {
-                    //大
-                    score += additionalScoreLarge;
+                    ratio = additionalRatio;
                 }
-                else
-                {
-                    //小
-                    score += additionalScoreSmall;
-                }
+                score += (int)(additionalScore * additionalRatio);
             }
             //計算結果を返す。
             return score;
