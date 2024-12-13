@@ -15,8 +15,6 @@ public enum SceneList
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] private SceneList nextScene;
-
     static string GetSceneName(SceneList scene)
     {
         string temp;
@@ -44,8 +42,24 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene(GetSceneName(scene));
     }
 
+    [SerializeField] private SceneList nextScene;
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private SceneTransition transitionPrefab = null;
+
+    private void Awake()
+    {
+        if (canvas == null)
+        {
+            canvas = FindAnyObjectByType<Canvas>();
+        }
+    }
+
     public void ButtonClick()
     {
-        ChangeScene(nextScene);
+        SceneTransition transition = Instantiate(transitionPrefab, canvas.transform);
+        transition.gameObject.transform.SetParent(canvas.transform);
+
+        transition.SetNextScene(nextScene);
+        transition.Activate();
     }
 }

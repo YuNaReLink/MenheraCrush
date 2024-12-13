@@ -6,9 +6,6 @@ using UnityEngine.UI;
 public class FaceChanger : MonoBehaviour
 {
     [SerializeField]
-    private SceneTransition transitionPrefab = null;
-
-    [SerializeField]
     private Sprite backSprite;
 
     [SerializeField]
@@ -20,11 +17,6 @@ public class FaceChanger : MonoBehaviour
     [SerializeField]
     private Image[] images;
 
-    [SerializeField]
-    private SceneList nextScene;
-
-    [SerializeField]
-    private Canvas canvas;
 
     public void Click()
     {
@@ -37,10 +29,5 @@ public class FaceChanger : MonoBehaviour
             backImage.sprite = backSprite;
         }
 
-        SceneTransition transition = Instantiate(transitionPrefab, canvas.transform);
-        transition.gameObject.transform.SetParent(canvas.transform);
-
-        transition.SetNextScene(nextScene);
-        transition.Activate();
     }
 }
