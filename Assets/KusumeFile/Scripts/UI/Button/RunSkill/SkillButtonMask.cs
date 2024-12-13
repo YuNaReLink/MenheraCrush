@@ -6,11 +6,15 @@ namespace Kusume
     public class SkillButtonMask : MonoBehaviour
     {
         private Image image;
+
+        [SerializeField]
+        private float alpha = 0.7f;
+
         private void Awake()
         {
             image = GetComponentInChildren<Image>();
             Color c = image.color;
-            c.a = 0.5f;
+            c.a = alpha;
             image.color = c;
         }
 
