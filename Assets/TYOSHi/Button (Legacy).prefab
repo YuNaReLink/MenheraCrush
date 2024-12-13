@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7813238485031355893}
   - component: {fileID: 6950807473122432318}
   - component: {fileID: 5393274789683384022}
-  - component: {fileID: 9139715770383060944}
+  - component: {fileID: 1343253588361201099}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -203,9 +203,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9139715770383060944}
-        m_TargetAssemblyTypeName: FaceChanger, Assembly-CSharp
-        m_MethodName: Click
+      - m_Target: {fileID: 1343253588361201099}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -273,7 +273,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &9139715770383060944
+--- !u!114 &1343253588361201099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,10 +282,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7816937722573136808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a80d5bd672bc44a80b8c470682d3e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f25bd3489cb728b498d4015d72f3ff51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 2
+  canvas: {fileID: 0}
   transitionPrefab: {fileID: 4782931703562359562, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
-  sprites: []
-  images: []
-  nextScene: 0
