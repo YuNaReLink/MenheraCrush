@@ -11,7 +11,6 @@ namespace Kusume
     {
         [SerializeField]
         private LineRenderer        lineRenderer = null;
-        public LineRenderer         LineRenderer => lineRenderer;
 
         private PlayerController    playerController = null;
 

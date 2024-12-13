@@ -19,7 +19,7 @@ namespace Kusume
 
         protected override MenheraBoard     Board => GameController.Instance.EnemyBoard;
         [SerializeField]
-        private int                         actionRatio;
+        private int                         skillCount;
 
         private void Awake()
         {
@@ -59,12 +59,7 @@ namespace Kusume
         {
             if (GameController.Instance.IsPuzzleStop || GameController.Instance.IsEndGame) { return; }
             float time = Time.deltaTime;
-            /*
-            if (Input.GetKey(KeyCode.Alpha2))
-            {
-                time *= 1.5f;
-            }
-             */
+
             attackTimer.Update(time);
         }
         private void Attack()
@@ -72,24 +67,17 @@ namespace Kusume
             enemyAttackCount.CountUpdate();
             if(enemyAttackCount.Count <= 0)
             {
-                int random = GetRandomAction();
-                if (random <= actionRatio / 2)
+                skillCount++;
+                if(skillCount >= 3)
                 {
-                    player.HP.Decrease(10);
+                    Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+                    skillCount = 0;
                 }
                 else
                 {
-                    Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+                    player.HP.Decrease(10);
                 }
-                
             }
-        }
-
-        public int GetRandomAction()
-        {
-            int randomized = Random.Range(0, actionRatio+1);
-            
-            return randomized;
         }
     }
 }
