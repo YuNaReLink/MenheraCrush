@@ -13,6 +13,7 @@ namespace Kusume
         [SerializeField]
         private List<Piece>         pieceList = new List<Piece>();
         public List<Piece>          PieceList => pieceList;
+        public bool NullPieceList() { return pieceList.Count <= 0; }
 
         private CreatePieceMachine  createPiecemMachine;
 

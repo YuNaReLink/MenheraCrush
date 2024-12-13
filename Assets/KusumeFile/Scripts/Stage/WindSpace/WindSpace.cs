@@ -20,8 +20,13 @@ namespace Kusume
         [SerializeField]
         private float addAngle = 90.0f;
 
+        private PlayerController playerController;
+        public void SetPlayerController(PlayerController p) { playerController = p; }
+
         public void Activate()
         {
+            if(playerController == null) { return; }
+            if (!playerController.PieceContainer.NullPieceList()) { return; }
             RunWind();
         }
 

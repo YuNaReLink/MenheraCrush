@@ -40,6 +40,7 @@ namespace Kusume
 
         [SerializeField]
         private PieceContainer          pieceContainer;
+        public PieceContainer           PieceContainer => pieceContainer;
         public List<Piece>              PieceList => pieceContainer.PieceList;
 
         protected override MenheraBoard Board => GameController.Instance.PlayerBoard;
