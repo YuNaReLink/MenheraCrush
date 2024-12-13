@@ -36,6 +36,7 @@ namespace Kusume
             }
             playerController = FindObjectOfType<PlayerController>();
             windSpace = FindObjectOfType<WindSpace>();
+
         }
 
         private void Start()

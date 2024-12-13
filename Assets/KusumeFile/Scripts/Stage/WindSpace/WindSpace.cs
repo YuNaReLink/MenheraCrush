@@ -27,6 +27,7 @@ namespace Kusume
         {
             if(playerController == null) { return; }
             if (!playerController.PieceContainer.NullPieceList()) { return; }
+            if (!GameController.Instance.IsPlayable()) { return; }
             RunWind();
         }
 

@@ -1075,7 +1075,7 @@ MonoBehaviour:
   sprites: []
   images: []
   nextScene: 0
-  parent: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!4 &250426656
 Transform:
   m_ObjectHideFlags: 0
@@ -4372,6 +4372,10 @@ PrefabInstance:
       value: Button (Legacy)
       objectReference: {fileID: 0}
     - target: {fileID: 9139715770383060944, guid: f218e66813936e447862cec3c71aef4d, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1851769524}
+    - target: {fileID: 9139715770383060944, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 1851769525}
@@ -5004,6 +5008,10 @@ PrefabInstance:
       value: Button (Legacy)
       objectReference: {fileID: 0}
     - target: {fileID: 9139715770383060944, guid: f218e66813936e447862cec3c71aef4d, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1851769524}
+    - target: {fileID: 9139715770383060944, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 1851769525}
@@ -5421,6 +5429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (Legacy)
       objectReference: {fileID: 0}
+    - target: {fileID: 9139715770383060944, guid: f218e66813936e447862cec3c71aef4d, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1851769524}
     - target: {fileID: 9139715770383060944, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: parent
       value: 

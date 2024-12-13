@@ -20,6 +20,7 @@ MonoBehaviour:
     animator: {fileID: 9100000, guid: c7709532207edcd4784da6e0c29cf2fe, type: 2}
     sprite: {fileID: 21300000, guid: 82ee2c1e90a4e2c4cb1ac325e3b822f9, type: 3}
     faceSprite: {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
+    backSprite: {fileID: 21300000, guid: 50b534f6219d1bc4ab2cca9b5f8e7bda, type: 3}
     ImageOffset: {x: 0, y: 0}
     imageColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   - tag: 1
@@ -29,6 +30,7 @@ MonoBehaviour:
     animator: {fileID: 9100000, guid: e520782af84dd4b499f3224a80f9a71a, type: 2}
     sprite: {fileID: 21300000, guid: 27202cf273238c446913b491ccacf476, type: 3}
     faceSprite: {fileID: 780244944, guid: d3dde02520d9bcc41a5e5f39b0af30c1, type: 3}
+    backSprite: {fileID: 21300000, guid: 935ca1d6691681a4aa2ff20358f8f080, type: 3}
     ImageOffset: {x: 50, y: 0}
     imageColor: {r: 0, g: 0.6272721, b: 1, a: 1}
   - tag: 2
@@ -38,6 +40,7 @@ MonoBehaviour:
     animator: {fileID: 9100000, guid: 3d5e38cdf7146cc4f909c48e9c416d57, type: 2}
     sprite: {fileID: 21300000, guid: cab5ea185d45aee4b81d56f858b02990, type: 3}
     faceSprite: {fileID: -902836371, guid: 22c3982b593ddff4b88980881ab897e9, type: 3}
+    backSprite: {fileID: 21300000, guid: c514618a777dbb84b943f02e89d12a35, type: 3}
     ImageOffset: {x: 50, y: 0}
     imageColor: {r: 0, g: 1, b: 0.047268867, a: 1}
   - tag: 3
@@ -47,6 +50,7 @@ MonoBehaviour:
     animator: {fileID: 9100000, guid: 5a13eabe86810354b9d6690be603dec9, type: 2}
     sprite: {fileID: 21300000, guid: 90c0ef654e3e20b438f405ebc3729fbd, type: 3}
     faceSprite: {fileID: -651514625, guid: 1e595923d2798fb4a8d5c36a1cd4aaec, type: 3}
+    backSprite: {fileID: 21300000, guid: 823df8cdd7e55ca42a0e4394466d7451, type: 3}
     ImageOffset: {x: 50, y: 0}
     imageColor: {r: 1, g: 0.108383685, b: 0, a: 1}
   - tag: 4
@@ -56,5 +60,6 @@ MonoBehaviour:
     animator: {fileID: 9100000, guid: cc8c06f9a38749644938a7c451f00f39, type: 2}
     sprite: {fileID: 21300000, guid: b1b4095e5f334d24b87b8dd76d9eca1a, type: 3}
     faceSprite: {fileID: -394756606, guid: df196fa9b236047458b5862508507f59, type: 3}
+    backSprite: {fileID: 21300000, guid: 95ce7cccc5ccdd94cab07705bab67450, type: 3}
     ImageOffset: {x: 0, y: 0}
     imageColor: {r: 1, g: 0.96657693, b: 0, a: 1}

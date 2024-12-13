@@ -57,7 +57,7 @@ namespace Kusume
         
         private void Update()
         {
-            if (GameController.Instance.IsPuzzleStop || GameController.Instance.IsEndGame) { return; }
+            if (!GameController.Instance.IsPlayable()) { return; }
             float time = Time.deltaTime;
 
             attackTimer.Update(time);
