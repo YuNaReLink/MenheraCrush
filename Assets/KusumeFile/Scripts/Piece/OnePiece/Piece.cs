@@ -55,14 +55,17 @@ namespace Kusume
 
         [SerializeField]
         private ParticleSystem breakEffect;
-
-        private Color effectColor = Color.white;
+        [SerializeField]
+        private Sprite breakSprite;
 
         public void Create()
         {
             GameObject effect = Instantiate(breakEffect.gameObject, transform.position,Quaternion.identity);
-            ParticleSystem e = effect.GetComponent<ParticleSystem>();
-            e.startColor = effectColor;
+            ParticleSystem particleSystem = effect.GetComponent<ParticleSystem>();
+            var renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
+            // Œ»İ‚Ìƒ}ƒeƒŠƒAƒ‹‚ğæ“¾
+            Material material = renderer.material;
+            material.mainTexture = breakSprite.texture;
         }
 
         private PlayerController player;
@@ -106,7 +109,9 @@ namespace Kusume
             spriteRenderer.sprite = data.sprite;
             spriteRenderer.material = data.material;
 
-            effectColor = data.color;
+            //effectColor = data.color;
+
+            breakSprite = data.breakSprite;
         }
         private void Update()
         {

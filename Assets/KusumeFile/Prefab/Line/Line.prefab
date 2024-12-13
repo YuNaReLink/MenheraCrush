@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6773981430731218382}
   - component: {fileID: 8858839971308651317}
-  - component: {fileID: -2509004429250817022}
   - component: {fileID: 2912361170068433586}
   m_Layer: 3
   m_Name: Line
@@ -85,7 +84,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.18840492
+        value: 0.61213386
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -136,22 +135,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &-2509004429250817022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8606966946790515500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88c740941cbcec42b9058bb09055099, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 0}
-  startColor: {r: 1, g: 1, b: 1, a: 1}
-  endColor: {r: 0, g: 0, b: 1, a: 1}
-  glowSpeed: 2
 --- !u!114 &2912361170068433586
 MonoBehaviour:
   m_ObjectHideFlags: 0

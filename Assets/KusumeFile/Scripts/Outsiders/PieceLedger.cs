@@ -15,6 +15,7 @@ namespace Kusume
         public float ratio;
         public Sprite sprite;
         public Material material;
+        public Sprite breakSprite;
     }
     [Serializable]
     public struct SizeInfo
