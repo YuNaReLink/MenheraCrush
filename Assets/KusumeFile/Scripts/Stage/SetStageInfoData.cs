@@ -18,6 +18,9 @@ namespace Kusume
 
         [SerializeField]
         private GameObject                  gameStartObject;
+
+        private PlayerController playerController;
+        private WindSpace                   windSpace;
         private void Awake()
         {
             scoreViewGauge = FindObjectOfType<ScoreViewGauge>();
@@ -31,6 +34,8 @@ namespace Kusume
             {
                 gameCanvasTransform = gameCanvas.transform;
             }
+            playerController = FindObjectOfType<PlayerController>();
+            windSpace = FindObjectOfType<WindSpace>();
         }
 
         private void Start()
@@ -53,6 +58,8 @@ namespace Kusume
             }
 
             SetGameStartCountDown();
+
+            windSpace.SetPlayerController(playerController);
         }
 
         private void SetGameStartCountDown()
