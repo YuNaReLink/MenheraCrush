@@ -23,6 +23,7 @@ namespace Kusume
 
         private void Awake()
         {
+            /*
             enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
             if(enemyAttackCount == null)
             {
@@ -30,11 +31,19 @@ namespace Kusume
             }
             
             attackTimer = new Timer(0);
+             */
 
         }
 
         private void Start()
         {
+            enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
+            if (enemyAttackCount == null)
+            {
+                Debug.LogError("EnemyAttackCountがアタッチされていません");
+            }
+
+            attackTimer = new Timer(0);
             player = FindObjectOfType<PlayerController>();
             if (player == null)
             {
