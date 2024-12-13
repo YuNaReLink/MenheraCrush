@@ -24,7 +24,7 @@ namespace Kusume
 
         private void Start()
         {
-            GameController.Instance.SetPuzzleStop(true);
+            GameController.Instance.SetPuzzleState(PuzzleState.Stop);
 
             List<Piece> pieceList = pieceMachine.Pieces;
             pieceInfo = pieceList[Random.Range(0, pieceList.Count)].PieceInfo;
@@ -54,7 +54,7 @@ namespace Kusume
                 GameScore.SetOnceCount((int)LucKee.ScoreCalculator.Calc(sizes, GameScore.Bonus));
             }
             */
-            GameController.Instance.SetPuzzleStop(false);
+            GameController.Instance.SetPuzzleState(PuzzleState.Playable);
         }
     }
 }

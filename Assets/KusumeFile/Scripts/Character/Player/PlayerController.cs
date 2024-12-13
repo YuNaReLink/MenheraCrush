@@ -124,7 +124,7 @@ namespace Kusume
             skillCoolTimer.Update(Time.deltaTime);
 
             UpdateDebug();
-            if (GameController.Instance.IsPuzzleStop||GameController.Instance.IsEndGame) { return; }
+            if (!GameController.Instance.IsPlayable()) { return; }
 
             if (Input.GetButtonDown("Jump"))
             {
