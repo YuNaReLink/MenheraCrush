@@ -20,7 +20,8 @@ namespace LucKee
 
         //再生するためだけのオブジェクトを生成する。
         //番号指定なので間違いに注意。
-        public void Play(int i)
+        //番号を指定しなかった場合は0番が再生される。
+        public void Play(int i = 0)
         {
             //番号が範囲外なら無視する。
             if (i < 0 || i >= ledger.Count)

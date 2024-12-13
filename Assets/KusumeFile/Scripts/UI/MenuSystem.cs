@@ -3,100 +3,88 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using LucKee;
 
 namespace Kusume
 {
-    public enum ButtonTag
+    //メニューの管理クラス
+    //ポーズメニューの各ボタンの処理を持つ。
+    //ポーズメニューなのでPauseを、効果音を扱うのでSEManagerを要求する。
+    //越権(LucKee：2024/12/13)
+    [RequireComponent(typeof(Pause))]
+    [RequireComponent(typeof(SEManager))]
+    public class PauseMenu : MonoBehaviour
     {
-        Menu,
-        Return,
-        Configure,
-        End
-    }
-    public class MenuController : MonoBehaviour
-    {
-        [SerializeField]
-        private List<Button> buttons = new List<Button>();
+        /*static*/
 
-        [SerializeField]
-        private GameObject MenuObject;
+        //シングルトン
+        public static PauseMenu Instance { get; private set; }
 
-        private FaceChanger faceChanger;
+        /*Component*/
 
-        private AudioSource audioSource;
+        //効果音再生用のコンポーネント
+        private SEManager se;
 
-        private LucKee.Pause pause;
+        //時を止めるためのコンポーネント
+        private Pause pause;
 
-        [SerializeField]
-        private AudioClip audioClip;
+        /*Event*/
 
         private void Awake()
         {
-            faceChanger = GetComponent<FaceChanger>();
+            //シングルトン用の変数に代入する。
+            Instance = this;
 
-            audioSource = GetComponent<AudioSource>();
+            /*各コンポーネントの取得*/
 
-            pause = GetComponent<LucKee.Pause>();
+            se = GetComponent<SEManager>();
+            pause = GetComponent<Pause>();
         }
+
         private void Start()
         {
-            UnityAction unityAction = null;
-            for(int i = 0; i < buttons.Count; i++)
-            {
-                if (buttons[i] == null) { continue; }
-                switch (i)
-                {
-                    case 0:
-                        unityAction = MenuStart;
-                        break;
-                    case 1:
-                        unityAction = ReturnUpdate;
-                        break;
-                    case 2:
-                        unityAction = ConfigureUpdate;
-                        break;
-                    case 3:
-                        unityAction = EndUpdate;
-                        break;
-                }
-                buttons[i].onClick.AddListener(unityAction);
-            }
-        }
+            //開始時に音を鳴らす。
+            se.Play();
 
-        private void MenuActive(bool a)
-        {
-            MenuObject?.SetActive(a);
-            audioSource.PlayOneShot(audioClip);
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                MenuStart();
-            }
-        }
-
-        private void MenuStart()
-        {
-            MenuActive(true);
+            //ポーズを有効化する。
             pause.Enable();
         }
 
-        private void ReturnUpdate()
+        private void OnDestroy()
         {
-            MenuActive(false);
-            pause.Disable();
+            //オブジェクトの破棄をシングルトン用変数に伝える。
+            //万が一、自身以外が入っていた場合は何もしない。
+            if(Instance == this)
+            {
+                Instance = null;
+            }
         }
 
-        private void ConfigureUpdate()
-        {
+        /*Method*/
 
+        //メニュー終了処理
+        public void Close()
+        {
+            //ポーズの解除はPause.OnDestroyに含まれているため、ここで書く必要は無い。
+            //pause.Disable();
+
+            //効果音の再生
+            se.Play();
+
+            //オブジェクトの破棄
+            Destroy(gameObject);
         }
 
-        private void EndUpdate()
+        //チュートリアルの呼び出し
+        public void CallTutorial()
         {
-            faceChanger.Click();
+            //TODO:チュートリアルの作成
+        }
+
+        //タイトルの呼び出し
+        public void CallTitleScene()
+        {
+            //TODO:タイトルへの遷移の作成
         }
     }
 }

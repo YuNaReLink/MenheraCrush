@@ -24,7 +24,7 @@ public class FaceChanger : MonoBehaviour
     private SceneList nextScene;
 
     [SerializeField]
-    private Transform parent;
+    private Canvas canvas;
 
     public void Click()
     {
@@ -37,10 +37,9 @@ public class FaceChanger : MonoBehaviour
             backImage.sprite = backSprite;
         }
 
-        Canvas canvas = parent.GetComponent<Canvas>();
-        GameObject maskObject = Instantiate(transitionPrefab, canvas.transform).gameObject;
-        maskObject.transform.SetParent(parent);
-        SceneTransition transition = maskObject.GetComponent<SceneTransition>();
+        SceneTransition transition = Instantiate(transitionPrefab, canvas.transform);
+        transition.gameObject.transform.SetParent(canvas.transform);
+
         transition.SetNextScene(nextScene);
         transition.Activate();
     }
