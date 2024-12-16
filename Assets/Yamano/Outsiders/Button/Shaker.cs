@@ -13,7 +13,7 @@ namespace LucKee
     {
         /*Serialized*/
 
-        //揺れの開始同士の間隔
+        //揺れ始めてから次に揺れ始めるまでの間隔
         [SerializeField]
         private float wait = 1.0f;
 
