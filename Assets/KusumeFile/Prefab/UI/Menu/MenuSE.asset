@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae34fea0446e8ab47bdc6c6c03dd2e57, type: 3}
   m_Name: MenuSE
   m_EditorClassIdentifier: 
-  values: []
+  values:
+  - {fileID: 8300000, guid: 846b85f5d626db642b806f98958885f8, type: 3}

@@ -2,6 +2,12 @@ using UnityEngine;
 
 namespace Kusume
 {
+    public enum PuzzleState
+    {
+        Playable,
+        Stop,
+        End
+    }
     public class GameController : MonoBehaviour
     {
 
@@ -36,6 +42,8 @@ namespace Kusume
         private CharacterInfo allyDataInfo;
         public CharacterInfo AllyDataInfo => allyDataInfo;
 
+        private AllyBackSpriteRenderer allyBack;
+
         private GameStarter gameStarter;
 
         public void SetPreparation()
@@ -43,16 +51,14 @@ namespace Kusume
             //準備時の用意するオブジェクトを作成
             preparationData.Datas.Instantiate();
         }
+        private PuzzleState             state;
+        public PuzzleState              State => state;
+        public void SetPuzzleState(PuzzleState s) {  state = s; }
+        public bool IsPlayable() { return state == PuzzleState.Playable && Time.timeScale > 0; }
 
-        private bool                    puzzleStop = false;
-        public bool                     IsPuzzleStop => puzzleStop;
-        public void                     SetPuzzleStop(bool b) { puzzleStop = b;}
-
-        public bool                     endGame = false;
-        public bool                     IsEndGame => endGame;
         public void EndGame() 
         {
-            endGame = true;
+            state = PuzzleState.End;
             resultSystem.Create();
         }
 
@@ -65,6 +71,8 @@ namespace Kusume
             resultSystem = FindAnyObjectByType<ResultSystem>();
 
             gameStarter = GetComponent<GameStarter>();
+
+            allyBack = FindObjectOfType<AllyBackSpriteRenderer>();
         }
 
         private void SetupInstance()
@@ -81,8 +89,8 @@ namespace Kusume
 
         private void Start()
         {
-            endGame = false;
-            puzzleStop = true;
+            state = PuzzleState.Stop;
+            allyBack.SetSprite(allyDataInfo.backSprite);
         }
 
         public void SetGameTimer(float t)
@@ -94,7 +102,7 @@ namespace Kusume
 
         public void GameStartTimerEnd()
         {
-            puzzleStop = false;
+            state = PuzzleState.Playable;
             LucKee.BGMManager.Play(bgm);
         }
 

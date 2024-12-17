@@ -8,7 +8,7 @@ namespace Kusume
         [SerializeField]
         protected MenheraData menheraData;
 
-        protected abstract MenheraBoard Board { get; }
+        protected abstract MenheraBoard board { get; }
 
         [SerializeField]
         protected int charaInt = 0;
@@ -17,7 +17,7 @@ namespace Kusume
 
         public virtual void SetMenheraUI()
         {
-            Board.Init(menheraData.Characters[charaInt]);
+            board.Init(menheraData.Characters[charaInt]);
         }
     }
 }

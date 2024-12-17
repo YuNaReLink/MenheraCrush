@@ -100,7 +100,7 @@ namespace Kusume
         {
             CheckAllPiece();
 
-            if (GameController.Instance.IsPuzzleStop || GameController.Instance.IsEndGame) { return; }
+            if (!GameController.Instance.IsPlayable()) { return; }
 
             if (createCoolDown >= 0)
             {

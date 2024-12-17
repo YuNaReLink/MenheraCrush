@@ -17,12 +17,13 @@ namespace Kusume
         [SerializeField]
         private EnemyAttackCount            enemyAttackCount;
 
-        protected override MenheraBoard     Board => GameController.Instance.EnemyBoard;
+        protected override MenheraBoard     board => GameController.Instance.EnemyBoard;
         [SerializeField]
         private int                         skillCount;
 
         private void Awake()
         {
+            /*
             enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
             if(enemyAttackCount == null)
             {
@@ -30,11 +31,19 @@ namespace Kusume
             }
             
             attackTimer = new Timer(0);
+             */
 
         }
 
         private void Start()
         {
+            enemyAttackCount = FindObjectOfType<EnemyAttackCount>();
+            if (enemyAttackCount == null)
+            {
+                Debug.LogError("EnemyAttackCountがアタッチされていません");
+            }
+
+            attackTimer = new Timer(0);
             player = FindObjectOfType<PlayerController>();
             if (player == null)
             {
@@ -57,7 +66,7 @@ namespace Kusume
         
         private void Update()
         {
-            if (GameController.Instance.IsPuzzleStop || GameController.Instance.IsEndGame) { return; }
+            if (!GameController.Instance.IsPlayable()) { return; }
             float time = Time.deltaTime;
 
             attackTimer.Update(time);
@@ -76,6 +85,7 @@ namespace Kusume
                 else
                 {
                     player.HP.Decrease(10);
+                    player.Board.DamageUI.ColorChangeStart();
                 }
             }
         }

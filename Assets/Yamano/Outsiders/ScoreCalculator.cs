@@ -16,6 +16,7 @@ namespace LucKee
             get
             {
                 //設定忘れ用
+                //コードで書いた通りのデフォルト値になるため注意されたし。
                 if (instance == null)
                 {
                     instance = new GameObject("ScoreCalculator").AddComponent<ScoreCalculator>();

@@ -6,7 +6,7 @@ using UnityEngine;
 namespace LucKee
 {
     //キーフレーム
-    //Unity製の既存のものでは情報量が多すぎたので自作。
+    //Unityの既製品では情報量が多すぎたので自作。
     [Serializable]
     public struct Keyframe2D
     {
