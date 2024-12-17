@@ -43,7 +43,9 @@ namespace Kusume
         public PieceContainer           PieceContainer => pieceContainer;
         public List<Piece>              PieceList => pieceContainer.PieceList;
 
-        protected override MenheraBoard Board => GameController.Instance.PlayerBoard;
+        protected override MenheraBoard board => GameController.Instance.PlayerBoard;
+
+        public MenheraBoard Board => board;
 
         [SerializeField]
         private float minMag = 1.0f;
