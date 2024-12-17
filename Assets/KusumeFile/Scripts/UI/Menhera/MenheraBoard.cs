@@ -15,8 +15,6 @@ namespace Kusume
 
         private Animator animator;
 
-        private bool entry = false;
-
         private DamageUI damageUI;
         public DamageUI DamageUI => damageUI;
 
