@@ -1096,6 +1096,7 @@ GameObject:
   - component: {fileID: 883414425}
   - component: {fileID: 883414428}
   - component: {fileID: 883414429}
+  - component: {fileID: 883414430}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1171,6 +1172,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: FaceChanger, Assembly-CSharp
         m_MethodName: Click
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 883414430}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1270,6 +1283,19 @@ MonoBehaviour:
   nextScene: 1
   canvas: {fileID: 1199505652}
   transitionPrefab: {fileID: 4782931703562359562, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
+--- !u!114 &883414430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883414423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
 --- !u!1 &899132537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1574,7 @@ GameObject:
   - component: {fileID: 1299004879}
   - component: {fileID: 1299004878}
   - component: {fileID: 1299004877}
+  - component: {fileID: 1299004881}
   m_Layer: 5
   m_Name: CreditButton
   m_TagString: Untagged
@@ -1644,6 +1671,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1299004881}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1299004879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,6 +1721,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299004875}
   m_CullTransparentMesh: 1
+--- !u!114 &1299004881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299004875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
 --- !u!1 &1484994895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1852,7 @@ GameObject:
   - component: {fileID: 1532961185}
   - component: {fileID: 1532961184}
   - component: {fileID: 1532961187}
+  - component: {fileID: 1532961188}
   m_Layer: 5
   m_Name: End
   m_TagString: Untagged
@@ -1883,6 +1936,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1532961188}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1532961185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1933,6 +1998,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acf2c28dcad8d147853ab85f2562b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1532961188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532961182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
 --- !u!1 &1592255014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,6 +2174,7 @@ GameObject:
   - component: {fileID: 1963059270}
   - component: {fileID: 1963059269}
   - component: {fileID: 1963059272}
+  - component: {fileID: 1963059273}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -2179,6 +2258,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1963059273}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1963059270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2230,6 +2321,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 71420448}
+--- !u!114 &1963059273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963059267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
 --- !u!1 &2120052643
 GameObject:
   m_ObjectHideFlags: 0
