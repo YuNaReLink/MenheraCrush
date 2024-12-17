@@ -1095,8 +1095,6 @@ GameObject:
   - component: {fileID: 883414426}
   - component: {fileID: 883414425}
   - component: {fileID: 883414428}
-  - component: {fileID: 883414429}
-  - component: {fileID: 883414430}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1180,18 +1178,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 883414430}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &883414426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a80d5bd672bc44a80b8c470682d3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionPrefab: {fileID: 4782931703562359562, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
   backSprite: {fileID: 21300000, guid: 578a734eb961ce54abb74522ebba058a, type: 3}
   backImage: {fileID: 308723671}
   sprites:
@@ -1256,34 +1243,8 @@ MonoBehaviour:
   - {fileID: 1592255015}
   - {fileID: 1127064117}
   - {fileID: 899132538}
---- !u!114 &883414429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883414423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f25bd3489cb728b498d4015d72f3ff51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   nextScene: 1
-  canvas: {fileID: 1199505652}
-  transitionPrefab: {fileID: 1092840886}
---- !u!114 &883414430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883414423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
+  parent: {fileID: 1199505653}
 --- !u!1 &899132537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,17 +1320,6 @@ RectTransform:
   m_AnchoredPosition: {x: -734.944, y: -2.4840088}
   m_SizeDelta: {x: 480.59, y: 1072.59}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1092840886 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4782931703562359562, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
-  m_PrefabInstance: {fileID: 86590170}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25c74612db4828e48827f7ae92a37f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1127064116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,7 +1523,6 @@ GameObject:
   - component: {fileID: 1299004879}
   - component: {fileID: 1299004878}
   - component: {fileID: 1299004877}
-  - component: {fileID: 1299004881}
   m_Layer: 5
   m_Name: CreditButton
   m_TagString: Untagged
@@ -1670,18 +1619,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1299004881}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1299004879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1720,19 +1657,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299004875}
   m_CullTransparentMesh: 1
---- !u!114 &1299004881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299004875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
 --- !u!1 &1484994895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1775,6 @@ GameObject:
   - component: {fileID: 1532961185}
   - component: {fileID: 1532961184}
   - component: {fileID: 1532961187}
-  - component: {fileID: 1532961188}
   m_Layer: 5
   m_Name: End
   m_TagString: Untagged
@@ -1935,18 +1858,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1532961188}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1532961185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,19 +1908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acf2c28dcad8d147853ab85f2562b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1532961188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532961182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
 --- !u!1 &1592255014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,7 +2071,6 @@ GameObject:
   - component: {fileID: 1963059270}
   - component: {fileID: 1963059269}
   - component: {fileID: 1963059272}
-  - component: {fileID: 1963059273}
   m_Layer: 5
   m_Name: Option
   m_TagString: Untagged
@@ -2257,18 +2154,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1963059273}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1963059270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2320,19 +2205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 71420448}
---- !u!114 &1963059273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963059267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ledger: {fileID: 11400000, guid: c926770fc4242ca48bdcb5e86cc078b4, type: 2}
 --- !u!1 &2120052643
 GameObject:
   m_ObjectHideFlags: 0
