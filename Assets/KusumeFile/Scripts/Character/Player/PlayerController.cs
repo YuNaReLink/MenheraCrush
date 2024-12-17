@@ -118,7 +118,10 @@ namespace Kusume
                 }
             }
             SetMenheraUI();
-
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                skillRunCount = maxSkillRunCount;
+            }
         }
 
         public void Update()

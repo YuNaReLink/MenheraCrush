@@ -37,6 +37,7 @@ namespace Kusume
             {
                 if (pieceList[i].IsSelected) { continue; }
                 var pieceInfo = pieceMachine.PieceLedger.GetRandomPiece();
+                pieceList[i].Create();
                 pieceList[i].SetPieceData(pieceInfo.color, pieceInfo);
             }
         }

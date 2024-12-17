@@ -93,7 +93,7 @@ namespace Kusume
 
         public Piece RandomPiece()
         {
-            return pieces[Random.Range(0, pieces.Count + 1)];
+            return pieces[Random.Range(0, pieces.Count)];
         }
 
         void Update()

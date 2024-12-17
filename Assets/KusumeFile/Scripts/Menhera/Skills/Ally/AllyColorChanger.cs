@@ -32,13 +32,9 @@ namespace Kusume
             {
                 if (pieceMachine.Pieces[i].IsSelected) { continue; }
                 if (pieceMachine.Pieces[i].Tag != tag) { continue; }
+                pieceMachine.Pieces[i].Create();
                 pieceMachine.Pieces[i].SetPieceData(pieceInfo.color,pieceInfo);
             }
-        }
-
-        private void OnDestroy()
-        {
-            Execute();
         }
     }
 }
