@@ -490,7 +490,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: <sprite name=Pink0><sprite name=Pink1><sprite name=Pink2><sprite name=Pink3><sprite
     name=Pink4><sprite name=Pink5><sprite name=Pink6><sprite name=Pink7><sprite name=Pink8><sprite
-    name=Pink9>
+    name=Pink:>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
