@@ -17,7 +17,7 @@ namespace Kusume
         [SerializeField]
         private EnemyAttackCount            enemyAttackCount;
 
-        protected override MenheraBoard     Board => GameController.Instance.EnemyBoard;
+        protected override MenheraBoard     board => GameController.Instance.EnemyBoard;
         [SerializeField]
         private int                         skillCount;
 
@@ -85,6 +85,7 @@ namespace Kusume
                 else
                 {
                     player.HP.Decrease(10);
+                    player.Board.DamageUI.ColorChangeStart();
                 }
             }
         }
