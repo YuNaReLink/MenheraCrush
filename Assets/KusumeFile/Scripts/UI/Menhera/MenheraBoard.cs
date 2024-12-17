@@ -17,6 +17,9 @@ namespace Kusume
 
         private bool entry = false;
 
+        private DamageUI damageUI;
+        public DamageUI DamageUI => damageUI;
+
         public void Init(CharacterInfo characterInfo)
         {
             animator.runtimeAnimatorController = characterInfo.animator;
@@ -39,17 +42,13 @@ namespace Kusume
             animator = GetComponent<Animator>();
 
             rectTransform = GetComponent<RectTransform>();
+
+            damageUI = GetComponent<DamageUI>();
         }
 
         private void Start()
         {
             image.enabled = false;
-        }
-
-        private void EntryUpdate()
-        {
-            if (!entry) { return; }
-
         }
     }
 }

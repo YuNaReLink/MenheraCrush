@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 3930838363855288546}
   - component: {fileID: 8384649838985514215}
   - component: {fileID: 5935592790497239904}
+  - component: {fileID: 7488154850965778898}
   - component: {fileID: 4804745624207857328}
   m_Layer: 5
   m_Name: AllyMenhera
@@ -440,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.21960784}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -490,6 +491,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffabd428fdcf5184f9ec02f23862e8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7488154850965778898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377694292885309919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376873bfe190aaf4aa09c56024c1331c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseColor: {r: 0, g: 0, b: 0, a: 1}
+  changeColor: {r: 1, g: 0, b: 0, a: 1}
+  active: 0
+  count: 1
+  loopCount: 0.125
 --- !u!114 &4804745624207857328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,7 +1456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784, y: 462}
+  m_AnchoredPosition: {x: -732, y: 462}
   m_SizeDelta: {x: 320, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2890253490758995188
@@ -1673,7 +1691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 815, y: 473}
+  m_AnchoredPosition: {x: 739, y: 473}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &916491085013635049
