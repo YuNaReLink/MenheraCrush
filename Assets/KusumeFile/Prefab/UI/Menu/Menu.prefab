@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 7631065596922532328}
   - component: {fileID: 4400536677556091108}
   - component: {fileID: 1489104177531870146}
+  - component: {fileID: 4752652069661721284}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -286,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb665096716ef140810a2b442d859b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 846b85f5d626db642b806f98958885f8, type: 3}
+  next: 1
 --- !u!114 &1489104177531870146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +301,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ledger: {fileID: 11400000, guid: d17ef7ed6a12d7d448e32b7dc6a68ba8, type: 2}
+--- !u!114 &4752652069661721284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956135551308201026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8a42b82525bd140ba78596789ff40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4502466729491066991
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,8 +788,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4400536677556091108}
-        m_TargetAssemblyTypeName: Kusume.MenuController, Assembly-CSharp
-        m_MethodName: CallTitleScene
+        m_TargetAssemblyTypeName: Kusume.PauseMenu, Assembly-CSharp
+        m_MethodName: CallScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
