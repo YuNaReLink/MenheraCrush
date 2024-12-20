@@ -22,6 +22,8 @@ public class MenuCaller : MonoBehaviour
     [SerializeField]
     private PauseMenu menuPrefab;
 
+    //召喚するメニューが戻る先のシーン
+    //選択画面から選択画面に戻ることを防ぐため。
     [SerializeField]
     private SceneList returnTo = SceneList.Title;
 
@@ -71,7 +73,9 @@ public class MenuCaller : MonoBehaviour
 
         //対象のキャンバスに生成する。
         PauseMenu menu = Instantiate(menuPrefab, canvas.transform);
-        //menu.SetNext(returnTo);
+
+        //次のシーンを指定する。
+        menu.SetNext(returnTo);
     }
 
     //メニューの終了
