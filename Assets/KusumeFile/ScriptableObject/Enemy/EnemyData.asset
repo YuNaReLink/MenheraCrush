@@ -17,69 +17,76 @@ MonoBehaviour:
     name: YadomeAyane
     skill: {fileID: 8884762241872583565, guid: 896de778f47ccb146a8a3a09f579646c, type: 3}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: c7709532207edcd4784da6e0c29cf2fe, type: 2}
+    animator: {fileID: 9100000, guid: a37a40fb9177f7a458284b27191c274f, type: 2}
     sprite: {fileID: 21300000, guid: 82ee2c1e90a4e2c4cb1ac325e3b822f9, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
     ImageOffset: {x: 0, y: 0}
     imageColor: {r: 0, g: 0, b: 0, a: 0}
+    ImageScale: 1.8
   - tag: 1
     name: 1
     skill: {fileID: 8884762241872583565, guid: a5d9397eaf9f1824990a00301a2860b5, type: 3}
     skillGauge: 0
-    animator: {fileID: 0}
-    sprite: {fileID: 21300000, guid: b9a31cd41cdeb0841b25f53a7d39abcd, type: 3}
+    animator: {fileID: 9100000, guid: e00ca555f042f3f45b8718938fe181ab, type: 2}
+    sprite: {fileID: 21300000, guid: 5b4d4b07118fd8d44acec8123e98c140, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
-    ImageOffset: {x: 0, y: 0}
+    ImageOffset: {x: -50, y: 0}
     imageColor: {r: 0, g: 0, b: 0, a: 0}
+    ImageScale: 1.8
   - tag: 2
     name: 2
     skill: {fileID: 8884762241872583565, guid: cecc3eb968f5a004d857043603525c73, type: 3}
     skillGauge: 0
-    animator: {fileID: 0}
-    sprite: {fileID: 605480745, guid: a8f8cc1d0aab87c48a132cca42463d6f, type: 3}
+    animator: {fileID: 9100000, guid: 16f7ca9c62262004098a76d36e975ae9, type: 2}
+    sprite: {fileID: 21300000, guid: ddb334fe5df52964b957c1819d714cdf, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
-    ImageOffset: {x: 0, y: 0}
+    ImageOffset: {x: -50, y: 0}
     imageColor: {r: 0, g: 0, b: 0, a: 0}
+    ImageScale: 1.8
   - tag: 3
     name: 3
     skill: {fileID: 0}
     skillGauge: 0
-    animator: {fileID: 0}
-    sprite: {fileID: -651514625, guid: 18d8b0a469ac70e4e9c29716b8fdcc60, type: 3}
+    animator: {fileID: 9100000, guid: f6ac5a9f94759694893261de57320f71, type: 2}
+    sprite: {fileID: 21300000, guid: 0b5527f30fd9d2d4aa207e1e3d6ee712, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
-    ImageOffset: {x: 0, y: 0}
+    ImageOffset: {x: -50, y: 0}
     imageColor: {r: 0, g: 0, b: 0, a: 0}
+    ImageScale: 1.8
   - tag: 4
     name: 4
     skill: {fileID: 0}
     skillGauge: 0
-    animator: {fileID: 0}
-    sprite: {fileID: -394756606, guid: e11611c482996ab47b5e39626ca6bbd3, type: 3}
+    animator: {fileID: 9100000, guid: 18733bb0539b0ec4d8f2398e080838ba, type: 2}
+    sprite: {fileID: 21300000, guid: ac1976d318981434a8959d2093cb4daa, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
     ImageOffset: {x: 0, y: 0}
     imageColor: {r: 0, g: 0, b: 0, a: 0}
+    ImageScale: 1.8
   - tag: 5
     name: Hanaya Raika
     skill: {fileID: 8884762241872583565, guid: 896de778f47ccb146a8a3a09f579646c, type: 3}
     skillGauge: 0
     animator: {fileID: 9100000, guid: c5547e59dea041f43b32e9291e4d5e99, type: 2}
-    sprite: {fileID: 21300000, guid: 5eef487c76177ea42b0b78546c68eaf2, type: 3}
+    sprite: {fileID: 21300000, guid: d69b130d67f6a4b488ede69149ed305e, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
     ImageOffset: {x: 0, y: 0}
     imageColor: {r: 0, g: 0, b: 0, a: 0}
+    ImageScale: 1.8
   - tag: 6
     name: Kuzuhara Naoya
     skill: {fileID: 8884762241872583565, guid: a5d9397eaf9f1824990a00301a2860b5, type: 3}
     skillGauge: 0
     animator: {fileID: 9100000, guid: 7d93164d0345c9943b2d63368d1ceda2, type: 2}
-    sprite: {fileID: 21300000, guid: 1448e0c3a39bf1943aee789c2cb2abe0, type: 3}
+    sprite: {fileID: 21300000, guid: d863751e706d0c042b9e601ad6141e5a, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
     ImageOffset: {x: 0, y: 0}
     imageColor: {r: 0, g: 0, b: 0, a: 0}
+    ImageScale: 1.8

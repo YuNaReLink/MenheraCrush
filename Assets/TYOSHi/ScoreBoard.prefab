@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378d57d76132f76469287742092714b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  format: <sprite index={0}>
+  black: 0
 --- !u!1 &3840437950754004871
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.8951416, y: 237}
-  m_SizeDelta: {x: 1, y: 128.1158}
+  m_SizeDelta: {x: 1000, y: 128.1158}
   m_Pivot: {x: 0.5, y: 0.49999964}
 --- !u!222 &4755323368936903159
 CanvasRenderer:
@@ -607,6 +607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: 1
+  canvas: {fileID: 0}
+  transitionPrefab: {fileID: 0}
 --- !u!1 &8192734935857966566
 GameObject:
   m_ObjectHideFlags: 0

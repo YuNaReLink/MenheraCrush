@@ -22,10 +22,6 @@ namespace Kusume
         private Material            mat = null;
         public GameObject           GetGameObject => transform.gameObject;
 
-        [SerializeField]
-        private new PieceTag        tag = PieceTag.Red;
-        public PieceTag             Tag { get { return tag; }set { tag = value; } }
-
         [Header("ピースサイズが大の時に使う爆発オブジェクト")]
         [SerializeField]
         private ImpactObject        impactObject = null;
@@ -58,6 +54,31 @@ namespace Kusume
         [SerializeField]
         private Sprite breakSprite;
 
+
+        public static int Count {  get; private set; }
+        public static int[] pieceTagCount = new int[(int)PieceTag.Count];
+        public static int[] PieceTagCount => pieceTagCount;
+
+        [SerializeField]
+        private new PieceTag tag = PieceTag.Null;
+
+        public PieceTag Tag 
+        {
+            get => tag;
+            set 
+            {
+                if(tag != PieceTag.Null)
+                {
+                    pieceTagCount[(int)tag]--;
+                }
+                tag = value;
+                if (tag != PieceTag.Null)
+                {
+                    pieceTagCount[(int)tag]++;
+                }
+            } 
+        }
+
         public void Create()
         {
             GameObject effect = Instantiate(breakEffect.gameObject, transform.position,Quaternion.identity);
@@ -86,6 +107,8 @@ namespace Kusume
 
         private void Awake()
         {
+            Count++;
+
             rb2D = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
@@ -103,7 +126,7 @@ namespace Kusume
 
         public void SetPieceData(ColorInfo data,PieceInfo _pieceInfo)
         {
-            tag = data.tag;
+            Tag = data.tag;
             //spriteRenderer.color = data.color;
             pieceInfo = _pieceInfo;
             spriteRenderer.sprite = data.sprite;
@@ -179,7 +202,6 @@ namespace Kusume
             {
                 seManager.Play(1);
             }
-            CreatePieceMachine.CurrentPieceCount--;
             Create();
             Destroy(gameObject);
         }
@@ -227,6 +249,15 @@ namespace Kusume
             if(keepImpactPower <= 0)
             {
                 keepImpactPower = 0;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            Count--;
+            if (tag != PieceTag.Null)
+            {
+                pieceTagCount[(int)tag]--;
             }
         }
     }

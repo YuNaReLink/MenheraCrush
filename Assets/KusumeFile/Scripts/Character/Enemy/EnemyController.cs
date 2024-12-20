@@ -16,10 +16,18 @@ namespace Kusume
         //敵がプレイヤーを攻撃するまでのカウントを管理＆表示するクラス
         [SerializeField]
         private EnemyAttackCount            enemyAttackCount;
+        [SerializeField]
+        private EnemySkillCutIn             enemySkillCutIn;
 
         protected override MenheraBoard     board => GameController.Instance.EnemyBoard;
         [SerializeField]
         private int                         skillCount;
+
+        [SerializeField]
+        private int                         activateAllSkillCount;
+
+        [SerializeField]
+        private AllSkillData allSkillData;
 
         private void Awake()
         {
@@ -42,6 +50,7 @@ namespace Kusume
             {
                 Debug.LogError("EnemyAttackCountがアタッチされていません");
             }
+            enemySkillCutIn = enemyAttackCount.GetComponent<EnemySkillCutIn>();
 
             attackTimer = new Timer(0);
             player = FindObjectOfType<PlayerController>();
@@ -70,6 +79,13 @@ namespace Kusume
             float time = Time.deltaTime;
 
             attackTimer.Update(time);
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                ActivateSkill();
+                enemySkillCutIn.RunSkill();
+                skillCount = 0;
+            }
         }
         private void Attack()
         {
@@ -79,13 +95,31 @@ namespace Kusume
                 skillCount++;
                 if(skillCount >= 3)
                 {
-                    Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+                    ActivateSkill();
+                    enemySkillCutIn.RunSkill();
                     skillCount = 0;
                 }
                 else
                 {
                     player.HP.Decrease(10);
                     player.Board.DamageUI.ColorChangeStart();
+                }
+            }
+        }
+
+        private void ActivateSkill()
+        {
+            if(charaInt >= (int)CharacterNameList.PlayebleCount)
+            {
+                Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(allSkillData.Skills[activateAllSkillCount], transform.position, Quaternion.identity);
+                activateAllSkillCount++;
+                if(activateAllSkillCount > 1)
+                {
+                    activateAllSkillCount = 0;
                 }
             }
         }

@@ -410,7 +410,7 @@ RectTransform:
   m_GameObject: {fileID: 1377694292885309919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3825572372955718997}
@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 8169830578399935500}
   - component: {fileID: 2479044689742937751}
   - component: {fileID: 1216988463770702640}
+  - component: {fileID: 8763230505213719720}
   m_Layer: 5
   m_Name: EnemyAttackCount
   m_TagString: Untagged
@@ -1037,6 +1038,19 @@ MonoBehaviour:
   - 1
   - 0.7
   - 0.4
+--- !u!114 &8763230505213719720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661131312520757705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1df266d0ceddc48b0580b4a4005cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutIn: {fileID: 1627902704877820490, guid: 0f856aa285cd34d40a7239fd3dbbc199, type: 3}
 --- !u!1 &5829294288647168125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,13 +1555,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 553261597618492646}
+        m_TargetAssemblyTypeName: MenuCaller, Assembly-CSharp
+        m_MethodName: Call
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1567,6 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 3439526542185540714}
   menuPrefab: {fileID: 4400536677556091108, guid: 8c8623a6ac3fc11439d52ba9c1e8f98c, type: 3}
+  returnTo: 1
 --- !u!1 &8015639725725112321
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using LucKee;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ public class StageSelect : MonoBehaviour
 
     [SerializeField] String[] stageName;
     [SerializeField] Text stageText;
+
+    [SerializeField] AudioClip[] BGM;
 
     private void Awake()
     {
@@ -73,7 +76,8 @@ public class StageSelect : MonoBehaviour
             }
         }
 
-        stageText.text = stageName[(int)no];
+        stageText.text = stageName[n];
+        BGMManager.Play(BGM[n]);
     }
 
     //‰E‚É‘—‚é

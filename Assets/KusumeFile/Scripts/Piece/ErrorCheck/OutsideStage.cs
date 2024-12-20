@@ -8,13 +8,6 @@ namespace Kusume
     /// </summary>
     public class OutsideStage : MonoBehaviour
     {
-        [SerializeField]
-        private CreatePieceMachine createPieceMachine;
-
-        private void Awake()
-        {
-            createPieceMachine = GetComponent<CreatePieceMachine>();
-        }
 
         private void Update()
         {
@@ -33,7 +26,7 @@ namespace Kusume
 
             // スクリーン座標をワールド座標に変換
             Vector3 worldBottomPosition = mainCamera.ScreenToWorldPoint(bottomScreenPoint);
-            List<Piece> pieces = createPieceMachine.Pieces;
+            List<Piece> pieces = CreatePieceMachine.Instance.Pieces;
             for (int i = 0; i < pieces.Count; i++)
             {
                 if(pieces[i] == null)
@@ -44,9 +37,8 @@ namespace Kusume
                 {
                     continue;
                 }
-                CreatePieceMachine.CurrentPieceCount--;
                 Destroy(pieces[i].gameObject);
-                createPieceMachine.PieceRemove(i);
+                CreatePieceMachine.Instance.PieceRemove(i);
             }
         }
 

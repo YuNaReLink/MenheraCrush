@@ -2,9 +2,8 @@ using UnityEngine;
 
 namespace Kusume
 {
-    public class Skill_EnemyCreateBlockPiece : MonoBehaviour
+    public class Skill_EnemyCreateBlockPiece : MonoBehaviour, LucKee.ISkillObject
     {
-        private CreatePieceMachine      pieceMachine;
 
         private PieceInfo               pieceInfo;
 
@@ -13,12 +12,10 @@ namespace Kusume
 
         private void Awake()
         {
-            pieceMachine = FindObjectOfType<CreatePieceMachine>();
-            pieceInfo = pieceMachine.PieceLedger.GetDecisionPiece((int)PieceTag.Jama);
+            pieceInfo = CreatePieceMachine.Instance.PieceLedger.GetDecisionPiece((int)PieceTag.Jama);
         }
 
-        // Start is called before the first frame update
-        void Start()
+        public void Execute()
         {
             for (int i = 0; i < changeCount; i++)
             {
@@ -28,7 +25,7 @@ namespace Kusume
 
         private void Create()
         {
-            Piece piece = pieceMachine.Pieces[Random.Range(0, pieceMachine.Pieces.Count - 1)];
+            Piece piece = CreatePieceMachine.Instance.Pieces[Random.Range(0, CreatePieceMachine.Instance.Pieces.Count - 1)];
             if (piece.IsSelected)
             {
                 Create();

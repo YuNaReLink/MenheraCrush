@@ -14,7 +14,8 @@ public enum CharacterNameList
     HayashiKouta,
     SawashiroNozomi,
     UenoNozomi,
-    HanayaRaika,
+    PlayebleCount,
+    HanayaRaika = PlayebleCount,
     KuzuharaNaoya,
     Count
 }

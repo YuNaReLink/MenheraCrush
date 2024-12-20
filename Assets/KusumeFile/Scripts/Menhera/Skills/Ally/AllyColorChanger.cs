@@ -7,9 +7,6 @@ namespace Kusume
     /// </summary>
     public class AllyColorChanger : MonoBehaviour, IColorChanger,LucKee.ISkillObject
     {
-        private CreatePieceMachine      pieceMachine;
-
-        public CreatePieceMachine       CreatePieceMachine => pieceMachine;
 
         [SerializeField]
         private ColorChangeType         type = ColorChangeType.TypeAlly;
@@ -18,22 +15,18 @@ namespace Kusume
 
         private PieceInfo               pieceInfo;
 
-        private void Awake()
-        {
-            pieceMachine = FindObjectOfType<CreatePieceMachine>();
-        }
 
         public void Execute()
         {
-            pieceInfo = pieceMachine.PieceLedger.GetRandomPiece();
-            Piece p = pieceMachine.RandomPiece();
+            pieceInfo = CreatePieceMachine.Instance.PieceLedger.GetRandomPiece();
+            Piece p = CreatePieceMachine.Instance.RandomPiece();
             PieceTag tag = p.Tag;
-            for (int i = 0; i < pieceMachine.Pieces.Count; i++)
+            for (int i = 0; i < CreatePieceMachine.Instance.Pieces.Count; i++)
             {
-                if (pieceMachine.Pieces[i].IsSelected) { continue; }
-                if (pieceMachine.Pieces[i].Tag != tag) { continue; }
-                pieceMachine.Pieces[i].Create();
-                pieceMachine.Pieces[i].SetPieceData(pieceInfo.color,pieceInfo);
+                if (CreatePieceMachine.Instance.Pieces[i].IsSelected) { continue; }
+                if (CreatePieceMachine.Instance.Pieces[i].Tag != tag) { continue; }
+                CreatePieceMachine.Instance.Pieces[i].Create();
+                CreatePieceMachine.Instance.Pieces[i].SetPieceData(pieceInfo.color,pieceInfo);
             }
         }
     }
