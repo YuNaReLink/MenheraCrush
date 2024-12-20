@@ -7,7 +7,7 @@ namespace Kusume
     /// 敵メンヘラのスキルクラス
     /// 全ピースの色をランダムに変化させるクラス
     /// </summary>
-    public class EnemyColorChanger : MonoBehaviour, IColorChanger
+    public class EnemyColorChanger : MonoBehaviour, IColorChanger,LucKee.ISkillObject
     {
 
         [SerializeField]
@@ -17,10 +17,6 @@ namespace Kusume
 
         private PieceInfo               pieceInfo;
 
-        private void Start()
-        {
-            Execute();
-        }
 
         public void Execute()
         {

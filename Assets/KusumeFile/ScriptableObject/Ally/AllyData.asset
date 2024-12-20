@@ -16,7 +16,7 @@ MonoBehaviour:
   - tag: 0
     name: HuzisakiAyane
     skill: {fileID: 8884762241872583565, guid: 5024e68d3c4ce8143abda77d66099db0, type: 3}
-    skillGauge: 5
+    skillGauge: 15
     animator: {fileID: 9100000, guid: c7709532207edcd4784da6e0c29cf2fe, type: 2}
     sprite: {fileID: 21300000, guid: 82ee2c1e90a4e2c4cb1ac325e3b822f9, type: 3}
     faceSprite: {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
@@ -38,7 +38,7 @@ MonoBehaviour:
   - tag: 2
     name: Hayashi Kouta
     skill: {fileID: 8884762241872583565, guid: dab0f94f17df52b4da24c5c96d74a020, type: 3}
-    skillGauge: 20
+    skillGauge: 30
     animator: {fileID: 9100000, guid: 3d5e38cdf7146cc4f909c48e9c416d57, type: 2}
     sprite: {fileID: 21300000, guid: cab5ea185d45aee4b81d56f858b02990, type: 3}
     faceSprite: {fileID: -902836371, guid: 22c3982b593ddff4b88980881ab897e9, type: 3}
@@ -49,7 +49,7 @@ MonoBehaviour:
   - tag: 3
     name: Ueno Nozomi
     skill: {fileID: 8884762241872583565, guid: cecc3eb968f5a004d857043603525c73, type: 3}
-    skillGauge: 20
+    skillGauge: 10
     animator: {fileID: 9100000, guid: 5a13eabe86810354b9d6690be603dec9, type: 2}
     sprite: {fileID: 21300000, guid: 90c0ef654e3e20b438f405ebc3729fbd, type: 3}
     faceSprite: {fileID: -651514625, guid: 1e595923d2798fb4a8d5c36a1cd4aaec, type: 3}
@@ -60,7 +60,7 @@ MonoBehaviour:
   - tag: 4
     name: Sawashiro Nozomi
     skill: {fileID: 8884762241872583565, guid: b8c9b7f42ec5a2842872f6befca4fc5f, type: 3}
-    skillGauge: 20
+    skillGauge: 25
     animator: {fileID: 9100000, guid: cc8c06f9a38749644938a7c451f00f39, type: 2}
     sprite: {fileID: 21300000, guid: b1b4095e5f334d24b87b8dd76d9eca1a, type: 3}
     faceSprite: {fileID: -394756606, guid: df196fa9b236047458b5862508507f59, type: 3}
