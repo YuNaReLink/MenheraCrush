@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Kusume
 {
-    public class Skill_EnemyCreateBlockPiece : MonoBehaviour
+    public class Skill_EnemyCreateBlockPiece : MonoBehaviour, LucKee.ISkillObject
     {
 
         private PieceInfo               pieceInfo;
@@ -15,8 +15,7 @@ namespace Kusume
             pieceInfo = CreatePieceMachine.Instance.PieceLedger.GetDecisionPiece((int)PieceTag.Jama);
         }
 
-        // Start is called before the first frame update
-        void Start()
+        public void Execute()
         {
             for (int i = 0; i < changeCount; i++)
             {

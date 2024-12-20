@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 8169830578399935500}
   - component: {fileID: 2479044689742937751}
   - component: {fileID: 1216988463770702640}
+  - component: {fileID: 8763230505213719720}
   m_Layer: 5
   m_Name: EnemyAttackCount
   m_TagString: Untagged
@@ -1037,6 +1038,19 @@ MonoBehaviour:
   - 1
   - 0.7
   - 0.4
+--- !u!114 &8763230505213719720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661131312520757705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1df266d0ceddc48b0580b4a4005cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutIn: {fileID: 1627902704877820490, guid: 0f856aa285cd34d40a7239fd3dbbc199, type: 3}
 --- !u!1 &5829294288647168125
 GameObject:
   m_ObjectHideFlags: 0

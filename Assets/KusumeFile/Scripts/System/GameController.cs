@@ -37,7 +37,8 @@ namespace Kusume
         [SerializeField]
         private MenheraData enemyData;
         public MenheraData EnemyData => enemyData;
-
+        private CharacterInfo enemyDataInfo;
+        public CharacterInfo EnemyDataInfo => enemyDataInfo;
 
         private CharacterInfo allyDataInfo;
         public CharacterInfo AllyDataInfo => allyDataInfo;
@@ -85,6 +86,7 @@ namespace Kusume
             instance = this;
 
             allyDataInfo = allyData.Characters[CharacterSelect.SelectCharacterNo];
+            enemyDataInfo = enemyData.Characters[(int)SelectStageContainer.EnemyCharacter];
         }
 
         private void Start()
