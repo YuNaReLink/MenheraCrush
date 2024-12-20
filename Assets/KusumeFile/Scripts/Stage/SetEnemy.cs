@@ -33,5 +33,12 @@ namespace Kusume
         {
             SelectStageContainer.SetEnemyCharacter(character);
         }
+
+        public void RandomSet()
+        {
+            int randomChara = Random.Range((int)CharacterNameList.HuzisakiAyane, (int)CharacterNameList.HanayaRaika);
+            character = (CharacterNameList)randomChara;
+            SelectStageContainer.SetEnemyCharacter(character);
+        }
     }
 }

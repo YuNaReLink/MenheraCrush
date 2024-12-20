@@ -8,6 +8,7 @@ namespace Kusume
     /// </summary>
     public enum PieceTag
     {
+        Null = -1,
         Purple,
         Blue,
         Green,
@@ -50,9 +51,6 @@ namespace Kusume
         [SerializeField]
         private int                     maxPieceCount = 100;
 
-        private static int              currentPieceCount = 0;
-        public static int               CurrentPieceCount { get { return currentPieceCount; }set { currentPieceCount = value; } }
-
         [SerializeField]
         private List<Piece>             pieces = new List<Piece>();
         public List<Piece>              Pieces => pieces;
@@ -88,7 +86,6 @@ namespace Kusume
         private void Start()
         {
             pieceLedger.Setup();
-            currentPieceCount = 0;
         }
 
         public Piece RandomPiece()
@@ -115,7 +112,7 @@ namespace Kusume
         /// </summary>
         private void Create()
         {
-            if(currentPieceCount >= maxPieceCount) { return; }
+            if(Piece.Count >= maxPieceCount) { return; }
         
             //ピースの生成
             Piece p = Instantiate(basePiece, pieceSpawnPosition[currentCreatorPositionCount].position, Quaternion.identity); ;
@@ -138,7 +135,6 @@ namespace Kusume
 
             //生成位置を変更
             currentCreatorPositionCount++;
-            currentPieceCount++;
             //生成位置の最大値に達したら
             if (currentCreatorPositionCount >= creatorCount)
             {
@@ -151,7 +147,7 @@ namespace Kusume
 
         private void CheckAllPiece()
         {
-            if(currentPieceCount > pieces.Count) { return; }
+            if(Piece.Count > pieces.Count) { return; }
             for (int i = 0; i < pieces.Count; i++)
             {
                 if (pieces[i] == null)

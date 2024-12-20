@@ -20,17 +20,23 @@ namespace Kusume
 
         public void Init(CharacterInfo characterInfo)
         {
+            //アニメーターの設定
             animator.runtimeAnimatorController = characterInfo.animator;
-
+            //画像の設定
             image.sprite = characterInfo.sprite;
+            //画像のカラーを設定
             image.color = Color.white;
-            image.SetNativeSize();
+            //大きさを設定
+            rectTransform.localScale *= characterInfo.ImageScale;
+            //画像にあった大きさに設定
             image.enabled = true;
 
             basePosition = rectTransform.anchoredPosition;
             Vector2 pos =basePosition;
             pos += characterInfo.ImageOffset;
             rectTransform.anchoredPosition = pos;
+
+            image.SetNativeSize();
         }
 
         private void Awake()

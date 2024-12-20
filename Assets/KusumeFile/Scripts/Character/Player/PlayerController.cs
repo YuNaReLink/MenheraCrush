@@ -35,10 +35,6 @@ namespace Kusume
         private Timer                   skillCoolTimer = new Timer(0);
 
         [SerializeField]
-        private CreatePieceMachine      createPiecemMachine;
-        public CreatePieceMachine       CreatePieceMachine => createPiecemMachine;
-
-        [SerializeField]
         private PieceContainer          pieceContainer;
         public PieceContainer           PieceContainer => pieceContainer;
         public List<Piece>              PieceList => pieceContainer.PieceList;
@@ -79,11 +75,6 @@ namespace Kusume
 
         private void Start()
         {
-            createPiecemMachine = FindObjectOfType<CreatePieceMachine>();
-            if (createPiecemMachine == null)
-            {
-                Debug.LogError("CreatePieceMachineがアタッチされていません");
-            }
 
             pieceContainer.Setup(this);
             SetCharaInt(CharacterSelect.SelectCharacterNo);
@@ -108,6 +99,7 @@ namespace Kusume
                 {
                     charaInt = 0;
                 }
+                SetMenheraUI();
             }
             else if(Input.GetKeyDown(KeyCode.RightArrow))
             {
@@ -116,8 +108,8 @@ namespace Kusume
                 {
                     charaInt = (int)CharacterNameList.SawashiroNozomi;
                 }
+                SetMenheraUI();
             }
-            SetMenheraUI();
             if (Input.GetKeyDown(KeyCode.M))
             {
                 skillRunCount = maxSkillRunCount;
