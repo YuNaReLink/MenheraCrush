@@ -400,6 +400,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 271247375}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 271247376}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Reveal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LucKee.SEManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PanelHider, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445653342984425511, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4716049959763096657, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -518,6 +558,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+--- !u!114 &271247375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5066996384312714169, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+  m_PrefabInstance: {fileID: 271247374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &271247376 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7789448217062432533, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
+  m_PrefabInstance: {fileID: 271247374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079d1dac3fa83004f90a13cc59eac21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &308723669
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 985656673129454029, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
       propertyPath: m_FontData.m_Alignment
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1005060462798006504, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
       propertyPath: m_Pivot.x
@@ -936,11 +998,73 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 515417609}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 515417610}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Reveal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LucKee.SEManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PanelHider, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606516868541496107, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+--- !u!114 &515417609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8992915158289627412, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+  m_PrefabInstance: {fileID: 515417608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &515417610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2309286705735275047, guid: 5355d08655508b441b16ea9af55523cd, type: 3}
+  m_PrefabInstance: {fileID: 515417608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079d1dac3fa83004f90a13cc59eac21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &607308979 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3623072837111000366, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
@@ -1168,10 +1292,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 883414428}
-        m_TargetAssemblyTypeName: FaceChanger, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 1
+      - m_Target: {fileID: 883414430}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1180,10 +1304,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 883414430}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
+      - m_Target: {fileID: 883414428}
+        m_TargetAssemblyTypeName: FaceChanger, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1659,10 +1783,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1299004877}
-        m_TargetAssemblyTypeName: PanelHider, Assembly-CSharp
-        m_MethodName: Reveal
-        m_Mode: 1
+      - m_Target: {fileID: 1299004881}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1671,10 +1795,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1299004881}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
+      - m_Target: {fileID: 1299004877}
+        m_TargetAssemblyTypeName: PanelHider, Assembly-CSharp
+        m_MethodName: Reveal
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1924,10 +2048,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1532961187}
-        m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
+      - m_Target: {fileID: 1532961188}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1936,10 +2060,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1532961188}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
+      - m_Target: {fileID: 1532961187}
+        m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2246,10 +2370,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1963059272}
-        m_TargetAssemblyTypeName: PanelHider, Assembly-CSharp
-        m_MethodName: Reveal
-        m_Mode: 1
+      - m_Target: {fileID: 1963059273}
+        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2258,10 +2382,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1963059273}
-        m_TargetAssemblyTypeName: LucKee.SEManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 3
+      - m_Target: {fileID: 1963059272}
+        m_TargetAssemblyTypeName: PanelHider, Assembly-CSharp
+        m_MethodName: Reveal
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
