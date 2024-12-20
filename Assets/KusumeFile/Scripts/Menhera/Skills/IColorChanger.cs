@@ -9,7 +9,6 @@ namespace Kusume
     }
     public interface IColorChanger
     {
-        public CreatePieceMachine CreatePieceMachine {  get; }
 
         public ColorChangeType Type { get; }
 

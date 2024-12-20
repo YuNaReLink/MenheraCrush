@@ -15,8 +15,6 @@ namespace Kusume
         public List<Piece>          PieceList => pieceList;
         public bool NullPieceList() { return pieceList.Count <= 0; }
 
-        private CreatePieceMachine  createPiecemMachine;
-
         private PlayerHP            hp;
 
         private PlayerController controller;
@@ -28,7 +26,6 @@ namespace Kusume
         public void Setup(PlayerController p)
         {
             controller = p;
-            createPiecemMachine = p.CreatePieceMachine;
             hp = p.HP;
             pieceConcatenate = controller.GetComponent<PieceConcatenate>();
         }
@@ -77,7 +74,7 @@ namespace Kusume
             {
                 List<bool> sizes = new List<bool>();
 
-                createPiecemMachine.ChangeGravityAllPiece();
+                CreatePieceMachine.Instance.ChangeGravityAllPiece();
                 for (int i = 0; i < pieceList.Count; i++)
                 {
                     if((int)pieceList[0].PieceInfo.color.tag == controller.CharaInt)

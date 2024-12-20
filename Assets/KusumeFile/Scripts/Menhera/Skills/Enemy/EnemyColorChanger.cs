@@ -9,9 +9,6 @@ namespace Kusume
     /// </summary>
     public class EnemyColorChanger : MonoBehaviour, IColorChanger
     {
-        private CreatePieceMachine      pieceMachine;
-
-        public CreatePieceMachine       CreatePieceMachine => pieceMachine;
 
         [SerializeField]
         private ColorChangeType         type = ColorChangeType.TypeAlly;
@@ -20,11 +17,6 @@ namespace Kusume
 
         private PieceInfo               pieceInfo;
 
-        private void Awake()
-        {
-            pieceMachine = FindObjectOfType<CreatePieceMachine>();
-        }
-
         private void Start()
         {
             Execute();
@@ -32,11 +24,11 @@ namespace Kusume
 
         public void Execute()
         {
-            List<Piece> pieceList = pieceMachine.Pieces;
+            List<Piece> pieceList = CreatePieceMachine.Instance.Pieces;
             for (int i = 0; i < pieceList.Count; i++)
             {
                 if (pieceList[i].IsSelected) { continue; }
-                var pieceInfo = pieceMachine.PieceLedger.GetRandomPiece();
+                var pieceInfo = CreatePieceMachine.Instance.PieceLedger.GetRandomPiece();
                 pieceList[i].Create();
                 pieceList[i].SetPieceData(pieceInfo.color, pieceInfo);
             }

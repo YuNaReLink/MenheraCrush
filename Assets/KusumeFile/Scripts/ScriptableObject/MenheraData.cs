@@ -20,6 +20,7 @@ namespace Kusume
         public Sprite backSprite;
         public Vector2 ImageOffset;
         public Color imageColor;
+        public float ImageScale;
     }
 
     [CreateAssetMenu(fileName = "Menhera", menuName = "ScriptableObjects/Menhera", order = 1)]

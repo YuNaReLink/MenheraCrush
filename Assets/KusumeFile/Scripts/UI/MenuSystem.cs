@@ -23,7 +23,10 @@ namespace Kusume
         /*Serialized*/
         [SerializeField]
         private SceneList next;
-        public void SetNext(SceneList n) { next = n; }
+        [SerializeField]
+        private Text returnText;
+
+
 
         /*Component*/
 
@@ -91,6 +94,25 @@ namespace Kusume
         {
             //TODO:タイトルへの遷移の作成
             SceneChanger.ChangeScene(next);
+        }
+
+        public void SetNext(SceneList n)
+        {
+            next = n;
+            string t = "";
+            switch (next)
+            {
+                case SceneList.Title:
+                    t = "タイトル";
+                    break;
+                case SceneList.StageSelect:
+                    t = "ステージ選択";
+                    break;
+                default:
+                    t = "v(´・ω・`)v{エラー......)";
+                    break;
+            }
+            returnText.text = t + "に戻る";
         }
     }
 }
