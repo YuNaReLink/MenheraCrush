@@ -7,7 +7,7 @@ namespace LucKee
     //テキストファイルの台帳
     //テキストファイルをSerializeFieldから追加することで使える。
     //ScriptableObjectを継承しているため、下記の1行のコメントアウトを解除することで使えるようになる。
-    //[CreateAssetMenu(fileName = "TextLedger", menuName = "ScriptableObjects/TextLedger", order = 1)]
+    //[CreateAssetMenu(fileName = "TextLedger", menuName = "ScriptableObjects/Ledger/Text", order = 1)]
     public class TextLedger : LedgerBase<TextAsset>
     {
 

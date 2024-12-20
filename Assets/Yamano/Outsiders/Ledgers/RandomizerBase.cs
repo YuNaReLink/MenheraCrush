@@ -28,6 +28,14 @@ namespace LucKee
         }
         public T GetRandom()
         {
+            if (Values.Length <= 1)
+            {
+                if (Values.Length <= 0)
+                {
+                    throw new Exception("There are nothing to return.");
+                }
+                return Values[0].value;
+            }
             if (sum <= 0.0f)
             {
                 Initialize();

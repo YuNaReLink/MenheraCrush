@@ -1,3 +1,4 @@
+using Kusume;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ namespace LucKee {
     //テスト用の適当なコンポーネント
     public class Tester : MonoBehaviour
     {
+
+
     }
 }
 

@@ -15,6 +15,7 @@ namespace LucKee
         private void Start()
         {
             BGMManager.Play(clip);
+            Destroy(gameObject);
         }
     }
 }

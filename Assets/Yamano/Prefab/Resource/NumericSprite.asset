@@ -529,7 +529,7 @@ MonoBehaviour:
       m_HorizontalBearingY: 180
       m_HorizontalAdvance: 200
     m_GlyphRect:
-      m_X: 1850
+      m_X: 1870
       m_Y: 0
       m_Width: 180
       m_Height: 210
@@ -561,7 +561,7 @@ MonoBehaviour:
       m_HorizontalBearingY: 180
       m_HorizontalAdvance: 200
     m_GlyphRect:
-      m_X: 1850
+      m_X: 1870
       m_Y: 220
       m_Width: 180
       m_Height: 210

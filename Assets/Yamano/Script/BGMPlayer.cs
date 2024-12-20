@@ -24,6 +24,8 @@ namespace LucKee
 
         private void Awake()
         {
+            DontDestroyOnLoad(gameObject);
+
             //既に流れている場合、そのBGMを消す。
             if (Instance != null)
             {
@@ -57,6 +59,15 @@ namespace LucKee
             audio.clip = clip;
             audio.Play();
         }
+
+        //現在のBGMを最初に戻す。
+        public void Restart()
+        {
+            audio.Play();
+        }
+
+        //クリップの取得(YAGNI)
+        public AudioClip GetClip() { return audio.clip; }
 
         //再生速度の変更
         //Unityの仕様上、速度の変更に伴って音程も変わってしまうため注意。

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace LucKee
 {
-    //[CreateAssetMenu(fileName = "SkillLedger", menuName = "ScriptableObjects/SkillLedger", order = 1)]
+    //[CreateAssetMenu(fileName = "SkillLedger", menuName = "ScriptableObjects/Ledger/Skill", order = 1)]
     public class SkillLedger : LedgerBase<Skill>
     {
     }

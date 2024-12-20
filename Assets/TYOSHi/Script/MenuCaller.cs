@@ -18,6 +18,17 @@ public class MenuCaller : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
 
+    private Canvas TargetCanvas {
+        get
+        {
+            if (canvas == null)
+            {
+                canvas = FindAnyObjectByType<Canvas>();
+            }
+            return canvas;
+        }
+    }
+
     //召喚するメニューのプレハブ
     [SerializeField]
     private PauseMenu menuPrefab;
@@ -29,14 +40,6 @@ public class MenuCaller : MonoBehaviour
 
     /*Event*/
 
-    private void Awake()
-    {
-        //未設定の場合、キャンバスを自動取得する。
-        if (canvas == null)
-        {
-            canvas = FindAnyObjectByType<Canvas>();
-        }
-    }
 
     private void Update()
     {
@@ -72,7 +75,7 @@ public class MenuCaller : MonoBehaviour
         }
 
         //対象のキャンバスに生成する。
-        PauseMenu menu = Instantiate(menuPrefab, canvas.transform);
+        PauseMenu menu = Instantiate(menuPrefab, TargetCanvas.transform);
 
         //次のシーンを指定する。
         menu.SetNext(returnTo);
