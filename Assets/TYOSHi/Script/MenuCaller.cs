@@ -22,6 +22,9 @@ public class MenuCaller : MonoBehaviour
     [SerializeField]
     private PauseMenu menuPrefab;
 
+    [SerializeField]
+    private SceneList returnTo = SceneList.Title;
+
     /*Event*/
 
     private void Awake()
@@ -67,7 +70,8 @@ public class MenuCaller : MonoBehaviour
         }
 
         //対象のキャンバスに生成する。
-        Instantiate(menuPrefab, canvas.transform);
+        PauseMenu menu = Instantiate(menuPrefab, canvas.transform);
+        //menu.SetNext(returnTo);
     }
 
     //メニューの終了
