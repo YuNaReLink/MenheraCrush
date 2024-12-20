@@ -20,6 +20,11 @@ namespace Kusume
         //シングルトン
         public static PauseMenu Instance { get; private set; }
 
+        /*Serialized*/
+        [SerializeField]
+        private SceneList next;
+        public void SetNext(SceneList n) { next = n; }
+
         /*Component*/
 
         //効果音再生用のコンポーネント
@@ -82,9 +87,10 @@ namespace Kusume
         }
 
         //タイトルの呼び出し
-        public void CallTitleScene()
+        public void CallScene()
         {
             //TODO:タイトルへの遷移の作成
+            SceneChanger.ChangeScene(next);
         }
     }
 }
