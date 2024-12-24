@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 namespace LucKee
 {
+    //遷移用の機能の親オブジェクト
+    //手前側のキャンバスとして生成し、上から表示を行う。
     [RequireComponent(typeof(Image))]
     [RequireComponent(typeof(Mask))]
     [RequireComponent(typeof(Canvas))]
     public abstract class TransitionUnit : MonoBehaviour
     {
+        //
         protected TransitionHole hole = null;
 
         protected virtual float StartSize => 0.0f;

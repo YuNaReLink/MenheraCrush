@@ -14,7 +14,23 @@ namespace LucKee
         /*static*/
 
         //唯一のインスタンス
-        public static BGMPlayer Instance { get; private set; }
+        private static BGMPlayer instance = null;
+        public static BGMPlayer Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    GameObject obj = new GameObject("BGM Player");
+                    instance = obj.AddComponent<BGMPlayer>();
+                }
+                return instance;
+            }
+            private set
+            {
+                instance = value;
+            }
+        }
 
         /*Component*/
 
@@ -40,7 +56,7 @@ namespace LucKee
             audio.loop = true;
         }
 
-        //破棄時、BGMの停止と唯一の座を降りる。
+        //破棄時、BGMの停止と共に唯一の座を降りる。
         private void OnDestroy()
         {
             audio.Stop();
@@ -60,6 +76,12 @@ namespace LucKee
             audio.Play();
         }
 
+        //停止
+        public void Stop()
+        {
+            audio.Stop();
+        }
+
         //現在のBGMを最初に戻す。
         public void Restart()
         {
@@ -68,13 +90,6 @@ namespace LucKee
 
         //クリップの取得(YAGNI)
         public AudioClip GetClip() { return audio.clip; }
-
-        //再生速度の変更
-        //Unityの仕様上、速度の変更に伴って音程も変わってしまうため注意。
-        public void SetSpeed(float speed)
-        {
-            audio.pitch = speed;
-        }
     }
 
 }
