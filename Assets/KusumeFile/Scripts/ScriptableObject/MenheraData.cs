@@ -1,8 +1,4 @@
-using LucKee;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Kusume
@@ -12,9 +8,9 @@ namespace Kusume
     {
         public CharacterNameList tag;
         public string name;
-        public Skill skill;
+        public LucKee.Skill skill;
         public int skillGauge; 
-        public AnimatorController animator;
+        public int characterNumber;
         public Sprite sprite;
         public Sprite faceSprite;
         public Sprite backSprite;

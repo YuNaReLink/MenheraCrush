@@ -26,6 +26,8 @@ namespace Kusume
         [SerializeField]
         private Text returnText;
 
+        [SerializeField]
+        private TransitionCloser transitionCloser;
 
 
         /*Component*/
@@ -93,7 +95,9 @@ namespace Kusume
         public void CallScene()
         {
             //TODO:ƒ^ƒCƒgƒ‹‚Ö‚Ì‘JˆÚ‚Ìì¬
-            SceneChanger.ChangeScene(next);
+            //SceneChanger.ChangeScene(next);
+            TransitionCloser t = Instantiate(transitionCloser);
+            t.SetNext(next);
         }
 
         public void SetNext(SceneList n)
