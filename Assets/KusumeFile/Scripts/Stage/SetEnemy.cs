@@ -15,6 +15,9 @@ namespace Kusume
         [SerializeField]
         private CharacterNameList   character;
 
+        [SerializeField]
+        private GameBGMType gameBGMType;
+
         private void Awake()
         {
             selectButton = GetComponentInChildren<Button>();
@@ -32,6 +35,7 @@ namespace Kusume
         public void Set()
         {
             SelectStageContainer.SetEnemyCharacter(character);
+            SelectStageContainer.SetGameBGMType(gameBGMType);
         }
 
         public void RandomSet()
@@ -39,6 +43,7 @@ namespace Kusume
             int randomChara = Random.Range((int)CharacterNameList.HuzisakiAyane, (int)CharacterNameList.HanayaRaika);
             character = (CharacterNameList)randomChara;
             SelectStageContainer.SetEnemyCharacter(character);
+            SelectStageContainer.SetGameBGMType(gameBGMType);
         }
     }
 }

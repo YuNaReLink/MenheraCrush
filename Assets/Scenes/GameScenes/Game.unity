@@ -735,6 +735,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 433559906}
+    - target: {fileID: 4097233445527138983, guid: 28f1452077d409f4b86abc9e248ef205, type: 3}
+      propertyPath: audioLedger
+      value: 
+      objectReference: {fileID: 11400000, guid: 8729b85c71020ab4aa8714c85716bd02, type: 2}
+    - target: {fileID: 4097233445527138983, guid: 28f1452077d409f4b86abc9e248ef205, type: 3}
+      propertyPath: bgms.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7531911738132834561, guid: 28f1452077d409f4b86abc9e248ef205, type: 3}
       propertyPath: m_Name
       value: GameController
