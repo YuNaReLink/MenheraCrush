@@ -51,7 +51,6 @@ namespace Kusume
             }
 
             GameController.Instance.SetGameTimer(stageInfoData.StageInfos[(int)SelectStageContainer.EnemyCharacter].gameTime);
-            GameStarter.Instance.Activate();
 
             if(enteringLeader != null)
             {
