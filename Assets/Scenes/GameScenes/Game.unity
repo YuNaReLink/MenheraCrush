@@ -271,18 +271,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7094557881360654385, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7094557881360654385, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7094557881360654385, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7275984273271906618, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -291,6 +279,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7670824406330572197, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0e2048ea01a773844bfe375bf4999546, type: 2}
     - target: {fileID: 7862508805563682038, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -299,6 +291,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8384649838985514215, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d84df7ef5fcec0744af5c86510932f01, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

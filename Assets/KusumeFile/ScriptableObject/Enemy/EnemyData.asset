@@ -17,7 +17,7 @@ MonoBehaviour:
     name: YadomeAyane
     skill: {fileID: 8884762241872583565, guid: 896de778f47ccb146a8a3a09f579646c, type: 3}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: a37a40fb9177f7a458284b27191c274f, type: 2}
+    characterNumber: 0
     sprite: {fileID: 21300000, guid: 82ee2c1e90a4e2c4cb1ac325e3b822f9, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
@@ -28,7 +28,7 @@ MonoBehaviour:
     name: 1
     skill: {fileID: 8884762241872583565, guid: a5d9397eaf9f1824990a00301a2860b5, type: 3}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: e00ca555f042f3f45b8718938fe181ab, type: 2}
+    characterNumber: 1
     sprite: {fileID: 21300000, guid: 5b4d4b07118fd8d44acec8123e98c140, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
@@ -39,7 +39,7 @@ MonoBehaviour:
     name: 2
     skill: {fileID: 8884762241872583565, guid: cecc3eb968f5a004d857043603525c73, type: 3}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: 16f7ca9c62262004098a76d36e975ae9, type: 2}
+    characterNumber: 2
     sprite: {fileID: 21300000, guid: ddb334fe5df52964b957c1819d714cdf, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
     name: 3
     skill: {fileID: 0}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: f6ac5a9f94759694893261de57320f71, type: 2}
+    characterNumber: 3
     sprite: {fileID: 21300000, guid: 0b5527f30fd9d2d4aa207e1e3d6ee712, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
@@ -61,7 +61,7 @@ MonoBehaviour:
     name: 4
     skill: {fileID: 0}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: 18733bb0539b0ec4d8f2398e080838ba, type: 2}
+    characterNumber: 4
     sprite: {fileID: 21300000, guid: ac1976d318981434a8959d2093cb4daa, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
     name: Hanaya Raika
     skill: {fileID: 8884762241872583565, guid: 896de778f47ccb146a8a3a09f579646c, type: 3}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: c5547e59dea041f43b32e9291e4d5e99, type: 2}
+    characterNumber: 5
     sprite: {fileID: 21300000, guid: d69b130d67f6a4b488ede69149ed305e, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
     name: Kuzuhara Naoya
     skill: {fileID: 8884762241872583565, guid: a5d9397eaf9f1824990a00301a2860b5, type: 3}
     skillGauge: 0
-    animator: {fileID: 9100000, guid: 7d93164d0345c9943b2d63368d1ceda2, type: 2}
+    characterNumber: 6
     sprite: {fileID: 21300000, guid: d863751e706d0c042b9e601ad6141e5a, type: 3}
     faceSprite: {fileID: 0}
     backSprite: {fileID: 0}

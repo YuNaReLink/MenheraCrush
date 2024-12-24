@@ -289,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   next: 1
   returnText: {fileID: 8054955923394798112}
+  transitionCloser: {fileID: 4582031877775778392, guid: 5372678c87951e945b7f2c0169fdb50c, type: 3}
 --- !u!114 &1489104177531870146
 MonoBehaviour:
   m_ObjectHideFlags: 0
