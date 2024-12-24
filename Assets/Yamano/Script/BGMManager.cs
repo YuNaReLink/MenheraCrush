@@ -19,6 +19,11 @@ namespace LucKee
 
             BGMPlayer player = BGMPlayer.Instance;
 
+            if (player == null)
+            {
+                player = new GameObject("BGM Player").AddComponent<BGMPlayer>();
+            }
+
             //çƒê∂äJén
             player.Play(clip);
         }

@@ -14,23 +14,7 @@ namespace LucKee
         /*static*/
 
         //唯一のインスタンス
-        private static BGMPlayer instance = null;
-        public static BGMPlayer Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    GameObject obj = new GameObject("BGM Player");
-                    instance = obj.AddComponent<BGMPlayer>();
-                }
-                return instance;
-            }
-            private set
-            {
-                instance = value;
-            }
-        }
+        public static BGMPlayer Instance { get; private set; }
 
         /*Component*/
 
