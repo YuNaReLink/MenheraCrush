@@ -81,24 +81,21 @@ public class StageSelect : MonoBehaviour
 
         AudioClip clip = null;
 
-        switch (no)
-        {
-            case StageNo.Stage1:
-                //clip = BGM[(int)CharacterNameList.HanayaRaika];
-                break;
-            case StageNo.Stage2:
-                //clip = BGM[(int)CharacterNameList.KuzuharaNaoya];
-                break;
-            case StageNo.Stage3:
-                //{
-                //    int index = CharacterSelect.SelectCharacterNo;
-                //    clip = BGM[index];
-                //}
-                break;
-            default:
-                break;
-        }
-        BGMManager.Play(clip);
+        //switch (no)
+        //{
+        //    case StageNo.Stage1:
+        //        clip = BGM[0];
+        //        break;
+        //    case StageNo.Stage2:
+        //        clip = BGM[1];
+        //        break;
+        //    case StageNo.Stage3:
+        //        clip = BGM[2];
+        //        break;
+        //    default:
+        //        break;
+        //}
+        //BGMManager.Play(clip);
     }
 
     //‰E‚É‘—‚é

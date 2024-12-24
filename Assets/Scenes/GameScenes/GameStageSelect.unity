@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689505822945942701, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4045,9 +4045,9 @@ MonoBehaviour:
   - "\u3042\u306A\u305F\u304C\u6368\u3066\u305F\u30E2\u30CE"
   stageText: {fileID: 693811263}
   BGM:
-  - {fileID: 8300000, guid: d741b24755cef5e4d86392de4119e446, type: 3}
-  - {fileID: 8300000, guid: 4dccd072a8dbaae45870136ebf659fa5, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
+  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
+  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
 --- !u!4 &1561487482
 Transform:
   m_ObjectHideFlags: 0
@@ -4096,7 +4096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1576566421
 Transform:
   m_ObjectHideFlags: 0
@@ -4489,7 +4489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d937ad751388e414a848c3f0c8b05b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: d741b24755cef5e4d86392de4119e446, type: 3}
+  clip: {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
 --- !u!4 &1700362363
 Transform:
   m_ObjectHideFlags: 0
@@ -5961,10 +5961,6 @@ PrefabInstance:
     - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2118040268}
-    - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
       objectReference: {fileID: 2118040269}
     - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -5988,10 +5984,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ButtonClick
       objectReference: {fileID: 0}
     - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
@@ -6001,10 +5993,6 @@ PrefabInstance:
     - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: RandomSet
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: LucKee.SEManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7813238485031355893, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
