@@ -14,6 +14,7 @@ namespace Kusume
         public Sprite sprite;
         public Sprite faceSprite;
         public Sprite backSprite;
+        public Sprite backSprite2;
         public Vector2 ImageOffset;
         public Color imageColor;
         public float ImageScale;

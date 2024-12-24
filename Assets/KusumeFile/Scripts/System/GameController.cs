@@ -74,6 +74,7 @@ namespace Kusume
             gameStarter = GetComponent<GameStarter>();
 
             allyBack = FindObjectOfType<AllyBackSpriteRenderer>();
+
         }
 
         private void SetupInstance()

@@ -105,6 +105,8 @@ namespace Kusume
         {
             LucKee.CutIn c = Instantiate(cutIn, canvas.transform);
             c.SetSprite(GameController.Instance.AllyDataInfo.sprite);
+            AllySkillBackImage a = c.GetComponent<AllySkillBackImage>();
+            a.SetSprite(GameController.Instance.AllyDataInfo.backSprite2);
         }
     }
 }

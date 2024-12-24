@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Kusume
 {
     public class AllyBackSpriteRenderer : MonoBehaviour
     {
+        [SerializeField]
         private SpriteRenderer spriteRenderer;
 
         private void Awake()
