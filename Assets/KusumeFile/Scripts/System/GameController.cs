@@ -113,5 +113,12 @@ namespace Kusume
             if(gameStarter != null) { return; }
             gameTimer.Update(Time.deltaTime);
         }
+
+        //’Ç‰Á
+        //ƒLƒƒƒ‰‚É‚æ‚Á‚ÄBGM‚ð•Ï‚¦‚é
+        public void GetBGM(AudioClip Get)
+        {
+            bgm = Get;
+        }
     }
 }

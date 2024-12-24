@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689505822945942701, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4032,8 +4032,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5b43ee2410801654b99705ddb570b368, type: 3}
   - {fileID: 21300000, guid: ef233270270ecb64792e51c956e6cf55, type: 3}
   - {fileID: 21300000, guid: 5a4e5af4f28ffea40aca42e20735f278, type: 3}
-  - {fileID: 21300000, guid: ced57932034a78a4dacb3f504bbe0bea, type: 3}
   - {fileID: 21300000, guid: f77cdc1376b045b41953e35e4e5605ca, type: 3}
+  - {fileID: 21300000, guid: ced57932034a78a4dacb3f504bbe0bea, type: 3}
   backSprite:
   - {fileID: 21300000, guid: ad238965e23cf0c43bba30cd048b0811, type: 3}
   - {fileID: 21300000, guid: ed595fbe17c6cde4fa81d53d15444e0a, type: 3}
@@ -4096,7 +4096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1576566421
 Transform:
   m_ObjectHideFlags: 0
@@ -4581,6 +4581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 361636996}
     m_Modifications:
+    - target: {fileID: 1343253588361201099, guid: f218e66813936e447862cec3c71aef4d, type: 3}
+      propertyPath: ss
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3738103688697129116, guid: f218e66813936e447862cec3c71aef4d, type: 3}
       propertyPath: m_Text
       value: "\u30B9\u30C6\u30FC\u30B81"
