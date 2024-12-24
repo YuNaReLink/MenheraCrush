@@ -31,6 +31,7 @@ public class StageSelect : MonoBehaviour
 
     [SerializeField] AudioClip[] BGM;
 
+
     private void Awake()
     {
         background.sprite = backSprite[index];
@@ -77,7 +78,27 @@ public class StageSelect : MonoBehaviour
         }
 
         stageText.text = stageName[n];
-        BGMManager.Play(BGM[n]);
+
+        AudioClip clip = null;
+
+        switch (no)
+        {
+            case StageNo.Stage1:
+                //clip = BGM[(int)CharacterNameList.HanayaRaika];
+                break;
+            case StageNo.Stage2:
+                //clip = BGM[(int)CharacterNameList.KuzuharaNaoya];
+                break;
+            case StageNo.Stage3:
+                //{
+                //    int index = CharacterSelect.SelectCharacterNo;
+                //    clip = BGM[index];
+                //}
+                break;
+            default:
+                break;
+        }
+        BGMManager.Play(clip);
     }
 
     //‰E‚É‘—‚é
