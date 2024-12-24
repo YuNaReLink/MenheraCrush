@@ -3916,7 +3916,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f77cdc1376b045b41953e35e4e5605ca, type: 3}
   - {fileID: 21300000, guid: ced57932034a78a4dacb3f504bbe0bea, type: 3}
   backSprite:
-  - {fileID: 21300000, guid: ad238965e23cf0c43bba30cd048b0811, type: 3}
+  - {fileID: 21300000, guid: 23c646e4f5c489d499410f41004987a6, type: 3}
   - {fileID: 21300000, guid: ed595fbe17c6cde4fa81d53d15444e0a, type: 3}
   - {fileID: 21300000, guid: fda9bf4eb94a4cd4ea4a7a89f3ae740d, type: 3}
   background: {fileID: 2084995668}
@@ -3925,10 +3925,6 @@ MonoBehaviour:
   - "\u845B\u539F\u76F4\u4E5F"
   - "\u3042\u306A\u305F\u304C\u6368\u3066\u305F\u30E2\u30CE"
   stageText: {fileID: 693811263}
-  BGM:
-  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
-  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
-  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
 --- !u!4 &1561487482
 Transform:
   m_ObjectHideFlags: 0

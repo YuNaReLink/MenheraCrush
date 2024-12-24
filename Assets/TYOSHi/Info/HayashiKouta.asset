@@ -18,4 +18,4 @@ MonoBehaviour:
   fullBody: {fileID: 605480745, guid: a8f8cc1d0aab87c48a132cca42463d6f, type: 3}
   normalFace: {fileID: -902836371, guid: 22c3982b593ddff4b88980881ab897e9, type: 3}
   yamiFace: {fileID: 664011754, guid: 4c39967b4de49fc4e9301d386832b85a, type: 3}
-  color: {r: 0.46274513, g: 0.61960787, b: 0.49411768, a: 1}
+  backImage: {fileID: 21300000, guid: 0052afb72caa06d4e9cdf680d87d4504, type: 3}

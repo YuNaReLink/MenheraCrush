@@ -94,7 +94,7 @@ public class CharacterSelect : MonoBehaviour
             buttons[i].image.color = c;
             buttons[i].image.sprite = s;
         }
-        background.color = infos[index].color;
+        background.sprite= infos[index].backImage;
 
         SelectCharacterNo = index;
 

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CreditLedger
   m_EditorClassIdentifier: 
   texts:
-  - {fileID: 4900000, guid: 0928d83bfaf7d3747ad5e163668448a8, type: 3}
+  - {fileID: 4900000, guid: 27b7932ab2302f1419fe4ce63937ea6c, type: 3}
