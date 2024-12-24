@@ -21,7 +21,7 @@ namespace Kusume
         public void Init(CharacterInfo characterInfo)
         {
             //アニメーターの設定
-            animator.runtimeAnimatorController = characterInfo.animator;
+            animator.SetInteger("Number",characterInfo.characterNumber);
             //画像の設定
             image.sprite = characterInfo.sprite;
             //画像のカラーを設定

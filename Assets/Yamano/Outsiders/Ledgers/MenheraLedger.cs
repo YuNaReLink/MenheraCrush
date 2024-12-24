@@ -1,11 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace LucKee
 {
+    /*
+     */
     [Serializable]
     public struct MenheraInfo
     {
@@ -14,7 +13,7 @@ namespace LucKee
 
         public String name;
 
-        public AnimatorController wait;
+        //public AnimatorController wait;
 
         public Skill skill;
 
