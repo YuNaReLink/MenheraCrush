@@ -21,6 +21,9 @@ namespace LucKee
             hole = GetComponentInChildren<TransitionHole>();
             hole.Initialize(StartSize, EndSize);
             hole.OnFinished += OnFinished;
+
+            Canvas canvas = GetComponent<Canvas>();
+            canvas.sortingOrder = 1;
         }
         private void OnDestroy()
         {
