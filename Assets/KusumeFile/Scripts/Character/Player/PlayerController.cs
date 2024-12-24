@@ -52,7 +52,14 @@ namespace Kusume
 
         private static int puzzleStop;
         public static int PuzzleStop => puzzleStop;
-        public static void SetPuzzleStop(int s) {  puzzleStop = s; }
+        public static void AddPuzzleStop() 
+        {
+            puzzleStop++; 
+        }
+        public static void DecPuzzleStop()
+        {
+            puzzleStop--;
+        }
 
         private void Awake()
         {
