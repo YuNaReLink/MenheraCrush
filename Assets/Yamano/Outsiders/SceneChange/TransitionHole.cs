@@ -21,7 +21,14 @@ namespace LucKee
 
         public event Action OnFinished;
 
+        private bool unscaled = true;
+
         private RectTransform rect;
+
+        private float Delta
+        {
+            get => unscaled ? Time.unscaledDeltaTime : Time.deltaTime;
+        }
 
         private void Awake()
         {
@@ -34,7 +41,7 @@ namespace LucKee
             {
                 return;
             }
-            float delta = Time.deltaTime;
+            float delta = Delta;
             float move = speed * delta;
             if (Mathf.Abs(current - goal) <= move)
             {
@@ -62,5 +69,7 @@ namespace LucKee
         {
             OnFinished.Invoke();
         }
+
+        public void SetUnscaled(bool b) { unscaled = b; }
     }
 }
