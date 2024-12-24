@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HuzisakiAyane
   m_EditorClassIdentifier: 
   name: "\u85E4\u54B2\u5F69\u97F3"
-  comment: "\u85E4\u54B2\u5F69\u97F3"
+  comment: "\u79C1\u3060\u3051\u3092\u898B\u3066..."
   skillDetail: {fileID: 21300000, guid: baf13913d47f3e94b962a9e69bb69aa0, type: 3}
   fullBody: {fileID: -1974864238, guid: b3fe2e615dadf0440bbb762c142b194e, type: 3}
   normalFace: {fileID: -1974864238, guid: 6d6ae0b40571b534495c1690090ff400, type: 3}
   yamiFace: {fileID: 1915891541, guid: fc1e3749101854a49ba2b4e5480522d8, type: 3}
-  color: {r: 0.6, g: 0.5686275, b: 0.69411767, a: 1}
+  backImage: {fileID: 21300000, guid: 391cff6cf713ff74ea9d8f267e4acf04, type: 3}

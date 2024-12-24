@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: StageInfoData
   m_EditorClassIdentifier: 
   stageInfos:
-  - attackCount: 10
+  - attackCount: 3
     gameTime: 120
-    goalScore: 5000
-  - attackCount: 9
+    goalScore: 7500
+  - attackCount: 3
     gameTime: 120
-    goalScore: 5500
-  - attackCount: 8
+    goalScore: 7500
+  - attackCount: 3
     gameTime: 120
-    goalScore: 6000
-  - attackCount: 7
+    goalScore: 7500
+  - attackCount: 3
     gameTime: 120
-    goalScore: 6500
-  - attackCount: 6
+    goalScore: 7500
+  - attackCount: 3
     gameTime: 120
-    goalScore: 7000
+    goalScore: 7500
   - attackCount: 5
     gameTime: 120
     goalScore: 5000
   - attackCount: 4
     gameTime: 120
-    goalScore: 8000
+    goalScore: 6000

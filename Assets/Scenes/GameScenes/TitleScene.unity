@@ -434,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 8246902054829604079, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6994f091a6cc0554abe23857841fd85f, type: 3}
+      objectReference: {fileID: 21300000, guid: adf5ca9371653f140a5f4e6846bb6ae6, type: 3}
     - target: {fileID: 8246902054829604079, guid: 12e1267d547ad9840a2254d8ba1ba03a, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1647,9 +1647,10 @@ RectTransform:
   - {fileID: 461351091}
   - {fileID: 1127064120}
   - {fileID: 420131419}
+  - {fileID: 690783936}
   - {fileID: 71420449}
   - {fileID: 344129237}
-  - {fileID: 690783936}
+  - {fileID: 607308979}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

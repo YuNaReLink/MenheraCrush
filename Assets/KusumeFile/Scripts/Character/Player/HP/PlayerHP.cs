@@ -23,7 +23,7 @@ namespace Kusume
         public void Decrease(int damage)
         {
             currentHP -= damage;
-            if (currentHP < 0)
+            if (currentHP <= 0)
             {
                 currentHP = 0;
                 GameController.Instance.EndGame();

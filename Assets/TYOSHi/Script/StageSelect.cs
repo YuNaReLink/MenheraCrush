@@ -29,9 +29,6 @@ public class StageSelect : MonoBehaviour
     [SerializeField] String[] stageName;
     [SerializeField] Text stageText;
 
-    [SerializeField] AudioClip[] BGM;
-
-
     private void Awake()
     {
         background.sprite = backSprite[index];
@@ -78,24 +75,6 @@ public class StageSelect : MonoBehaviour
         }
 
         stageText.text = stageName[n];
-
-        AudioClip clip = null;
-
-        //switch (no)
-        //{
-        //    case StageNo.Stage1:
-        //        clip = BGM[0];
-        //        break;
-        //    case StageNo.Stage2:
-        //        clip = BGM[1];
-        //        break;
-        //    case StageNo.Stage3:
-        //        clip = BGM[2];
-        //        break;
-        //    default:
-        //        break;
-        //}
-        //BGMManager.Play(clip);
     }
 
     //‰E‚É‘—‚é
