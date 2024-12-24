@@ -23,8 +23,8 @@ public class SceneTransition : MonoBehaviour
     private SceneList nextScene = SceneList.Title;
     public void SetNextScene(SceneList n) {  nextScene = n; }
 
-    [SerializeField]
-    private StartGamePreparation startGamePreparation;
+    //[SerializeField]
+    //private StartGamePreparation startGamePreparation;
 
     //// Start is called before the first frame update
     void Awake()
@@ -53,10 +53,6 @@ public class SceneTransition : MonoBehaviour
 
         if (circle.sizeDelta.x >= maxSize)
         {
-            if(GameController.Instance != null)
-            {
-                GameController.Instance.SetPreparation();
-            }
             Destroy(gameObject);
             return;
         }

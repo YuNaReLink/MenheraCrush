@@ -1,3 +1,4 @@
+using LucKee;
 using UnityEngine;
 
 namespace Kusume
@@ -30,7 +31,10 @@ namespace Kusume
         public MenheraBoard             EnemyBoard => enemy;
 
         [SerializeField]
-        private AudioClip bgm;
+        private AudioClip[] bgms;
+
+        [SerializeField]
+        private AudioLedger audioLedger;
 
         [SerializeField]
         private MenheraData allyData;
@@ -105,7 +109,8 @@ namespace Kusume
         public void GameStartTimerEnd()
         {
             state = PuzzleState.Playable;
-            LucKee.BGMManager.Play(bgm);
+            AudioClip audioClip = audioLedger.Values[(int)SelectStageContainer.EnemyCharacter];
+            LucKee.BGMManager.Play(audioClip);
         }
 
         private void Update()
@@ -116,9 +121,11 @@ namespace Kusume
 
         //’Ç‰Á
         //ƒLƒƒƒ‰‚É‚æ‚Á‚ÄBGM‚ð•Ï‚¦‚é
+        /*
         public void GetBGM(AudioClip Get)
         {
             bgm = Get;
         }
+         */
     }
 }

@@ -27,11 +27,28 @@ namespace Kusume
             gameStartTimer = new Timer(0);
         }
 
+        private void Start()
+        {
+            LucKee.TransitionHole transitionHole = FindObjectOfType<LucKee.TransitionHole>();
+            if(transitionHole == null)
+            {
+                Activate();
+            }
+            else
+            {
+                transitionHole.OnFinished += Activate;
+            }
+        }
+
         public void Activate()
         {
             gameStartTimer.Start(gameStartCount);
             gameStartTimer.OnOnceEnd += GameController.Instance.GameStartTimerEnd;
             gameStartTimer.OnOnceEnd += Destroy;
+            if (GameController.Instance != null)
+            {
+                GameController.Instance.SetPreparation();
+            }
         }
 
         private void Destroy()
