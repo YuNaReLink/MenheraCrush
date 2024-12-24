@@ -50,6 +50,10 @@ namespace Kusume
 
         SkillButton skillButton;
 
+        private static int puzzleStop;
+        public static int PuzzleStop => puzzleStop;
+        public static void SetPuzzleStop(int s) {  puzzleStop = s; }
+
         private void Awake()
         {
 
@@ -121,6 +125,7 @@ namespace Kusume
             skillCoolTimer.Update(Time.deltaTime);
 
             UpdateDebug();
+            if(puzzleStop > 0) { return; }
             if (!GameController.Instance.IsPlayable()) { return; }
 
             if (Input.GetButtonDown("Jump"))

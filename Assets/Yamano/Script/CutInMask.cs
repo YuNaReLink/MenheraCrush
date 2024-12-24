@@ -1,3 +1,4 @@
+using Kusume;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,11 @@ namespace LucKee
             image = GetComponent<Image>();
         }
 
+        private void Start()
+        {
+            PlayerController.SetPuzzleStop(1);
+        }
+
         private void Update()
         {
             //現在の大きさを取得する。
@@ -57,6 +63,7 @@ namespace LucKee
             //上記の処理の関係で、この時点で目標値を超えることは無いため、同値演算子でも可。
             if (goalHeight <= size.y)
             {
+                PlayerController.SetPuzzleStop(0);
                 Destroy(this);
             }
         }

@@ -6,12 +6,19 @@ public class ScoreBoard : MonoBehaviour
 {
 
     private LucKee.SpriteConverter  converter;
+
     [SerializeField]
-    private Text                    resultText;
+    private Image                   resultImage;
+
+    [SerializeField]
+    private Sprite                  clearResult;
+    [SerializeField]
+    private Sprite                  overResult;
 
     private void Awake()
     {
         converter = GetComponentInChildren<LucKee.SpriteConverter>();
+        
     }
     void Start()
     {
@@ -20,11 +27,11 @@ public class ScoreBoard : MonoBehaviour
 
         if (Kusume.GameScore.IsSuccessful())
         {
-            resultText.text = "Ÿ‚Á‚½Ÿ‚Á‚½¡“ú‚Íƒhƒ“‚©‚Â‚¾I";
+            resultImage.sprite = clearResult;
         }
         else
         {
-            resultText.text = "YOU DIE";
+            resultImage.sprite = overResult;
         }
     }
 }

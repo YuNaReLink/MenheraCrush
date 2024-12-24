@@ -11,6 +11,8 @@ namespace Kusume
         private Timer                       attackTimer;
         public  Timer                       AttackTimer => attackTimer;
 
+        private float                       power;
+
         [Header("敵の攻撃開始までのカウント"),SerializeField]
         private float                       attackCount;
         //敵がプレイヤーを攻撃するまでのカウントを管理＆表示するクラス
@@ -62,6 +64,7 @@ namespace Kusume
             SetCharaInt((int)SelectStageContainer.EnemyCharacter);
 
             SetMenheraUI();
+            power = menheraData.Characters[charaInt].skillGauge;
         }
 
         public void LoopAttackStart(float time)
@@ -101,7 +104,7 @@ namespace Kusume
                 }
                 else
                 {
-                    player.HP.Decrease(10);
+                    player.HP.Decrease((int)power);
                     player.Board.DamageUI.ColorChangeStart();
                 }
             }
