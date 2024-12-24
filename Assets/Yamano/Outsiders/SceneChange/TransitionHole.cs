@@ -23,16 +23,22 @@ namespace LucKee
 
         private bool unscaled = true;
 
-        private RectTransform rect;
+        private RectTransform r;
+        private RectTransform rect
+        {
+            get
+            {
+                if (r == null)
+                {
+                    r = GetComponent<RectTransform>();
+                }
+                return r;
+            }
+        }
 
         private float Delta
         {
             get => unscaled ? Time.unscaledDeltaTime : Time.deltaTime;
-        }
-
-        private void Awake()
-        {
-            rect = GetComponent<RectTransform>();
         }
 
         private void Update()
@@ -63,6 +69,7 @@ namespace LucKee
         {
             current = start;
             goal = end;
+            rect.sizeDelta = current * Vector2.one;
         }
 
         private void Finish()
