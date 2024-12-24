@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689505822945942701, guid: b60be063fdacf4e4ebc240600abe8cc5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4045,9 +4045,9 @@ MonoBehaviour:
   - "\u3042\u306A\u305F\u304C\u6368\u3066\u305F\u30E2\u30CE"
   stageText: {fileID: 693811263}
   BGM:
-  - {fileID: 8300000, guid: d741b24755cef5e4d86392de4119e446, type: 3}
-  - {fileID: 8300000, guid: 4dccd072a8dbaae45870136ebf659fa5, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
+  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
+  - {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
 --- !u!4 &1561487482
 Transform:
   m_ObjectHideFlags: 0
@@ -4489,7 +4489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d937ad751388e414a848c3f0c8b05b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: d741b24755cef5e4d86392de4119e446, type: 3}
+  clip: {fileID: 8300000, guid: 9ce6145e4b2cdc541b8a671209c260af, type: 3}
 --- !u!4 &1700362363
 Transform:
   m_ObjectHideFlags: 0
