@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Kusume;
+using LucKee;
 
 //メニューを呼び出すためのクラス
 //何に括り付けても問題なく動く。
@@ -23,7 +24,22 @@ public class MenuCaller : MonoBehaviour
         {
             if (canvas == null)
             {
-                canvas = FindAnyObjectByType<Canvas>();
+                /*トランジション用のキャンバスを除外して選択*/
+
+                Canvas[] canvases = FindObjectsOfType<Canvas>();
+                foreach (Canvas c in canvases)
+                {
+                    if (c.GetComponent<TransitionUnit>() != null)
+                    {
+                        continue;
+                    }
+                    canvas = c;
+                    break;
+                }
+                if (canvas == null && canvases.Length > 0)
+                {
+                    canvas = canvases[0];
+                }
             }
             return canvas;
         }
