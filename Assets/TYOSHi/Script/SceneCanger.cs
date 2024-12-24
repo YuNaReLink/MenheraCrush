@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Kusume;
+using LucKee;
 
 public enum SceneList
 {
@@ -14,6 +15,7 @@ public enum SceneList
     Count
 }
 
+//âzå†(LucKeeÅF2024/12/24)
 public class SceneChanger : MonoBehaviour
 {
     static string GetSceneName(SceneList scene)
@@ -43,24 +45,15 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene(GetSceneName(scene));
     }
 
-    [SerializeField] private SceneList nextScene;
-    [SerializeField] private Canvas canvas;
-    [SerializeField] private SceneTransition transitionPrefab = null;
+    [SerializeField]
+    private SceneList nextScene;
 
-    private void Awake()
+    [SerializeField]
+    private TransitionCloser transitionPrefab = null;
+
+    public void Execute()
     {
-        if (canvas == null)
-        {
-            canvas = FindAnyObjectByType<Canvas>();
-        }
-    }
-
-    public void ButtonClick()
-    {
-        SceneTransition transition = Instantiate(transitionPrefab, canvas.transform);
-        transition.gameObject.transform.SetParent(canvas.transform);
-
-        transition.SetNextScene(nextScene);
-        transition.Activate();
+        TransitionCloser closer = Instantiate(transitionPrefab);
+        closer.SetNext(nextScene);
     }
 }

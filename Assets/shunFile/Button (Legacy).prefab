@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2206655666696809598}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: ButtonClick
+        m_MethodName: Execute
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -225,4 +225,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25bd3489cb728b498d4015d72f3ff51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextSceneNume: Scene1
+  nextScene: 0
+  transitionPrefab: {fileID: 4582031877775778392, guid: 5372678c87951e945b7f2c0169fdb50c, type: 3}
