@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ShinonomeAoi
   m_EditorClassIdentifier: 
   name: "\u6771\u96F2\u8475\u8863"
-  comment: "\u6771\u96F2\u8475\u8863"
+  comment: "\u30AD\u30DF\u3068\u4E00\u7DD2\u306A\u3089\u50D5\u306F\u5B09\u3057\u3044\u3088"
   skillDetail: {fileID: 21300000, guid: 407182fc6e093dd4a93bf6e9b3b3953c, type: 3}
   fullBody: {fileID: -127505809, guid: dbbc809ce00d17d49ac9850246a0624b, type: 3}
   normalFace: {fileID: 780244944, guid: d3dde02520d9bcc41a5e5f39b0af30c1, type: 3}
   yamiFace: {fileID: -1445708448, guid: 840d8565dbc5b4740bc826a875c1f051, type: 3}
-  color: {r: 0.38823533, g: 0.43921572, b: 0.5294118, a: 1}
+  backImage: {fileID: 21300000, guid: fd88e93b25b47d546832535bf0a19226, type: 3}

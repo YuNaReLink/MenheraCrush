@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 [CreateAssetMenu(fileName = "CharacterInfo", menuName = "ScriptableObjects/CharacterInfo", order = 1)]
@@ -13,7 +14,7 @@ public class CharacterInfo : ScriptableObject
     public Sprite fullBody;
     public Sprite normalFace;
     public Sprite yamiFace;
-    public Color color;
+    public Sprite backImage;
 
 
 }
