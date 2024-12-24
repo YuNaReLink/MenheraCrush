@@ -12,6 +12,11 @@ namespace LucKee
         //再生用のオブジェクトを生成し、引数で受け取ったクリップを再生するように命令する。
         public static void Play(AudioClip clip)
         {
+            if (clip == null) {
+                Stop();
+                return;
+            }
+
             BGMPlayer player = BGMPlayer.Instance;
 
             //再生開始
