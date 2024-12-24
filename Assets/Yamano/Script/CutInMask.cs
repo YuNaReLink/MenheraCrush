@@ -24,6 +24,9 @@ namespace LucKee
         [SerializeField]
         private float widenSpeed = 200.0f;
 
+        [SerializeField]
+        private Image background = null;
+
         /*Component*/
 
         private Image image;
@@ -59,6 +62,13 @@ namespace LucKee
             {
                 Destroy(this);
             }
+        }
+        public void SetBackSprite(Sprite sprite)
+        {
+            background.sprite = sprite;
+            background.SetNativeSize();
+            float ratio = image.rectTransform.rect.width / background.rectTransform.rect.width;
+            background.rectTransform.localScale = ratio * Vector2.one;
         }
     }
 }

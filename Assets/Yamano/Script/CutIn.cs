@@ -8,8 +8,6 @@ namespace LucKee
     /*旧式なので後々変更する予定*/
 
     //カットイン用のコンポーネント
-    //カットイン中はゲームの動きを止めるのでポーズを要求する。
-    [RequireComponent(typeof(Pause))]
     public class CutIn : MonoBehaviour
     {
         /*Serialized*/
@@ -40,9 +38,6 @@ namespace LucKee
 
         void Start()
         {
-            //カットインが始まった時にゲームを一時停止する。
-            Pause pause = GetComponent<Pause>();
-            pause.Enable();
 
             time = 0.0f;
             route.SetOffset(image.rectTransform.localPosition);
