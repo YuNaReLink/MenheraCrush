@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectButton: {fileID: 0}
   character: 5
+  gameBGMType: 0
 --- !u!222 &361636995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1884,6 +1885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectButton: {fileID: 0}
   character: 6
+  gameBGMType: 0
 --- !u!222 &402017696
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2695,6 +2697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectButton: {fileID: 0}
   character: 0
+  gameBGMType: 0
 --- !u!222 &697263714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4096,7 +4099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1576566421
 Transform:
   m_ObjectHideFlags: 0
