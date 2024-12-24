@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Kusume;
 
 public enum SceneList
 {
@@ -31,7 +32,7 @@ public class SceneChanger : MonoBehaviour
                 temp = "Game";
                 break;
             default:
-                temp = "KanataniScene";
+                temp = "TitleScene";
                 break;
         }
         return temp;

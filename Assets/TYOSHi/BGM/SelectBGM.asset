@@ -10,8 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae34fea0446e8ab47bdc6c6c03dd2e57, type: 3}
-  m_Name: SelectLedger
+  m_Name: SelectBGM
   m_EditorClassIdentifier: 
   values:
+  - {fileID: 0}
   - {fileID: 8300000, guid: d741b24755cef5e4d86392de4119e446, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 8300000, guid: 4dccd072a8dbaae45870136ebf659fa5, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
