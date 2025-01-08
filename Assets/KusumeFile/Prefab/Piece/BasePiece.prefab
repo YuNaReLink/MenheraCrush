@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fa19295f997b4a645b9291dec2af224d, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -165,12 +165,13 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   spriteRenderer: {fileID: 0}
   mat: {fileID: 0}
-  tag: 0
   impactObject: {fileID: 6887719655045300248, guid: 558bbc09ce04cc54dabc1f06fe7e3406, type: 3}
   keepImpactPower: 0
   baseGravityScale: 5.5
   selected: 0
   breakEffect: {fileID: 9009186611849046066, guid: 9935ea04d32108f46814f83f10c4cc0f, type: 3}
+  breakSprite: {fileID: 0}
+  tag: 0
 --- !u!114 &-989834613429512028
 MonoBehaviour:
   m_ObjectHideFlags: 0

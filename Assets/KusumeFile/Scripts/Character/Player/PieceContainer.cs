@@ -89,7 +89,7 @@ namespace Kusume
                 PieceTag tag = pieceList[0].PieceInfo.color.tag;
                 if (tag == PieceTag.Pink)
                 {
-                    hp.Regain(5);
+                    hp.Regain(20);
                 }
             }
             for(int i = 0;i < pieceList.Count; i++)
