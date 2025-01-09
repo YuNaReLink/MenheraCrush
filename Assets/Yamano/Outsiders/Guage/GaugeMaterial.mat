@@ -63,7 +63,7 @@ Material:
     m_Floats:
     - <noninit>: 0
     - _BumpScale: 1
-    - _ColorBorder: 0.65
+    - _ColorBorder: 0.5
     m_Colors:
     - _Color1: {r: 0, g: 1, b: 0, a: 1}
     - _Color2: {r: 0, g: 0, b: 1, a: 1}
