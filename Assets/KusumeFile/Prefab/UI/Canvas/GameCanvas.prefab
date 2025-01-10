@@ -1992,6 +1992,7 @@ GameObject:
   - component: {fileID: 4941235099288379309}
   - component: {fileID: 6286974577090923476}
   - component: {fileID: 12544290387471656}
+  - component: {fileID: 4669549437287677225}
   m_Layer: 5
   m_Name: SkillButton
   m_TagString: Untagged
@@ -2117,3 +2118,16 @@ MonoBehaviour:
   cutIn: {fileID: 1627902704877820490, guid: 6e51bffe32a805a408e4a3fafe544434, type: 3}
   buttonMoveUI: 0
   colorDataList: {fileID: 11400000, guid: 6e0319d3337126442af1d1c26c63804d, type: 2}
+--- !u!114 &4669549437287677225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9031953538681153301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ledger: {fileID: 11400000, guid: 2b306b61bdbc24344a068f26b90106bd, type: 2}

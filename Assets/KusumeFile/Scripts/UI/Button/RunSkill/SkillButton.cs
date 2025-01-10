@@ -1,3 +1,4 @@
+using LucKee;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -33,6 +34,11 @@ namespace Kusume
         [SerializeField]
         private SkillButtonColorDataList colorDataList;
 
+
+        private SEManager               seManager;
+
+        private bool                    useSkill = false;
+
         private void Awake()
         {
             image = GetComponent<Image>();
@@ -47,6 +53,8 @@ namespace Kusume
             baseRectPosition = rectTransform.anchoredPosition;
 
             button = GetComponent<Button>();
+
+            seManager = GetComponent<SEManager>();
         }
 
         private void Start()
@@ -95,14 +103,19 @@ namespace Kusume
             }
             else
             {
+                if (useSkill) { return; }
+                useSkill = true;
                 Vector2 pos = baseRectPosition;
                 pos.y += 10;
                 rectTransform.anchoredPosition = pos;
+
+                seManager.Play();
             }
         }
 
         public void RunCutIn()
         {
+            useSkill = false;
             LucKee.CutIn c = Instantiate(cutIn, canvas.transform);
             c.SetSprite(GameController.Instance.AllyDataInfo.sprite);
             AllySkillBackImage a = c.GetComponent<AllySkillBackImage>();
