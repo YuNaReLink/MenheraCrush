@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,15 +22,15 @@ public enum CharacterNameList
 }
 public class CharacterSelect : MonoBehaviour
 {
-    [SerializeField] private new Text name;
-    [SerializeField] private Text comment;
+    private new Text name;
+    private Text comment;
 
-    [SerializeField] private Image skillDetail;
-    [SerializeField] private Image image;
-    [SerializeField] private Image background;
+    private Image skillDetail;
+    private Image image;
+    private Image background;
 
     [SerializeField] private CharacterInfo[] infos;
-    [SerializeField] private UnityEngine.UI.Button[] buttons;
+    private UnityEngine.UI.Button[] buttons = new Button[(int)CharacterNameList.PlayebleCount];
 
     [SerializeField] private StageSelect changer;
     [SerializeField] private NowCharacter NC;
@@ -68,7 +69,7 @@ public class CharacterSelect : MonoBehaviour
     {
         int index = (int)character;
         //ÉLÉÉÉâñºï\é¶
-        name.text = infos[index].name;
+        name.text = infos[index].name.FullName;
 
         //ÉLÉÉÉââÊëúêÿë÷
         image.sprite = infos[index].fullBody;
