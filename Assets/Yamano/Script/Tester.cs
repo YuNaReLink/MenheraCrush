@@ -8,6 +8,8 @@ namespace LucKee {
     //テスト用の適当なコンポーネント
     public class Tester : MonoBehaviour
     {
+        [SerializeField]
+        MenheraData data;
         private void Update()
         {
             if (Input.anyKeyDown)
