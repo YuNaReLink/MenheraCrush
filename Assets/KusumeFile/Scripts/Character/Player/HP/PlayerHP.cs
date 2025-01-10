@@ -1,3 +1,4 @@
+using LucKee;
 using UnityEngine;
 
 namespace Kusume
@@ -14,15 +15,20 @@ namespace Kusume
 
         public float        CurrentHP => currentHP;
 
-        public void Setup()
+        [SerializeField]
+        private SEManager   seManager;
+
+        public void Setup(PlayerController player)
         {
             currentHP = maxHP;
+            seManager = player.gameObject.GetComponent<SEManager>();
         }
 
 
         public void Decrease(int damage)
         {
             currentHP -= damage;
+            seManager.Play(1);
             if (currentHP <= 0)
             {
                 currentHP = 0;
@@ -33,6 +39,7 @@ namespace Kusume
         public void Regain(int addHP)
         {
             currentHP += addHP;
+            seManager.Play();
             if (currentHP > maxHP)
             {
                 currentHP = maxHP;

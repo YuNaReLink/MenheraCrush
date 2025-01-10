@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae34fea0446e8ab47bdc6c6c03dd2e57, type: 3}
-  m_Name: SkillAudioLedger
+  m_Name: SkillUIAudioLedger
   m_EditorClassIdentifier: 
   values:
   - {fileID: 8300000, guid: ed6d9f31257b6d542988326c1f4b283e, type: 3}

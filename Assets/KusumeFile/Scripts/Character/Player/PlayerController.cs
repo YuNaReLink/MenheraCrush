@@ -74,7 +74,7 @@ namespace Kusume
             if(viewHP != null)
             {
                 viewHP.Setup(this);
-                hp.Setup();
+                hp.Setup(this);
             }
 
             SkillButton skill = FindObjectOfType<SkillButton>();

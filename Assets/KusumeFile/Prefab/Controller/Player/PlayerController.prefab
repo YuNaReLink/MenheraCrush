@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3722682839659423639}
   - component: {fileID: 6737004526536627335}
   - component: {fileID: 5206039346121342140}
+  - component: {fileID: 7584505607418997950}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -67,10 +68,10 @@ MonoBehaviour:
   hp:
     maxHP: 200
     currentHP: 0
+    seManager: {fileID: 0}
   skillCoolDownCount: 1
   skillRunCount: 0
   maxSkillRunCount: 0
-  createPiecemMachine: {fileID: 0}
   pieceContainer:
     pieceList: []
     diss:
@@ -93,6 +94,19 @@ MonoBehaviour:
   lineRenderer: {fileID: 8858839971308651317, guid: 9eec45f19962dd74c9bf956a9b2bf07b, type: 3}
   joint: {fileID: 2761353069815332505, guid: 9d2452b2c42cae54cb0dbba9ed330f1a, type: 3}
   joints: []
+--- !u!114 &7584505607418997950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9027297697176674626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49fd60361013b84c8a33ca52b524bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ledger: {fileID: 11400000, guid: b678ce0d29addbc4399759b691423284, type: 2}
 --- !u!1001 &7439873790999196228
 PrefabInstance:
   m_ObjectHideFlags: 0
