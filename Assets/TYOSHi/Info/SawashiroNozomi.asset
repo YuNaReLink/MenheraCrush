@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7134dac6d17cb4bb88f677d986f878, type: 3}
   m_Name: SawashiroNozomi
   m_EditorClassIdentifier: 
-  name: "\u6FA4\u57CE\u5E0C\u7F8E"
+  name:
+    familyName: "\u6FA4\u57CE"
+    givenName: "\u5E0C\u7F8E"
+    familyRuby: "\u3055\u308F\u3057\u308D"
+    givenRuby: "\u306E\u305E\u307F"
   comment: "\u79C1\u3092\u9078\u3070\u306A\u304B\u3063\u305F\u3089\u308F\u304B\u308B\u308F\u3088\u306D?"
   skillDetail: {fileID: 21300000, guid: 2c85bf098312b96488cb3a9e3a3487e7, type: 3}
   fullBody: {fileID: -651514625, guid: 18d8b0a469ac70e4e9c29716b8fdcc60, type: 3}

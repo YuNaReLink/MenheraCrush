@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7134dac6d17cb4bb88f677d986f878, type: 3}
   m_Name: ShinonomeAoi
   m_EditorClassIdentifier: 
-  name: "\u6771\u96F2\u8475\u8863"
+  name:
+    familyName: "\u6771\u96F2"
+    givenName: "\u8475\u8863"
+    familyRuby: "\u3057\u306E\u306E\u3081"
+    givenRuby: "\u3042\u304A\u3044"
   comment: "\u30AD\u30DF\u3068\u4E00\u7DD2\u306A\u3089\u50D5\u306F\u5B09\u3057\u3044\u3088"
   skillDetail: {fileID: 21300000, guid: 407182fc6e093dd4a93bf6e9b3b3953c, type: 3}
   fullBody: {fileID: -127505809, guid: dbbc809ce00d17d49ac9850246a0624b, type: 3}

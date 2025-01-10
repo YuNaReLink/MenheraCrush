@@ -1,7 +1,9 @@
+using LucKee;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,15 +23,15 @@ public enum CharacterNameList
 }
 public class CharacterSelect : MonoBehaviour
 {
-    [SerializeField] private new Text name;
-    [SerializeField] private Text comment;
+    private new RubiedName name;
+    private Text comment;
 
-    [SerializeField] private Image skillDetail;
-    [SerializeField] private Image image;
-    [SerializeField] private Image background;
+    private Image skillDetail;
+    private Image image;
+    private Image background;
 
     [SerializeField] private CharacterInfo[] infos;
-    [SerializeField] private UnityEngine.UI.Button[] buttons;
+    private UnityEngine.UI.Button[] buttons = new Button[(int)CharacterNameList.PlayebleCount];
 
     [SerializeField] private StageSelect changer;
     [SerializeField] private NowCharacter NC;
@@ -39,7 +41,7 @@ public class CharacterSelect : MonoBehaviour
 
     private void Start()
     {
-        name = GameObject.Find("Name").GetComponent<Text>();
+        name = GameObject.Find("RubiedName").GetComponent<RubiedName>();
         comment=GameObject.Find("SingleWord").GetComponent<Text>();
 
         skillDetail = GameObject.Find("CharacterDescription").GetComponent<Image>();
@@ -68,7 +70,7 @@ public class CharacterSelect : MonoBehaviour
     {
         int index = (int)character;
         //ÉLÉÉÉâñºï\é¶
-        name.text = infos[index].name;
+        name.SetName(infos[index].name);
 
         //ÉLÉÉÉââÊëúêÿë÷
         image.sprite = infos[index].fullBody;

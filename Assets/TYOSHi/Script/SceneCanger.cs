@@ -18,6 +18,12 @@ public enum SceneList
 //âzå†(LucKeeÅF2024/12/24)
 public class SceneChanger : MonoBehaviour
 {
+    private void Awake()
+    {
+        
+    }
+
+
     static string GetSceneName(SceneList scene)
     {
         string temp;

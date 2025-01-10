@@ -18,7 +18,7 @@ public enum StageNo
 
 public class StageSelect : MonoBehaviour
 {
-    int index = (int)(StageNo)0;
+    public static int index {  get; private set; }
 
     [SerializeField] Vector2[] offsets;
     [SerializeField] Image[] images;
@@ -32,6 +32,8 @@ public class StageSelect : MonoBehaviour
     private void Awake()
     {
         background.sprite = backSprite[index];
+
+        CheckState((StageNo)index);
     }
 
     private void Update()

@@ -188,9 +188,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 12544290387471656, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
-      propertyPath: cutIn
-      value: 
-      objectReference: {fileID: 1627902704877820490, guid: 6e51bffe32a805a408e4a3fafe544434, type: 3}
+      propertyPath: buttonMoveUI
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3825572372955718997, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -271,6 +271,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4669549437287677225, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
+      propertyPath: ledger
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b306b61bdbc24344a068f26b90106bd, type: 2}
     - target: {fileID: 6584424040492837756, guid: b0d1160a0c439d2499913b49c4e409cf, type: 3}
       propertyPath: m_Name
       value: GameCanvas
