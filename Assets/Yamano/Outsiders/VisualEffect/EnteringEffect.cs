@@ -22,13 +22,13 @@ namespace LucKee
         {
             rect = GetComponent<RectTransform>();
             //初期地点を保持する。
-            initialPosition = rect.position;
+            initialPosition = rect.localPosition;
         }
 
         private void Update()
         {
             //初期地点にY座標の補正を加算した値を現在地とする。
-            rect.position = initialPosition + EnteringLeader.OffsetY * Vector2.up;
+            rect.localPosition = initialPosition + EnteringLeader.OffsetY * Vector2.up;
 
             //値を計算する側が終了しているなら、自身も消える。
             if (EnteringLeader.Instance == null)
