@@ -9,11 +9,16 @@ namespace LucKee {
     public class Tester : MonoBehaviour
     {
         [SerializeField]
-        MenheraData data;
+        RubyableText text;
+        [SerializeField]
+        String main;
+        [SerializeField]
+        String ruby;
         private void Update()
         {
             if (Input.anyKeyDown)
             {
+                text.SetText(main, ruby);
             }
         }
     }
