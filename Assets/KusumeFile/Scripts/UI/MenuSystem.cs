@@ -29,6 +29,9 @@ namespace Kusume
         [SerializeField]
         private TransitionCloser transitionCloser;
 
+        //0110追加
+        [SerializeField]
+        private GameObject tutorial;
 
         /*Component*/
 
@@ -89,6 +92,7 @@ namespace Kusume
         public void CallTutorial()
         {
             //TODO:チュートリアルの作成
+            tutorial.SetActive(true);
         }
 
         //タイトルの呼び出し
