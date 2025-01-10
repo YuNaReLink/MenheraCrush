@@ -1,3 +1,4 @@
+using LucKee;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ public enum CharacterNameList
 }
 public class CharacterSelect : MonoBehaviour
 {
-    private new Text name;
+    private new RubiedName name;
     private Text comment;
 
     private Image skillDetail;
@@ -40,7 +41,7 @@ public class CharacterSelect : MonoBehaviour
 
     private void Start()
     {
-        name = GameObject.Find("Name").GetComponent<Text>();
+        name = GameObject.Find("RubiedName").GetComponent<RubiedName>();
         comment=GameObject.Find("SingleWord").GetComponent<Text>();
 
         skillDetail = GameObject.Find("CharacterDescription").GetComponent<Image>();
@@ -69,7 +70,7 @@ public class CharacterSelect : MonoBehaviour
     {
         int index = (int)character;
         //ƒLƒƒƒ‰–¼•\¦
-        name.text = infos[index].name.FullName;
+        name.SetName(infos[index].name);
 
         //ƒLƒƒƒ‰‰æ‘œØ‘Ö
         image.sprite = infos[index].fullBody;
