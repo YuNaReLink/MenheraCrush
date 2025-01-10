@@ -678,29 +678,9 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1866941528}
-    - target: {fileID: 4437756510216954929, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437756510216954929, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437756510216954929, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4437756510216954929, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5620450250612987728, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
       propertyPath: m_Name
       value: ScoreCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8015352439134280985, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 8572549380833219732, guid: 64a9da1e9046adc409210a5f1d5bae53, type: 3}
       propertyPath: m_Pivot.x
