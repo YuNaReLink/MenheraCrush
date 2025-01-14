@@ -9,11 +9,19 @@ public class ScoreBoard : MonoBehaviour
 
     [SerializeField]
     private Image                   resultImage;
+    [SerializeField]
+    private Image                   backGround;
 
     [SerializeField]
     private Sprite                  clearResult;
     [SerializeField]
     private Sprite                  overResult;
+
+    [SerializeField]
+    private Sprite[]                resultSprites;
+
+    [SerializeField]
+    private Sprite[]                backSprites;
 
     private void Awake()
     {
@@ -27,11 +35,13 @@ public class ScoreBoard : MonoBehaviour
 
         if (Kusume.GameScore.IsSuccessful())
         {
-            resultImage.sprite = clearResult;
+            resultImage.sprite = resultSprites[0];
+            backGround.sprite = backSprites[0];
         }
         else
         {
-            resultImage.sprite = overResult;
+            resultImage.sprite = resultSprites[1];
+            backGround.sprite = backSprites[1];
         }
     }
 }

@@ -20,6 +20,8 @@ namespace LucKee
 
         private new AudioSource audio = null;
 
+        public void SetVolume(float v) { audio.volume = v; }
+
         /*Event*/
 
         private void Awake()
