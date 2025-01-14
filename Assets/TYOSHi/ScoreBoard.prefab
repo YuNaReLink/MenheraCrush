@@ -667,3 +667,6 @@ MonoBehaviour:
   backSprites:
   - {fileID: 21300000, guid: 24122280b9377654482482884fd1e82f, type: 3}
   - {fileID: 21300000, guid: 9cb3c9e08dbe2314481f975c87fc3cb4, type: 3}
+  audioClips:
+  - {fileID: 8300000, guid: 3cdb63a7c61ff644796a0a5b4cc1e43a, type: 3}
+  - {fileID: 8300000, guid: 25a080e9f5b6ae342b8411956fa3fdc6, type: 3}
