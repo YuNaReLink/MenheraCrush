@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PanelHider : MonoBehaviour
 {
-    [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject originObject;
+    [SerializeField] private Canvas canvase;
 
     public void Reveal()
     {
-        panel.SetActive(!panel.activeSelf);
+        GameObject cloneObject = Instantiate(originObject, canvase.transform);
     }
 }

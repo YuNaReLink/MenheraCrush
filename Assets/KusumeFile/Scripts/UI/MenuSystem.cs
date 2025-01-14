@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using LucKee;
+using Unity.VisualScripting;
 
 namespace Kusume
 {
@@ -32,6 +33,8 @@ namespace Kusume
         //0110追加
         [SerializeField]
         private GameObject tutorial;
+        [SerializeField]
+        private GameObject canvase;
 
         /*Component*/
 
@@ -92,7 +95,7 @@ namespace Kusume
         public void CallTutorial()
         {
             //TODO:チュートリアルの作成
-            tutorial.SetActive(true);
+            GameObject cloneObject = Instantiate(tutorial, canvase.transform);
         }
 
         //タイトルの呼び出し
