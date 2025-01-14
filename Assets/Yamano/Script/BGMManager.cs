@@ -23,7 +23,7 @@ namespace LucKee
             {
                 player = new GameObject("BGM Player").AddComponent<BGMPlayer>();
             }
-
+            player.SetVolume(0.3f);
             //Ä¶ŠJn
             player.Play(clip);
         }

@@ -34,11 +34,17 @@ namespace LucKee
 
         private MonoBehaviour after = null;
 
+        private Skill skillObject;
+        public void SetSkill(Skill skill) 
+        {
+            skillObject = skill; 
+            skillObject.enabled = false;
+        }
+
         /*Event*/
 
         void Start()
         {
-
             time = 0.0f;
             route.SetOffset(image.rectTransform.localPosition);
             image.rectTransform.localPosition = route.GetPosition(0.0f);
@@ -86,7 +92,10 @@ namespace LucKee
             {
                 Instantiate(after);
             }
-
+            if(skillObject != null)
+            {
+                skillObject.enabled = true;
+            }
             Destroy(gameObject);
         }
     }

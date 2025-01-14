@@ -1,3 +1,4 @@
+using LucKee;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -149,8 +150,11 @@ namespace Kusume
         public void RunSkill()
         {
             if (skillRunCount < menheraData.Characters[charaInt].skillGauge) { return; }
-            skillButton.RunCutIn();
-            Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+            //カットイン
+            CutIn c = skillButton.RunCutIn();
+            //スキル
+            Skill skill = Instantiate(menheraData.Characters[charaInt].skill, transform.position, Quaternion.identity);
+            c.SetSkill(skill);
             skillCoolTimer.Start(skillCoolDownCount);
             skillRunCount = 0;
             skillButton.SetStateButton(true);

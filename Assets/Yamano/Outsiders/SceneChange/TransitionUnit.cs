@@ -37,8 +37,8 @@ namespace LucKee
 
         protected float CalcMaxSize()
         {
-            RectTransform rect = GetComponent<RectTransform>();
-            Vector2 size = rect.sizeDelta;
+            CanvasScaler scaler = GetComponent<CanvasScaler>();
+            Vector2 size = scaler.referenceResolution;
 
             return size.magnitude;
         }
