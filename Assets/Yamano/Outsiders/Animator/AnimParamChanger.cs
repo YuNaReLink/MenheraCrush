@@ -17,7 +17,7 @@ namespace LucKee
         {
             Animator animator = GetComponent<Animator>();
             animator.SetInteger("Number", (int)character);
-            Destroy(this);
+            //Destroy(this);
         }
     }
 }
