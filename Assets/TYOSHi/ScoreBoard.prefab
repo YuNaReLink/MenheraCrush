@@ -341,7 +341,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2, y: -1}
-  m_SizeDelta: {x: 1350, y: 646}
+  m_SizeDelta: {x: 1350, y: 800}
   m_Pivot: {x: 0.49999976, y: 0.50000006}
 --- !u!222 &3999664054335787250
 CanvasRenderer:
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 24122280b9377654482482884fd1e82f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -658,5 +658,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultImage: {fileID: 461475666116297590}
+  backGround: {fileID: 7818551583649297350}
   clearResult: {fileID: 21300000, guid: 55b555c656e7ee4428dab90e4b1d5664, type: 3}
   overResult: {fileID: 21300000, guid: f07c000c44d47b342bb58c957d18cdf9, type: 3}
+  resultSprites:
+  - {fileID: 21300000, guid: 55b555c656e7ee4428dab90e4b1d5664, type: 3}
+  - {fileID: 21300000, guid: f07c000c44d47b342bb58c957d18cdf9, type: 3}
+  backSprites:
+  - {fileID: 21300000, guid: 24122280b9377654482482884fd1e82f, type: 3}
+  - {fileID: 21300000, guid: 9cb3c9e08dbe2314481f975c87fc3cb4, type: 3}

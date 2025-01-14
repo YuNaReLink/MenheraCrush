@@ -113,13 +113,14 @@ namespace Kusume
             }
         }
 
-        public void RunCutIn()
+        public CutIn RunCutIn()
         {
             useSkill = false;
             LucKee.CutIn c = Instantiate(cutIn, canvas.transform);
             c.SetSprite(GameController.Instance.AllyDataInfo.sprite);
             AllySkillBackImage a = c.GetComponent<AllySkillBackImage>();
             a.SetSprite(GameController.Instance.AllyDataInfo.backSprite2);
+            return c;
         }
     }
 }
